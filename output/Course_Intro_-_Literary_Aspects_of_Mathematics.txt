@@ -1,0 +1,83 @@
+Irida Altman
+Lit Aspects of Maths
+July 2023
+LITERARY ASPECTS OF MATHEMATICS 
+SEMF Summer School 
+Valencia, 24–28 July 2023 
+Time:  
+Monday, Tuesday, Wednesday, Thursday, 12:00–14:00. 
+Abstract:  
+This mini-course explores storytelling, semiotic, and interpretational approaches to 
+mathematics that uncover forgotten and oft-ignored literary aspects of the 
+mathematical practice. Half of the course will investigate ideas in existing literature 
+while the other half will deliver advances in ongoing research. This is both a lecture 
+course and a discussion forum. Participants are not expected to be mathematicians or 
+literary experts. Everyone is welcome, those who just wish to listen and those who 
+would like to engage in the discussion. On a meta-level, the course is also meant to 
+disseminate ideas that might take root in different guises across different ﬁelds. 
+Structure of each session (approx within given timeframe): 
+12:10–13:00   Lecture: General introduction to the material 
+13:00–13:20   Break: Opportunity to leave, if you’re not staying for the discussion 
+13:20–13:50   Discussion: Audience participation actively encouraged 
+Attendance:  
+This is a four-session course. Participants who wish to get the most out of it, are 
+encouraged to attend all four sessions. However, as there are other courses going on, 
+full attendance might not be possible. For convenience, below you have prerequisite 
+chart, where the arrows show the dependencies of material.  
+Of course, nothing is cast in stone—you are welcome to attend as you wish. 
+ 
+1 of 
+2
+Lecture 1
+Discussion 1
+Lecture 2
+Discussion 2
+Lecture 3
+Discussion 3
+Lecture 4
+Discussion 4
+Monday
+Tuesday
+Wednesday
+Thursday
+Discussions cannot be meaningfully attended without attending their corresponding Lectures. 
+Lecture 2 depends only weakly on Lecture 1.  
+Lecture 4 depends strongly on Lecture 3.  
+Lectures 3 and 4 can be attended without having attended Lectures 1 and 2.
+Irida Altman
+Lit Aspects of Maths
+July 2023
+SESSION BREAKDOWN 
+Monday  ➛ Narrative Elements in Mathematics: comparing stories and mathematical 
+texts (Dietiker and Thomas) 
+Tuesday ➛ The Characters in Mathematics: discussing one approach to characters in 
+mathematical texts and the consequences of such an approach (Rotman). 
+Wednesday ➛ Presentations and presentations system: the units of mathematical 
+texts, but also more generally the units in all semiotic practices (regardless of ﬁeld, 
+genre, scientiﬁc and artistic content!) 
+Thursday ➛ Translation: the key mechanism of interpretation that binds presentations 
+together (with a focus on mathematics, but with the possibilities of integrating 
+everything from hard sciences, natural sciences, social science, to arts and music). 
+REFERENCES FOR LECTURES 1–2 
+(You do NOT need to read this material to follow the Lectures & Discussions) 
+Dietiker, Leslie. 2013. ‘Mathematical Texts as Narrative: Rethinking Curriculum’. For the 
+Learning of Mathematics 33 (3): 14–19. 
+Thomas, R.S.D. 2007. ‘The Comparison Of Mathematics With Narrative’. In Perspectives On 
+Mathematical Practices, edited by Bart Van Kerkhove and Jean Paul Van Bendegem, 43–59. 
+Dordrecht: Springer Netherlands. https://doi.org/10.1007/1-4020-5034-8_3. 
+Rotman, Brian. 2000. Excerpt from ‘Towards a Semiotics of Mathematics’. In Mathematics as 
+Sign: Writing, Imagining, Counting, 4-41 without 21-37. Writing Science. Stanford, CA: 
+Stanford University Press. 
+READING BEYOND THE COURSE 
+(Historical arguments and case studies; mathematical aspects of literature) 
+Doxiadis, Apostolos K., and Barry Mazur, eds. 2012. Circles Disturbed: The Interplay of 
+Mathematics and Narrative. Princeton: Princeton University Press. 
+Tubbs, Robert, Alice Jenkins, and Nina Engelhardt, eds. 2021. The Palgrave Handbook of 
+Literature and Mathematics. Cham: Palgrave Macmillan. 
+REFERENCES FOR LECTURES 3–4 OR FURTHER QUESTIONS/DISCUSSIONS 
+Talk to me in person in Valencia or online. 
+Discord channel for the summer school: #altman 
+Discord handle: iarxiv 
+Email: irida.altman@gess.ethz.ch
+2 of 
+2

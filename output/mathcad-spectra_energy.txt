@@ -1,0 +1,12376 @@
+spectra_energy.mcd                       1
+T h e o r y   o f   A t o m i c   S p e c t r a   a n d   I o n i z a t i o n   E n e r g i e s
+by
+Ronald W. Satz, Ph.D.*
+Transpower Corporation
+Abstract
+This paper presents the derivation of the equations for atomic spectra and ionization energies according to the Reciprocal
+System of physical theory developed by D. B. Larson.  The factors include atomic number, ionization level, ion shift, isotope
+shift, temperature, and integer translational quantum numbers representing atomic energy levels.
+keywords:  atomic spectra, ionization energies, atomic number, atomic energy, ion shift, isotope shift, arc spectra,
+spark spectra, x-ray spectra, Rydberg series, line spectra, continuous spectra, spectra intensity, spectral line splitting
+*The author is president of Transpower Corporation, a commercial and custom software manufacturing company and engineering/physics
+consultancy.  Mailing address:  P. O. Box 7132, Penndel, PA  19047.  He is a full member of ASME, SAE, INFORMS, ISUS, and SIAM.
+spectra_energy.mcd                       2
+Introduction and Literature Survey
+Spectroscopy began with Newton's work on prisms and refraction.
+In the 19th century, spectroscopists discovered various "series" of photon frequencies emitted or absorbed by elements on the
+earth and from the sun, and there were many attempts to derive equations to represent them.  Fowler, Ref. [12], provides an
+interesting historical account of these attempts, as well as as a brief discussion of the Bohr theory.
+By the 1930's, Quantum Mechanics was in ascendancy, and Prof. White, in Ref. [8], explains this theory in considerable detail,
+along with the experimental data.  This textbook is still in use today at our universities and has not been superceded.
+A brief treatment of the physical concepts of conventional spectroscopic theory is given by Herzberg, Ref. [9].
+More recent treatments of theory and experiment are given by Kuhn, Ref. [10], and Candler, Ref. [11].  Kuhn (p. 1)  begins his
+work with this statement:  "The light emitted by atomic gases in a discharge tube is due to the motions of electrons in the atom,
+and by studying this light we can gain information on the electronic structure which determines the physical and chemical
+properties of the atom."  But this is pure assumption--there is no actual physical evidence verifying it.  To his credit, though,
+Kuhn does use "effective quantum numbers" and other empirical relations to calculate spectra.  Candler's work is on the same
+level as Kuhn's; he includes numerous Grotrian (energy) diagrams for elements and ions.
+Walker and Straw are the authors of two volumes of applied spectroscopy, Ref. [13] and Ref. [14].  These volumes contain
+numerous diagrams of the instruments used in spectroscopy.
+In contrast, Condon and Shortley, Ref. [15], give a purely theoretical account of atomic spectra.  Their work is full of the usual
+impractical, complicated equations of Quantum Mechanics.  They talk about the central-field approximation, Russell-Saunders
+coupling, j-j coupling, intermediate coupling, the perturbation method, etc.  
+Over at the National Bureau of Standards (now known as NIST), Moore compiled four volumes of atomic energy levels, Ref.
+[16], [17], [18], and [19].  Much of this material is now online at Ref. [20].   She says, Ref. [16], p. viii, "Each chemical element
+can emit as many atomic spectra as it has electrons."  This statement needs to be revised to say, "Each chemical element can
+emit as many atomic spectra as its atomic number."  Also, unfortunately, the work does not contain the Rydberg denominators
+of the series members.
+spectra_energy.mcd                       3
+Moseley, Ref. [21], was the first scientist to grasp the concept of atomic number.  His famous equations for x-ray spectra and
+the "screening doublet law" can be generalized to cover all spectra, as will be shown later in this paper.
+A useful compilation of astrophysical formulae, including those covering continuum radiation and line radiation, is provided by
+Prof. Lang, Ref. [22].  Another, similar compilation, though focused more on data, is that edited by Cox, Ref. [23].
+Several handbooks have tables of spectroscopic data.  These include Ref. [24], a Russian compilation; Ref. [25], an American
+compilation; and Ref. [26], the AIP Handbook.
+A fairly extensive search of the physics literature yields just two papers which extend Moseley's work in somewhat the same
+fashion as what we will attempt, Ref. [27] and Ref. [28].  These papers use the term "screening constant" for what we will call
+"ion shift."  The equations in the papers are still those of Quantum Mechanics and involve the distance between each possible
+pair of electrons.  They are impractical for the computation of complex spectra.
+Ref. [29]  is a clear review of modern physics with many solved problems.
+Dewey B. Larson, the developer of the Reciprocal System of theory, thoroughly debunked the nuclear theory of the atom and
+Quantum Mechanics in Ref. [1].  This work should be read before continuing with this paper.  His other works, Ref. [2], [3], [4],
+[5], and [6], describe the Reciprocal System in detail.  The fundamentals of spectroscopic theory are given in Ref. [3], and
+there are minor mentions in the others, such as Ref. [6], p. 216.
+The author's The Unmysterious Universe, Ref. [7], is a primer on the Reciprocal System.  Ref. [30]  includes equations for
+work function and single-level ionization energy; Ref. [31] gives the Reciprocal System equations for subatomic masses and
+atomic masses; and Ref. [32] provides the Reciprocal System equations for many electrical and magnetic phenomena.
+This paper is a runnable Mathcad program, so the equations are more detailed than they otherwise would be.
+spectra_energy.mcd                       4
+Nomenclature
+A = angstrom unit (10-8 cm  or 10-10 m)
+A = ionization energy, conventional theory, eV
+a = conventional theory adjustable constant in spectra equation
+a, b = translational quantum numbers used in Reciprocal System for simple spectra 
+B = magnetic field, tesla (= webers/m2) 
+B = brightness of radiation from a black body, a perfect absorber, in thermal equilibrium, erg/(sec cm2 Hz steradian) 
+       note:  subscript (, ,`) indicates the absicssa (frequency, wavelength, wave number) used in the intensity plots
+ccgs = speed of light in cgs units
+cSI = speed of light in SI units
+ck, cl, cm, cn = Mathcad range variables for calculation of ionization energies 
+convevtojoule = factor to convert eV to joule
+D = diameter of atom, m (approx. same as "nucleus" of conventional theory; subscript has element symbol)
+Du = natural Reciprocal System unit of atomic diameter, stated in m
+E = total energy of atom, eV (subscript has element symbol), eV
+EB = energy of atom due to magnetic field, eV
+EE = energy of atom due to electric field, eV
+spectra_energy.mcd                       5
+EI or Ei = individual ionization energy of atom (subscript gives element symbol and ionization stage), eV
+EI_tot = total ionization energy of atom (up to and including current level), eV (subscript has element symbol)
+Eother = other atomic energy (electric, magnetic, photonic, etc., subscript has element symbol and indication of state), eV
+Eth = thermal energy of atom, from thermodynamics, eV
+FV = electric field intensity, V/m
+h = Planck's constant, eV-sec
+hcgs = Planck's constant in cgs units, erg-sec
+hSI = Planck's constant in SI units, joule-sec
+I = spectral line intensity, eV/sec
+IR = Reciprocal System inter-regional ratio
+inf = infinity (the regular infinity symbol does not always work properly in different versions of Mathcad)
+kB_ev = Boltzmann's constant in eV/K
+kB_erg = Boltzmann's constant in erg/K
+M = atomic or molecular weight, u
+MH1_u = mass of hydrogen 1 isotope, u
+spectra_energy.mcd                       6
+me = mass of electron, u
+ml = conventional theory magnetic quantum number
+m1, m2 = Reciprocal System time-space region thermal (translational) quantum numbers (dimensionless integers)
+n = conventional theory principal quantum number (dimensionless integer)
+nM = number of magnetic charges of atom (dimensionless integer)
+np, ns, ne = principal, subordinate, and electric rotational displacements of atom (dimensionless integers) 
+n1, n2 = Reciprocal System time region thermal (translational) quantum numbers (dimensionless integers)
+n3, n4 = Reciprocal System ion motion quantum numbers for n2 for atom in electric field (dimensionless integers)
+p = adjustable constant ("screening constant") in conventional theory (real number)
+Quc = Reciprocal System natural unit of electric charge, stated in coulombs
+R = Rydberg fundamental frequency for H1, Hz (if there is a subscript, then the Rydberg frequency for that element)
+R` = Rydberg fundamental wave number, cm-1
+R = Rydberg fundamental frequency stated in half-cycles/sec
+Rgas = molecular gas constant, erg/gmole K
+su = Reciprocal System natural unit of distance, stated in cm 
+st_u = Reciprocal System time region natural unit of distance, stated in cm
+spectra_energy.mcd                       7
+T = temperature, K
+Tv_u = Reciprocal System natural unit of temperature for atoms in vapor state, K
+W = number of transitions taking place per second in spectral source
+xx = Reciprocal Shift ion shift number (real number, equivalent to screening constant in conventional theory)
+Z = atomic number
+ = change in (e.g., ` = change in wave number, cm-1)
+0_SI = permittivity of free space in SI units
+r = relative permittivity (dimensionless)
+ = wavelength of spectral line (usually cm, but could be m or A depending on context)
+B = wavelength of spectral line due to magnetic field (cm)
+E = wavelength of spectral line due to electric field (cm)
+m = wavelength of spectral line of maximum intensity
+u = Rydberg fundamental wavelength, cm
+0_SI = magnetic permeability of free space in SI units
+admp_u_som = Reciprocal System natural unit of atomic magnetic dipole moment stated in Sommerfeld units, joule/tesla
+spectra_energy.mcd                       8
+B_som = Bohr magneton stated in Sommerfeld units, joule/tesla
+L = Larson magneton stated in Sommerfeld units, joule/tesla
+ = frequency of spectral line, Hz (subscript may have element symbol)
+B = frequency of spectral line due to magnetic field, Hz
+E = frequency of spectral line due to electric field, Hz
+` = wave number of spectral line, cm-1
+`0 = initial value of wave number before application of field
+m = frequency of spectral line of greatest intensity, Hz
+`m = wave number of spectral line of greatest intensity, cm-1
+01 = 0-1 step function
+Note:  A black square in the upper right of an equation means that the equation is disabled from running in Mathcad.  This is done because not all variables 
+in the equation have, as yet, been given numerical values.  Because of the nature of this subject, it is necessary to use a mixture of SI, cgs, and natural units in
+the paper, but each individual equation utilizes just one set of units.
+spectra_energy.mcd                       9
+Reciprocal System Physical Constants (from Ref. [2]-[6], [31], or derived therefrom)
+h
+4.14 10
+ 15
+
+
+ev sec
+
+hSI
+6.626 10
+ 34
+
+
+J sec
+
+hcgs
+6.626 10
+ 27
+
+
+erg-sec
+ccgs
+2.997925 1010
+
+
+cm/sec
+cSI
+2.997925 108
+
+
+m/sec
+μ0_SI
+4 π
+
+10 7
+
+
+
+henry/m
+IR
+ 156.4444
+(inter-regional ratio)
+Tv_u
+3.5978 109
+
+
+K
+Du
+3.359 10 15
+
+
+
+m
+Rν
+6.576115 1015
+
+
+half-cycles/sec
+R
+Rν
+2
+
+R
+3.28806
+ 1015
+
+cycles/sec
+su
+4.558816 10
+ 6
+
+
+cm
+λu
+ccgs
+R
+
+λu
+9.11762
+10 6
+
+
+
+R'
+1
+λu
+
+R'
+ 109677.77713
+cm-1
+convevtojoule
+1.602062 10 19
+
+
+
+cm
+kB_ev
+8.617 10
+ 5
+
+
+ev/K
+Quc
+1.602062 10
+ 19
+
+
+me
+ .000548567
+u
+Φ01 x
+( )
+1
+x
+ 0
+if
+0
+x
+ 0
+if
+
+kB_erg
+1.602062 10
+ 12
+
+kB_ev
+
+(Boltzmann constant)
+0-1 Step Function
+st_u
+su
+IR
+
+ε0_SI
+8.85 10
+ 12
+
+
+"farads/meter"
+Z
+1
+np 1
+
+r
+2 r2
+ 
+
+
+
+1
+ns
+r
+2 r2
+ 
+
+
+
+
+ ne
+ 2
+
+atomic number of an element with rotational displacements np, ns, ne
+see Reciprocal System Periodic Table in Ref. [7], pp. 42-43
+μB_som
+9.2741 10 24
+
+
+
+μadmp_u_som
+9.3175 10
+ 37
+
+μ0_SI
+
+μadmp_u_som
+7.41463
+10
+ 31
+
+
+joule/tesla
+joule/tesla
+spectra_energy.mcd                       10
+1.  Simple Atomic Spectra
+In the Reciprocal System, as expressed by Larson in 1959 (Ref. [3] , p. 122):  "The frequency or vibrational velocity of the
+escaping space unit, the photon, is determined by the characteristics of the atomic vibrational motion from which the motion of
+the space unit was derived."  In other words, it is the thermal motion and ionization level of the atom that counts here, not the
+motion of some alleged electrons jumping from orbit to orbit around an alleged nucleus.
+Continuing with Larson, p. 122:  "At zero temperature the thermal vibration period is infinite and the equivalent thermal velocity
+1/t2 [(1/t)/t because the atom is inside unit space] is 1/inf or zero.  The addition of thermal energy, which is space displacement,
+is equivalent to reducing the time displacement.  The vibration period and the corresponding equivalent thermal velocity
+therefore decrease with increasing temperature up to a limit of t = 1, at  which point the molecule has reached the boundary of
+the time region and is ready to make the transition into the time-space region.  Since it is the thermal velocity (with some
+modifications to be considered later) which is radiated, the distribution of radiated frequencies or spectrum emitted by time
+region structures comprises all values of 1/t2 from 1/inf to a maximum which depends on the temperature, the absolute
+maximum being 1/1.  Because of the small interval between these values of 1/t2 in the solid and the modifications to which the
+frequencies are subjected in escaping from the dense solid or liquid structures the actual distribution of the frequencies is
+essentially continuous and we observe a continuous spectrum."
+Continuing, p. 122:  "At the unit level, the boundary between the time region and the time-space region, there is a directional
+reversal and further additions of motion of the same nature, motion which is equivalent to thermal energy, go into the reverse
+velocity component of a compound velocity:  velocity of a velocity (mass).  The total equivalent thermal energy in the two regions
+is the sum of the regional components, but since the velocity in the time-space region is inversely directed, the resultant velocity
+(frequency) of the radiation is the difference between the time region and the time-space region velocity-energy components."
+Continuing, p. 123:  "As we have found, velocity in the time region is in equilibrium with energy in the time-space region.  The
+latter in turn is proportional to the square of the time-space region velocity.  Where the time displacement is b, the velocity is 1/b
+and the energy per mass unit is equal to 1/b2.  This is the time-space contribution to the radiation frequency and since it is in the
+opposite direction from the time region component 1/a2 the resultant is 1/a2 - 1/b2.  In order to maintain a positive value of the
+resultant it is necessary that b exceed a by at least one unit and the minimum value of b is therefore 2."
+spectra_energy.mcd                       11
+Continuing, p. 123:  "It will be noted that the velocity interval for the normal range of temperatures in the time-space (gas) region
+is relatively large; that is the difference between 1/22 and 1/32 involves a reduction of about 55%.  Furthermore, there is
+comparatively little interference on the way out of a gas aggregate.  Instead of a continuous spectrum the gas therefore has a
+line spectrum:  a regular succession of discrete frequencies resulting from the various possible values of the displacements a
+and b."
+Continuing, p. 123:  "In the case of hydrogen there are no modifying factors and the frequencies can be obtained directly from
+the expression 1/a2 - 1/b2, utilizing the value of unit frequency previously employed, which we will designate R, in accordance
+with the usual practice.
+                                                                                 H = R(1/a2 - 1/b2)                                                                   (144)
+Placing a equal to 1 and assigning the successive values 2, 3, 4, etc. to the displacement b, we obtain the Lyman series of
+spectral lines.  Although the time region displacement a can reach unit value before gas motion starts, this is not mandatory and
+other series based on higher values of a also occur, becoming less and less probable as a increases beyond 2.  When a = 2
+and b has the values 3, 4, 5, etc., the well-known Balmer series, the first spectral series to be identified, is the result.  When a =
+3 we obtain the Paschen series, a = 4 gives us the Brackett series, and so on."
+Continuing, p. 123:  "The frequencies for ionized helium can also be calculated from equation 144 by introducing the factor 4.
+                                                                                 He = 4R(1/a2 - 1/b2)                                                               (145)
+  
+Continuing, pp. 123-124:  In this case the normal one unit of space in the expression 1/a2 and 1/b2 has been increased to two
+by the addition of one unit of rotational space vibration [positive electric charge].  The velocity 1/a2, which is actually (1/a)2, now
+becomes (2/a)2 or 4(1/a)2.   A similar change takes place in the b component.  To generalize we may say that ionization
+increases the spectral frequencies by the factor e2, where e is the total ionization based on the normal state as unity.  The
+generalized equation for the hydrogen type spectrum is therefore 
+spectra_energy.mcd                       12
+                                                                                   = Re2(1/a2 - 1/b2)                                                                (146)
+Continuing, p. 124:  "When we examine the velocity relations of other elements we find that this hydrogen type spectrum is not
+characteristic of the normal atom but represents a special case in which the effects of all motion other than thermal are
+eliminated by the absence of any rotational motion with a force integral exceeding unity.  In the normal atom effective rotational
+motions do exist and the radiation frequencies are modified very substantially by these coexisting velocities."
+Continuing, p. 125:  "...even a preliminary analysis is sufficient to indicate that the numerical values of the spectral terms conform
+to the general relationship that would be expected on theoretical grounds:  that is, each term of the spectral combinations is one
+of the terms of equation 145 (the thermal motion) plus or minus the effective components of the other motions of the atom,
+including the rotation, the basic linear vibration, the rotational vibration, the secondary motion of the associated space unit, any
+electric or magnetic motion that may be present, etc.  The splitting of the various terms under certain conditions is obviously due
+to the fact that the directions of these other motions are not necessarily fixed with reference to the direction of the thermal motion
+and the corresponding frequency increments may be either plus or minus."
+That's about as far as Larson carried the theory of spectra (other than some work on the alkalis), so we're on our own from here
+on out.  Let's first compare the atomic energy terms of conventional spectral theory with those of the Reciprocal System.
+spectra_energy.mcd                       13
+2.  Complex Atomic Spectra
+a.  Conventional and Reciprocal System Expressions for Atomic Energies
+The conventional expression for the atomic energy level of an atom is given by Ref. [9], p. 197 as 
+Eel
+A
+Z
+ p
+(
+)2 h
+
+R
+
+n
+ a
+(
+)2
+
+
+(A, p, and a are three adjustable real constants,
+n is an integer, the supposed principal quantum
+number)
+From Larson's statements above we can easily write the generalized atomic energy level of an atom in the
+Reciprocal System:
+(Reciprocal System expression,
+translational quantum numbers n1, m1
+integers only)
+Eel
+Eel_I_tot
+E_el_I
+1
+n1
+2
+1
+m1
+2
+
+
+
+
+
+
+
+
+
+ Eel_other
+
+(1)
+Eel_I is the individual ionization energy of the next level up, Eel_I_tot is the total ionization energy up to and including the
+current ionization level of the atom, and n1 and m1 are integers, so that  
+1
+n1
+2
+1
+m1
+2
+
+
+
+
+
+
+
+ represents a fraction of the next
+higher ionization level, Eel_I.  Of course, the correct Roman numerals should be substituted for I in Eel_I and Eel_I_tot
+above, with the value of I in Eel_I_tot being one less than the value of I in Eel_I.  Eel_other includes all other energy,
+including that of the internal photons, any magnetic charges, etc.  (The ground state frequency of both internal photons
+is 2R; under some circumstances, this can increase to 3R or 4R; but this increase will normally be quickly radiated
+back out or changed to some other form of energy.)
+spectra_energy.mcd                       14
+At the limit of n or n1 and m1:
+Eel
+ A
+when n --> inf
+(conventional expression, at n = inf the atom is ionized or the ion is further
+ionized)
+Eel_tot
+Eel_I_tot
+ Eel_I
+ Eel_other
+
+when n1 = 1 and m1 = inf
+(Reciprocal System expression)
+where, again, the value of I in Eel_I_tot is one less than the value of I in Eel_I 
+Example:  suppose the atom has two positive electric charges and the temperature is above 0 K.  Then, for
+the Reciprocal System,
+Eel_II_tot
+Eel_I
+ Eel_II
+
+(total ionization energy at level II = sum of individual ionization levels I and II)
+Eel_tot
+Eel_II_tot
+Eel_III
+1
+n1
+2
+1
+m1
+2
+
+
+
+
+
+
+
+
+
+ Eel_other
+
+n1
+ 1
+m1
+ n1
+(integers only)
+This means that the ground state for an atom or ion in the Reciprocal System occurs when (1/n1
+2 -1/m1
+2) --> 1/inf --> 0,
+which occurs at T = 0 K.  When n1 is very high, the term values are difficult to distinguish from one another and so we have
+a "continuous" spectrum at low temperatures.  Actually, it's still discrete, but the common spectroscopes cannot
+distinguish the lines.  With greater and greater thermal motion, i.e., translational space displacement, eventually a limit is
+reached and this translational space vibration converts to rotational space vibration--a positive electric charge--and the
+atom is ionized (or raised to the next ionization level).  This also explains why there is such a difference in spectra
+between arc and spark (something that is difficult to explain by conventional theory).  In arc spectra the atoms are at
+approx. 4000 K and usually neutral, whereas in spark spectra the atoms are at approx. 40000 K and usually ionized.
+X-ray spectra come from atoms at very, very high energy levels and result from jumps in ionization levels.
+When a photon is emitted or absorbed by an atom, the energy of the atom changes by the energy, h, of that photon.  The
+frequency of a photon emitted or absorbed by a gaseous atom may thus be represented in the Reciprocal System as
+spectra_energy.mcd                       15
+ν
+1
+h
+Eel_I_tot_1
+E_el_I_1
+1
+n1
+2
+1
+m1
+2
+
+
+
+
+
+
+
+
+
+ Eel_other_1
+Eel_I_tot_2
+E_el_I_2
+1
+n2
+2
+1
+m2
+2
+
+
+
+
+
+
+
+
+
+ Eel_other_2
+
+
+
+
+
+
+
+
+
+(2)
+where 1 indicates the first (initial) state of the atom and 2 indicates the second (final) state of the atom.  This expression
+works for all spectra, including radio, infrared, optical, ultraviolet, and x-ray, and therefore this equation completely
+supercedes any equation from conventional theory.  Again, note that the correct Roman numerals must be substituted
+for the I's in this equation.  The Reciprocal System is a completely quantized theory, so n1, m1, n2, and m2 are integers
+only.  Note:  conventional theory cannot use very large values of such integers because it would make the theoretical
+atom too large!
+Of course, for optical spectra, there is normally no change in ionization level.  If we can neglect the change in Eother,  the
+expression simplifies to
+ν
+E_el_I
+h
+1
+n1
+2
+1
+m1
+2
+
+
+
+
+
+
+
+1
+n2
+2
+1
+m2
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(3)
+Furthermore, for hydrogen and hydrogen-like atoms, the 1/m1 and 1/m2 can often be neglected, so that we finally have
+ν
+E_el_I
+h
+1
+n1
+2
+
+
+
+
+
+
+1
+n2
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(4)
+spectra_energy.mcd                       16
+With the proper selection of the ionization levels and the n's and m's, the frequencies of all spectra of all elements can be
+found.  Other than probability considerations, there is no limitation on the integer values of the n's and m's; obviously the most
+probable values of the n's and m's will give the most intense spectral lines.
+b.  Determination of n and m Values
+The n's generally have a low value (for an atom in the gas or vapor state), whereas the m's generally have a high value.
+Given that the n's and m's are energy coefficients, we can determine them by equating the atomic thermal energy with the
+thermodynamic energy expression involving temperature (Ref. [22], p. 21 and see below, Section 4):
+Eth
+3 kB_ev
+
+T
+
+(5)
+Example:  For a very hot arc spectra of H1 (isotope 1 of hydrogen, not ionized),
+T1
+ 11058
+K
+(from iteration with equations below to obtain integer values of n and m)
+From Eq. (5):
+Eth
+3 kB_ev
+
+T1
+
+Eth
+ 2.8586
+eV
+(initial state of atom)
+ZH
+ 1
+RH1
+R
+
+EH1_I
+ZH
+2 h
+
+RH1
+
+EH1_I
+ 13.61256
+eV
+(ionization energy level I)
+Neglecting m1, temporarily,
+Eth
+EH1_I
+1
+n1
+2
+
+
+
+
+
+
+
+=
+n1
+EH1_I
+Eth
+
+n1
+ 2.18219
+spectra_energy.mcd                       17
+But this is not an integer, so we must "floor" it and then compute m1 and T1 by iteration, so that m1 is also an
+integer.
+n1
+floor n1
+
+
+
+n1
+2
+
+Eth
+EH1_I
+1
+n1
+2
+1
+m1
+2
+
+
+
+
+
+
+
+
+=
+m1
+n1
+EH1_I
+
+EH1_I
+Eth n1
+2
+
+
+
+m1
+ 4.99985
+m1
+ 5
+(close enough)
+EH1_1
+EH1_I
+1
+n1
+2
+1
+m1
+2
+
+
+
+
+
+
+
+
+
+EH1_1
+ 2.85864
+eV
+(state 1)
+So we have a Balmer energy hydrogen atom.  If it absorbs a photon causing the m1 coefficient to increase by 1,
+then:
+m2
+m1
+ 1
+
+n2
+n1
+
+ν
+EH1_I
+h
+1
+n1
+2
+1
+m1
+2
+
+
+
+
+
+
+
+1
+n2
+2
+1
+m2
+2
+
+
+
+
+
+
+
+
+
+
+ν
+4.01874
+ 1013
+
+cycle/sec
+(absorbed)
+λ
+ccgs
+ν
+108
+
+λ
+ 74598.68714
+A
+(far infrared)
+EH1_2
+EH1_1
+h ν
+
+
+
+EH1_2
+ 3.02501
+EH1_2
+ EH1_1
+ 0.16638
+eV
+(increase)
+(state 2)
+spectra_energy.mcd                       18
+EH1_I
+1
+n1
+2
+1
+m2
+2
+
+
+
+
+
+
+
+
+ 3.02501
+(checks)
+T2
+EH1_2
+3 kB_ev
+
+
+T2
+ 11701.72488
+K
+T2
+ T1
+ 643.72488
+K
+Any number of such calculations can be done.  Therefore, in the Reciprocal System, spectroscopy has nothing to
+do with the energy states of the alleged electrons jumping around the alleged nucleus of conventional theory.
+Instead, spectroscopy has everything to do with the thermal motions of atoms and ions.  The Reciprocal System
+Data Base will enable a user to enter a range of ionization energy levels and a range of n and m values and
+calculate the corresponding spectra.  And, inversely, if a user enters a specific spectral line, the program will
+determine the most probable values of the n's and m's. 
+c.  Doublets, Triplets, Quartets, etc.
+In the fine structure of atomic spectra, 1/m1 and 1/m2 cannot be neglected.  Doublets are observed, and conventional
+theory explains this as resulting from the supposed two types of electron spin, +/- (1/2) h/2.  But in the Reciprocal
+System, doublets, triplets, quartets, etc., are all explained as minor differences between m1 and m2.  
+Example:  consider the first Balmer line in H1, neglecting for the moment 1/m1 and 1/m2:
+n1
+ 2
+n2
+3
+
+νH1_1
+EH1_I
+h
+1
+n1
+2
+
+
+
+
+
+
+1
+n2
+
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+νH1_1
+4.566747
+ 1014
+
+Hz
+λH1_1
+ccgs
+νH1_1
+
+λH1_1
+ 0.0000656468
+cm
+spectra_energy.mcd                       19
+But now suppose we don't neglect 1/m1 and 1/m2.  Let
+m1
+ 88
+m2
+89
+
+values which are probably close to the present resolution limit of spectroscopes.
+νH1_2
+EH1_I
+h
+1
+n1
+2
+1
+m1
+2
+
+
+
+
+
+
+
+1
+n2
+2
+1
+m2
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+νH1_2
+4.566652
+ 1014
+
+Hz
+λH1_2
+ccgs
+νH1_2
+
+λH1_2
+ 0.0000656482
+cm
+The difference or "separation" in the usual spectroscopic units of cm-1 is:
+νH1_1
+ccgs
+νH1_2
+ccgs
+
+ 0.31648
+cm-1
+which agrees with that observed (Ref. [11], p. 31)
+(Balmer doublet separation)
+λH1_2
+ λH1_1
+1.3639
+10 9
+
+
+
+cm
+(.13639 A)
+which is probably at the limit of most spectroscopes.  Hypothetically, m1 and m2 can go even higher and would be
+observed with spectroscopes of even higher resolving power.  Every line observed can be explained by choosing
+the proper values of ionization level and n1, m1, n2, and m2.  Eq. (2) can only be falsified if a line can be found
+which cannot be accounted for by any integer set of n1, n2, m1, and m2.
+spectra_energy.mcd                       20
+White (Ref. [8], p. 249) and Candler (Ref. [11], p. 113) state the "Alternation Law of Multiplicities":  spectral terms
+arising from successive elements in the periodic table alternate between even and odd multiplicities.  If this effect
+is actually real, and not just due to spectroscopic resolving power, then the Reciprocal System would explain this
+by means of the electric rotational displacement, which increases across a row of the table.  However, ionization
+energy increases likewise, and so for the same values of the n's and m's the lines will be spaced further apart and
+thus other lines intermediate between these could be found at the same resolution (provided, of course, that they
+are still integers).  So, it's not clear at this time that the "Alternation Law of Multiplicities" is a real effect.
+d.  Spectroscopic Jargon
+Conventional spectroscopy and conventional theorists specify "electron configurations"  like this, for the ground state of
+Cs:  
+1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 5s2 5p6 6s
+Spectra result, supposedly, when these electrons (typically the outer electrons, like the 6 in 5p and the one in 6s here) are
+raised to a higher level (orbit or shell or "cloud").  Conventional notations for the transitions are given in the References.  Of
+course, the Reciprocal System completely rejects the nuclear theory of the atom and present-day spectroscopic theory
+and jargon.  A much simpler notation for atomic energy transition may be given as follows, for any frequency or wavelength
+of a photon absorbed or emitted.  If Eother can be neglected, the energy change of an atom can be represented thusly:
+Eel_I_1, m1, n1 --> Eel_I_2, m2, n2
+(6)
+spectra_energy.mcd                       21
+The stage of ionization (series limit) should be given in Roman numerals, following the convention given previously.  So for
+the example with H above, neutral, we would have 
+EH1_I, 2,4  --> EH1_I,2,5
+Here the energy of ionization, at the series limit, is represented by I, Roman numeral 1, for one charge.  Or consider
+isotope Cs-133, going from 4 charges to 5 charges, at highest temperature (n1, n2 = 1, m1, m2 = inf). 
+ECs133_IV,1,inf --> ECs133_V,1,inf
+This is then easily expanded to the totals (but ignoring Eother for now):
+ECs133_tot_1
+ECs133_IV_tot
+ ECs133_V
+
+or
+ECs133_tot_1
+ECs133_V_tot
+
+ECs133_tot_2
+ECs133_V_tot
+ ECs133_VI
+
+or
+ECs133_tot_2
+ECs133_VI_tot
+
+Obviously the difference is then
+ECs133_tot_2
+ ECs133_tot_1
+ ECs133_VI
+(the individual energy required for the 6th charge)
+A 5-charge atom at maximum temperature is thus equal to a 6-charge atom at minimum temperature.
+Because atomic energy depends on ionization state, we now turn to a calculation of the ionization levels of the elements.
+spectra_energy.mcd                       22
+3.  Ionization Energies
+a.  Elements from H to Kr
+We will generalize Moseley's x-ray expression to cover all spectra, so all energy expressions will involve Z2.  Moseley's
+so-called "screening doublets" represent jumps from one ionization level to another adjacent one.  Within one
+ionization level we have the usual optical and surrounding spectra.
+Observed values given below for EI come from Lang, Ref. [22], pp. 246-247,  except where noted from Grigoriev and
+Meilikhov, Ref. [24], pp. 515-521.  Most of Lang's values actually come from Moore's compilation, Ref. [19].
+Moore herself says, Ref. [19], p. 1 and p. 5, "The reliability of the data recorded in the literature is often difficult to appraise.
+In cases where long series are known in the various spectra, the ionization potentials are well determined.  With these as
+key points, good values can be derived by extrapolation or interpolation along isoelectronic sequences, or by comparison
+along the rows in the Periodic Chart for spectra of similar stages of ionization.  Frequently, however, authors give values of
+ionization potentials without stating the conversion factor [between vacuum value and air value] used and without describing
+clearly how the quoted value was obtained....Catalan and his associates ...have interpolated values for spectra in which
+series are not known....In Table 2 all ionization limits were recorded that were derived from observed series, from
+extrapolation or interpolation as described above." 
+ In other words, the "observed" ionization energies compiled by Moore may really just be estimates.  The original attempt at
+calculating the theoretical ionization energies in the Reciprocal System was that given in Ref. [30].  Here, the first ionization
+energy is shown to be twice that of the electron work function.  The problem is that, although the theoretical value of work
+function in the Reciprocal System is known, the experimental values are uncertain.  Even the CRC Handbook (Ref. [25], p.
+12-118) confesses:  "Since [the work function] is dependent on the cleanliness of the surface, measurements reported in
+the literature often cover a considerable range."  Because the first ionization energy = 2 x the work function, this means that
+the observed ionization energy is also somewhat uncertain.  Nonetheless, we will use the observed first ionization levels
+(which are still quite close to those calculated from the Reciprocal System in Ref. [30])) in the tabulations below..  
+In all cases, the final ionization energy, as indicated earlier by Larson, is simply  
+spectra_energy.mcd                       23
+Eel_Z
+h Zel
+2
+
+Rel
+
+(7)
+where Rel is the effective value of R for the isotope:
+Rel
+1
+me
+MH1
+
+1
+me
+Mel
+
+R'
+ccgs
+
+(8)
+This effective Rydberg frequency depends on the mass M of the isotope, because in creating an ion, it's helpful (though
+not strictly required) to have a force couple so that both a positive charge and a negative charge are created.  Therefore
+the mass values of the atom and an electron come into play, as a ratio in Eq. (8).  Incidentally, this is why there is a
+difference of spectra among the isotopes of a given element--this difference is called the isotope shift.  It's not due to
+differences of "nuclear spin."
+OK, so where does the electron come from?  After all, electrons are not constituents of atoms in the Reciprocal System!
+But:  an atom may harbor a massless, chargeless electron (or sometimes more than one).  This is so because there is an
+ominpresent universal flux of photons, neutrinos, and other massless, chargeless subatomic particles in the universe.
+Atoms can capture some of the subatomic particles and keep some of them--particularly a massless, chargeless
+electron.  But once an electron becomes charged, as in ionization, it can escape the atom.  The atom can then accept
+another massless, chargeless electron, and the cycle can then repeat.
+It would be simple if all lower ionization levels could be expressed as
+Eel_Z_xx
+h
+Zel
+ xx
+
+
+2
+
+Rel
+
+(9)
+spectra_energy.mcd                       24
+where xx is an integer in the set {Zel-1, Zel-2, ...., 1}.  But the rotational displacements of the atom modify this number into
+a real number, which we will call the "ion shift" (same as what is called the "screening constant" in conventional theory).
+For the penultimate (next to last) ionization level
+xx
+2
+3
+
+(penultimate ionization)
+(10)
+rather than 1.  For the remainder of the ionization levels, the ion shift is a linear function of the level, with two line segments
+having different slopes.  Normally the first segment has a slope of 1/3, indicating that the one-dimensional electric rotational
+displacements of the atom are the factors affecting xx, and normally the second segment has a slope of 1/2, indicating that
+the two-dimensional magnetic rotational displacements of the atoms are the factors affecting xx.
+In what follows, for most cases after the first 10 elements, we will compute the best fit values for the slopes by manual
+iteration.  You will see that in most cases these best fit values are very close to the theoretical values.  Then the
+calculated values of the ionization energies are compared with the observed values.  Complete series are known only for
+the range of elements from H to Kr, so that's what we'll cover.  The isotope masses (in u) are those calculated from
+Reciprocal System theory in Ref. [31].  Subscripts will be used to denote ionization levels here, rather than Roman
+numerals, for convenience.
+spectra_energy.mcd                       25
+H1
+ZH
+ 1
+MH1
+ 1.0078078
+RH1
+ R
+EH11
+ZH
+2 h
+
+RH1
+
+EH11
+ 13.61256
+EH1_obs1
+13.598
+
+(based on Ref. [16], p. 1)
+H2
+MH2
+ 2.014169251
+R'H2
+1
+me
+MH1
+
+1
+me
+MH2
+
+R'
+
+RH2
+ccgs R'H2
+
+
+EH21
+h RH2
+
+
+EH21
+ 13.61626
+EH2_obs1
+ 13.6012
+(based on Ref. [16], p. 3)
+H3
+MH3
+ 3.0160493
+(obs.)
+R'H3
+1
+me
+MH1
+
+1
+me
+MH3
+
+R'
+
+RH3
+ccgs R'H3
+
+
+EH31
+h RH3
+
+
+EH31
+ 13.61749
+EH3_obs1
+ 13.6024
+(based on Ref. [16], p. 3)
+spectra_energy.mcd                       26
+He
+ZHe
+ 2
+MHe4
+ 4.002589
+R'He4
+1
+me
+MH1
+
+1
+me
+MHe4
+
+R'
+
+RHe4
+ccgs R'He4
+
+
+ck
+1
+ ZHe
+
+EHe4_obs
+24.587
+54.416
+
+
+EHe41
+ZHe
+2
+3
+
+
+
+2
+h
+RHe4
+
+EHe41
+24.20996
+
+EHe42
+ZHe
+2 h
+
+RHe4
+
+EHe42
+54.4724
+
+EHe4ck
+24.20996
+54.4724
+
+EHe4_obsck
+24.587
+54.416
+
+1
+ZHe
+ii
+EHe4ii
+EHe4_obsii
+
+
+ZHe
+ 0.99285
+spectra_energy.mcd                       27
+Li
+ZLi
+ 3
+MLi7
+ 7.042190
+R'Li7
+1
+me
+MH1
+
+1
+me
+MLi7
+
+R'
+
+RLi7
+ccgs R'Li7
+
+
+ELi7_obs
+5.392
+75.638
+122.451
+
+
+
+
+
+
+
+
+
+cm
+1
+ZLi
+ 2
+
+
+ck
+1
+ ZLi
+
+xx1
+ZLi
+ELi7_obs1
+RLi7 h
+
+
+
+xx1
+2.37078
+
+cl
+2
+
+ZLi
+ xx1
+0.62922
+
+ELi71
+ZLi
+ xx1
+
+
+2 h
+
+RLi7
+
+ELi7ZLi 1
+
+h RLi7
+
+ZLi
+2
+3
+
+
+
+2
+
+
+ELi7ZLi
+h RLi7
+
+ZLi
+2
+
+
+1
+2
+3
+0
+50
+100
+ELi7ck
+ELi7_obsck
+ck
+ELi7ck
+5.392
+74.14738
+122.57016
+
+ELi7_obsck
+5.392
+75.638
+122.451
+
+1
+ZLi
+ii
+ELi7ii
+ELi7_obsii
+
+
+ZLi
+ 0.99376
+spectra_energy.mcd                       28
+Be
+ZBe
+ 4
+MBe9
+9.056359
+
+R'Be9
+1
+me
+MH1
+
+1
+me
+MBe9
+
+R'
+
+RBe9
+ccgs R'Be9
+
+
+EBe9_obs
+9.322
+18.211
+153.893
+217.713
+
+
+
+
+
+
+
+
+
+cl
+2
+ZBe
+ 2
+
+
+cm
+1
+ZBe
+ 2
+
+
+ck
+1
+ ZBe
+
+xx1
+ZBe
+EBe9_obs1
+RBe9 h
+
+
+
+xx1
+3.17267
+
+ZBe
+ xx1
+0.82733
+
+xxcl
+xx1
+cl
+ 1
+(
+) .1
+3
+
+
+
+EBe9cl
+ZBe
+ xxcl
+
+
+2 h
+
+RBe9
+
+EBe91
+ZBe
+ xx1
+
+
+2 h
+
+RBe9
+
+EBe9ZBe 1
+
+h RBe9
+
+ZBe
+2
+3
+
+
+
+2
+
+
+EBe9ZBe
+h RBe9
+
+ZBe
+2
+
+
+EBe9ck
+9.322
+10.0883
+151.32381
+217.90628
+
+EBe9_obsck
+9.322
+18.211
+153.893
+217.713
+
+1
+2
+3
+4
+0
+100
+200
+EBe9ck
+EBe9_obsck
+ck
+1
+ZBe
+ii
+EBe9ii
+EBe9_obsii
+
+
+ZBe
+0.88454
+
+The theoretical slope, 1/3, has been used here; see below.
+spectra_energy.mcd                       29
+B
+ZB
+ 5
+MB11
+ 11.012542
+R'B11
+1
+me
+MH1
+
+1
+me
+MB11
+
+R'
+
+RB11
+ccgs R'B11
+
+
+EB11_obs
+8.298
+25.154
+37.930
+259.368
+340.217
+
+
+
+
+
+
+
+
+
+
+
+
+
+cl
+2
+ZB
+ 2
+
+
+cm
+1
+ZB
+ 2
+
+
+ck
+1
+ ZB
+
+xx1
+ZB
+EB11_obs1
+RB11 h
+
+
+
+xx1
+4.21943
+
+ZB
+ xx1
+0.78057
+
+xxcl
+xx1
+cl
+ 1
+(
+) 1
+2
+
+
+
+EB11cl
+ZB
+ xxcl
+
+
+2 h
+
+RB11
+
+EB111
+ZB
+ xx1
+
+
+2 h
+
+RB11
+
+EB11ZB 1
+
+h RB11
+
+ZB
+2
+3
+
+
+
+2
+
+
+EB11ZB
+h RB11
+
+ZB
+2
+
+
+E
+E
+spectra_energy.mcd                       30
+1
+2
+3
+4
+5
+0
+100
+200
+300
+EB11ck
+EB11_obsck
+ck
+EB11ck
+8.298
+22.33357
+43.17879
+255.73999
+340.48223
+
+EB11_obsck
+8.298
+25.154
+37.93
+259.368
+340.217
+
+1
+ZB
+ii
+EB11ii
+EB11_obsii
+
+
+ZB
+1.00261
+
+C
+ZC
+ 6
+MC12
+ 12.085016
+R'C12
+1
+me
+MH1
+
+1
+me
+MC12
+
+R'
+
+RC12
+ccgs R'C12
+
+
+EC12_obs
+11.26
+24.383
+47.887
+64.492
+392.077
+489.981
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cl
+2
+ZC
+ 2
+
+
+cm
+1
+ZC
+ 2
+
+
+ck
+1
+ ZC
+
+xx1
+ZC
+EC12_obs1
+RC12 h
+
+
+
+xx1
+5.09073
+
+ZC
+ xx1
+0.90927
+
+xxcl
+xx1
+cl
+ 1
+(
+) 1
+2
+
+
+
+EC12cl
+ZC
+ xxcl
+
+
+2 h
+
+RC12
+
+spectra_energy.mcd                       31
+EC121
+ZC
+ xx1
+
+
+2 h
+
+RC12
+
+EC12ZC 1
+
+h RC12
+
+ZC
+2
+3
+
+
+
+2
+
+
+EC12ZC
+h RC12
+
+ZC
+2
+
+
+EC12ck
+11.26
+27.04845
+49.64658
+79.05438
+387.39483
+490.29658
+
+EC12_obsck
+11.26
+24.383
+47.887
+64.492
+392.077
+489.981
+
+1
+2
+3
+4
+5
+6
+0
+100
+200
+300
+400
+500
+EC12ck
+EC12_obsck
+ck
+1
+ZC
+ii
+EC12ii
+EC12_obsii
+
+
+ZC
+ 1.06009
+spectra_energy.mcd                       32
+N
+ZN
+ 7
+MN14
+ 14.099185
+R'N14
+1
+me
+MH1
+
+1
+me
+MN14
+
+R'
+
+RN14
+ccgs R'N14
+
+
+EN14_obs
+14.534
+29.601
+47.448
+77.472
+97.888
+552.057
+667.029
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cl
+2
+ZN
+ 2
+
+
+cm
+1
+ZN
+ 2
+
+
+ck
+1
+ ZN
+
+xx1
+ZN
+EN14_obs1
+RN14 h
+
+
+
+xx1
+5.96697
+
+ZN
+ xx1
+1.03303
+
+xxcl
+xx1
+cl
+ 1
+(
+) 1
+2
+
+
+
+EN14cl
+ZN
+ xxcl
+
+
+2 h
+
+RN14
+
+EN141
+ZN
+ xx1
+
+
+2 h
+
+RN14
+
+EN14ZN 1
+
+h RN14
+
+ZN
+2
+3
+
+
+
+2
+
+
+EN14ZN
+h RN14
+
+ZN
+2
+
+
+EN14ck
+14.534
+32.00815
+56.29202
+87.3856
+125.28891
+546.29078
+667.35245
+
+EN14_obsck
+14.534
+29.601
+47.448
+77.472
+97.888
+552.057
+667.029
+
+1
+2
+3
+4
+5
+6
+7
+0
+200
+400
+600
+EN14ck
+EN14_obsck
+ck
+1
+ZN
+ii
+EN14ii
+EN14_obsii
+
+
+ZN
+ 1.09509
+spectra_energy.mcd                       33
+O
+ZO
+ 8
+MO16
+ 16.113354
+R'O16
+1
+me
+MH1
+
+1
+me
+MO16
+
+R'
+
+RO16
+ccgs R'O16
+
+
+EO16_obs
+13.618
+35.116
+54.934
+77.412
+113.896
+138.116
+739.315
+871.387
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cl
+2
+ZO
+ 2
+
+
+cm
+1
+ZO
+ 2
+
+
+ck
+1
+ ZO
+
+xx1
+ZO
+EO16_obs1
+RO16 h
+
+
+
+xx1
+7.00006
+
+ZO
+ xx1
+0.99994
+
+xxcl
+xx1
+cl
+ 1
+(
+) 1
+2
+
+
+
+EO16cl
+ZO
+ xxcl
+
+
+2 h
+
+RO16
+
+EO161
+ZO
+ xx1
+
+
+2 h
+
+RO16
+
+EO16ZO 1
+
+h RO16
+
+ZO
+2
+3
+
+
+
+2
+
+
+EO16ZO
+h RO16
+
+ZO
+2
+
+
+EO16ck
+13.618
+30.64163
+54.47501
+85.11814
+122.57102
+166.83366
+732.42666
+871.64825
+
+EO16_obsck
+13.618
+35.116
+54.934
+77.412
+113.896
+138.116
+739.315
+871.387
+
+1
+2
+3
+4
+5
+6
+7
+8
+0
+200
+400
+600
+800
+EO16ck
+EO16_obsck
+ck
+1
+ZO
+ii
+EO16ii
+EO16_obsii
+
+
+ZO
+ 1.02986
+spectra_energy.mcd                       34
+F
+ZF
+ 9
+MF19
+ 19.127205
+R'F19
+1
+me
+MH1
+
+1
+me
+MF19
+
+R'
+
+RF19
+ccgs R'F19
+
+
+EF19_obs
+17.422
+34.970
+62.707
+87.138
+114.240
+157.161
+185.182
+953.886
+1103.089
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cl
+2
+ZF
+ 2
+
+
+cm
+1
+ZF
+ 2
+
+
+ck
+1
+ ZF
+
+xx1
+ZF
+EF19_obs1
+RF19 h
+
+
+
+xx1
+7.86899
+
+ZF
+ xx1
+1.13101
+
+xxcl
+xx1
+cl
+ 1
+(
+) 1
+2
+
+
+
+EF19cl
+ZF
+ xxcl
+
+
+2 h
+
+RF19
+
+EF191
+ZF
+ xx1
+
+
+2 h
+
+RF19
+
+EF19ZF 1
+
+h RF19
+
+ZF
+2
+3
+
+
+
+2
+
+
+EF19ZF
+h RF19
+
+ZF
+2
+
+
+EF19ck
+17.422
+36.2308
+61.84939
+94.27776
+133.51593
+179.56388
+232.42162
+945.80396
+1103.18574
+
+EF19_obsck
+17.422
+34.97
+62.707
+87.138
+114.24
+157.161
+185.182
+953.886
+1103.089
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+0
+500
+1 103
+
+EF19ck
+EF19_obsck
+ck
+1
+ZF
+ii
+EF19ii
+EF19_obsii
+
+
+ZF
+ 1.07359
+spectra_energy.mcd                       35
+Ne
+ZNe
+ 10
+MNe20
+ 20.141693
+R'Ne20
+1
+me
+MH1
+
+1
+me
+MNe20
+
+R'
+
+RNe20
+ccgs R'Ne20
+
+
+ENe20_obs
+21.564
+40.962
+63.45
+97.11
+126.21
+157.93
+207.27
+239.09
+1195.797
+1362.164
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cl
+2
+ZNe
+ 2
+
+
+cm
+1
+ZNe
+ 2
+
+
+ck
+1
+ ZNe
+
+xx1
+ZNe
+ENe20_obs1
+RNe20 h
+
+
+
+xx1
+8.7417
+
+ZNe
+ xx1
+1.2583
+
+ENe201
+ZNe
+ xx1
+
+
+2 h
+
+RNe20
+
+ENe20ZNe 1
+
+h RNe20
+
+ZNe
+2
+3
+
+
+
+2
+
+
+ENe20ZNe
+h RNe20
+
+ZNe
+2
+
+
+xxcl
+xx1
+cl
+ 1
+(
+) 1
+2
+
+
+
+ENe20cl
+ZNe
+ xxcl
+
+
+2 h
+
+RNe20
+
+spectra_energy.mcd                       36
+ENe20ck
+21.564
+42.10637
+69.45854
+103.62051
+144.59228
+192.37384
+246.96521
+308.36637
+1186.4182
+1361.95967
+
+ENe20_obsck
+21.564
+40.962
+63.45
+97.11
+126.21
+157.93
+207.27
+239.09
+1195.797
+1362.164
+
+1 2 3
+4 5
+6 7
+8 9 10
+0
+500
+1 103
+
+ENe20ck
+ENe20_obsck
+ck
+1
+ZNe
+ii
+ENe20ii
+ENe20_obsii
+
+
+ZNe
+ 1.10267
+spectra_energy.mcd                       37
+Na
+ZNa
+ 11
+MNa23
+ 23.155544
+R'Na23
+1
+me
+MH1
+
+1
+me
+MNa23
+
+
+
+
+
+
+
+R'
+
+RNa23
+ccgs R'Na23
+
+
+ENa23_obs
+5.139
+47.286
+71.64
+98.91
+138.39
+172.15
+208.47
+264.18
+299.87
+1465.091
+1648.659
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cl
+3
+ZNa
+ 2
+
+
+cm
+1
+ZNa
+ 2
+
+
+ck
+1
+ ZNa
+
+xx1
+ZNa
+ENa23_obs1
+RNa23 h
+
+
+
+xx1
+10.38573
+
+(special)
+ZNa
+ xx1
+0.61427
+
+xx2
+ZNa
+ENa23_obs2
+RNa23 h
+
+
+
+special situation for Na only--have to use observed second ionization
+spectra_energy.mcd                       38
+ENa231
+ZNa
+ xx1
+
+
+2 h
+
+RNa23
+
+ENa23ZNa 1
+
+h RNa23
+
+ZNa
+2
+3
+
+
+
+2
+
+
+ENa23ZNa
+h RNa23
+
+ZNa
+2
+
+
+ENa232
+ZNa
+ xx2
+
+
+2 h
+
+RNa23
+
+xxcl
+xx2
+1
+3
+cl
+ 1
+(
+)
+
+Φ01 cl
+ 2
+(
+)
+
+
+
+ENa23cl
+ZNa
+ xxcl
+
+
+2 h
+
+RNa23
+
+ENa23ck
+5.1390
+47.2860
+87.1759
+111.6607
+139.1721
+169.7101
+203.2747
+239.8658
+279.4836
+1454.2754
+1647.9770
+
+ENa23_obsck
+5.139
+47.286
+71.64
+98.91
+138.39
+172.15
+208.47
+264.18
+299.87
+1465.091
+1648.659
+
+1 2 3 4 5 6 7 8 9 1011
+0
+500
+1 103
+
+1.5 103
+
+ENa23ck
+ENa23_obsck
+ck
+1
+ZNa
+i
+ENa23i
+ENa23_obsi
+
+
+ZNa
+1.01314
+
+From here on out we'll determine the "best fit" values for the two slopes, but keep in mind that the theoretical values are 1/3
+and 1/2.  See above and below for a discussion of this matter.
+spectra_energy.mcd                       39
+Mg
+ZMg
+ 12
+MMg24
+ 24.170031
+R'Mg24
+1
+me
+MH1
+
+1
+me
+MMg24
+
+
+
+
+
+
+
+R'
+
+RMg24
+ccgs R'Mg24
+
+
+(calc)
+EMg24_obs
+7.646
+15.035
+80.143
+109.24
+141.26
+186.50
+224.94
+265.90
+327.95
+367.53
+1761.802
+1962.813
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cl
+2
+ZMg
+ 2
+
+
+cm
+1
+ZMg
+ 2
+
+
+ck
+1
+ ZMg
+
+xx1
+ZMg
+EMg24_obs1
+RMg24 h
+
+
+
+xx1
+11.25074
+
+EMg241
+ZMg
+ xx1
+
+
+2 h
+
+RMg24
+
+EMg24ZMg 1
+
+h RMg24
+
+ZMg
+2
+3
+
+
+
+2
+
+
+EMg24ZMg
+h RMg24
+
+ZMg
+2
+
+
+spectra_energy.mcd                       40
+xxcl
+xx1
+.33 cl
+ 1
+(
+)
+
+Φ01 2
+ cl
+(
+)
+
+
+.575 cl
+ 1
+(
+)
+
+Φ01 cl
+ 3
+(
+)
+
+
+
+(segment change after cl = 2)
+EMg24cl
+ZMg
+ xxcl
+
+
+2 h
+
+RMg24
+
+EMg24ck
+7.646
+15.86428
+49.12881
+83.37921
+126.63561
+178.89802
+240.16642
+310.44082
+389.72122
+478.00761
+1749.36947
+1961.23082
+
+EMg24_obsck
+7.646
+15.035
+80.143
+109.24
+141.26
+186.5
+224.94
+265.9
+327.95
+367.53
+1761.802
+1962.813
+
+0
+500
+1 103
+
+1.5 103
+
+2 103
+
+EMg24ck
+EMg24_obsck
+ck
+1
+ZMg
+ii
+EMg24ii
+EMg24_obsii
+
+
+ZMg
+ 1.00029
+spectra_energy.mcd                       41
+Al
+ZAl
+ 13
+MAl27
+ 27.183882
+R'Al27
+1
+me
+MH1
+
+1
+me
+MAl27
+
+
+
+
+
+
+
+R'
+
+RAl27
+ccgs R'Al27
+
+
+         
+EAl27_obs
+5.986
+18.828
+28.447
+119.99
+153.71
+190.47
+241.43
+284.59
+330.21
+398.57
+442.07
+2085.983
+2304.080
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cl
+2
+ZAl
+ 2
+
+
+cm
+1
+ZAl
+ 2
+
+
+ck
+1
+ ZAl
+
+xx1
+ZAl
+EAl27_obs1
+RAl27 h
+
+
+
+xx1
+12.33704
+
+EAl271
+ZAl
+ xx1
+
+
+2 h
+
+RAl27
+
+EAl27ZAl 1
+
+h RAl27
+
+ZAl
+2
+3
+
+
+
+2
+
+
+EAl27ZAl
+h RAl27
+
+ZAl
+2
+
+
+spectra_energy.mcd                       42
+xxcl
+xx1
+.33 cl
+ 1
+(
+)
+
+Φ01 3
+ cl
+(
+)
+
+
+.6 cl
+ 1
+(
+)
+
+Φ01 cl
+ 4
+(
+)
+
+
+
+(segment change after cl = 3)
+EAl27cl
+ZAl
+ xxcl
+
+
+2 h
+
+RAl27
+
+EAl27ck
+5.986
+13.42849
+23.83736
+82.61913
+127.77586
+182.73878
+247.50787
+322.08314
+406.46459
+500.65222
+604.64602
+2071.7066
+2301.72808
+
+EAl27_obsck
+5.986
+18.828
+28.447
+119.99
+153.71
+190.47
+241.43
+284.59
+330.21
+398.57
+442.07
+2085.983
+2304.08
+
+1
+5
+9
+13
+0
+1 103
+
+2 103
+
+EAl27ck
+EAl27_obsck
+ck
+1
+ZAl
+ii
+EAl27ii
+EAl27_obsii
+
+
+ZAl
+ 1.00264
+spectra_energy.mcd                       43
+Si
+ZSi
+ 14
+MSi28
+ 28.198370
+R'Si28
+1
+me
+MH1
+
+1
+me
+MSi28
+
+
+
+
+
+
+
+R'
+
+RSi28
+ccgs R'Si28
+
+
+         
+ESi28_obs
+8.151
+16.345
+33.492
+45.141
+166.77
+205.05
+246.52
+303.17
+351.10
+401.43
+476.06
+523.50
+2437.676
+2673.108
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cl
+2
+ZSi
+ 2
+
+
+cm
+1
+ZSi
+ 2
+
+
+ck
+1
+ ZSi
+
+xx1
+ZSi
+ESi28_obs1
+RSi28 h
+
+
+
+xx1
+13.22639
+
+ESi281
+ZSi
+ xx1
+
+
+2 h
+
+RSi28
+
+ESi28ZSi 1
+
+h RSi28
+
+ZSi
+2
+3
+
+
+
+2
+
+
+ESi28ZSi
+h RSi28
+
+ZSi
+2
+
+
+spectra_energy.mcd                       44
+xxcl
+xx1
+.37 cl
+ 1
+(
+)
+
+Φ01 4
+ cl
+(
+)
+
+
+.55 cl
+ 1
+(
+)
+
+Φ01 cl
+ 5
+(
+)
+
+
+
+(segment change after cl = 4)
+ESi28cl
+ZSi
+ xxcl
+
+
+2 h
+
+RSi28
+
+ESi28ck
+8.151
+17.81242
+31.20291
+48.32248
+120.4302
+169.0998
+226.00932
+291.15876
+364.54812
+446.17741
+536.04661
+634.15573
+2421.28047
+2669.46172
+
+ESi28_obsck
+8.151
+16.345
+33.492
+45.141
+166.77
+205.05
+246.52
+303.17
+351.1
+401.43
+476.06
+523.5
+2437.676
+2673.108
+
+0
+1 103
+
+2 103
+
+ESi28ck
+ESi28_obsck
+ck
+1
+ZSi
+ii
+ESi28ii
+ESi28_obsii
+
+
+ZSi
+ 0.99964
+spectra_energy.mcd                       45
+P
+ZP
+ 15
+MP31
+ 31.212221
+R'P31
+1
+me
+MH1
+
+1
+me
+MP31
+
+
+
+
+
+
+
+R'
+
+RP31
+ccgs R'P31
+
+
+         
+EP31_obs
+10.486
+19.725
+30.18
+51.37
+65.023
+220.43
+263.22
+309.41
+371.73
+424.50
+479.57
+560.41
+611.85
+2816.943
+3069.762
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cl
+2
+ZP
+ 2
+
+
+cm
+1
+ZP
+ 2
+
+
+ck
+1
+ ZP
+
+xx1
+ZP
+EP31_obs1
+RP31 h
+
+
+
+xx1
+14.12255
+
+EP311
+ZP
+ xx1
+
+
+2 h
+
+RP31
+
+EP31ZP 1
+
+h RP31
+
+ZP
+2
+3
+
+
+
+2
+
+
+EP31ZP
+h RP31
+
+ZP
+2
+
+
+spectra_energy.mcd                       46
+xxcl
+xx1
+.32 cl
+ 1
+(
+)
+
+Φ01 5
+ cl
+(
+)
+
+
+.54 cl
+ 1
+(
+)
+
+Φ01 cl
+ 6
+(
+)
+
+
+
+(segment change after cl = 5)
+EP31cl
+ZP
+ xxcl
+
+
+2 h
+
+RP31
+
+EP31ck
+10.486
+19.52903
+31.36139
+45.98306
+63.39406
+174.30698
+230.90025
+295.43654
+367.91587
+448.33821
+536.70359
+633.01199
+737.26341
+2798.0975
+3064.43885
+
+EP31_obsck
+10.486
+19.725
+30.18
+51.37
+65.023
+220.43
+263.22
+309.41
+371.73
+424.5
+479.57
+560.41
+611.85
+2816.943
+3069.762
+
+0
+1 103
+
+2 103
+
+3 103
+
+EP31ck
+EP31_obsck
+ck
+1
+ZP
+ii
+EP31ii
+EP31_obsii
+
+
+ZP
+ 1.00088
+spectra_energy.mcd                       47
+S
+ZS
+ 16
+MS32
+ 32.226708
+R'S32
+1
+me
+MH1
+
+1
+me
+MS32
+
+
+
+
+
+
+
+R'
+
+RS32
+ccgs R'S32
+
+
+         
+ES32_obs
+10.360
+23.33
+34.83
+47.30
+72.68
+88.049
+280.93
+328.23
+379.10
+447.09
+504.78
+564.65
+651.63
+707.14
+3223.836
+3494.099
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cl
+2
+ZS
+ 2
+
+
+cm
+1
+ZS
+ 2
+
+
+ck
+1
+ ZS
+
+xx1
+ZS
+ES32_obs1
+RS32 h
+
+
+
+xx1
+15.12784
+
+ES321
+ZS
+ xx1
+
+
+2 h
+
+RS32
+
+ES32ZS 1
+
+h RS32
+
+ZS
+2
+3
+
+
+
+2
+
+
+ES32ZS
+h RS32
+
+ZS
+2
+
+
+spectra_energy.mcd                       48
+xxcl
+xx1
+.33 cl
+ 1
+(
+)
+
+Φ01 6
+ cl
+(
+)
+
+
+.545 cl
+ 1
+(
+)
+
+Φ01 cl
+ 7
+(
+)
+
+
+
+(segment change after cl = 6)
+ES32cl
+ZS
+ xxcl
+
+
+2 h
+
+RS32
+
+ES32ck
+10.36
+19.68305
+31.97247
+47.22827
+65.45046
+86.63902
+233.68033
+299.2182
+372.84687
+454.56635
+544.37663
+642.27772
+748.26961
+862.3523
+3202.15121
+3486.65235
+
+ES32_obsck
+10.36
+23.33
+34.83
+47.3
+72.68
+88.049
+280.93
+328.23
+379.1
+447.09
+504.78
+564.65
+651.63
+707.14
+3223.836
+3494.099
+
+0
+1 103
+
+2 103
+
+3 103
+
+ES32ck
+ES32_obsck
+ck
+1
+ZS
+ii
+ES32ii
+ES32_obsii
+
+
+ZS
+ 0.9977
+spectra_energy.mcd                       49
+Cl
+ZCl
+ 17
+MCl35
+ 35.240559
+R'Cl35
+1
+me
+MH1
+
+1
+me
+MCl35
+
+
+
+
+
+
+
+R'
+
+RCl35
+ccgs R'Cl35
+
+
+         
+ECl35_obs
+12.967
+23.81
+39.61
+53.46
+67.8
+97.03
+114.193
+348.28
+400.05
+455.62
+529.26
+591.97
+656.69
+749.74
+809.39
+3658.425
+3946.193
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cl
+2
+ZCl
+ 2
+
+
+cm
+1
+ZCl
+ 2
+
+
+ck
+1
+ ZCl
+
+xx1
+ZCl
+ECl35_obs1
+RCl35 h
+
+
+
+xx1
+16.02426
+
+ECl351
+ZCl
+ xx1
+
+
+2 h
+
+RCl35
+
+ECl35ZCl 1
+
+h RCl35
+
+ZCl
+2
+3
+
+
+
+2
+
+
+ECl35ZCl
+h RCl35
+
+ZCl
+2
+
+
+spectra_energy.mcd                       50
+xxcl
+xx1
+.33 cl
+ 1
+(
+)
+
+Φ01 7
+ cl
+(
+)
+
+
+.52 cl
+ 1
+(
+)
+
+Φ01 cl
+ 8
+(
+)
+
+
+
+(segment change after cl = 7)
+ECl35cl
+ZCl
+ xxcl
+
+
+2 h
+
+RCl35
+
+ECl35ck
+12.967
+23.22118
+36.44173
+52.62868
+71.782
+93.90171
+118.9878
+290.16993
+359.23261
+435.66084
+519.45465
+610.61401
+709.13894
+815.02943
+928.28549
+3633.44813
+3936.10936
+
+ECl35_obsck
+12.967
+23.81
+39.61
+53.46
+67.8
+97.03
+114.193
+348.28
+400.05
+455.62
+529.26
+591.97
+656.69
+749.74
+809.39
+3658.425
+3946.193
+
+0
+1 103
+
+2 103
+
+3 103
+
+4 103
+
+ECl35ck
+ECl35_obsck
+ck
+1
+ZCl
+ii
+ECl35ii
+ECl35_obsii
+
+
+ZCl
+ 0.99723
+spectra_energy.mcd                       51
+Ar
+ZAr
+ 18
+MAr40
+ 40.253775
+R'Ar40
+1
+me
+MH1
+
+1
+me
+MAr40
+
+
+
+
+
+
+
+R'
+
+RAr40
+ccgs R'Ar40
+
+
+         
+EAr40_obs
+15.759
+27.629
+40.74
+59.81
+75.02
+91.007
+124.319
+143.456
+422.44
+478.68
+538.95
+618.24
+686.09
+755.73
+854.75
+918
+4120.778
+4426.114
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cl
+2
+ZAr
+ 2
+
+
+cm
+1
+ZAr
+ 2
+
+
+ck
+1
+ ZAr
+
+xx1
+ZAr
+EAr40_obs1
+RAr40 h
+
+
+
+xx1
+16.92433
+
+xx_obsck
+ZAr
+EAr40_obsck
+RAr40 h
+
+
+
+EAr401
+ZAr
+ xx1
+
+
+2 h
+
+RAr40
+
+EAr40ZAr 1
+
+h RAr40
+
+ZAr
+2
+3
+
+
+
+2
+
+
+EAr40ZAr
+h RAr40
+
+ZAr
+2
+
+
+spectra_energy.mcd                       52
+xxcl
+xx1
+.333 cl
+ 1
+(
+)
+
+Φ01 8
+ cl
+(
+)
+
+
+.5 cl
+ 1
+(
+)
+
+Φ01 cl
+ 9
+(
+)
+
+
+
+(segment change after cl = 8)
+EAr40cl
+ZAr
+ xxcl
+
+
+2 h
+
+RAr40
+
+EAr40ck
+15.759
+27.02645
+41.31447
+58.62305
+78.9522
+102.30192
+128.67221
+158.06307
+350.87869
+423.41316
+502.75752
+588.91178
+681.87592
+781.64996
+888.23388
+1001.6277
+4091.98783
+4412.80937
+
+EAr40_obsck
+15.759
+27.629
+40.74
+59.81
+75.02
+91.007
+124.319
+143.456
+422.44
+478.68
+538.95
+618.24
+686.09
+755.73
+854.75
+918
+4120.778
+4426.114
+
+0
+1 103
+
+2 103
+
+3 103
+
+4 103
+
+EAr40ck
+EAr40_obsck
+ck
+1
+ZAr
+ii
+EAr40ii
+EAr40_obsii
+
+
+ZAr
+ 1.00193
+spectra_energy.mcd                       53
+K
+ZK
+ 19
+MK39
+ 39.2688898
+R'K39
+1
+me
+MH1
+
+1
+me
+MK39
+
+
+
+
+
+
+
+R'
+
+RK39
+ccgs R'K39
+
+
+         
+EK39_obs
+4.341
+31.625
+45.72
+60.91
+82.66
+100.0
+117.56
+154.86
+175.814
+503.44
+564.13
+629.09
+714.02
+787.13
+861.77
+968
+1034
+4610.955
+4933.931
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cl
+2
+ZK
+ 2
+
+
+cm
+1
+ZK
+ 2
+
+
+ck
+1
+ ZK
+
+xx1
+ZK
+EK39_obs1
+RK39 h
+
+
+
+xx1
+18.43544
+
+xx_obsck
+ZK
+EK39_obsck
+RK39 h
+
+
+
+spectra_energy.mcd                       54
+EK391
+ZK
+ xx1
+
+
+2 h
+
+RK39
+
+EK39ZK 1
+
+h RK39
+
+ZK
+2
+3
+
+
+
+2
+
+
+EK39ZK
+h RK39
+
+ZK
+2
+
+
+xxcl
+xx1
+.44 cl
+ 1
+(
+)
+
+Φ01 9
+ cl
+(
+)
+
+
+.57 cl
+ 1
+(
+)
+
+Φ01 cl
+ 10
+(
+)
+
+
+
+(segment change after cl = 9)
+EK39cl
+ZK
+ xxcl
+
+
+2 h
+
+RK39
+
+EK39ck
+4.341
+13.74427
+28.42111
+48.37153
+73.59553
+104.0931
+139.86426
+180.90899
+227.2273
+441.66228
+534.50419
+636.19623
+746.73841
+866.13071
+994.37314
+1131.46571
+1277.40841
+4577.75849
+4916.73962
+
+EK39_obsck
+4.341
+31.625
+45.72
+60.91
+82.66
+100
+117.56
+154.86
+175.814
+503.44
+564.13
+629.09
+714.02
+787.13
+861.77
+968
+1034
+4610.955
+4933.931
+
+0
+1 103
+
+2 103
+
+3 103
+
+4 103
+
+5 103
+
+EK39ck
+EK39_obsck
+ck
+1
+ZK
+ii
+EK39ii
+EK39_obsii
+
+
+ZK
+ 0.99799
+spectra_energy.mcd                       55
+Ca
+ZCa
+ 20
+MCa40
+ 40.283385
+R'Ca40
+1
+me
+MH1
+
+1
+me
+MCa40
+
+
+
+
+
+
+
+R'
+
+RCa40
+ccgs R'Ca40
+
+
+         
+ECa40_obs
+6.113
+11.871
+50.908
+67.10
+84.41
+108.78
+127.7
+147.24
+188.54
+211.70
+591.25
+656.39
+726.03
+816.61
+895.12
+974
+1087
+1157
+5129.045
+5469.738
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cl
+2
+ZCa
+ 2
+
+
+cm
+1
+ZCa
+ 2
+
+
+ck
+1
+ ZCa
+
+xx1
+ZCa
+ECa40_obs1
+RCa40 h
+
+
+
+xx1
+19.33005
+
+xx_obsck
+ZCa
+ECa40_obsck
+RCa40 h
+
+
+
+spectra_energy.mcd                       56
+ECa401
+ZCa
+ xx1
+
+
+2 h
+
+RCa40
+
+ECa40ZCa 1
+
+h RCa40
+
+ZCa
+2
+3
+
+
+
+2
+
+
+ECa40ZCa
+h RCa40
+
+ZCa
+2
+
+
+xxcl
+xx1
+.4 cl
+ 1
+(
+)
+
+Φ01 10
+ cl
+(
+)
+
+
+.55 cl
+ 1
+(
+)
+
+Φ01 cl
+ 11
+(
+)
+
+
+
+(segment change after cl = 10)
+ECa40cl
+ZCa
+ xxcl
+
+
+2 h
+
+RCa40
+
+ECa40ck
+6.113
+15.59182
+29.42897
+47.62445
+70.17826
+97.0904
+128.36087
+163.98967
+203.9768
+248.32226
+518.48165
+615.03834
+719.835
+832.87162
+954.14822
+1083.66478
+1221.42131
+1367.41781
+5090.7719
+5447.91285
+
+ECa40_obsck
+6.113
+11.871
+50.908
+67.1
+84.41
+108.78
+127.7
+147.24
+188.54
+211.7
+591.25
+656.39
+726.03
+816.61
+895.12
+974
+1087
+1157
+5129.045
+5469.738
+
+0
+2 103
+
+4 103
+
+ECa40ck
+ECa40_obsck
+ck
+1
+ZCa
+ii
+ECa40ii
+ECa40_obsii
+
+
+ZCa
+ 0.99985
+spectra_energy.mcd                       57
+Sc
+ZSc
+ 21
+MSc45
+ 45.296601
+R'Sc45
+1
+me
+MH1
+
+1
+me
+MSc45
+
+
+
+
+
+
+
+R'
+
+RSc45
+ccgs R'Sc45
+
+
+ESc45_obs
+6.54
+12.80
+24.76
+73.47
+91.66
+111.1
+138.0
+158.7
+180.02
+225.32
+249.832
+685.89
+755.47
+829.79
+926
+1009
+1094
+1213
+1288
+5674.9
+6033.8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cl
+2
+ZSc
+ 2
+
+
+cm
+1
+ZSc
+ 2
+
+
+ck
+1
+ ZSc
+
+xx1
+ZSc
+ESc45_obs1
+RSc45 h
+
+
+
+xx1
+20.30705
+
+xx_obsck
+ZSc
+ESc45_obsck
+RSc45 h
+
+
+
+(from Ref. [24] compilation after XV)
+spectra_energy.mcd                       58
+ESc451
+ZCa
+ xx1
+
+
+2 h
+
+RSc45
+
+ESc45ZSc 1
+
+h RSc45
+
+ZSc
+2
+3
+
+
+
+2
+
+
+ESc45ZSc
+h RSc45
+
+ZSc
+2
+
+
+xxcl
+xx1
+.4 cl
+ 1
+(
+)
+
+Φ01 11
+ cl
+(
+)
+
+
+.55 cl
+ 1
+(
+)
+
+Φ01 cl
+ 12
+(
+)
+
+
+
+(segment change after cl = 11)
+ESc45cl
+ZSc
+ xxcl
+
+
+2 h
+
+RSc45
+
+ESc45ck
+1.28405
+16.26947
+30.35728
+48.80342
+71.6079
+98.77072
+130.29187
+166.17136
+206.40919
+251.00535
+299.95985
+619.25713
+724.39857
+837.77999
+959.40139
+1089.26278
+1227.36414
+1373.70548
+1528.28681
+5631.03174
+6006.33297
+
+ESc45_obsck
+6.54
+12.8
+24.76
+73.47
+91.66
+111.1
+138
+158.7
+180.02
+225.32
+249.832
+685.89
+755.47
+829.79
+926
+1009
+1094
+1213
+1288
+5674.9
+6033.8
+
+0
+2 103
+
+4 103
+
+6 103
+
+ESc45ck
+ESc45_obsck
+ck
+1
+ZSc
+ii
+ESc45ii
+ESc45_obsii
+
+
+ZSc
+ 0.99505
+spectra_energy.mcd                       59
+Ti
+ZTi
+ 22
+MTi48
+ 48.310452
+R'Ti48
+1
+me
+MH1
+
+1
+me
+MTi48
+
+
+
+
+
+
+
+R'
+
+RTi48
+ccgs R'Ti48
+
+
+()
+ETi48_obs
+6.82
+13.58
+27.491
+43.266
+99.22
+119.36
+140.8
+168.5
+193.2
+215.91
+265.23
+291.497
+787.33
+861.33
+940.36
+1044
+1131
+1221
+1346
+1426
+6249.1
+6625.8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cl
+2
+ZTi
+ 2
+
+
+cm
+1
+ZTi
+ 2
+
+
+ck
+1
+ ZTi
+
+xx1
+ZTi
+ETi48_obs1
+RTi48 h
+
+
+
+xx1
+21.29237
+
+xx_obsck
+ZTi
+ETi48_obsck
+RTi48 h
+
+
+
+(from Ref. [24] compilation after XV)
+spectra_energy.mcd                       60
+ETi481
+ZCa
+ xx1
+
+
+2 h
+
+RTi48
+
+ETi48ZTi 1
+
+h RTi48
+
+ZTi
+2
+3
+
+
+
+2
+
+
+ETi48ZTi
+h RTi48
+
+ZTi
+2
+
+
+xxcl
+xx1
+.32 cl
+ 1
+(
+)
+
+Φ01 12
+ cl
+(
+)
+
+
+.54 cl
+ 1
+(
+)
+
+Φ01 cl
+ 13
+(
+)
+
+
+
+(segment change after cl = 12)
+ETi48cl
+ZTi
+ xxcl
+
+
+2 h
+
+RTi48
+
+ETi48ck
+22.74807
+14.38286
+24.73506
+37.87659
+53.80746
+72.52767
+94.03722
+118.3361
+145.42432
+175.30189
+207.96878
+243.42502
+703.62724
+813.32449
+930.96483
+1056.54823
+1190.07471
+1331.54427
+1480.9569
+1638.31261
+6198.5282
+6591.98947
+
+ETi48_obsck
+6.82
+13.58
+27.491
+43.266
+99.22
+119.36
+140.8
+168.5
+193.2
+215.91
+265.23
+291.497
+787.33
+861.33
+940.36
+1044
+1131
+1221
+1346
+1426
+6249.1
+6625.8
+
+0
+2 103
+
+4 103
+
+6 103
+
+ETi48ck
+ETi48_obsck
+ck
+1
+ZTi
+ii
+ETi48ii
+ETi48_obsii
+
+
+ZTi
+ 1.0042
+spectra_energy.mcd                       61
+V
+ZV
+ 23
+MV51
+ 51.324304
+R'V51
+1
+me
+MH1
+
+1
+me
+MV51
+
+
+
+
+
+
+
+R'
+
+RV51
+ccgs R'V51
+
+
+         
+EV51_obs
+6.74
+14.65
+29.310
+46.707
+65.23
+128.12
+150.17
+173.7
+205.8
+230.5
+255.04
+308.25
+336.267
+895.58
+974.02
+1060
+1168
+1260
+1355
+1486
+1569.6
+6851.29
+7246.18
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cl
+2
+ZV
+ 2
+
+
+cm
+1
+ZV
+ 2
+
+
+ck
+1
+ ZV
+
+xx1
+ZV
+EV51_obs1
+RV51 h
+
+
+
+xx1
+22.29653
+
+xx_obsck
+ZV
+EV51_obsck
+RV51 h
+
+
+
+(from Ref. [24] compilation after XV)
+spectra_energy.mcd                       62
+EV511
+ZV
+ xx1
+
+
+2 h
+
+RV51
+
+EV51ZV 1
+
+h RV51
+
+ZV
+2
+3
+
+
+
+2
+
+
+EV51ZV
+h RV51
+
+ZV
+2
+
+
+xxcl
+xx1
+.374 cl
+ 1
+(
+)
+
+Φ01 13
+ cl
+(
+)
+
+
+.55 cl
+ 1
+(
+)
+
+Φ01 cl
+ 14
+(
+)
+
+
+
+(segment change after cl = 13)
+EV51cl
+ZV
+ xxcl
+
+
+2 h
+
+RV51
+
+EV51ck
+6.74
+15.81175
+28.69368
+45.38578
+65.88805
+90.20049
+118.32311
+150.2559
+185.99886
+225.55199
+268.9153
+316.08878
+367.07243
+840.02917
+961.80829
+1091.82739
+1230.08649
+1376.58558
+1531.32466
+1694.30374
+1865.52281
+6793.26456
+7204.88585
+
+EV51_obsck
+6.74
+14.65
+29.31
+46.707
+65.23
+128.12
+150.17
+173.7
+205.8
+230.5
+255.04
+308.25
+336.267
+895.58
+974.02
+1060
+1168
+1260
+1355
+1486
+1569.6
+6851.29
+7246.18
+
+0
+2 103
+
+4 103
+
+6 103
+
+EV51ck
+EV51_obsck
+ck
+1
+ZV
+ii
+EV51ii
+EV51_obsii
+
+
+ZV
+ 0.99985
+spectra_energy.mcd                       63
+7204.88585
+7246.18
+Cr
+ZCr
+ 24
+MCr52
+ 52.338791
+R'Cr52
+1
+me
+MH1
+
+1
+me
+MCr52
+
+
+
+
+
+
+
+R'
+
+RCr52
+ccgs R'Cr52
+
+
+ECr52_obs
+6.766
+16.50
+30.96
+49.1
+69.3
+90.56
+161.1
+184.7
+209.3
+244.4
+270.8
+298.0
+355
+384.30
+1010.64
+1097
+1185
+1299
+1396
+1496
+1634
+1721
+7432
+7894.8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cl
+2
+ZCr
+ 2
+
+
+cm
+1
+ZCr
+ 2
+
+
+ck
+1
+ ZCr
+
+xx1
+ZCr
+ECr52_obs1
+RCr52 h
+
+
+
+xx1
+23.29518
+
+xx_obsck
+ZCr
+ECr52_obsck
+RCr52 h
+
+
+
+(from Russian compilation after XV)
+spectra_energy.mcd                       64
+ECr521
+ZCr
+ xx1
+
+
+2 h
+
+RCr52
+
+ECr52ZCr 1
+
+h RCr52
+
+ZCr
+2
+3
+
+
+
+2
+
+
+ECr52ZCr
+h RCr52
+
+ZCr
+2
+
+
+xxcl
+xx1
+.376 cl
+ 1
+(
+)
+
+Φ01 14
+ cl
+(
+)
+
+
+.55 cl
+ 1
+(
+)
+
+Φ01 cl
+ 15
+(
+)
+
+
+
+(segment change after cl = 14)
+ECr52cl
+ZCr
+ xxcl
+
+
+2 h
+
+RCr52
+
+ECr52ck
+6.766
+15.91039
+28.90582
+45.75228
+66.44977
+90.99829
+119.39785
+151.64844
+187.75006
+227.70271
+271.5064
+319.16112
+370.66687
+426.02366
+962.11879
+1092.15823
+1230.43766
+1376.95709
+1531.71651
+1694.71593
+1865.95534
+2045.43474
+7415.23797
+7845.01911
+
+ECr52_obsck
+6.766
+16.5
+30.96
+49.1
+69.3
+90.56
+161.1
+184.7
+209.3
+244.4
+270.8
+298
+355
+384.3
+1010.64
+1097
+1185
+1299
+1396
+1496
+1634
+1721
+7432
+7894.8
+
+0
+2 103
+
+4 103
+
+6 103
+
+8 103
+
+ECr52ck
+ECr52_obsck
+ck
+1
+ZCr
+ii
+ECr52ii
+ECr52_obsii
+
+
+ZCr
+ 1.00036
+spectra_energy.mcd                       65
+spectra_energy.mcd                       66
+Mn
+ZMn
+ 25
+MMn55
+ 55.352642
+R'Mn55
+1
+me
+MH1
+
+1
+me
+MMn55
+
+
+
+
+
+
+
+R'
+
+RMn55
+ccgs R'Mn55
+
+
+EMn55_obs
+7.435
+15.640
+33.667
+51.2
+72.4
+95
+119.27
+196.46
+221.8
+243.3
+286
+314.4
+343.6
+404
+435.3
+1136.2
+1244
+1317
+1437
+1539
+1644
+1788
+1880
+8141
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cl
+2
+ZMn
+ 2
+
+
+cm
+1
+ZMn
+ 2
+
+
+ck
+1
+ ZMn
+
+xx1
+ZMn
+EMn55_obs1
+RMn55 h
+
+
+
+xx_obsck
+ZMn
+EMn55_obsck
+RMn55 h
+
+
+
+xx1
+ 24.26115
+(from Russian compilation after XVI)
+spectra_energy.mcd                       67
+8571.9
+
+EMn551
+ZMn
+ xx1
+
+
+2 h
+
+RMn55
+
+EMn55ZMn 1
+
+h RMn55
+
+ZMn
+2
+3
+
+
+
+2
+
+
+EMn55ZMn
+h RMn55
+
+ZMn
+2
+
+
+xxcl
+xx1
+.379 cl
+ 1
+(
+)
+
+Φ01 15
+ cl
+(
+)
+
+
+.53 cl
+ 1
+(
+)
+
+Φ01 cl
+ 16
+(
+)
+
+
+
+(segment change after cl = 15) ne_eff
+15
+
+EMn55cl
+ZMn
+ xxcl
+
+
+2 h
+
+RMn55
+
+EMn55ck
+7.435
+17.0191
+30.51593
+47.9255
+69.2478
+94.48283
+123.6306
+156.6911
+193.66433
+234.55029
+279.34898
+328.06041
+380.68457
+437.22147
+497.6711
+1028.24377
+1157.51066
+1294.42917
+1438.99931
+1591.22107
+1751.09445
+1918.61946
+2093.79608
+
+EMn55_obsck
+7.435
+15.64
+33.667
+51.2
+72.4
+95
+119.27
+196.46
+221.8
+243.3
+286
+314.4
+343.6
+404
+435.3
+1136.2
+1244
+1317
+1437
+1539
+1644
+1788
+1880
+
+0
+2 103
+
+4 103
+
+6 103
+
+8 103
+
+EMn55ck
+EMn55_obsck
+ck
+1
+ZMn
+ii
+EMn55ii
+EMn55_obsii
+
+
+ZMn
+ 0.99983
+spectra_energy.mcd                       68
+2093.79608
+8064.45423
+8512.39539
+1880
+8141
+8571.9
+spectra_energy.mcd                       69
+Fe
+ZFe
+ 26
+MFe56
+ 56.367129
+R'Fe56
+1
+me
+MH1
+
+1
+me
+MFe56
+
+
+
+
+
+
+
+R'
+
+RFe56
+ccgs R'Fe56
+
+
+EFe56_obs
+7.870
+16.18
+30.651
+54.8
+75.0
+99
+125
+151.06
+235.04
+262.1
+290.4
+330.8
+361.0
+392.2
+457
+489.5
+1266.1
+1360
+1470
+1582
+1690
+1800
+1960
+2046
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cl
+2
+ZFe
+ 2
+
+
+cm
+1
+ZFe
+ 2
+
+
+ck
+1
+ ZFe
+
+xx1
+ZFe
+EFe56_obs1
+RFe56 h
+
+
+
+xx_obsck
+ZFe
+EFe56_obsck
+RFe56 h
+
+
+
+(from Ref. [24] compilation after
+XVII)
+xx1
+ 25.23985
+spectra_energy.mcd                       70
+8828
+9277.7
+
+
+
+
+EFe561
+ZFe
+ xx1
+
+
+2 h
+
+RFe56
+
+EFe56ZFe 1
+
+h RFe56
+
+ZFe
+2
+3
+
+
+
+2
+
+
+EFe56ZFe
+h RFe56
+
+ZFe
+2
+
+
+xxcl
+xx1
+.379 cl
+ 1
+(
+)
+
+Φ01 16
+ cl
+(
+)
+
+
+.52 cl
+ 1
+(
+)
+
+Φ01 cl
+ 17
+(
+)
+
+
+
+(segment change after cl = 16) ne_eff
+16
+
+EFe56cl
+ZFe
+ xxcl
+
+
+2 h
+
+RFe56
+
+EFe56ck
+7.87
+17.67407
+31.39087
+49.02041
+70.56268
+96.01768
+125.38541
+158.66588
+195.85909
+236.96502
+281.98369
+330.91509
+383.75923
+440.5161
+501.1857
+565.76804
+1122.9444
+1255.2442
+1394.90962
+1541.94064
+1696.33727
+1858.0995
+2027.22734
+
+EFe56_obsck
+7.87
+16.18
+30.651
+54.8
+75
+99
+125
+151.06
+235.04
+262.1
+290.4
+330.8
+361
+392.2
+457
+489.5
+1266.1
+1360
+1470
+1582
+1690
+1800
+1960
+
+0
+2 103
+
+4 103
+
+6 103
+
+8 103
+
+EFe56ck
+EFe56_obsck
+ck
+1
+ZFe
+ii
+EFe56ii
+EFe56_obsii
+
+
+ZFe
+ 0.99946
+spectra_energy.mcd                       71
+2027.22734
+2203.72079
+8740.90747
+9207.00849
+1960
+2046
+8828
+9277.7
+spectra_energy.mcd                       72
+Co
+ZCo
+ 27
+MCo59
+ 59.380981
+R'Co59
+1
+me
+MH1
+
+1
+me
+MCo59
+
+
+
+
+
+
+
+R'
+
+RCo59
+ccgs R'Co59
+
+
+ECo59_obs
+7.86
+17.06
+33.50
+51.3
+79.5
+102
+129
+157
+186.13
+276
+305
+336
+379
+411
+444
+512
+546.8
+1403.0
+1505
+1603
+1735
+1846
+1962
+2119
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cl
+2
+ZCo
+ 2
+
+
+cm
+1
+ZCo
+ 2
+
+
+ck
+1
+ ZCo
+
+xx1
+ZCo
+ECo59_obs1
+RCo59 h
+
+
+
+xx_obsck
+ZCo
+ECo59_obsck
+RCo59 h
+
+
+
+(from Ref. [24] compilation after
+XVIII)
+xx1
+ 26.24033
+spectra_energy.mcd                       73
+2219
+9544
+10012.1
+
+
+
+
+
+
+
+
+ECo591
+ZCo
+ xx1
+
+
+2 h
+
+RCo59
+
+ECo59ZCo 1
+
+h RCo59
+
+ZCo
+2
+3
+
+
+
+2
+
+
+ECo59ZCo
+h RCo59
+
+ZCo
+2
+
+
+xxcl
+xx1
+.38 cl
+ 1
+(
+)
+
+Φ01 17
+ cl
+(
+)
+
+
+.52 cl
+ 1
+(
+)
+
+Φ01 cl
+ 18
+(
+)
+
+
+
+(segment change after cl = 17) ne_eff
+17
+
+ECo59cl
+ZCo
+ xxcl
+
+
+2 h
+
+RCo59
+
+ECo59ck
+7.86
+17.69011
+31.45364
+49.15058
+70.78092
+96.34468
+125.84184
+159.27242
+196.63641
+237.9338
+283.16461
+332.32883
+385.42646
+442.4575
+503.42194
+568.3198
+637.15107
+1255.11845
+1394.77708
+1541 80133
+
+ECo59_obsck
+7.86
+17.06
+33.5
+51.3
+79.5
+102
+129
+157
+186.13
+276
+305
+336
+379
+411
+444
+512
+546.8
+1403
+1505
+1603
+
+0
+5 103
+
+1 104
+
+ECo59ck
+ECo59_obsck
+ck
+1
+ZCo
+ii
+ECo59ii
+ECo59_obsii
+
+
+ZCo
+ 0.99981
+spectra_energy.mcd                       74
+1541.80133
+1696.19119
+1857.94666
+2027.06774
+2203.55443
+2387.40673
+9444.60361
+9928.86466
+1603
+1735
+1846
+1962
+2119
+2219
+9544
+10012.1
+spectra_energy.mcd                       75
+Ni
+ZNi
+ 28
+MNi58
+ 58.396103
+R'Ni58
+1
+me
+MH1
+
+1
+me
+MNi58
+
+
+
+
+
+
+
+R'
+
+RNi58
+ccgs R'Ni58
+
+
+ENi58_obs
+7.635
+18.168
+35.17
+54.9
+75.5
+108
+133
+162
+193
+224.5
+321.2
+352
+384
+430
+464
+499
+571
+607.2
+1547
+1648
+1756
+1894
+2011
+2131
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cl
+2
+ZNi
+ 2
+
+
+cm
+1
+ZNi
+ 2
+
+
+ck
+1
+ ZNi
+
+xx1
+ZNi
+ENi58_obs1
+RNi58 h
+
+
+
+xx_obsck
+ZNi
+ENi58_obsck
+RNi58 h
+
+
+
+(from Ref. [24] compilation after XIX)
+xx1
+ 27.25128
+spectra_energy.mcd                       76
+2131
+2295
+2399
+10290
+10775
+
+
+
+
+
+
+
+
+
+
+
+
+ENi581
+ZNi
+ xx1
+
+
+2 h
+
+RNi58
+
+ENi58ZNi 1
+
+h RNi58
+
+ZNi
+2
+3
+
+
+
+2
+
+
+ENi58ZNi
+h RNi58
+
+ZNi
+2
+
+
+xxcl
+xx1
+.38 cl
+ 1
+(
+)
+
+Φ01 18
+ cl
+(
+)
+
+
+.528 cl
+ 1
+(
+)
+
+Φ01 cl
+ 19
+(
+)
+
+
+
+(segment change after cl = 18) ne_eff
+18
+
+ENi58cl
+ZNi
+ xxcl
+
+
+2 h
+
+RNi58
+
+ENi58_obsck
+7.635
+18.168
+35.17
+54.9
+75.5
+108
+133
+162
+193
+224.5
+321.2
+352
+384
+430
+
+ENi58ck
+7.635
+17.35175
+31.00191
+48.58547
+70.10245
+95.55284
+124.93663
+158.25384
+195.50445
+236.68848
+281.80591
+330.85676
+383.84101
+440 75868
+
+0
+5 103
+
+1 104
+
+ENi58ck
+ENi58_obsck
+ck
+1
+ZNi
+ii
+ENi58ii
+ENi58_obsii
+
+
+ZNi
+ 0.99967
+spectra_energy.mcd                       77
+464
+499
+571
+607.2
+1547
+1648
+1756
+1894
+2011
+2131
+2295
+2399
+10290
+10775
+440.75868
+501.60975
+566.39423
+635.11213
+707.76343
+1431.69351
+1582.95074
+1741.80197
+1908.24718
+2082.28637
+2263.91955
+2453.14672
+2649.96788
+10175.53354
+10677.95429
+spectra_energy.mcd                       78
+Cu
+ZCu
+ 29
+MCu63
+ 63.409319
+R'Cu63
+1
+me
+MH1
+
+1
+me
+MCu63
+
+
+
+
+
+
+
+R'
+
+RCu63
+ccgs R'Cu63
+
+
+ECu63_obs
+7.726
+20.292
+36.83
+55.2
+79.9
+103
+139
+166
+199
+232
+266
+368.8
+401
+435
+484
+520
+557
+633
+671
+1698
+1793
+1905
+2045
+2173
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cl
+2
+ZCu
+ 2
+
+
+cm
+1
+ZCu
+ 2
+
+
+ck
+1
+ ZCu
+
+xx1
+ZCu
+ECu63_obs1
+RCu63 h
+
+
+
+xx_obsck
+ZCu
+ECu63_obsck
+RCu63 h
+
+
+
+(from Ref. [24] compilation after XX)
+xx1
+ 28.24683
+spectra_energy.mcd                       79
+2298
+2460
+2585
+11062
+11568
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ECu631
+ZCu
+ xx1
+
+
+2 h
+
+RCu63
+
+ECu63ZCu 1
+
+h RCu63
+
+ZCu
+2
+3
+
+
+
+2
+
+
+ECu63ZCu
+h RCu63
+
+ZCu
+2
+
+
+xxcl
+xx1
+.378 cl
+ 1
+(
+)
+
+Φ01 19
+ cl
+(
+)
+
+
+.534 cl
+ 1
+(
+)
+
+Φ01 cl
+ 20
+(
+)
+
+
+
+(segment change after cl = 19) ne_eff
+19
+
+ECu63cl
+ZCu
+ xxcl
+
+
+2 h
+
+RCu63
+
+ECu63ck
+7.726
+17.42712
+31.02036
+48.50572
+69.88319
+95.15278
+124.31449
+157.36831
+194.31425
+235.15231
+279.88249
+328.50478
+381.01919
+437.42572
+497.72436
+561.91513
+629.99801
+701 973
+
+ECu63_obsck
+7.726
+20.292
+36.83
+55.2
+79.9
+103
+139
+166
+199
+232
+266
+368.8
+401
+435
+484
+520
+557
+633
+
+0
+5 103
+
+1 104
+
+ECu63ck
+ECu63_obsck
+ck
+1
+ZCu
+ii
+ECu63ii
+ECu63_obsii
+
+
+ZCu
+ 0.99976
+spectra_energy.mcd                       80
+701.973
+777.84012
+1617.92699
+1780.35004
+1950.54067
+2128.49885
+2314.2246
+2507.71791
+2708.97879
+2918.00723
+10933.71273
+11454.29366
+633
+671
+1698
+1793
+1905
+2045
+2173
+2298
+2460
+2585
+11062
+11568
+spectra_energy.mcd                       81
+Zn
+ZZn
+ 30
+MZn64
+ 63.409319
+R'Zn64
+1
+me
+MH1
+
+1
+me
+MZn64
+
+
+
+
+
+
+
+R'
+
+RZn64
+ccgs R'Zn64
+
+
+EZn64_obs
+9.394
+17.964
+39.722
+59.4
+82.6
+108
+134
+174
+203
+238
+274
+310.8
+419.7
+454
+490
+542
+579
+619
+698
+738
+1856
+1953
+2070
+2216
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cl
+2
+ZZn
+ 2
+
+
+cm
+1
+ZZn
+ 2
+
+
+ck
+1
+ ZZn
+
+xx1
+ZZn
+EZn64_obs1
+RZn64 h
+
+
+
+xx_obsck
+ZZn
+EZn64_obsck
+RZn64 h
+
+
+
+(from Ref. [24] compilation after
+XXI)
+xx1
+ 29.1695
+spectra_energy.mcd                       82
+2350
+2479
+2647
+2780
+11865
+12389
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+EZn641
+ZZn
+ xx1
+
+
+2 h
+
+RZn64
+
+EZn64ZZn 1
+
+h RZn64
+
+ZZn
+2
+3
+
+
+
+2
+
+
+EZn64ZZn
+h RZn64
+
+ZZn
+2
+
+
+xxcl
+xx1
+.379 cl
+ 1
+(
+)
+
+Φ01 20
+ cl
+(
+)
+
+
+.5 cl
+ 1
+(
+)
+
+Φ01 cl
+ 21
+(
+)
+
+
+
+(segment change after cl = 20) ne_eff
+20
+
+EZn64cl
+ZZn
+ xxcl
+
+
+2 h
+
+RZn64
+
+EZn64ck 
+EZn64 obsck 
+spectra_energy.mcd                       83
+ck
+9.394
+19.92431
+34.36736
+52.72315
+74.99168
+101.17294
+131.26694
+165.27368
+203.19316
+245.02537
+290.77032
+340.42801
+393.99844
+451.48161
+512.87751
+578.18615
+647.40753
+720.54164
+797.5885
+878.54809
+1597.60441
+1748.51914
+1906.2438
+2070.77838
+2242.12289
+2420.27732
+2605.24168
+2797.01596
+11719.12407
+12257.86479
+_
+ck
+9.394
+17.964
+39.722
+59.4
+82.6
+108
+134
+174
+203
+238
+274
+310.8
+419.7
+454
+490
+542
+579
+619
+698
+738
+1856
+1953
+2070
+2216
+2350
+2479
+2647
+2780
+11865
+12389
+0
+5 103
+
+1 104
+
+EZn64ck
+EZn64_obsck
+ck
+1
+ZZn
+ii
+EZn64ii
+EZn64_obsii
+
+
+ZZn
+ 0.99981
+spectra_energy.mcd                       84
+Ga
+ZGa
+ 31
+MGa69
+ 69.437011
+R'Ga69
+1
+me
+MH1
+
+1
+me
+MGa69
+
+
+
+
+
+
+
+R'
+
+RGa69
+ccgs R'Ga69
+
+
+EGa69_obs
+5.99
+20.51
+30.71
+64
+90
+117
+147
+179
+214
+248
+284
+321
+358
+475
+510
+546
+596
+637
+677
+765
+807
+2010
+2120
+2242
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+spectra_energy.mcd                       85
+2242
+2393
+2533
+2668
+2840
+2982
+12696
+13239
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cl
+2
+ZGa
+ 2
+
+
+cm
+1
+ZGa
+ 2
+
+
+ck
+1
+ ZGa
+
+xx1
+ZGa
+EGa69_obs1
+RGa69 h
+
+
+
+xx_obsck
+ZGa
+EGa69_obsck
+RGa69 h
+
+
+
+(from Ref. [24] compilation after
+IV)
+xx1
+30.33683
+
+EGa691
+ZGa
+ xx1
+
+
+2 h
+
+RGa69
+
+EGa69ZGa 1
+
+h RGa69
+
+ZGa
+2
+3
+
+
+
+2
+
+
+EGa69ZGa
+h RGa69
+
+ZGa
+2
+
+
+xxcl
+xx1
+.4 cl
+ 1
+(
+)
+
+Φ01 21
+ cl
+(
+)
+
+
+.515 cl
+ 1
+(
+)
+
+Φ01 cl
+ 22
+(
+)
+
+
+
+(segment change after cl = 21) ne_eff
+21
+
+EGa69cl
+ZGa
+ xxcl
+
+
+2 h
+
+RGa69
+
+EGa69ck
+5.99
+15.39504
+29.15844
+47.28019
+69.76029
+96.59875
+127.79557
+163.35074
+203.26427
+247.53615
+296.16639
+349.15498
+406.50193
+468.20723
+534 27089
+
+EGa69_obsck
+5.99
+20.51
+30.71
+64
+90
+117
+147
+179
+214
+248
+284
+321
+358
+475
+510
+
+spectra_energy.mcd                       86
+534.27089
+604.6929
+679.47327
+758.612
+842.10908
+929.96451
+1022.1783
+1794.39564
+1959.02901
+2130.88704
+2309.96973
+2496.27707
+2689.80906
+2890.56571
+3098.54702
+12531.78452
+13088.68546
+510
+546
+596
+637
+677
+765
+807
+2010
+2120
+2242
+2393
+2533
+2668
+2840
+2982
+12696
+13239
+0
+5 103
+
+1 104
+
+EGa69ck
+EGa69_obsck
+ck
+1
+ZGa
+ii
+EGa69ii
+EGa69_obsii
+
+
+ZGa
+ 0.99975
+spectra_energy.mcd                       87
+Ge
+ZGe
+ 32
+MGe74
+ 74.450238
+R'Ge74
+1
+me
+MH1
+
+1
+me
+MGe74
+
+
+
+
+
+
+
+R'
+
+RGe74
+ccgs R'Ge74
+
+
+EGe74_obs
+7.899
+15.934
+34.22
+45.71
+93.5
+120
+151
+183
+217
+255
+291
+330
+369
+409
+533
+568
+607
+658
+701
+744
+836
+880
+2180
+2294
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+spectra_energy.mcd                       88
+2421
+2577
+2723
+2863
+3041
+3192
+13550
+14119
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cl
+2
+ZGe
+ 2
+
+
+cm
+1
+ZGe
+ 2
+
+
+ck
+1
+ ZGe
+
+xx1
+ZGe
+EGe74_obs1
+RGe74 h
+
+
+
+xx_obsck
+ZGe
+EGe74_obsck
+RGe74 h
+
+
+
+(from Ref. [24] compilation after
+V)
+xx1
+31.23845
+
+EGe741
+ZGe
+ xx1
+
+
+2 h
+
+RGe74
+
+EGe74ZGe 1
+
+h RGe74
+
+ZGe
+2
+3
+
+
+
+2
+
+
+EGe74ZGe
+h RGe74
+
+ZGe
+2
+
+
+xxcl
+xx1
+.386 cl
+ 1
+(
+)
+
+Φ01 22
+ cl
+(
+)
+
+
+.5 cl
+ 1
+(
+)
+
+Φ01 cl
+ 23
+(
+)
+
+
+
+(segment change after cl = 22) ne_eff
+22
+
+EGe74cl
+ZGe
+ xxcl
+
+
+2 h
+
+RGe74
+
+0
+5 103
+
+1 104
+
+EGe74ck
+EGe74_obsck
+ck
+EGe74ck
+7.899
+17.93567
+32.03096
+50.18486
+72.39736
+98.66848
+128.99822
+163.38656
+201.83351
+244.33908
+290.90326
+341.52604
+396.20744
+454.94746
+517 74608
+
+EGe74_obsck
+7.899
+15.934
+34.22
+45.71
+93.5
+120
+151
+183
+217
+255
+291
+330
+369
+409
+533
+
+1
+ZGe
+ii
+EGe74ii
+EGe74_obsii
+
+
+ZGe
+ 1.00026
+spectra_energy.mcd                       89
+517.74608
+584.60331
+655.51916
+730.49362
+809.52669
+892.61837
+979.76866
+1070.97756
+1884.09218
+2047.68793
+2218.09361
+2395.30922
+2579.33476
+2770.17024
+2967.81566
+3172.271
+13371.683
+13946.74406
+533
+568
+607
+658
+701
+744
+836
+880
+2180
+2294
+2421
+2577
+2723
+2863
+3041
+3192
+13550
+14119
+spectra_energy.mcd                       90
+As
+ZAs
+ 33
+MAs75
+ 75.464725
+R'As75
+1
+me
+MH1
+
+1
+me
+MAs75
+
+
+
+
+
+
+
+R'
+
+RAs75
+ccgs R'As75
+
+
+EAs75_obs
+9.81
+18.633
+28.351
+50.13
+62.63
+127.6
+154
+187
+222
+259
+300
+338
+379
+421
+462
+594
+630
+670
+724
+769
+813
+910
+957
+2357
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+spectra_energy.mcd                       91
+2357
+2474
+2606
+2768
+2920
+3065
+3248
+3409
+14440
+15029
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cl
+2
+ZAs
+ 2
+
+
+cm
+1
+ZAs
+ 2
+
+
+ck
+1
+ ZAs
+
+xx1
+ZAs
+EAs75_obs1
+RAs75 h
+
+
+
+xx_obsck
+ZAs
+EAs75_obsck
+RAs75 h
+
+
+
+(from Ref. [24] compilation after
+VI)
+xx1
+32.15131
+
+EAs751
+ZAs
+ xx1
+
+
+2 h
+
+RAs75
+
+EAs75ZAs 1
+
+h RAs75
+
+ZAs
+2
+3
+
+
+
+2
+
+
+EAs75ZAs
+h RAs75
+
+ZAs
+2
+
+
+xxcl
+xx1
+.371 cl
+ 1
+(
+)
+
+Φ01 23
+ cl
+(
+)
+
+
+.5 cl
+ 1
+(
+)
+
+Φ01 cl
+ 24
+(
+)
+
+
+
+(segment change after cl = 22) ne_eff
+23
+
+EAs75cl
+ZAs
+ xxcl
+
+
+2 h
+
+RAs75
+
+spectra_energy.mcd                       92
+EAs75ck
+9.81
+20.26144
+34.46219
+52.41225
+74.1116
+99.56027
+128.75823
+161.70551
+198.40208
+238.84797
+283.04315
+330.98764
+382.68144
+438.12454
+497.31694
+560.25865
+626.94967
+697.38998
+771.57961
+849.51854
+931.20677
+1016.64431
+1105.83115
+2076.89505
+2248.48752
+2426.88993
+2612.10228
+2804.12455
+3002.95676
+3208.59891
+3421.05099
+14238.81595
+
+EAs75_obsck
+9.81
+18.633
+28.351
+50.13
+62.63
+127.6
+154
+187
+222
+259
+300
+338
+379
+421
+462
+594
+630
+670
+724
+769
+813
+910
+957
+2357
+2474
+2606
+2768
+2920
+3065
+3248
+3409
+14440
+
+0
+5 103
+
+1 104
+
+1.5 104
+
+EAs75ck
+EAs75_obsck
+ck
+1
+ZAs
+ii
+EAs75ii
+EAs75_obsii
+
+
+ZAs
+ 1.00047
+spectra_energy.mcd                       93
+14832.0369
+15029
+spectra_energy.mcd                       94
+Se
+ZSe
+ 34
+MSe80
+ 80.477941
+R'Se80
+1
+me
+MH1
+
+1
+me
+MSe80
+
+
+
+
+
+
+
+R'
+
+RSe80
+ccgs R'Se80
+
+
+ESe80_obs
+9.752
+21.19
+30.820
+42.944
+68.3
+81.70
+155.4
+191
+227
+264
+304
+347
+388
+431
+475
+519
+657
+695
+736
+793
+839
+886
+987
+1036 3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+spectra_energy.mcd                       95
+1036.3
+2542
+2661
+2798
+2965
+3123
+3274
+3463
+3633
+15370
+15968
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cl
+2
+ZSe
+ 2
+
+
+cm
+1
+ZSe
+ 2
+
+
+ck
+1
+ ZSe
+
+xx1
+ZSe
+ESe80_obs1
+RSe80 h
+
+
+
+xx_obsck
+ZSe
+ESe80_obsck
+RSe80 h
+
+
+
+(from Ref. [24] compilation after VII)
+xx1
+33.15382
+
+ESe801
+ZSe
+ xx1
+
+
+2 h
+
+RSe80
+
+ESe80ZSe 1
+
+h RSe80
+
+ZSe
+2
+3
+
+
+
+2
+
+
+ESe80ZSe
+h RSe80
+
+ZSe
+2
+
+
+xxcl
+xx1
+.369 cl
+ 1
+(
+)
+
+Φ01 24
+ cl
+(
+)
+
+
+.5 cl
+ 1
+(
+)
+
+Φ01 cl
+ 25
+(
+)
+
+
+
+(segment change after cl = 24) ne_eff
+24
+
+ESe80cl
+ZSe
+ xxcl
+
+
+2 h
+
+RSe80
+
+ESe80ck
+9.752
+20.1118
+34.18059
+51.95837
+73.44514
+98.64091
+127.54566
+160.15941
+
+ESe80_obsck
+9.752
+21.19
+30.82
+42.944
+68.3
+81.7
+155.4
+191
+
+spectra_energy.mcd                       96
+196.48215
+236.51388
+280.2546
+327.70432
+378.86302
+433.73072
+492.30741
+554.59309
+620.58776
+690.29142
+763.70407
+840.82572
+921.65636
+1006.19599
+1094.44461
+1186.40222
+2247.60917
+2425.97744
+2611.15564
+2803.14378
+3001.94186
+3207.54987
+3419.96783
+3639.19572
+15133.19418
+15744.57522
+227
+264
+304
+347
+388
+431
+475
+519
+657
+695
+736
+793
+839
+886
+987
+1036.3
+2542
+2661
+2798
+2965
+3123
+3274
+3463
+3633
+15370
+15968
+0
+5 103
+
+1 104
+
+1.5 104
+
+ESe80ck
+ESe80_obsck
+ck
+1
+ZSe
+ii
+ESe80ii
+ESe80_obsii
+
+
+ZSe
+ 1.00072
+spectra_energy.mcd                       97
+Br
+ZBr
+ 35
+MBr79
+ 79.493064
+R'Br79
+1
+me
+MH1
+
+1
+me
+MBr79
+
+
+
+
+
+
+
+R'
+
+RBr79
+ccgs R'Br79
+
+
+EBr79_obs
+11.814
+21.8
+36
+47.3
+59.7
+88.6
+103.0
+192.8
+232
+270
+310
+352
+398
+441
+486
+533
+579
+724
+762
+806
+864
+913
+961
+1068
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+spectra_energy.mcd                       98
+1068
+1119
+2733
+2855
+2997
+3170
+3334
+3490
+3684
+3865
+16315
+16937
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cl
+2
+ZBr
+ 2
+
+
+cm
+1
+ZBr
+ 2
+
+
+ck
+1
+ ZBr
+
+xx1
+ZBr
+EBr79_obs1
+RBr79 h
+
+
+
+xx_obsck
+ZBr
+EBr79_obsck
+RBr79 h
+
+
+
+(from Ref. [24] compilation after
+VIII)
+xx1
+34.06865
+
+EBr791
+ZBr
+ xx1
+
+
+2 h
+
+RBr79
+
+EBr79ZBr 1
+
+h RBr79
+
+ZBr
+2
+3
+
+
+
+2
+
+
+EBr79ZBr
+h RBr79
+
+ZBr
+2
+
+
+xxcl
+xx1
+.356 cl
+ 1
+(
+)
+
+Φ01 25
+ cl
+(
+)
+
+
+.5 cl
+ 1
+(
+)
+
+Φ01 cl
+ 26
+(
+)
+
+
+
+(segment change after cl = 25) ne_eff
+25
+
+EBr79cl
+ZBr
+ xxcl
+
+
+2 h
+
+RBr79
+
+EBr79ck
+11.814
+22.57173
+36.78173
+54.44397
+75.55848
+100.12524
+128.14426
+159.61553
+
+EBr79_obsck
+11.814
+21.8
+36
+47.3
+59.7
+88.6
+103
+192.8
+
+spectra_energy.mcd                       99
+194.53906
+232.91485
+274.7429
+320.0232
+368.75576
+420.94057
+476.57764
+535.66697
+598.20855
+664.20239
+733.64849
+806.54684
+882.89745
+962.70032
+1045.95544
+1132.66283
+1222.82246
+2457.04027
+2643.3785
+2836.52667
+3036.48477
+3243.25281
+3456.83079
+3677.2187
+3904.41655
+16054.80435
+16684.34517
+232
+270
+310
+352
+398
+441
+486
+533
+579
+724
+762
+806
+864
+913
+961
+1068
+1119
+2733
+2855
+2997
+3170
+3334
+3490
+3684
+3865
+16315
+16937
+0
+5 103
+
+1 104
+
+1.5 104
+
+EBr79ck
+EBr79_obsck
+ck
+1
+ZBr
+ii
+EBr79ii
+EBr79_obsii
+
+
+ZBr
+ 0.99832
+spectra_energy.mcd                       100
+spectra_energy.mcd                       101
+Kr
+ZKr
+ 36
+MKr84
+ 84.506279
+R'Kr84
+1
+me
+MH1
+
+1
+me
+MKr84
+
+
+
+
+
+
+
+R'
+
+RKr84
+ccgs R'Kr84
+
+
+EKr84_obs
+13.999
+24.359
+36.95
+52.5
+64.7
+78.5
+111.0
+126
+230.9
+275
+316
+358
+403
+451
+497
+545
+593
+642
+794
+833
+878
+939
+989
+1039
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+spectra_energy.mcd                       102
+1151
+1205
+2931
+3056
+3203
+3381
+3551
+3712
+3912
+4105
+17290
+17936
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cl
+2
+ZKr
+ 2
+
+
+cm
+1
+ZKr
+ 2
+
+
+ck
+1
+ ZKr
+
+xx1
+ZKr
+EKr84_obs1
+RKr84 h
+
+
+
+xx_obsck
+ZKr
+EKr84_obsck
+RKr84 h
+
+
+
+(from Ref. [24] compilation after
+IX)
+xx1
+34.98618
+
+EKr841
+ZKr
+ xx1
+
+
+2 h
+
+RKr84
+
+EKr84ZKr 1
+
+h RKr84
+
+ZKr
+2
+3
+
+
+
+2
+
+
+EKr84ZKr
+h RKr84
+
+ZKr
+2
+
+
+xxcl
+xx1
+.345 cl
+ 1
+(
+)
+
+Φ01 26
+ cl
+(
+)
+
+
+.5 cl
+ 1
+(
+)
+
+Φ01 cl
+ 27
+(
+)
+
+
+
+(segment change after cl = 26) ne_eff
+26
+
+EKr84cl
+ZKr
+ xxcl
+
+
+2 h
+
+RKr84
+
+spectra_energy.mcd                       103
+EKr84ck
+13.999
+25.14772
+39.53866
+57.1718
+78.04716
+102.16473
+129.52451
+160.12651
+193.97072
+231.05714
+271.38577
+314.95661
+361.76967
+411.82494
+465.12242
+521.66211
+581.44402
+644.46813
+710.73446
+780.24301
+852.99376
+928.98673
+1008.2219
+1090.6993
+1176.4189
+1265.38071
+2674.77018
+2869.04172
+3070.1232
+3278.01462
+3492.71597
+3714.22727
+
+EKr84_obsck
+13.999
+24.359
+36.95
+52.5
+64.7
+78.5
+111
+126
+230.9
+275
+316
+358
+403
+451
+497
+545
+593
+642
+794
+833
+878
+939
+989
+1039
+1151
+1205
+2931
+3056
+3203
+3381
+3551
+3712
+
+0
+5 103
+
+1 104
+
+1.5 104
+
+EKr84ck
+EKr84_obsck
+ck
+1
+ZKr
+ii
+EKr84ii
+EKr84_obsii
+
+
+ZKr
+ 0.99819
+spectra_energy.mcd                       104
+3942.5485
+4177.67968
+17003.6625
+17651.36342
+3912
+4105
+17290
+17936
+Unfortunately there are no complete series of observed ionization energy values for elements beyond Kr.   Based on
+the previous equations, the Reciprocal System equations may be generalized to apply to any isotope, as follows.
+b.  Generalized Expressions for Ionization Energies
+The results above indicate quite clearly that the true slopes are 1/3 and 1/2--the differences with that observed are due to
+experimental errors or faulty extrapolation (see quotation from Moore above).  Therefore, generalizing:
+cl
+2
+Zel
+ 2
+
+
+cm
+1
+Zel
+ 2
+
+
+ck
+1
+ Zel
+
+xxcl
+xx1
+1
+3
+cl
+ 1
+(
+)
+
+Φ01
+Zel
+ 10
+
+
+ cl
+
+
+
+
+1
+2
+cl
+ 1
+(
+)
+
+Φ01 cl
+Zel
+ 9
+
+
+
+
+
+
+
+
+Zel
+10
+
+(segment change after cl = Zel - 10)
+Eel1
+Zel
+ xx1
+
+
+2 h
+
+Rel
+
+EelZel 1
+
+h Rel1
+
+Zel
+2
+3
+
+
+
+2
+
+
+EelZel
+h Rel
+
+Zel
+2
+
+
+Eelcl
+Zel
+ xxcl
+
+
+2 h
+
+Rel
+
+spectra_energy.mcd                       105
+Example: extrapolation of ionization energy equation to uranium
+We can extrapolate the above ionization energy equations to the natural isotope with the highest Z-value, U-238
+ZU
+ 92
+MU238
+ 239.286410
+R'U238
+1
+me
+MH1
+
+1
+me
+MU238
+
+
+
+
+
+
+
+R'
+
+RU238
+ccgs R'U238
+
+
+cl
+2
+ZU
+ 2
+
+
+cm
+1
+ZU
+ 2
+
+
+ck
+1
+ ZU
+
+EU238_obs
+6.194
+11.9
+20
+37
+
+
+
+
+
+
+
+
+
+From Ref. [24] compilation--only known values
+cn
+1
+ 4
+
+xx1
+ZU
+EU238_obs1
+RU238 h
+
+
+
+xxcl
+xx1
+1
+3
+cl
+ 1
+(
+)
+
+Φ01
+ZU
+ 10
+
+
+ cl
+
+
+
+
+1
+2
+cl
+ 1
+(
+)
+
+Φ01 cl
+ZU
+ 9
+
+
+
+
+
+
+
+
+(segment change after cl = ZU - 10)
+EU2381
+ZU
+ xx1
+
+
+2 h
+
+RU238
+
+EU238ZU 1
+
+h RU238
+
+ZU
+2
+3
+
+
+
+2
+
+
+EU238ZU
+h RU238
+
+ZU
+2
+
+
+EU238cl
+ZU
+ xxcl
+
+
+2 h
+
+RU238
+
+spectra_energy.mcd                       106
+EU238ck
+6.194
+13.83057
+24.4938
+38.18368
+54.90021
+74.6434
+97.41324
+123.20973
+152.03287
+183.88266
+218.75911
+256.66221
+297.59196
+341.54837
+388.53143
+438.54114
+491.5775
+547.64051
+606.73018
+668.8465
+733.98947
+802.1591
+873.35538
+947.57831
+1024.82789
+1105.10413
+1188.40701
+1274.73655
+1364.09275
+1456.47559
+1551.88509
+1650.32124
+
+EU238_obscn
+6.194
+11.9
+20
+37
+
+spectra_energy.mcd                       107
+1751.78404
+1856.2735
+1963.78961
+2074.33237
+2187.90178
+2304.49785
+2424.12057
+2546.76994
+2672.44596
+2801.14864
+2932.87796
+3067.63394
+3205.41658
+3346.22586
+3490.0618
+3636.92439
+3786.81364
+3939.72953
+4095.67208
+4254.64128
+4416.63714
+4581.65964
+4749.7088
+4920.78461
+5094.88708
+5272.01619
+5452.17196
+5635.35438
+5821.56346
+6010.79918
+6203.06156
+6398 35059
+spectra_energy.mcd                       108
+6398.35059
+6596.66628
+6798.00861
+7002.3776
+7209.77324
+7420.19554
+7633.64448
+7850.12008
+8069.62234
+8292.15124
+8517.7068
+8746.28901
+8977.89787
+9212.53338
+9450.19555
+9690.88437
+9934.59984
+10181.34196
+10431.11074
+23654.4666
+24225.47385
+24803.29107
+25387.91825
+25979.3554
+26577.60253
+27182.65961
+27794.52667
+113614.48258
+115279.14147
+0
+5 104
+
+1 105
+
+EU238ck
+ck
+This is, of course, a prediction.  And, of course, it's possible that there may be additional
+line segments, in which case the extrapolation would be wrong.  But there is, presently, no
+theoretical indication that this would be the case, so we'll go with this extrapolation.
+4.  Intensity of Spectral Lines
+spectra_energy.mcd                       109
+Based on the definition given by Herzberg, p. 152, the intensity of an emission spectrum line corresponding to the
+transition from n1, m1 to n2, m2 can be given by
+(11)
+I n1 m1
+
+n2
+m2
+
+
+W n1 m1
+
+n2
+m2
+
+ h
+
+ν
+
+eV
+sec
+where W(n1,m1,n2,m2) represents the number of transitions taking place per second in the light source, and h is the
+energy of the radiated quantum.  However, W is very difficult to calculate.
+Kuhn, Ref. [10], p. 171, states:  "The absolute strength of spectral lines is difficult to measure and difficult to establish.
+The same applies to the relative strength of lines of appreciably differing frequencies such as the different lines of a
+series.  In consequence of this, accurate comparisons between experiment and theory are not very numerous."  Relative
+intensities are tabulated in the CRC Handbook (Ref. [25],p. 10-1, ff.), but the Introduction says:  "Because different
+observers frequently use different scales for their intensity estimates, these intensities are useful only as a rough
+indication of the appearance of a spectrum."
+However, now that we know that emission and absorption lines are the result of changes in the thermal motions of the
+atoms, not electrons jumping from orbit to orbit around nuclei, we can, as an approximation, use the well-known regular
+"black body" relations derived by Wien.  
+The brightest lines observed should indicate the most likely temperature.   Wien's Law is (Lang, Ref. [22], p. 21):
+Bν T ν
+
+(
+)
+2 hcgs
+
+ν3
+
+ccgs
+2
+exp
+hcgs
+ν
+
+kB_erg T
+
+
+
+
+
+
+
+
+
+erg
+sec cm2
+
+Hz
+rad2
+
+hcgs >> kB_erg T
+(12)
+The frequency at which B is maximized is then computed from:
+ν
+2 hcgs
+
+ν3
+
+ccgs
+2
+exp
+hcgs
+ν
+
+kB_erg T
+
+
+
+
+
+
+
+
+
+
+
+
+d
+d
+= 0
+(13)
+spectra_energy.mcd                       110
+νm
+3 kB_erg
+
+hcgs
+T
+
+or 
+νm
+6.2442 1010
+
+T
+
+Hz
+λm
+ccgs
+νm
+
+λm
+.4801
+T
+
+cm
+(14)
+(all temperatures are in K)
+νm T
+( )
+3 kB_erg
+
+hcgs
+T
+
+(functional representation)
+Example calculations for arc spectra:
+For a wide range of arc spectra, we'll assume 5 temperatures for 5 bright lines (interspersed with dark lines).
+T1
+ 2000
+νm1
+νm T1
+
+
+
+νm1
+1.25007
+ 1014
+
+Bνm1
+Bν T1 νm1
+
+
+
+
+Bνm1
+1.43404
+10 6
+
+
+
+T2
+ 4000
+νm2
+νm T2
+
+
+
+νm2
+2.50015
+ 1014
+
+Bνm2
+Bν T2 νm2
+
+
+
+
+Bνm2
+0.00001
+
+T3
+ 6000
+νm3
+νm T3
+
+
+
+νm3
+3.75022
+ 1014
+
+Bνm3
+Bν T3 νm3
+
+
+
+
+Bνm3
+ 0.00004
+spectra_energy.mcd                       111
+T4
+ 8000
+νm4
+νm T4
+
+
+
+νm4
+5.00029
+ 1014
+
+Bνm4
+Bν T4 νm4
+
+
+
+
+Bνm4
+0.00009
+
+T5
+ 10000
+νm5
+νm T5
+
+
+
+νm5
+6.25036
+ 1014
+
+Bνm5
+Bν T5 νm5
+
+
+
+
+Bνm5
+0.00018
+
+Now we can plot the ratio of brightness of any frequency to the maximum brightness for that temperature:
+spectra_energy.mcd                       112
+2 1014
+
+4 1014
+
+6 1014
+
+8 1014
+
+1 1015
+
+0
+0.2
+0.4
+0.6
+0.8
+1
+Bν T1 νν
+
+
+
+Bνm1
+Bν T2 νν
+
+
+
+Bνm2
+Bν T3 νν
+
+
+
+Bνm3
+Bν T4 νν
+
+
+
+Bνm4
+Bν T5 νν
+
+
+
+Bνm5
+νν
+(Hz)
+spectra_energy.mcd                       113
+It's also helpful to plot the corresponding wavelengths and wave numbers: 
+erg
+sec cm2
+
+Hz
+rad2
+Bλ T λ
+
+(
+)
+2 hcgs
+
+ccgs
+λ3
+
+exp
+hcgs
+ccgs
+λ
+
+kB_erg T
+
+
+
+
+
+
+
+
+
+(functional form for wavelength)
+Bν' T ν'
+
+(
+)
+2 hcgs
+
+ccgs
+ν'3
+exp
+hcgs
+ccgs
+ν'
+
+kB_erg T
+
+
+
+
+
+
+
+
+
+erg
+sec cm2
+
+Hz
+rad2
+
+(functional form for wavenumber)
+λm1
+ccgs
+νm1
+
+λm1
+ 0.00024
+cm
+Bλm1
+Bλ T1 λm1
+
+
+
+
+λm2
+ccgs
+νm2
+
+λm2
+ 0.00012
+cm
+Bλm2
+Bλ T2 λm2
+
+
+
+
+λm3
+ccgs
+νm3
+
+λm3
+ 0.00008
+cm
+Bλm3
+Bλ T3 λm3
+
+
+
+
+λm4
+ccgs
+νm4
+
+λm4
+ 0.00006
+cm
+Bλm4
+Bλ T4 λm4
+
+
+
+
+λm5
+ccgs
+νm5
+
+λm5
+ 0.000048
+cm
+Bλm5
+Bλ T5 λm5
+
+
+
+
+spectra_energy.mcd                       114
+ν'm1
+1
+λm1
+
+ν'm1
+ 4169.79273
+cm-1
+Bν'm1
+Bν' T1 ν'm1
+
+
+
+
+ν'm2
+1
+λm2
+
+ν'm2
+ 8339.58545
+cm-1
+Bν'm2
+Bν' T2 ν'm2
+
+
+
+
+ν'm3
+1
+λm3
+
+Bν'm3
+Bν' T3 ν'm3
+
+
+
+
+ν'm3
+ 12509.37818
+cm-1
+ν'm4
+1
+λm4
+
+ν'm4
+ 16679.1709
+cm-1
+Bν'm4
+Bν' T4 ν'm4
+
+
+
+
+ν'm5
+1
+λm5
+
+ν'm5
+ 20848.96363
+cm-1
+Bν'm5
+Bν' T5 ν'm5
+
+
+
+
+spectra_energy.mcd                       115
+2 10
+ 4
+
+4 10
+ 4
+
+6 10
+ 4
+
+8 10
+ 4
+
+0
+0.2
+0.4
+0.6
+0.8
+Bλ T1 λλ
+
+
+
+Bλm1
+Bλ T2 λλ
+
+
+
+Bλm2
+Bλ T3 λλ
+
+
+
+Bλm3
+Bλ T4 λλ
+
+
+
+Bλm4
+Bλ T5 λλ
+
+
+
+Bλm5
+λλ
+(cm)
+spectra_energy.mcd                       116
+1 104
+
+2 104
+
+3 104
+
+4 104
+
+5 104
+
+0
+0.2
+0.4
+0.6
+0.8
+Bν' T1 ν'ν'
+
+
+
+Bν'm1
+Bν' T2 ν'ν'
+
+
+
+Bν'm2
+Bν' T3 ν'ν'
+
+
+
+Bν'm3
+Bν' T4 ν'ν'
+
+
+
+Bν'm4
+Bν' T5 ν'ν'
+
+
+
+Bν'm5
+ν'ν'
+(cm-1)
+If one examines the numerous spectra illustrated in the References, one usually sees widely separated bright lines, with
+relatively less bright lines in between.  Our interpretation is that this means that these bright lines are at considerably
+different temperatures.  The nearby darker lines surrounding each bright line are then at approximately the same
+temperature as this bright line.  Therefore we conclude that the plots above are, at least approximately, correct.
+spectra_energy.mcd                       117
+Example calculations for spark spectra:
+For a wide range of spark spectra, we'll assume 5 temperatures for 5 bright lines.
+T1
+ 30000
+νm1
+νm T1
+
+
+
+νm1
+1.87511
+ 1015
+
+Bνm1
+Bν T1 νm1
+
+
+
+
+Bνm1
+0.00484
+
+T2
+ 35000
+νm2
+νm T2
+
+
+
+νm2
+2.18763
+ 1015
+
+Bνm2
+Bν T2 νm2
+
+
+
+
+Bνm2
+0.00769
+
+T3
+ 40000
+νm3
+νm T3
+
+
+
+νm3
+2.50015
+ 1015
+
+Bνm3
+Bν T3 νm3
+
+
+
+
+Bνm3
+0.01147
+
+T4
+ 45000
+νm4
+νm T4
+
+
+
+νm4
+2.81266
+ 1015
+
+Bνm4
+Bν T4 νm4
+
+
+
+
+Bνm4
+0.01633
+
+T5
+ 50000
+νm5
+νm T5
+
+
+
+νm5
+3.12518
+ 1015
+
+Bνm5
+Bν T5 νm5
+
+
+
+
+Bνm5
+ 0.02241
+spectra_energy.mcd                       118
+2 1015
+
+4 1015
+
+6 1015
+
+8 1015
+
+1 1016
+
+0
+0.2
+0.4
+0.6
+0.8
+1
+Bν T1 νν
+
+
+
+Bνm1
+Bν T2 νν
+
+
+
+Bνm2
+Bν T3 νν
+
+
+
+Bνm3
+Bν T4 νν
+
+
+
+Bνm4
+Bν T5 νν
+
+
+
+Bνm5
+νν
+(Hz)
+spectra_energy.mcd                       119
+As with the arc spectra, it's also helpful to plot the corresponding wavelengths and wave numbers: 
+λm1
+ccgs
+νm1
+
+λm1
+ 0.000016
+Bλm1
+Bλ T1 λm1
+
+
+
+
+cm
+λm2
+ccgs
+νm2
+
+λm2
+ 0.000014
+Bλm2
+Bλ T2 λm2
+
+
+
+
+cm
+λm3
+ccgs
+νm3
+
+λm3
+ 0.000012
+cm
+Bλm3
+Bλ T3 λm3
+
+
+
+
+λm4
+ccgs
+νm4
+
+λm4
+ 0.000011
+Bλm4
+Bλ T4 λm4
+
+
+
+
+cm
+λm5
+ccgs
+νm5
+
+λm5
+9.592803
+10 6
+
+
+
+cm
+Bλm5
+Bλ T5 λm5
+
+
+
+
+spectra_energy.mcd                       120
+ν'm1
+1
+λm1
+
+ν'm1
+ 62546.89088
+cm-1
+Bν'm1
+Bν' T1 ν'm1
+
+
+
+
+ν'm2
+1
+λm2
+
+ν'm2
+ 72971.37269
+cm-1
+Bν'm2
+Bν' T2 ν'm2
+
+
+
+
+ν'm3
+1
+λm3
+
+Bν'm3
+Bν' T3 ν'm3
+
+
+
+
+ν'm3
+ 83395.85451
+cm-1
+ν'm4
+1
+λm4
+
+ν'm4
+ 93820.33632
+cm-1
+Bν'm4
+Bν' T4 ν'm4
+
+
+
+
+ν'm5
+1
+λm5
+
+ν'm5
+ 104244.81814
+cm-1
+Bν'm5
+Bν' T5 ν'm5
+
+
+
+
+spectra_energy.mcd                       121
+2 10
+ 5
+
+4 10
+ 5
+
+6 10
+ 5
+
+8 10
+ 5
+
+0
+0.2
+0.4
+0.6
+0.8
+Bλ T1 λλ
+
+
+
+Bλm1
+Bλ T2 λλ
+
+
+
+Bλm2
+Bλ T3 λλ
+
+
+
+Bλm3
+Bλ T4 λλ
+
+
+
+Bλm4
+Bλ T5 λλ
+
+
+
+Bλm5
+λλ
+(cm)
+spectra_energy.mcd                       122
+1 105
+
+2 105
+
+3 105
+
+4 105
+
+0
+0.2
+0.4
+0.6
+0.8
+Bν' T1 ν'ν'
+
+
+
+Bν'm1
+Bν' T2 ν'ν'
+
+
+
+Bν'm2
+Bν' T3 ν'ν'
+
+
+
+Bν'm3
+Bν' T4 ν'ν'
+
+
+
+Bν'm4
+Bν' T5 ν'ν'
+
+
+
+Bν'm5
+ν'ν'
+(cm-1)
+spectra_energy.mcd                       123
+Example calculations for x-ray spectra:
+For a wide range of x-ray spectra, we'll assume 5 temperatures for 5 bright lines.  Note:  the temperatures may be
+thought of here as energy equivalents, because x-ray spectra are usually observed after bombarding solids by
+energetic charged electrons.
+T1
+ 30000000
+νm1
+νm T1
+
+
+
+νm1
+1.87511
+ 1018
+
+Bνm1
+Bν T1 νm1
+
+
+
+
+Bνm1
+4.83989
+ 106
+
+T2
+ 35000000
+νm2
+νm T2
+
+
+
+νm2
+2.18763
+ 1018
+
+Bνm2
+Bν T2 νm2
+
+
+
+
+Bνm2
+7.68557
+ 106
+
+T3
+ 40000000
+νm3
+νm T3
+
+
+
+νm3
+2.50015
+ 1018
+
+Bνm3
+Bν T3 νm3
+
+
+
+
+Bνm3
+1.14723
+ 107
+
+T4
+ 45000000
+νm4
+νm T4
+
+
+
+νm4
+2.81266
+ 1018
+
+Bνm4
+Bν T4 νm4
+
+
+
+
+Bνm4
+1.63346
+ 107
+
+T5
+ 50000000
+νm5
+νm T5
+
+
+
+νm5
+3.12518
+ 1018
+
+Bνm5
+Bν T5 νm5
+
+
+
+
+Bνm5
+2.24069
+ 107
+
+spectra_energy.mcd                       124
+2 1018
+
+4 1018
+
+6 1018
+
+8 1018
+
+1 1019
+
+0
+0.2
+0.4
+0.6
+0.8
+Bν T1 νν
+
+
+
+Bνm1
+Bν T2 νν
+
+
+
+Bνm2
+Bν T3 νν
+
+
+
+Bνm3
+Bν T4 νν
+
+
+
+Bνm4
+Bν T5 νν
+
+
+
+Bνm5
+νν
+(Hz)
+spectra_energy.mcd                       125
+As with the arc and spark spectra, it's also helpful to plot the corresponding wavelengths and wave numbers: 
+λm1
+ccgs
+νm1
+
+λm1
+1.5988
+10 8
+
+
+
+Bλm1
+Bλ T1 λm1
+
+
+
+
+cm
+λm2
+ccgs
+νm2
+
+λm2
+1.3704
+10 8
+
+
+
+Bλm2
+Bλ T2 λm2
+
+
+
+
+cm
+λm3
+ccgs
+νm3
+
+λm3
+1.1991
+10 8
+
+
+
+cm
+Bλm3
+Bλ T3 λm3
+
+
+
+
+λm4
+ccgs
+νm4
+
+λm4
+1.065867
+10 8
+
+
+
+Bλm4
+Bλ T4 λm4
+
+
+
+
+cm
+λm5
+ccgs
+νm5
+
+λm5
+9.592803
+10 9
+
+
+
+cm
+Bλm5
+Bλ T5 λm5
+
+
+
+
+spectra_energy.mcd                       126
+ν'm1
+1
+λm1
+
+ν'm1
+6.25469
+ 107
+
+cm-1
+Bν'm1
+Bν' T1 ν'm1
+
+
+
+
+ν'm2
+1
+λm2
+
+ν'm2
+7.29714
+ 107
+
+cm-1
+Bν'm2
+Bν' T2 ν'm2
+
+
+
+
+ν'm3
+1
+λm3
+
+Bν'm3
+Bν' T3 ν'm3
+
+
+
+
+ν'm3
+8.33959
+ 107
+
+cm-1
+ν'm4
+1
+λm4
+
+ν'm4
+9.38203
+ 107
+
+cm-1
+Bν'm4
+Bν' T4 ν'm4
+
+
+
+
+ν'm5
+1
+λm5
+
+ν'm5
+1.04245
+ 108
+
+cm-1
+Bν'm5
+Bν' T5 ν'm5
+
+
+
+
+spectra_energy.mcd                       127
+2 10
+ 8
+
+4 10
+ 8
+
+6 10
+ 8
+
+8 10
+ 8
+
+0
+0.2
+0.4
+0.6
+0.8
+Bλ T1 λλ
+
+
+
+Bλm1
+Bλ T2 λλ
+
+
+
+Bλm2
+Bλ T3 λλ
+
+
+
+Bλm3
+Bλ T4 λλ
+
+
+
+Bλm4
+Bλ T5 λλ
+
+
+
+Bλm5
+λλ
+(cm)
+(note:  1 A = 10-8 cm, so x-ray wave-
+lengths are commonly expressed in A)
+spectra_energy.mcd                       128
+1 108
+
+2 108
+
+3 108
+
+4 108
+
+5 108
+
+0
+0.2
+0.4
+0.6
+0.8
+Bν' T1 ν'ν'
+
+
+
+Bν'm1
+Bν' T2 ν'ν'
+
+
+
+Bν'm2
+Bν' T3 ν'ν'
+
+
+
+Bν'm3
+Bν' T4 ν'ν'
+
+
+
+Bν'm4
+Bν' T5 ν'ν'
+
+
+
+Bν'm5
+ν'ν'
+(cm-1)
+spectra_energy.mcd                       129
+5.  Spectral Line Width
+Quoting Kuhn, Ref. [10], pp. 385-386:  "If a monochromatic light source is moving with a velocity whose component in the line of
+sight is vx, the frequency appears shifted by an amount 0vx/c compared with the frequency 0 of the source at rest.  Owing to
+this Doppler Effect, the random motion of the atoms of a gas causes the spectral lines emitted or absorbed by these atoms to
+be broadened.  If the lines emitted by atoms at rest are considered as infinitely narrow, i.e., if natural line width and broadening
+by external influences are neglected, the intensity distribution follows immediately from Maxwell's distribution law....The
+half-value width in wave-numbers is found to be
+Δν'
+2 ν'0
+
+c
+2 Rgas
+
+T
+ln 2
+( )
+
+M
+
+
+Δν'
+7.16 10
+ 7
+
+ν'0
+T
+M
+
+
+Here, for once, the Reciprocal System is in agreement with conventional theory.  But:  isn't it odd that conventional theory uses
+thermal theory to explain line width but not the frequency itself, as does the Reciprocal System?
+Example:
+MU238
+ 239.28641
+u
+T
+ 23900
+K
+ν'0
+1
+5000 10 8
+
+
+
+cm-1
+Δν'
+7.16 10
+ 7
+
+ν'0
+T
+MU238
+
+
+Δν'
+ 0.14311
+cm-1
+note:  this is of the same order of magnitude as present-day spectroscope resolution
+spectra_energy.mcd                       130
+6.  Spectra in Magnetic Fields
+As explained in Ref. [29], pp. 113-115, and many other texts, when an atom is placed in a magnetic field its spectral lines are
+spit into a number of discrete lines.  The observed change in frequency of the lines is directly proportional to the magnitude of
+the applied field, B.  The conventional expression (in SI units, for convenience) for this additional energy is
+EB
+ml μB_som
+
+B
+
+where ml is the magnetic quantum number and B is the Bohr magneton (in the Sommerfeld system).  From Ref. [32], it's
+easy to derive the corresponding equation fro the Reciprocal System (also in SI units, for convenience):
+EB
+nM μL
+
+B
+
+(15)
+where nM is the number of magnetic charges induced per atom and L is the Larson magneton.  This latter magneton can be
+defined as
+μL
+μadmp_u_som
+Tv_u
+T
+
+D
+Du
+
+
+joule/tesla
+(16)
+in Sommerfeld units, rather than Kennelly units.  Note that the Larson magneton varies with atomic diameter and temperature.
+For either theory, the change in wavelength can be found by taking the differential of E = hc/: 
+dE
+h
+c
+dλ
+λ2
+
+
+or
+dλ
+λ2
+ dE
+h c
+
+
+where dE = EB.
+spectra_energy.mcd                       131
+Example:  Cd red line in magnetic field of 1 tesla 
+B
+ 1
+tesla
+λ
+6438 10 10
+
+
+
+m
+μB_som
+9.2741
+10
+ 24
+
+
+joule/tesla
+conventional theory:
+dE
+μB_som B
+
+
+dE
+ 0
+joules
+dλ
+λ2
+ dE
+hSI cSI
+
+
+dλ
+1.93509
+10 11
+
+
+
+m
+(plus or minus from )
+here ml = +/- 1 ("regular" Zeeman effect)
+Reciprocal System:
+Cd has rotational displacements 4-3-(6)
+np
+ 4
+ns
+ 3
+ne
+6
+
+DCd
+14.922 10 15
+
+
+
+m
+(from Reciprocal System data base)
+T
+ 3850
+K
+(for arc spectra)
+(either from experiment or from iteration with EB)
+nM_Cd
+ 3
+(could be 1, 2, 3, or 4, i.e. <= np; 3 is for a strong field for "regular" Zeeman effect)
+μL_Cd
+μadmp_u_som
+Tv_u
+T
+
+DCd
+Du
+
+
+μL_Cd
+3.0781
+10
+ 24
+
+
+joule/tesla
+EB
+nM_Cd μL_Cd
+
+B
+
+EB
+9.2343
+10
+ 24
+
+
+joule
+spectra_energy.mcd                       132
+dλ
+λ2 EB
+
+hSI cSI
+
+
+dλ
+1.92679
+10 11
+
+
+
+m
+(plus or minus from )
+λCd
+λ
+dλ
+
+λ
+λ
+dλ
+
+
+
+
+
+
+
+
+
+1010
+
+λCd
+6437.81
+6438
+6438.19
+
+
+
+
+
+
+
+
+
+A
+For use with Eq. (2), for an atom initially in zero field and then in a field of magnitude B:
+Eel_other_1
+ 0
+Eel_other_2
+ EB
+(17)
+As stated at the beginning of this paper, the frequency or wavelength of a spectral line emitted or absorbed in the
+Reciprocal System is ordinarily due to a change in the thermal motion of the atom, not electrons jumping around.  The
+vectorial direction of the atomic thermal motion (scalarly outward) is random and thus there is a net component either
+in the direction of an imposed magnetic field or opposite to it at any moment.  Hence, the calculation above.
+For the "regular" Zeeman effect, there are only two displacements from the no-field spectral line.  This means, for
+the Reciprocal System, that all atoms have the same number of magnetic charges (and very nearly the same
+temperature).  For the "anomalous" Zeeman effect, there would be a probability distribution of the number of
+magnetic charges per atom, and thus there would have to be displacements for each set.  So, for a situation in a
+relatively weak field, where some atoms have zero magnetic charge, some have one magnetic charge, some
+have two, and some have three, there would be six lines, plus the undisplaced center line.  The strength of the
+lines would be dependent on the relative number of atoms with each possible number of charges.
+The "anomalous" Zeeman effect is actually more common than the "regular" Zeeman effect.  The "anomalous"
+Zeeman effect reduces to the "regular" Zeeman effect for sufficiently strong magnetic fields.  This transition is
+termed the "Paschen-Back effect."
+spectra_energy.mcd                       133
+Both conventional theory and the Reciprocal System are consistent with the experimental observations of the
+Zeeman effect.  But:  the conventional theory equation is not dependent on temperature, whereas the Reciprocal
+System equation is.  Therefore, it would be interesting to compare arc and spark spectra in a magnetic field--the
+problem, of course, is that normal electromagnets cannot be used at very high temperatures!
+The surface temperature of many main sequence stars (excepting their coronas) is at approximately the same
+temperature as the atoms in arc spectra, which explains, perhaps, why conventional theory does not include a
+temperature variation for the Bohr magneton.  The magnetic field of most stars is only a fraction of a tesla.
+spectra_energy.mcd                       134
+7.  Spectra in Electric Fields
+Just as a magnetic field splits atomic spectra, so does an electric field.  This phenomenon is termed the Stark effect,
+after its discoverer.  The electric field intensity is commonly expressed in units of volts/m--but electric flux density units
+are more appropriate here.  Analogous to webers/m2 (=tesla) for the magnetic field, we have coulombs/m2. for the
+electric field.  To convert the electric field intensity, FV, to the electric flux density, we must multiply FV by the permittivity,
+of the medium, r x 0_SI, in SI units.  This quantity must then be divided by the Reciprocal System natural unit of electric
+flux density stated in SI units.  This ratio then multiplies the total ionization energy level of the atoms.  The translational
+motion quantum number for state 2, n2, is modified by the motion caused by the electric field, n4-n3, with n3 and n4 being
+two additional quantum numbers.  Conventional theory adds two quantum numbers to explain the "parabolic" motion of
+the electrons of an atom  in an electric field.  This is nonsense, of course; the two new numbers are simply due to the
+motion of the ions in the electric field (either in the same or opposite direction of the thermal motion).  Putting all this
+together, we have
+EE
+Eel_I_tot
+εr ε0_SI
+
+FV
+
+Quc
+st_u 10
+ 2
+
+
+
+2
+
+n2
+n4
+ n3
+
+
+
+
+(for hydrogen and hydrogen-like ions)
+(18)
+n3
+ 0
+1
+...
+n2
+ 1
+
+n4
+ 0
+1
+...n2
+ 1
+
+(integers only)
+for 2n2 -1 equidistant levels.  The experimental data for the Stark effect is somewhat uncertain for elements higher than H;
+the splitting factor appears to be different (and may include modification of the time-space thermal translational quantum
+number, m2, as well as n2).  Application of the theory to these elements will have to wait for later work, but the terms in front
+of the splitting factor should be the same.
+spectra_energy.mcd                       135
+For use with Eq. (2), for an atom initially in zero field and then in a field of magnitude FV:
+Eel_other_1
+ 0
+Eel_other_2
+ EE
+(19)
+Example:
+ionized H1 in electric field of 100,000 volts/cm; assume Pashen series (n1 = 3, n2 = 4; ignore m1 and m2) 
+n1
+ 3
+n2
+ 4
+n3
+0 1
+
+2
+3
+
+n4
+0 1
+
+2
+3
+
+εr
+ 1.25
+(much higher than normal due to
+experimental conditions; needs
+independent confirmation)
+n2
+n4
+ n3
+
+
+
+12
+8
+4
+0
+4
+8
+12
+
+2 n2
+
+ 1
+ 7
+levels
+EH1_I
+ 13.61256
+eV
+EH1_I_tot
+ EH1_I
+EH1_I_tot
+ 13.61256
+eV
+FV
+100000 102
+
+
+FV
+1
+ 107
+
+volts/m
+EE
+EH1_I_tot
+εr ε0_SI
+
+FV
+
+Quc
+st_u 10
+ 2
+
+
+
+2
+
+convevtojoule
+
+(using SI for convenience and not including splitting factor yet) 
+νE
+EE
+hSI
+
+λE
+cSI
+νE
+
+ν'E
+1
+λE
+
+ν'E
+ 643.73173
+m-1
+spectra_energy.mcd                       136
+ν'E_cgs
+.01 ν'E
+
+
+ν'E_cgs
+ 6.43732
+cm-1
+(back to cgs)
+Kuhn (Ref. [10], p. 107) reports that the the experimental value is 6.44 cm-1 for this situation.
+The frequency of this line, without the electric field, is
+ν
+EH1_I
+h
+1
+n1
+2
+1
+n2
+2
+
+
+
+
+
+
+
+
+
+ν
+1.59836
+ 1014
+
+Hz
+With the splitting factor, we have the following set of frequencies:
+12
+
+8
+
+4
+
+0
+4
+8
+12
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+EE
+hSI
+
+ν
+
+1.5752
+1014
+
+1.58292
+1014
+
+1.59064
+1014
+
+1.59836
+1014
+
+1.60608
+1014
+
+1.6138
+1014
+
+1.62152
+1014
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Hz
+Conclusion
+spectra_energy.mcd                       137
+The spectroscopists and nuclear theorists have made the subject of spectroscopy and atomic structure far more difficult
+than it ever needed to be.  The conventional equations are very complicated and mostly impractical.  Complex spectra
+cannot be handled.   In contrast, the equations derived from the principles of the Reciprocal System are very simple and very
+practical.  All kinds of spectra, simple and complex, optical and x-ray, are all easily handled.  Calculations of atomic
+ionization levels compare very well with those observed.  Sooner or later, therefore, spectroscopists and atomic theorists will
+have to give up the nuclear theory of the atom and Quantum Mechanics.  Going back to the classical electron theory of
+Lorentz, then the plum-pudding model of the atom by Thomson, then the "Old Quantum Theory" of Rutherford, Bohr, and
+Sommerfeld, and then the Quantum Mechanics of Schrodinger, Heisenberg, Van Vleck, Pauling, et. al, the theoretical
+physicists and chemists have had a fetish for explaining physical and chemical phenomena, such as atomic spectra, by
+means of charged electrons.  That era is now ended.
+Acknowledgements
+Funding for this work came from Transpower Corporation, not the government!  Of course, great thanks go to Dewey B.
+Larson, who served as my theoretical physics mentor from 1965 until his death in 1990.  He was, by far, the most intelligent
+and most logical of any individual I've ever known. 
+References
+[1]  D. Larson, The Case Against the Nuclear Atom (Portland OR:  North Pacific Publishers, 1963).
+spectra_energy.mcd                       138
+[ ]
+g
+(
+)
+[2]  D. Larson, Basic Properties of Matter (Salt Lake City, UT:  International Society of Unified Science, 1988).
+[3]  D. Larson, The Structure of the Physical Universe (Portland, OR:  North Pacific Publishers, 1959); Nothing But Motion
+(Portland, OR, North Pacific Publishers, 1979.  The latter is Volume I of the 2nd ed. of The Structure of the Physical
+Universe.
+[4]  D. Larson, New Light on Space and Time (Portland, OR:  North Pacific Publishers, 1965).
+[5]  D. Larson, The Neglected Facts of Science (Portland, OR:  North Pacific Publishers, 1982).
+[6]  D. Larson, The Universe of Motion (Portland, OR:  North Pacific Publishers, 1984).
+[7]  R. Satz, The Unmysterious Universe (Troy, NY:  The New Science Advocates, 1971).
+[8]  H. White, Introduction to Atomic Spectra (New York, NY:  McGraw-Hill Book Company, Inc., 1934).
+[9]  G. Herzberg, Atomic Spectra and Atomic Structure (New York, NY:  Dover Publications, 1944).
+[10]  H. Kuhn, Atomic Spectra (London, UK:  Longmans, Green & Co., Ltd., 1962).
+[11]  C. Candler, Atomic Spectra and the Vector Model (Princeton, NJ:  D. Van Nostrand Company, Inc., 1964).
+[12]  A.  Fowler, Report on Series in Line Spectra (London, UK:  Fleetway Press, Ltd, 1922).
+[13]  S. Walker, H. Straw, Atomic, Microwave, and Radio-Frequency Spectroscopy (Norwich, UK:  Fletcher & Son, Ltd.,
+1961).
+[14]  S. Walker, H. Straw, Ultra-Violet, Visible, Infra-Red, and Raman Spectroscopy (Norwich, UK:  Fletcher & Son, Ltd.,
+1962).
+[15]  E. Condon, G. Shortley, The Theory of Atomic Spectra (London, UK:  Cambridge University Press, 1935).
+[16]  C. Moore, Atomic Energy Levels as Derived from the Analysis of Optical Spectra, Vol. 1 (Washington, D.C.:
+spectra_energy.mcd                       139
+[
+]
+gy
+y
+p
+p
+(
+g
+National Bureau of Standards, 1949).
+[17]  C. Moore, Atomic Energy Levels as Derived from the Analysis of Optical Spectra, Vol. 2 (Washington, D.C.:
+National Bureau of Standards, 1952).
+[18]  C. Moore, Atomic Energy Levels as Derived from the Analysis of Optical Spectra, Vol. 3 (Washington, D.C.:
+National Bureau of Standards, 1958). 
+[19]  C. Moore, Ionization Potentials and Ionization Limits Derived from the Analyses of Optical Spectra (Washington,
+D.C.:  National Bureau of Standards, 1970).
+[20]  NIST, http://www.nist.gov/pml/data/asd.cfm
+[21]  H. Moseley, "The High Frequency Spectra of the Elements," Phil. Mag., 1913, p. 1024.
+[22]  K. Lang, Astrophysical Formulae, 2nd Ed. (Berlin, Germany:  Springer-Verlag, 1980).
+[23]  A. Cox, ed., Allen's Astrophysical Quantities, 4th Ed. (New York, NY:  Springer Science, 2004).
+[24]  I. Grigoriev, E. Meilikhov, ed., Handbook of Physical Quantities (Boca Raton, FL:  CRC Press,  1997).
+spectra_energy.mcd                       140
+[25]  D. Lide, ed., CRC Handbook of Chemistry and Physics, 88th ed. (Boca Ratan, FL:  CRC Press, 2008).
+[26]  D. Gray, ed., American Institute of Physics Handbook, 3rd ed. (New York, NY:  McGraw-Hill Book Company, 1972).
+[27]  D. Layzer, "On a Screening Theory of Atomic Spectra," Annals of Physics, Vol. 8, pp. 271-296, 1959.
+[28]  H. Di Rocco, "A Simple and Effective Approach to Calculate the Energy of Complex Atoms," Revista Mexicana De
+Fisica, Vol. 48, No. 1, pp. 76-87.
+[29]  R. Gautreau, W. Savin, Modern Physics (New York, NY:  McGraw-Hill Book Company, 1978).
+[30]  R. Satz, "Photoionization and Photomagnetization," Reciprocity, Vol. XII, No. 1, Winter 1981-1982.
+[31]  R. Satz, "Theory of Subatomic and Atomic Masses and Half-Lives", http://transpower.wordpress.com, 02/10/2012.
+[32]  R. Satz, "Theory of Dielectrics, Diamagnets, Paramagnets, and Ferromagnets, including Calculation of Electric and
+Magnetic Susceptibilities", http://transpower.wordpress.com, 10/31/2011.
+  

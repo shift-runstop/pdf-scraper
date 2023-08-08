@@ -1,0 +1,2880 @@
+See discussions, stats, and author profiles for this publication at: https://www.researchgate.net/publication/361114681
+Ecological Memory: the spatiotemporal commons of conceptual and physical
+navigation
+Preprint · February 2022
+DOI: 10.13140/RG.2.2.18290.79046
+CITATIONS
+0
+READS
+440
+1 author:
+Andrea Hiott
+Universität Heidelberg
+1 PUBLICATION   0 CITATIONS   
+SEE PROFILE
+All content following this page was uploaded by Andrea Hiott on 06 June 2022.
+The user has requested enhancement of the downloaded file.
+Overview: The basic ideas presented here are: 1.that cognition is continuous with navigation 
+(which means navigation itself can be understood as pre-reflective cognition); 2. that taking 
+this seriously changes our understanding of landscape in ways that require non-binary 
+vocabularies (i.e. using terms like 'mental' and 'physical' as dichotomies is no longer a 
+productive strategy); and 3. the orientation and methods of cognitive neuroscience could be 
+optimised by an ecological approach which looks at scales of complexity rather than 
+stimulus-response and metricizes the experiment itself so it becomes part of the data and 
+analysis. 
+ 
+A note on the term 'ecological': Ecological as used here is inspired by many sources, from 
+Rachel Carson to Gregory Bateson. At its most general, it implies a stance that, in the words 
+of J.J. Gibson on affordance, “cuts across the dichotomy of subjective-objective and helps us 
+understand its inadequacy,” (Gibson, 1979, 129). 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+2 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Ecological Memory: 
+the spatiotemporal commons of physical and conceptual navigation 
+...................... 
+ 
+ 
+ 
+ 
+Master Thesis 
+submitted in fulfilment of the requirements for the degree 
+Master of Arts (M.A.) 
+in the master’s program „Mind and Brain“  
+ 
+ 
+ 
+Humboldt-Universität zu Berlin 
+Berlin School of Mind and Brain 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Andrea Hiott 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1. Supervisor:  
+Prof. Dr. Christian Doeller (Max Planck Institute) 
+2. Supervisor:   
+Prof. Dr. Georg Northoff (University of Ottawa) 
+ 
+ 
+ 
+ 
+ 
+ 
+3 
+ 
+ 
+ 
+Table of Contents 
+ 
+ 
+ 
+ 
+        Page 
+Abstract 
+ 
+ 
+ 
+ 
+ 
+ 
+3 
+Orientation 
+ 
+ 
+ 
+ 
+ 
+ 
+3 
+What this paper does & clarification of systems 1-3  
+4 
+Hippocampal-entorhinal formation  
+ 
+ 
+8 
+Cognition as behavior  
+ 
+ 
+ 
+          10 
+Navigation & memory as continuous terms   
+          12 
+ 
+Memory 
+ 
+ 
+ 
+ 
+          12 
+ 
+Representation  
+ 
+ 
+ 
+          15 
+ 
+Ecological 
+ 
+ 
+ 
+ 
+          19 
+ 
+Encounter 
+ 
+ 
+ 
+ 
+          21 
+ 
+Time & Space  
+ 
+ 
+ 
+          21 
+ 
+Navigation 
+ 
+ 
+ 
+ 
+          23 
+An alternative narration of memory research  
+          25 
+Further refining navigation 
+ 
+ 
+ 
+          28 
+Towards a process model 
+ 
+ 
+ 
+          29 
+Current measurements 
+ 
+ 
+ 
+          32 
+Tolman Eichenbaum Machine 
+ 
+ 
+          33 
+Emphasizing baseline activity  
+ 
+ 
+          36 
+Natural statistics 
+ 
+ 
+ 
+ 
+          39 
+Heuristics for reorientation 
+ 
+ 
+ 
+          41 
+Relevance to navigation and memory  
+ 
+          44 
+ 
+Nestedness 
+ 
+ 
+ 
+ 
+          45 
+ 
+Position 
+ 
+ 
+ 
+ 
+          46 
+Possible experiment  
+ 
+ 
+ 
+          48 
+Clinical potential 
+ 
+ 
+ 
+ 
+          49 
+The commons of physical and conceptual navigation          50 
+Bibliography  
+ 
+ 
+ 
+ 
+          53 
+Abbreviation  
+ 
+ 
+ 
+ 
+          70 
+Declaration of authorship 
+ 
+ 
+ 
+          71 
+ 
+4 
+ 
+ 
+ 
+ 
+ 
+Abstract 
+A particular vocabulary is basic to cognitive neuroscience—memory, thought, and 
+mind name what scientists hope to understand with their research, while maps, codes 
+and representations are sought within brains to explain those activities. Many 
+distinguished neuroscientists have recently pointed out that these vocabularies and the 
+stimulus-and-task-based methods used to study them require re-evaluation. Still, 
+decades of research have produced a successor path—one that begins with thinkers 
+such as Edward Tolman and J.J. Gibson in the 1950s and is currently evolving into a 
+computational hybrid incorporating dynamical systems. Taking this path requires 
+optimizing methods and vocabulary so that behavior and cognition can be 
+computationally evaluated as different scales within the same process: Rather than 
+speaking of behavior and cognition as separate (i.e. physical & conceptual) this 
+approach understands them as scales of nonbinary action, as ecological. Hippocampal 
+research relative to navigation and memory offers an example of this reorientation. 
+Evaluating memory and navigation as scales of the same process requires shifting the 
+weights in current vocabulary. It also means making an ecological shift at the level of 
+methods and data analysis. We must metricize the experiment itself and optimize data 
+analysis such that scale-free methods can be used to analyse regularities beyond 
+subject-object stimulus-response dichotomies. 
+ 
+ 
+Orientation 
+Cognitive neuroscience (CN) continues with measurement as usual though recent scholarship 
+portends shifts in assumptions underlying its vocabulary and methods, as well-worn 
+dichotomies need challenging (Brette, 2018; Buzsáki, 2020; Hasson et al., 2020). Current 
+methods cannot be separated from their concepts: Methods stem from worldview, and 
+worldview infuses vocabulary. As György Buzsáki puts it, “the narratives we use to describe 
+the world shape the way we design our experiments and interpret what we find” (Buzsáki, 
+2019). 
+ 
+ 
+5 
+CN is questioning its narrative. Whether reevaluating fMRI (Poldrack, 2017), challenging 
+assumptions behind coding (Brette, 2019; Cisek, 2019b) calling for a cross-disciplinary 
+understanding of representation (Baker, 2017; Constant et al., 2021; Kriegeskorte & 
+Diedrichsen, 2019) or questioning whether neuroscientists can use microprocessors (Jonas & 
+Kording, 2017), the call for clarification is widespread and coming from those who have 
+studied these subjects deeply. Buzsáki, for example, has written a book urging the discipline 
+towards a dramatic inside-out shift (Buzsáki, 2019) while Uri Hasson has turned towards an 
+ecological approach on parameterization (“direct fit”), claiming current “contrived 
+experimental manipulations may not provide sufficiently rich behavioral contexts for testing 
+our models ” (Hasson et al., 2020). Buzsáki, who recently engaged in a respectful spar with 
+David Poeppel on this topic (Buzsáki, 2020; Poeppel & Adolfi, 2020), writes that “the 
+general practice in large areas of neuroscience follows a misguided philosophy” (Buzsáki, 
+2019). Still, CN may have come further than it thinks. 
+ 
+ 
+Figure 1: A call for overparameterization from (Hasson et al., 2019) 
+ 
+What this paper does & clarification of Systems 1-3 
+This paper sketches out a new philosophy of mind—a way to understand cognition as 
+behavior continuous with navigation. The argument here, inspired by (Gibson, 1979; 
+Bellmund et al., 2018; Northoff, 2018b; Buzsáki 2019; Hasson et al., 2020) is that the NS 
+converts the regularities of the body’s encounter into action, that this action includes all 
+traditional cognition, and that by optimizing methods and vocabulary, CN can study 
+cognition computationally as scaled behavior. Another, rougher way of saying this is: The 
+nervous system (NS) positions the natural statistics it encounters (regardless of whether those 
+are internal or external) to its own biogenetic, baseline activity as the body develops and 
+evolves through external communication, developing further sensory scales (i.e., via cortex) 
+for reading and adjusting discrepancies. This process is best understood, both evolutionarily 
+and in current behavior, as navigation. Reorienting cognition as navigation unites it with 
+behavior, moving beyond dichotomies towards fresh methods and means of analysis. 
+Matching to natural statistics of the encounter is referred to here as System 1 navigation 
+while the ability to sense/read bodily regularities created by that matching is referred to as 
+System 2. A further term, System 3, is introduced to illustrate communicative measurement 
+ 
+6 
+and awareness of System 2, what humans recognize as thinking and memory. System 3 is 
+conscious awareness of the activity of mind, both in oneself and in another. 
+ 
+System 1 and System 2 were proposed (Kahneman, 2011; Stanovich & West, 2000) to 
+roughly describe two distinguishable modes of thinking or dual processes (Mandler, 1991), 
+modes labeled and argued over in numerous ways in philosophy and psychology comparable 
+to lower and higher order, phenomenal and access, model-free and model-based etc. (Evans, 
+2008). This paper uses System 1 and System 2 as defined below: 
+ 
+• “System 1 operates automatically and quickly, with little or no effort and no sense of 
+voluntary control. 
+• System 2 allocates attention to the effortful mental activities that demand it, 
+including complex computations. The operations of System 2 are often associated with 
+the subjective experience of agency, choice, and concentration.” (Kahneman, 2011) 
+ 
+Awareness of what Kahneman describes above as “the subjective experience” is understood 
+here as System 3—as the body’s awareness of System 1 and System 2 thinking (whether its 
+own or another’s). We can compute, choose, and concentrate without being aware we are 
+doing so. Likewise, we can notice another’s agency or effect without noticing that we are 
+noticing it. These are understood here as System 2. Knowing that we are doing so—knowing 
+that we are computing, choosing, concentrating, or observing our own or another’s agency—
+is what is conveyed by phrases like “being conscious” or “watching one’s thoughts” or 
+“thinking analytically.” System 3 (which would include Marr’s levels) happens in 
+conversation or communication with another or with oneself, whereby there is additional 
+sensing of System 2 processes. 
+ 
+Kahneman gives the following examples of System 1 (S1): 
+• “Detect that one object is more distant than another. 
+• Orient to the source of a sudden sound.  
+• Make a ‘disgust face’ when shown a horrible picture” (Kahneman, 2011). 
+ 
+Examples of System 2 (S2) are: 
+ 
+7 
+• “Focus on the voice of a particular person in a crowded and noisy room. 
+• Look for a woman with white hair. 
+• Search memory to identify a surprising sound” (Kahneman, 2011). 
+ 
+Examples of System 3 (S3) would be:  
+• Notice one’s own search for a particular woman. 
+• Watch oneself search memory for a particular sound.  
+• Engage in conversation that critiques one’s previous interaction. 
+ 
+As Kahneman makes clear, these systems are not meant literally but rather as means to 
+understand an ongoing, meshed process. To further generalize, these systems can be 
+connected to the striatum and caudate (S1), the hippocampal-entorhinal formation and 
+retrosplenial cortex (S2), and neocortex (S3). In fact, all systems involve all these areas to 
+differing degrees (Chersi & Burgess, 2015; Ciaramelli, 2008; Euston et al., 2012; Vertes, 
+2006; Schapiro et al., 2017; Momennejad, 2020; Nitzan et al., 2020; Shin et al., 2021; 
+Tzilivaki et al., 2021). Such comparisons seen through current literature, however, can be 
+helpful for reference, as the striatum is often associated with root navigation (sequences 
+linked to sequences) (Berke, 2009; Schmitzer-Torbert & Redish, 2004), the hippocampal-
+entorhinal formation with cognitive maps (readings of regularities), and neocortex 
+(prefrontal, etc.) with so-called “conscious” reading or awareness of regularities, critical 
+thinking, and communication (Spiers, 2008). Importantly, all systems are associated with 
+navigation (Chersi & Burgess, 2015; Spiers, 2008). As this is a lot to take in, here is a brief, 
+loose summary:  
+The NS and body come with inherited architectures that calibrate to the encounter by 
+way of the body’s sensuality. The body, as a sensory system, matches to (Buzsáki, 
+2019b), aligns (Northoff, 2018b) or directly fits (Hasson et al., 2020a), regularities of 
+its encounter by way of S1, iterating to S3. We can imagine these regularities as 
+natural statistics (Giere, 2004a, 2006), and the body’s ongoing encounter as its 
+lifespan. As the body learns to navigate regularities (S1), it builds its own regularities, 
+and learns to navigate those (S2, S3). This is what is meant by navigation. It includes 
+traditional notions of navigation such as movement through environments (i.e. homes, 
+cities) but it also includes how a body finds its way through concepts, social relations, 
+internet sites, computer tasks, books, etc. For the purposes of this paper, all of this is a 
+body’s encounter and that encounter includes the body itself. This encounter, as 
+ 
+8 
+explained below, can be of an environment or of one’s habituations to that 
+environment—a matter of going to the grocery store, writing a list of what’s needed at 
+the grocery store, or remembering an incident that happened there. Navigation is 
+whole-body movement and movement (behavior) of the NS through its own 
+habituations. (Speaking of NS habits may feel strange. We can also imagine them as 
+active priors or active scripts). The regularities of the encounter lead naturally to 
+regularities of brain activity as context shifts its regularity; they are generalizable, or 
+scales of the same activity. 
+ 
+The hippocampal-entorhinal formation (HEF) is summarized here as a fulcrum, part of 
+developing the pacing of striatum nonvoluntary action and cortex-tual readings. Due to space 
+and scope, I focus on the HEF as the brain’s GPS (place cells in the hippocampus, grid cells 
+in the entorhinal region, etc.) but such navigation should not be read as distinct from striatum 
+and other cortex—what is here divided into S1 navigation, S2 reading of habits, and S3 
+awareness of bodily navigation is an ongoing process involving all parts to differing degrees. 
+Still, traditional literature is used here to show how memory moves into an orientation of 
+cognition as continuous with navigation. This is done through re-narrating hippocampal 
+research and representation: Hippocampal research can be understood as conjunctive sensing 
+and positioning which matches a body to its encounter and which the NS later itself reads as 
+habituation. In this way, the paper moves towards a common definition of navigation and 
+memory and an example of cognition as scaled wayfinding. The paper proceeds as follows: 
+First we develop an understanding of the HEF and research linking navigation and memory, 
+then we reorient our definition of memory (which requires reorienting representation), and 
+finally, we see how this reorientation allows us to understand cognition as navigation 
+whereby navigation is defined as wayfinding via scaled, conjunctive sensing and positioning 
+(Gibson, 1979; Gallistel in Eichenbaum, 2017). 
+ 
+Before beginning, a quick note on a common confusion: Because S3 is the system through 
+which we become aware of S1 and S2, it is hard not to define our goal through the tools we 
+have built—to look for S3 notions of memory and thought in the processes that built them. 
+Because the ways we measure and scaffold our senses shape those senses (Hurme, 2017), our 
+ability to measure orients us to think through our measurements. These measurements look 
+different depending from what position they are measured, and their very ability to be 
+measured or communicated implies realism that some process is shared (Massimi, 2018). 
+ 
+9 
+This process arranges differently depending on position, just as two boats looking into the 
+ocean will necessarily see that ocean at slightly different angles. This processual, perspectival 
+view is not new to science (DiSalle, 2006; Giere, 2006) but is new to CN. Due to this 
+inclination to use S3 to look towards what created it to find it, it is necessary to note that 
+words like memory and thought are perspectival S3 measurements and can only be found to 
+the extent one can find an inch or a mile. 
+ 
+ 
+Hippocampal-Entorhinal Formation (HEF) 
+It became clear in the 1950s that two seahorse-shaped areas in the brain known as 
+hippocampi are linked to memory (Scoville & Milner, 1957). In the 1970s, it became clear 
+that these same areas of the brain are linked to navigation (O’Keefe & Dostrovsky, 1971; 
+O’Keefe & Nadel, 1978). In the following decades, the HEF and its positional cells1 (“the 
+brain’s GPS”) came to be associated with the cognitive map. The term cognitive map was 
+introduced in the 1950s (Tolman, 1948) to describe a systematic means in the brain for 
+organizing knowledge across domains (navigating to a reward, inferring a shortcut) and was 
+expanded upon (O’Keefe & Nadel, 1978) towards understanding cells in the HEF as firing in 
+statistical patterns relative to how a creature moves through its environment. The conjunction 
+of sensory and positional information seemed to connect memory and navigation in HEF 
+firing (Eichenbaum, 2017a; Eichenbaum & Cohen, 2014; E. I. Moser et al., 2008) which led 
+to further insight regarding generalization (Constantinescu et al., 2016; Behrens et al., 2018; 
+Bellmund et al., 2018: Theves et al., 2020). This paper reorients towards understanding 
+cognitive maps as crucial S3 measurements used to understand how priors develop, how one 
+remembers where one has been and how to get there again, and how one infers from those 
+priors towards staking out new paths (S1 & S2 navigation). 
+ 
+Figure 2 summary of positional cells and research from (Behrens et al., 2018) 
+ 
+For a time, there was debate about whether hippocampi and cognitive maps were for memory 
+(cognition) or for navigation (behavior), reflecting the Cartesian habit, to be discussed later, 
+of assuming cognition to be other than action. Scientists have since shown the hippocampus 
+is crucial for both memory and navigation (Buzsáki & Moser, 2013; Eichenbaum & Cohen, 
+ 
+1 cells relative to position: i.e., place cells, grid cells, border cells, etc. 
+ 
+10 
+1988; Eichenbaum, 2004, 2017a; Milivojevic & Doeller, 2013a; Schiller et al., 2015; 
+Eichenbaum & Cohen, 2014), though the invisible hand of dualism remains. Though material 
+(physical) navigation and conceptual (mental) navigation have traditionally been treated as 
+different domains, they clearly have functions in common (Doeller et al., 2010; Milivojevic 
+& Doeller, 2013). In 2017, Eichenbaum went so far as to say that ‘the role of the 
+hippocampus in navigation is memory’ (Eichenbaum, 2017b). Knowledge and conceptual 
+learning have since been linked to the HEF (Bellmund et al., 2018; Constantinescu et al., 
+2016; Eichenbaum, 2017b)—showing the NS likely positions sensory inputs represented by 
+S3 as concepts or knowledge in the same way it positions sensory inputs we call rooms or 
+landscapes, by relationally weighting clusters of sensory regularities through that 
+encountered regularity (J. C. R. Whittington et al., 2020). Such findings suggest we think the 
+same way we navigate (Bellmund et al., 2018b), as the NS and body habituate or ‘match’ to 
+regularities of the sensory encounter (Buzsáki, 2019). What is sometimes still presented as 
+different views of the cognitive map (O’Keefe & Krupic, 2021)—revolving around whether 
+these maps are spatial or nonspatial (i.e. behavioral or sensual/conceptual)—assumes 
+memory something other than behavior but can be reframed as matters of nested, 
+spatiotemporal measurements which differ in scale but not in pattern (Golesorkhi et al., 
+2021). In hippocampal literature, for example, audio is termed ‘nonspatial.’ For the NS, 
+however, audio is spatial: Although it is not spatial from a whole-body-to-world position, it is 
+spatial from the position of the brain and its behavior because the body (rather than the 
+world) is its space (Northoff et al., 2020a): space and time are positioned, sensory 
+measurements. 
+ 
+Cells in the HEF fire according to environmental regularities (i.e., particular parts of a room) 
+(E. I. Moser et al., 2008). For the NS, however, those regularities are not parts of a room but 
+regularities of the body’s sensory encounter. In matching to the encounter, the NS is 
+matching (Buzsáki, 2019) to the body’s conversion of that encounter (via sight, hearing, 
+tasting, proprioception, etc.). One can imagine this as S1 direct fit (Hasson et al., 2020; 
+Kahneman, 2011) which then, in a development continuous with the evolution of other 
+sensory systems (Schlosser, 2018), develops S2 reading of S1 habits and (perhaps) S3 
+communicative awareness of those habits (Heyes, 2018; Kahneman, 2011). In this theory, 
+what is sometimes referred to as “controlled hallucination” (Frith, 2005; Seth, 2018) would 
+be an S2 reading of S1 habituations as measured by S3, whereby what is encountered is as 
+ 
+11 
+much the body’s own habits as it is contextual encounter. As S3, what is being registered is a 
+sensory encounter—positioned, spatiotemporal measurement (Northoff, 2018). 
+ 
+ 
+Cognition as behavior 
+In recent years, there has been a push to bring behavior into methods to correct a bias of 
+reductionism (Krakauer et al., 2017). Perhaps this can be pushed further to say cognition is 
+different scales of behavior. Although philosophical circles argue about whether or not 
+cognition is behavior (Aizawa, 2017)—historical precedent nearly forcing a choice 
+(Chomsky, 1959)—there have always been options (Tolman, 1922; Gibson, 1966; Gibson, 
+1979) which do not separate the two so stringently but measure the subject differently, 
+allowing cognition to join walking, talking, or breathing as behavior—as activity of organs, 
+systems of organs, or parts of them. One could even define S1 cognition (sensing and 
+positioning of that sensing) biologically as an “iterative optimization process to pursue an 
+objective, given their input or environment” which is the definition Hasson’s lab gives of 
+their Gibson-inspired ‘direct fit’(Hasson et al., 2020). We then understand S1 behavior, 
+whether one frames it as navigation or cognition, as developing through exploration of the 
+encounter, and S2 behavior developing as a further sensing of those regularities or scripts. 
+Similarly, just as Tolman’s notion of a cognitive map is “useful for the animal only after it 
+has already learned the significance of the relationships among the landmarks through active 
+exploration” (Buzsáki, 2019), inference would not require S3 when whatever position making 
+the inference is positioned relative to regularities it has previously explored. Any map of this 
+activity would only be visible to an outside observer via S3, though this S3 observer could 
+also be that same positioned body. In other words, cognition need not be bodily awareness of 
+cognition any more than walking is bodily awareness of walking. Bodily awareness of 
+cognition is distinct from the ability of the NS to sense/read its own regularities. 
+ 
+S1 cognition is more akin to the movement described in the Churchland Lab (Russo et al., 
+2020) which does not require the NS to read its own activity to move (Russo et al., 2020; 
+Zimnik & Churchland, 2021)—one might say the movement here is traditionally ecological 
+(Gibson, 1969). This activity could, however, lead to the NS evolving to read the regularity 
+of its own integrated sensory conversions—evolving S2 in the same direct fit manner it 
+evolved S1, except at a different scale: Whereas for S1, the input is the body’s external 
+encounter, for S2, the input is the NS’s habituated behavior. The ability of the NS and body 
+ 
+12 
+to sense/read its own previous habituation, once developed, like any other sensory system, 
+would not depend on other sensory organs to function, and would exist even if others are 
+impaired (Rabinowitch et al., 2016). A body’s awareness of S2 reading (S3) would be an 
+ecological development necessitated by its involvement in a larger system. This would mean 
+brains are not building models, but observers of bodies with brains are—the body is sensing 
+its own multisensory regularities just as those regularities were once sensed by the NS 
+through that same body. Bodies, in communication, are sensing their regularities and 
+modeling them. 
+ 
+ 
+Navigation & memory as continuous  
+When cognition is understood as activity, navigating external space and navigating concepts 
+(behaving and thinking) become scales of the same ongoing activity. Remembering (and 
+thinking) are matters of finding one’s way through spatiotemporal sensory regularities such 
+as languages, images, or concepts. Current vocabulary sets space as distinct from sensing or 
+thinking, however. Cognitive maps are said to exist “for space and other domains” 
+(Eichenbaum, 2017b) and words like nonspatial and abstract are used to talk about sensing, 
+thinking and remembering. Audio, taste, concepts and so on are termed nonspatial as if the 
+NS encountered these differently (Allen et al., 2016; Hampson et al., 1999; O’Keefe & 
+Krupic, 2021). This assumes ‘mental’ is opposed to ‘physical’ or behavioral but cognition is 
+something the NS does and comes about the same way as other bodily navigation—the so-
+called inputs are just from the body rather than into it. 
+ 
+To assume mental and physical are different domains rather than different perspectives of 
+behavior is to fall into a Cartesian trap which confuses activity with representation of that 
+activity. This leads to problems previously noted (i.e., Buzsáki, 2019): The way vocabulary is 
+used in hippocampal research is an example of how assumptions rooted in our use of terms 
+restrain us from progress made by this same research. To grasp this shift, however, we must 
+re-narrate and observe some basic terms. The following are to be taken as conjecture based 
+on combining past research in a new way. Normally, a paper like this must cite anything for it 
+to be taken seriously, but those citations are themselves always of previous conjectures based 
+on previous assumptions of vocabulary, such that a tower of conjecture is built and forced 
+upon those wishing to comment. Some of the following seeks to let that tower fall and see 
+what else may have been built from those same resources. 
+ 
+13 
+ 
+Memory 
+In current literature, memory is said to be stored and encoded within heads (Michaelian & 
+Sutton, 2017; Schapiro et al., 2017). Still, most would not claim memory is a material that 
+can be extracted from heads any more than personality is a substance that can be extracted 
+from DNA. At its widest, memory is defined as any “modification of an agent’s behavioral 
+tendencies as a result of experience” (Michaelian & Sutton, 2017). This could mean 
+memories are stored only to the extent actions and behaviors are stored. Bodies do not store 
+behaviors in the sense of keeping them intact but rather of habituating them such that they 
+can be cued into use according to encountered regularities. Memory is best understood this 
+way, too. This does not mean there is no storage: it means storage is a dynamic activity 
+whereby cells produce memory the way an orchestra produces music; the same agents and 
+instruments create different songs depending upon cue and context. 
+ 
+When we remember, we seem to be sensing again without the presence of the objects that set 
+those parameters (Luczak et al., 2007): our body uses priors via action not via retrieval, just 
+as it does when it senses light or sound. Our senses have evolved for action (Schlosser, 2018; 
+Smetacek & Mechsner, 2004) and our ability to sense our cognition is continuous with this 
+development. The tricky thing is that priors can come from the body itself once that body’s 
+cognitive habits have been framed by the encounter. We remember our grandmother, for 
+example, because we are thinking of the test we have on Friday and see the date, which is 
+also her birthday. All cues are associative: these paths are cognition (Ginsburg & Jablonka, 
+2019). The encounter never stops, nor does the body’s sensing of it; it is never wholly inside 
+or out. 
+ 
+Most would not object to defining memory and storage as activity. Others explain words like 
+encoding or storage as metaphorical (Roediger, 1980). Even if used loosely, however, these 
+words come with assumptions that guide how experiments are created and whether those 
+experiments are deemed successful. Just as the Euclidean, spatial notion of cognitive maps 
+needs updating (Momennejad, 2020), assumptions behind storage do too. Understanding 
+memories as things stored in brains rather than behaviors weighted by cue frames the 
+paradigm towards substance rather than process and stifles progress (M. H. Bickhard, 2009). 
+ 
+ 
+14 
+To unpack these claims, let’s look at a lengthy quote (Eichenbaum, 2017a) which articulates 
+important history regarding navigation, memory and the hippocampus, demonstrating 
+standard vocabulary. In this quote, memory is assumed to exist as a substance in space, but 
+that space is defined as different from physical space. It sits snug within the tradition which 
+defines memory, thought, concepts, knowledge, smells, tastes and sounds as nonspatial (E. I. 
+Moser et al., 2008; O’Keefe & Krupic, 2021; Wu et al., 2020) or attributing them 
+instrumentally to conceptual space (Gärdenfors, 2000). Are these nonspatial from an NS 
+point of view? It seems unlikely, as from a neural position within the NS, these would have 
+their own spatiotemporal dynamics (Dotson & Yartsev, 2021; Northoff et al., 2020b). In fact, 
+the points made below become stronger if we understand memory as behavior, and concepts 
+and knowledge as different statistical sensory regularities read by the NS the same way they 
+are read by the sensory body when it’s moving through (for example) a maze. To assume 
+Cartesian non-spatiality (Descartes, 1993) is to confuse representations of activity (smells, 
+tastes, etc.) with the activity they measure. Now, to Eichenbaum: 
+ 
+Some have suggested that the hippocampus evolved to map space and support 
+navigation and that these functions were co-opted during evolution to also support the 
+organization and navigation of abstract spaces in memory. For example, O’Keefe and 
+Nadel (1978) viewed the rodent hippocampus as dedicated to mapping physical space; 
+they allowed that the human left hemisphere evolved to map semantic space. Buzsáki 
+and Moser (2013) raised a similar argument, suggesting that the hippocampus and 
+closely associated areas originally evolved as a dedicated spatial navigational system, 
+but in humans was co-opted to support a broader role in mapping memories. They 
+specifically emphasized that the form of representation originally developed to 
+represent routes was the basis for later evolution of the ability to remember the flow 
+of events in episodic memory. They also argued that the form of representation used 
+in the creation of cognitive maps was the basis for later evolution of the ability to 
+represent structured conceptual organizations in semantic memory…there is 
+substantial evidence the hippocampus is essential to creating cognitive maps of 
+physical and abstract space in nonprimates, including birds (Lazareva et al. 2015) as 
+well as rats (Bunsey and Eichenbaum 1996) and mice (Devito et al. 2010), indicating 
+a general role in cognitive mapping across spatial and nonspatial domains among 
+diverse mammalian species…These findings challenge the idea that navigation 
+preceded relational memory in evolutionary appearance (Eichenbaum, 2017a). 
+ 
+15 
+ 
+Eichenbaum’s quote assumes ‘space’ in memory, and memory to be a substance stored, yet 
+also asserts memory is nonspatial. His point is stronger if memory is defined as habitually 
+evoked behavior. Evoked by what? By encountered sensory regularities, even when those 
+regularities belong to the body reading them. This allows for conjunction of memory and 
+navigation in the way Eichenbaum shows conjunction of sensing and positioning. It means 
+seeing the brain as an organ of action (Hasson et al., 2020), no longer defining 
+“understanding” through a Cartesian prism of non-spatiality and non-extension. 
+ 
+What if S3 words like space and memory are communicative measurements of ongoing 
+activity? We could understand the activity it measures to be as spatial as any other from the 
+perspective of the NS (Northoff et al., 2020a). This means searching for what Brette calls 
+hieroglyphs within brains is helpful to the extent that we know from the start that those 
+hieroglyphs are communicative measurements of observed activity (Brette, 2018). It makes 
+sense to represent (via fMRI images, models, etc.) regularities of activity and how they 
+change in conditions of disease. Representing those activities externally to communicate 
+about them is how science proceeds. Looking for representations inside of brains, however, is 
+like looking into the ocean for replicas of the boat one is standing upon. 
+ 
+If we take maps out of brains and see them as measurements, concept space and physical 
+space become, for the NS, scaled activity of positioned sensing. Navigation is sensory 
+behavior; thinking and remembering are versions of it. For the NS, moving down the street 
+and moving through a book are matters of positioning encountered sensory relations. 
+Positioning them to what? To one another and all previously encountered. Positioned where? 
+In the weights of the interaction, in the way the body and brain ecologically encounter 
+whatever is encountered, even when that encounter is the body itself. This underlines 
+Eichenbaum’s point that navigation did not precede memory, though it also means memory 
+did not precede navigation: To move is to sense, and one cannot sense without being moved. 
+ 
+Representation 
+Debate flares over whether representations are real and/or internal (Constant et al., 2021; 
+Baker, 2017). The view expressed here is that representations are real and are not inside 
+brains; they are communicative measurements of systematic activity. This is a different take 
+on philosophical dichotomies of realism and anti-realism about representations (Appiah, 
+ 
+16 
+1991) because such dichotomizing is not necessary via an ecological and perspectival stance. 
+Theories and models are part of the same statistical regularities they theorize about or model, 
+so there is no gap, only different positions (Giere, 2006; Massimi, 2018). As we will see 
+below, space and time can be understood through a similar shift (DiSalle, 2006; Giere, 2004), 
+as measurements made from positions. We can only approximate activity with measurements 
+because measurements are themselves part of the ongoing shared regularities—as are we: To 
+communicate implies shared activity, regardless of whether one defines what is shared as 
+language, space, time, virtuality, illusion, etc. There are no gaps between positions because 
+those gaps would also be positions: From any position, one can turn the kaleidoscope of scale 
+(i.e. from social to human to cellular). Likewise, just as activity measured as time and space 
+is not distinct from what measures it (Baumann et al., 2016; Ciaglia et al., 2020), an S3 
+observation (measurement) cannot be extracted from S1 and S2 because the activity of those 
+systems is it. It is only through representations (language, numbers, etc.) that we can 
+communicate about regularities (we can communicate without representations, but we need 
+representations to communicate about regularities). Here, as discussed earlier, is where it 
+becomes easy to confuse S3 measurements with what is being measured, to look for language 
+or numbers or figures inside of brains simply because their natural statistics shape and form 
+our sensory experience of them. While it may seem like we have words and images in our 
+heads, they are not in heads but are sensed by them. The difference is subtle but momentous. 
+ 
+Turing’s machine models how sequences of symbols on a strip of tape can be ‘read’ and new 
+ones ‘written’ so long as there are a few basic rules by which the sequencing of that model 
+operates (Church, 1937; Turing, 1937; Wells, 2004). Reading and writing (words which only 
+make sense for an S3 observer) are, for the thing doing the reading or writing, a matter of 
+matching, aligning, or directly fitting to what the body has converted from its sensory 
+systems to the NS, or of the integrated habits that same NS makes through its matching 
+(Wells, 2002, 2004). Taking representations out of the head makes models and computation 
+in this Turing tradition more important, not less. A representation (code, map) needs (at least) 
+two points to be made by a third (Bateson, 1972). It is only through (at least this) 
+triangulation that further sensory organization forms. Bodies represent to communicate with 
+one another or with themselves. What they are communicating about are regularities, natural 
+statistics shared at least enough to be observed and communicated— discerned statistical 
+regularities shifting according to position of measurement, from the point of view measuring 
+ 
+17 
+it. Likewise, representations such as fMRI or EEG data are not observed in brains but are S3 
+measurements of highly regular brain activity. As Buzsáki writes: 
+Judgments of “similar” or “different” are subjective (i.e., observer-dependent). Yes, 
+an experimenter can quantitatively define the relationship between stimuli and the 
+spatiotemporal firing patterns of recorded neurons…this relationship does not mean 
+that neurons in the brain of the experimental subject views the stimuli in the same 
+way as the experimenter, nor does it mean that the brain uses these recorded signals in 
+the same way or at all. (Buzsáki, 2019). 
+ 
+Representations (words, images, models) are themselves co-created sensory clusters humans 
+form to better understand their activity. fMRI images are cropped snapshots of activity 
+happening when a person looks at a particular statistically regular image in an fMRI machine 
+(i.e., scary is a statistical regularity). As Buzsáki points out, the resulting brain image is 
+relevant to the position viewing it, not to the brain of the subject (Buzsáki, 2020). It does not 
+represent the brain it is a picture of; it represents the relation of that brain to the experimenter 
+and experiment. It correlates a general measurement (the task) to S3 measurement. This 
+shows the brain has regular statistics of activity when sensory stimulation is of regular 
+statistics (as in a controlled task). The maps between those statistics are external 
+measurements, observed from a point of view looking for specific regularities. Why does this 
+distinction matter? Because it guides methods, theories and vocabularies and keeps CN 
+trapped in dichotomies rather than seeing how patterns scale between positions. To do this, 
+one must understand memory as an S3 measurement of activity from a vantage point. As 
+Romain Brette writes, neural code “often spans both the experimental apparatus and the 
+brain” and is “information only by reference to something with a known meaning, which is 
+not the kind of information relevant for a perceptual system” (Brette, 2019). The response of 
+the brain does not represent intrinsically, it is measured as representation by whatever point 
+of view is measuring it, even when they use tools to do so (Buzsáki, 2019).  
+ 
+The strange loop of the human body is that it can also measure itself, and that in sensing the 
+representations it creates, it also has its sensory experience molded by those representations 
+(i.e., languages and images). This can lead to humans correlating representations (such as 
+images they make of brain activity) with words they create in representational systems (like 
+memory) or confusing measurements of activity with that activity itself, as is done when 
+models or representations are claimed to be in heads (Giere, 2004; Hawkins et al., 2018). 
+ 
+18 
+Comparing a term like “memory” to a freezeframe of brain activity is comparing two external 
+representations, as the logical positivists were doing in comparing language and math 
+(DiSalle, 2006). Saying the brain builds models confuses the brain with bodies that use brains 
+to build models to communicate about brains. A body using its brain is different than the 
+brain building a model for itself, just as a body using its lungs is different from a lung 
+building a model of itself. The brain does not need a model of the world when it has the 
+world itself, nor does it need a model of its own regularities when it has those regularities. 
+Only bodies communicating about regularities need models of them. A Turing machine is not 
+communicating when it reads (S2) but an observer is communicating when it observes that 
+reading (S3). 
+ 
+Using representations to measure cognitive habits, even when that means comparing 
+representations, is helpful for communication, just as using miles or kilometers to measure 
+movement over land is helpful. Representations such as codes and maps lead towards better 
+measurements in the same way standardized metrics have proven better than measuring with 
+hands or footsteps. Miles and kilometers are not in the landscape, yet as communicative of 
+regularities, they tell us a great deal about that landscape relative to our position in it and help 
+us find our way, as do fMRI images and EEG readings. These measure ongoing, dynamic 
+activities in brains but those measurements are not in brains, even if whole-body 
+consciousness of mind makes it feel as if they are. 
+ 
+Representations add a flexible layer of shared sensory statistics to the statistical regularities 
+of ecologies so they can be communicated about and better navigated. The structure of those 
+representations also influences how those bodies communicate. When I remember my 
+childhood dog, I am measuring my current encounter to all I have encountered before and 
+doing so through representations which are themselves part of the sensory regularities which 
+my body registers to shape active, multisensory integrations via S1 and S2. The S3 
+measurement I’m making is an activity of sensing which uses representations created beyond 
+me: it is a matter of whole-body communication, even if only with myself. Again we have (at 
+least) triangulation: Observation requires positioning of the ongoing encounter and sensory 
+conjunctions from my supervision of my position, the active history of that position, and the 
+shared representation through which I ecologically order both (Gibson, 1966). The ecological 
+interaction is the shared encounter, and measurement brackets recurring statistical regularities 
+(representations) of that ecological interaction (seemingly containing it) to communicate. At 
+ 
+19 
+no time do I need a representation of a dog in my head, any more than I need a representation 
+of a banana in my nose to smell a banana. My nervous system is not using a model or 
+representation—it is ecologically sensing or reading other actions; it is only from a place of 
+observation that these are models or representations.  
+ 
+Sensing a banana may result in similar cellular activity in my nose each time I am presented 
+with a different banana, just as walking down a street in Berlin requires similar activity in my 
+body as walking down a street in NYC. To confuse similar bodily behavior (either internal or 
+external) with a representation of its cue is not helpful. If, for example, we caricature S2 as 
+prefrontal cortex reading HEF activity, there is no need for cortex to represent the activity it 
+is reading; rather, the activity itself shifts weights according to the natural statistics of the 
+encounter. If I am walking the street in Berlin, for example, those statistics may overlap 
+considerably with the activity of walking the street in NYC but there will also be many 
+contextual sensory differences that ecologically cue differences in my own regularities. None 
+of this needs to be represented in the body because it is in the environment. Likewise, as we 
+will see below, any measurement of this bodily activity is only helpful if it can be statistically 
+compared to the environment not to another measurement of bodily activity on a different 
+street. 
+ 
+Our bodies and brains sense/read S1 habits that those same bodies and brains build. This 
+building may be a matter of bodily regularities being weighted and positioned by the 
+hippocampus in terms of striatum and cortex-tual habituations. The body, by way of S3 
+interaction with other bodies, becomes aware of itself as a subject and, in so doing, evolves to 
+observe and measure its own activity. An important distinction arises: Mind (bodily 
+navigation) and consciousness (sensory capacity) are not the same. Consciousness is a 
+measurement of the overall bodily state of sensory capacity. Mind is the activity of 
+positioning sensory regularities to navigate. Through S3, consciousness becomes aware of 
+mind, and of consciousness.2 
+ 
+Ecological 
+ 
+2 Probably Grossberg’s more spectrum like understanding of consciousness via ART would be a better way of 
+understanding this, alongside the simple Glasgow scale. 
+ 
+20 
+Gibson wrote that “perception of what a thing is and the perception of what it means are not 
+separate…they are ecological...” (Gibson, 1966) and coined affordance as an activity that 
+“cuts across the dichotomy of subjective-objective and helps us to understand its 
+inadequacy.” An affordance, he wrote, is both “physical and psychical, yet neither” (Gibson, 
+1979). He developed this view partly out of dismay at how the study of cognition had become 
+a binary struggle between behaviourism and cognitivism. An ecological view allows us to see 
+these as different scales of the measurement of regularities. 
+ 
+We share more of the statistics we encounter than we do not, otherwise there would be no 
+commons to navigate (Barlow, 2001). Importantly, as we notice divergences, we become 
+aware of shared parameters, and this infuses those parameters with potential. Divergences, 
+both positive and negative, evolve communication because they force us to find better ways 
+to communicate. There is more to life than any one position can sense and no more than all 
+positions sense: Life senses itself from a position as life while at the same time sustaining the 
+life of other positions to stay alive (D. Hofstadter, 2007). This cycle of sensing and 
+positioning is what is referred to here as navigation and can be a matter of finding one’s way 
+through cities, texts, ideas, video games, etc. It cannot be wholly located in any position, 
+neither in subject or object, body or environment. 
+ 
+Regardless how real or unreal one believes anything to be—call it all virtual, conscious, 
+etc.—for the purposes of this paper all one needs to allow is that to measure or observe 
+requires a sensory position, that measurements are matters of regularities, and that 
+communication between positions about those regularities can occur. Whatever it is that is 
+regular (real, virtual, or otherwise) is what this paper refers to as ecological. A human body, 
+if we take that position, is part of an ongoing ecological encounter from birth to death, the 
+very architecture that is the body cannot be separated from its sensing and positioning. The 
+ecological is the ongoing, unbroken activity necessary for that activity’s continuance as 
+observed from a particular point. This shares part of basic ideas of complex life cycles 
+(Wilbur, 1980), principles of ecology in studies of molecular evolution (Putman & Wratten, 
+1983; Quammen, 2018), research showing mind as bodily activity continuous with life 
+(Thompson, 2007; Varela et al., 1991), cognition as active engagement whereby meaning 
+clarifies in use (Hutto, 2017; Northoff, 2016b; Ryan & Gallagher, 2020; Wittgenstein, 1953), 
+and perception and action as inseparable, ongoing dynamical systems (Bateson, 1972; 
+Charles, 2012; Gibson, 1966). 
+ 
+21 
+ 
+Both Gibson and Tolman set about building nonbinary bridges in the 1950s, but 
+representation is no longer confined to Tolman’s version of the cognitive map and ecological 
+is not confined to anti-representational Gibsonian frameworks (Read et al., 2020). Taking an 
+ecological stance as used here means taking a conjunctive, systems-based approach that 
+depends upon computation (Eichenbaum, 2017; Whittington et al., 2020; Hasson et al., 
+2020). Computation is necessary precisely because the brain, body and world must be studied 
+as scales within the same active process. Computation is necessary to develop ecological 
+methods and means of analysis. 
+ 
+Encounter 
+Encounter, a word used often here, means a position’s nonstop ongoing sensing of the 
+ecological as defined above, which includes its sensing of itself. Encounter is used to avoid 
+words like stimulus and input when possible because those words suggest the body is sensing 
+one thing or that the body’s awareness of its sensing is the same as its sensing, but any 
+position is always attentive of less than the body is sensing (Drew et al., 2013; Nakajima et 
+al., 2019; Wimmer et al., 2015). In addition, parameters of stimulus or input are usually 
+decided by an observer, but the body is always sensing (no matter its awareness of that 
+sensing), even in an experiment; this totality for the body is expressed as the encounter, 
+which is continuous and unbroken from birth to death regardless of designated stimulus. 
+ 
+Time & space 
+There are dual arguments in philosophy and science about what space and time are and how 
+to understand them (Arthur, 1994). Both “absolute vs. relational” (i.e., Newton vs. Leibniz) 
+and “objective vs. subjective” (i.e., Bergson vs. Einstein) are worthy ways of doing 
+measurement; what matters are their results. As Newton understood and was made obvious 
+by Einstein, space and time (however defined) are always from a position (DiSalle, 2006a). 
+Like velocity, they are not properties of an object but positioned measurements. Space and 
+time, like velocity, depend on the position measuring. Kant also noticed this, writing that “our 
+knowledge of space is inseparable from our means of representing it to ourselves in 
+experience” (DiSalle, 2006). In other words, “exploratory experience is not a passive 
+representation or perception of space but a construction of relationships“ (Buzsáki & Llinás, 
+2017), an active measurement:  
+ 
+22 
+In classical physics, the ‘theater’ or ‘container’ metaphor of space and time 
+determines the exact location and speed of a particle. Distance and duration are 
+equated via velocity. Research in neuroscience continues to be performed within this 
+framework of classical physics (4), even though in contemporary physics ‘there is no 
+longer space which ‘contains’ the world, and there is no time ‘in which’ events occur, 
+(Buzsáki & Llinás, 2017). 
+ 
+Oddly, the same body (position) can have different perspectives, one position of 
+measurement can be shared among bodies (as with standardized metrics), and a perspective 
+can measure from a position different from its own. In The Monadology, Leibniz offers a way 
+to understand how points of view can overlap and shift (Rescher, 1991). Tweaking this, the 
+physicist Lee Smolin suggests that Leibniz’s monad might be point of view—taking Leibniz 
+as literally as possible to see a monad not as a substance but as what Daniel Dennett calls a 
+stance (Dennett, 1987), even better understood as position, since one need not stand to have 
+one. For Smolin, there is no ‘outside’; all is a matter of relations of events (Smolin, 2018). 
+We use the ecological the same way a fish uses water. If space is understood as 
+measurements of relations, the monad is a position in that relation, a point from which the 
+ongoing activity can be measured or viewed. Self is always a representation because it is 
+always a position’s measurement, a perspective (Llinás, 2001; Wolff et al., 2019). 
+ 
+This reorients what is meant by temporal and spatial. They are no longer positions in a 
+container but positions in an encounter. Just as populations of neurons do not have to be near 
+one another to fire at the same time to be coded as a population (Buzsáki, 2006, 2019), space 
+and time are measurements that can be taken from multiple dimensions or positions of 
+relation. Spatiotemporality is continuous, but its patterns differentiate according to the 
+position taking the measurement; the encounter is continuous even if the measurements are 
+discrete. This means we can observe statistical regularities of continuous patterns (activities) 
+as they evolve and translate, and our representations of them are not what they measure but 
+its measurement. Understanding cognition as continuous with navigation means 
+understanding as sensemaking of the ongoing encounter as part of that encounter (Weick, 
+1995). Space and time measure how those positions change ecologically; this transcendence 
+of bodily position is a capability of S3. 
+ 
+ 
+23 
+To reiterate, the human body is part of a 360-degree nonstop ecological encounter. The 
+encounter is whatever can be sensed—people, cities, homes, conversations, books, thoughts, 
+relationships, waves, gravity, spikes, etc.—themselves designated by their continuous sensory 
+statistics as positioned to all that has been previously encountered. For the brain, the 
+encounter is the body’s translation (sensuality) of this ongoing encounter. Regularities are 
+measured by humans as time and space. 
+ 
+ 
+Navigation 
+As the body matches and adjusts to the statistical regularities of the encounter, senses sharpen 
+and activities such as breathing, walking, talking, hearing, vision, remembering, and thinking 
+clarify. The encounter has highly stable statistics (Barlow, 2001; J. C. R. Whittington et al., 
+2020); the sensory body aligns with (Northoff, 2018b), matches to (Buzsáki, 2019) or fits 
+directly to (Hasson et al., 2020) that regularity as S1 navigation. Developing to sense that 
+habituation (via corollary discharge, etc.) is S2. The body’s development, through 
+communication, to read its own cognitive habituations (results of S1 and S2) comes as S3. 
+This delineation of navigation and cognition works for any landscape be it material or 
+conceptual. For the NS, the difference between navigating a room or navigating a language is 
+the sensory information being converted by the body (sight, hearing, proprioception, etc.)—
+‘sensory positioning’ within an ongoing encounter. 
+ 
+In current vocabulary, however, we say there are representations of features and 
+representations of conjunctions (flexible or not) stored in the brain (Kiefer & Pulvermüller, 
+2012; Kriegeskorte & Diedrichsen, 2019): Neuroscientists look for what parts of the brain are 
+active for features like colors or shapes, or for conjunctions of those features like objects, and 
+call these representations. This is problematic because it suggests there is some pattern that 
+begins and ends relative to some feature or conjunction, but brain activity normally does not 
+begin or end except once in a lifespan, accessing stimuli only via conversions of ongoing 
+sensuality. No doubt, after parameters are controlled, we can and do designate features and 
+correlate them to regularities of brain activity, but how helpful is this without measuring 
+those features? 
+ 
+Because we look for brain representations, we design experiments and methods towards 
+them. It is more likely, however, to find regularity of bodily/NS behavior according to the 
+ 
+24 
+statistics of a full encounter rather than snapshots of reliable activity that correspond to 
+unmeasured stimuli. There is ample evidence for this in behavior such as the success of 
+artificial limbs and cochlear implants (Marks & Michael, 2001; Ortiz-Catalan et al., 2020; B. 
+Wilson et al., 1997). Such technologies do not use representations but rather samplings of 
+ongoing rhythms and function. There are no beginnings or ends to NS and bodily activity and 
+while there are regularities, looking for patterns that correlate to an unmeasured stimulus3 to 
+tell us something about memory may be less helpful than noticing rhythms of activity specific 
+to the statistics of that encounter. The body, even in the most stringent experimental 
+conditions, is immersed in a full sensory encounter that does not need brain patterns for 
+single stimuli but rather an ongoing dynamical harmony, a full dynamic gestalt that changes 
+in statistical patterns of sensory regularities but never starts or stops. 
+ 
+The brain habituates like any other organ, working in response to the body’s ongoing sensory 
+encounter. The statistical regularities of this encounter allow for direct inference, as 
+exemplified in Tolman’s rats (Tolman, 1948). Habituation and sensing of regularities 
+generalize to the scale of brain behavior, to bodily behavior, and to that of groups. Maps are 
+made when we measure regularities from a position. Such statistics build upon statistical 
+activity aligning with, matching to, or directly fitting the statistical regularity of the 
+encounter. A body, in learning to navigate, does not need features unless it needs to 
+communicate. Features are measurements (robust statistical regularities) for communication, 
+and as of now, are not metricized. An S3 representation (i.e. a designated feature) 
+communicates regularity but will always be imprecise without metrics. 
+ 
+A creature senses the world through its previous experience, ecologically adjusting its 
+ongoing position in the encounter’s statistical regularity, a part of which is its own. The 
+creature’s position (its body, all it’s experienced) is important because that position, as 
+activity, has been molded by all previous encounters, much like a forest path or riverbed 
+takes its shape from what has moved through it. Tolman’s cognitive maps moved towards 
+uniting cognition as behavior in an inside-outside-in framework that contrasts with the more 
+accepted trial-and-error “instrumental response” (Buzsáki, 2019)—already suggesting 
+habitual, regularized activity within the nervous system matching statistical sensory 
+regularities of the encounter. The rat’s body could ecologically weight regularities of the 
+ 
+3 Words are also measurements. Here, I mean measurement with numerical metrics. 
+ 
+25 
+encounter due to its own position as part of that encounter, linking navigation and behavioral 
+associative learning (Birch et al., 2020). Rats learn without words or pictures, but if creatures 
+develop ways to represent (communicate) about regularities, they can become aware of them 
+(S3), extending navigation towards Unlimited Associative Learning (Birch et al., 2020), as 
+humans do with languages, images and other forms they create and learn through. For 
+Tolman’s rats, so long as the sensory statistics of the maze have been encountered in their 
+regularity, the rat’s bodily position itself, as part of those statistics, ecologically inhabits a 
+unique position in the encounter it navigates. Further sensing of those statistics allows 
+another level of inference (S2) experienced by humans as memory or thought once it comes 
+to awareness via S3. Communication adds a representational layer to agency. 
+ 
+Each child is born into an ongoing encounter full of beings that communicate through 
+representations (language, images, etc.). Part of navigation is navigation of these 
+representational statistics—the statistics of socially created communication. The brain 
+integrates and positions sensory information; it also reads those integrations. We create 
+drawings, films, artworks, books, apps, codes, maps, etc. to help us piece together and 
+transmit these cognitive gadgets (Heyes, 2018). In other words, we create new 
+representations via S3 which model our experience of ongoing activity but also shape that 
+activity in regular ways that can be observed and represented. This is the same activity that 
+happens when we use a map to navigate cities or when we draw a new map. These can be 
+understood as scaled connections between positions of the encounter made ecologically by 
+weighting patterns built of previous encountering—i.e., conceptual path integration. 
+ 
+ 
+An alternative narration of memory research  
+Ebbinghaus showed how prior experience, context, repetition and duration determine what 
+can be explicitly recalled (Ebbinghaus, 2013)—how the NS and body habituate to the 
+encounter through positioning regularities encountered via sensing. Behaviorists extended 
+this path to create a program of learning based on cues (sequences of weighted sensory 
+positions) to observe relationships between the encounter and its recall (Tolman, 1922). It 
+also became clear the hippocampus is important for situating new aspects of the encounter 
+with all previously encountered: Pioneers such as Lashley and Penfield saw that lesions 
+affected one’s ability to position previously-experienced habits (the body’s ongoing activity) 
+to the current sensory encounter, both behaviorally (material navigation) and conceptually 
+ 
+26 
+(representational navigation) (Penfield, 1952). Around this same time, Hebb postulated that 
+learning (habituating sensory regularities in the encounter) strengthened firing proclivities 
+between neurons during activities (LTP); certain patterns weight positionally towards others, 
+such that particular weights are more likely to trigger particular connective scripts, adjusting 
+overlap between a consistent encounter and ongoing baseline activity (Hebb, 1949; Langille 
+& Brown, 2018) and allowing for quick systematic change (Tse et al., 2007). 
+  
+In 1957, Milner and Scoville showed bilateral removal of the hippocampus and MTL in H.M. 
+induced severe, specific cognitive impairment, the inability to link the current encounter to 
+what had been encountered previously, which meant an inability to take the encounter 
+personally (Scoville & Milner, 1957). Copious research on H.M. (Squire, 2009), study of 
+others with similar lesions, and animal research (Vorhees & Williams, 2014), confirmed and 
+reconfirmed the HEF as essential to a person’s ability to position current cues of the 
+encounter to previous navigating of the encounter by adding or adjusting weights 
+accumulated through ongoing regularities; HEF is essential to active positioning of sensory 
+data, what S3 experiences as remembering and thinking. 
+ 
+Figure 3: Navigation and memory are sequences, successions of events from a position, is how I read Figure 3 above from 
+(Buzsáki & Llinás, 2017). 
+ 
+In the 1970s, this same part of the brain was understood as necessary for navigation. 
+Scientists found ways to record neurons in creatures as they moved through a determined 
+space (Ranck, 1973). O’Keefe and Dostrovsky discovered cells in the hippocampus fire 
+regularly when an animal is in a particular sensory space (O’Keefe & Dostrovsky, 1971); 
+Ranck found cells corresponding to head direction (Taube et al., 1990). It soon became clear 
+that O’Keefe’s place cells had different firing fields—unique hippocampal activity as the 
+animal moved through regularized sensory positions. O’Keefe and Nadal linked this to 
+Tolman’s work, designating the hippocampus a cognitive map, their S3 modeling of 
+systematic firing relative to the natural statistics experienced sensorily by the body from the 
+position of the brain. 
+ 
+O’Keefe’s postdocs Bruce McNaughton and Carol Barnes soon linked hippocampi firing 
+regularities to navigational situations (Mcnaughton et al., 1996; McNaughton et al., 2006). 
+Much of their work and others (Eichenbaum, 2004; Gallistel, 1990; Kubie et al., 2020; Kubie 
+ 
+27 
+& Muller, 1991; Muller & Kubie, 1987; O’Keefe & Burgess, 1996) reframes (Buzsáki, 2019) 
+in support of cognition as navigation, meaning hippocampal cells are not firing for 
+coordinates in the environment but rather for the overall body’s sensuality relative to the 
+natural statistics of the encounter, relative to all previously sensed. This fits with the primacy 
+of action in navigation—that firing frequency can depend on speed, that place fields in a 
+journey in one direction are often different on the return. It also fits the path integration 
+system McNaughton and Barnes postulated as “a body cues feedback-supported guiding 
+mechanism, based on information from local visual and somatosensory cues, proprioceptive 
+feedback from the body (e.g., muscles, tendons), the number of steps taken, vestibular input 
+(translational and rotational head accelerations), and, likely, corollary discharge from self-
+motion activity…” (Buzsáki, 2019). 
+ 
+Later, the Mosers found and named grid cells in the entorhinal cortex that fire at regular 
+intervals during navigation of defined sensory positions (Hafting et al., 2005). An extended 
+family of positional cells has since been observed and named (boundary, time, etc.) in the 
+HEF, all firing with regularities that correspond to changes in sensory statistics of the 
+encounter as experienced ecologically. Proprioception, head direction, and other such bodily 
+actions are themselves sensual (Buzsáki, 2019). Challenges of path integration (how a 
+creature navigates a place it has never been) melt away once we understand that it is not the 
+place being navigated that allows the brain’s GPS to produce adequate bodily behavior but 
+rather the overall natural statistics of that encounter in relation to all previous experience—
+the overall variations are slight, just as one can be in Paris or New York and still, for the most 
+part, experience the same overall natural statistics of a city (streets, buildings, etc.). 
+ 
+If we understand the HEF as positioning natural sensory statistics, we see how the encounter 
+is not limited to traditional landscapes but includes virtual or representational ones (images, 
+words, intranets, computer tasks, etc.): For the NS, those are also matters of natural sensory 
+statistics. Eichenbaum began clarifying this by asserting that navigation is relational 
+memory—multidirectional, nested conjunctions of sensory input and location (J. C. R. 
+Whittington et al., 2020). This same conjunctive formula generalizes whether one is 
+navigating a room or navigating images and concepts (Constantinescu et al., 2016; 
+Eichenbaum, 2017b). Categories and concepts are themselves made up of, or grounded in, 
+what is experienced by the body as sensory statistics, with metaphors illuminating the 
+connection of those concepts to sensorimotor experience of navigation (Barsalou, 2010; 
+ 
+28 
+Kirmayer et al., 2020; Lakoff et al., 1980; Lakoff & Johnson, 1999). There is extensive 
+research linking the hippocampus to language. Though this is not yet part of the common 
+narrative, language may itself be a matter of the conjunction Eichenbaum describes as 
+navigation and memory (Duff & Brown-Schmidt, 2012; Kurczek et al., 2013; MacKay et al., 
+1998), a matter of sensing and positioning regularities in the form of sounds and characters 
+which enter the body sensually (by sight, sound, etc.) and position according to their likeness 
+to one another in context.  
+ 
+What we are left with is the understanding that the body navigates by positioning sensory 
+regularities to one another, and that this holds for any form or navigation, be that material or 
+conceptual, for both are scaled behavior differentiated by their natural statistics and the 
+position (i.e. whole body or brain) from which that action is measured. Positional cells fire in 
+regularities to iteratively position these statistics, cycling S1 and S2, pacing brain and bodily 
+behavior such that creatures find their way and develop further sensory pathfinding as S3. 
+ 
+ 
+Further refining navigation 
+Eichenbaum uses Gallistel’s definition of navigation as “the process of determining and 
+maintaining a course or trajectory from one place to another” (Gallistel in Eichenbaum, 
+2017a). This definition (Gallistel & King, 2009) still holds here if we change the word ‘place’ 
+to ‘position’ (since a place is a position but a position is not necessarily a place). Navigation 
+can be from place to place but also from position to position, be that from a conceptual 
+position, an image, a sentence, an idea, etc. Eichenbaum’s notion that hippocampal 
+representations are inferred as a conjunction of sensory input and location (Eichenbaum, 
+2017b; Eichenbaum & Cohen, 1988) easily reorients to hippocampal activity matching 
+incoming sensory statistics as translated by the body into ongoing activity, such that 
+‘representation’ is the measurement of that activity from some designated position. 
+ 
+An example is the layered continuity of walking through the park and remembering walking 
+through the park. It is not that one is spatial and one nonspatial, or one real and the other a 
+simulation, but that they are nested (Northoff, 2018b) overlapping navigation. They are 
+behaviors measured from different positions. In both, the nervous system and body navigate 
+sensory statistics and that activity itself positions those regularities to all that has come before 
+(the path is the walking of it) (Varela, 2017). Walking through a park is sensory regularity 
+ 
+29 
+(proprioception, smell of freshly mown lawn, sound of water). Remembering that walk is 
+sensing one’s own patterns of cognition at a different scale but similar pattern, continuous 
+with and part of the current ongoing encounter and its statistics (like a Mandelbrot set). What 
+we experience as walking through a park or remembering walking through a park are not 
+events with beginnings or ends but different weightings of habitual and habituating bodily 
+(including NS) activity, some of which turns and shifts constantly, some of which maintains a 
+rhythmic baseline (Buzsáki, 2006). The brain’s activity carries within it (as a path carries 
+previous footsteps) all previous iterations of regularities as experienced in the encounter. The 
+brain does not suddenly start and stop navigation, it is always navigating, shifting what is 
+being navigated according to what is encountered, its parameters relative to all previously 
+encountered; natural statistics are pace and context. 
+ 
+ 
+Towards a process model 
+Bickhard has written that the history of science is the history of replacing substance 
+assumptions with process models, the study of mind being among the last using vocabulary 
+that looks for substances: “Here, substance assumptions are still ubiquitous, ranging from 
+models of representation to those of emotions to personality and psychopathology. Substance 
+assumptions do pernicious damage to our ability to understand such phenomena” (Bickhard, 
+2003).4  Perhaps current folk assumptions of memory storage leaning towards substance 
+cloud us from understanding “memory” as a measurement and productively applying 
+dynamical methods. Changing the weights of our vocabulary does not mean replacing them 
+with synonyms. Rather, the words as they already exist in vocabulary must be reweighted 
+towards processual forms of experimentation and data analysis. 
+ 
+Substance assumptions can be traced in numerous directions; Descartes is most obvious. 
+Descartes wrote that the essence of the body was its extension in space and that the essence of 
+mind was thought, assuming mind and thought are nonspatial: If we “examine what we are, 
+we see very clearly that neither extension nor shape nor local motion, nor anything of this 
+kind which is attributable to a body, belongs to our nature, but that thought alone belongs to 
+it”(Descartes, 1993). As Gilbert Ryle pointed out long ago, however, it is a category mistake 
+ 
+4 A proposed armistice to the “representation wars” via active inference and enactive generalization (Constant, 2021) is in 
+this direction. This paper reorients predictive processing to metacogntive parameters, meaning all prediction is S3. 
+Helmholz’s Unbewusster Schluss is not a prediction but an unconscious S1 or S2 reading. 
+ 
+30 
+to assume processes measured by words are substances (Ryle, 1949) simply because they 
+have been measured, nor can one assume they are contained by that measurement. An ocean 
+is not contained by a measurement of it. Running is not distinct from the body that is doing it 
+just because one can measure it as speed. Tasting is not distinct from the body even once the 
+body develops the capacity to measure sweetness. We use measurements to communicate and 
+predict; they are made up of sensory regularities molded into representations of activities that 
+transcend them. Smelling is not smell. Thinking is not thought. Walking is not mileage. 
+Miles, thoughts, and smells are measurements that represent regularities. 
+ 
+Similarly, cognitive space and abstract space are not substantive places but positional 
+measurements of activity. We can use conceptual space models (Gärdenfors, 2000) as ways 
+of modeling regularities (similarities, quality dimensions, etc.) of ongoing activities5-- sights 
+or smells are measurements of spatial or temporal activities such as light or sound (Clark, 
+1992). Conceptual space models show us how we develop measurements and representations 
+from an S3 level of manipulation of S2 (Theves et al., 2020). But looking for conceptual 
+models inside brains keeps us from using them to understand activity: Neurons do not 
+correlate to nodes; nodes show us weights of activity relative to statistical regularities of the 
+encounter. Quality dimensions (Clark, 1992; Gärdenfors, 2000) do not show how neurons 
+organize and fire but give us a bridge for understanding how statistical regularities in the 
+environment translate to brain dynamics. For now, however, rather than measuring the 
+encounter, we measure representations. We do not use models to measure brain activity to the 
+encounter but rather measure models against models. Take this abstract below: 
+ 
+Whereas the hippocampus is essential to spatial navigation via a cognitive map, its 
+role derives from the relational organization and flexibility of cognitive maps and not 
+from a selective role in the spatial domain. Correspondingly, hippocampal networks 
+map multiple navigational strategies, as well as other spatial and nonspatial memories 
+(Eichenbaum, 2017b). 
+ 
+Assuming and using the Cartesian terms above confuses what is being measured with the 
+measurement and blocks application of Eichenbaum’s insight regarding the continuity of 
+ 
+5 Gardenförs uses the term cognitive space instrumentally (Gärdenfors, 2000). This is not a refutation of cognitive space, it 
+only asks that we understand that cognitive space is not in the brain but a form of measurement. His models become 
+especially crucial after this reorientation. 
+ 
+31 
+navigation and memory—the realization that cognition is a regularity of activity that bodies 
+evolve to navigate and that hippocampi formations play a role in global memory for multiple 
+systems that are not only measurable as Euclidean (Momennejad, 2020; Sherry & Schacter, 
+1987; Wood et al., 1999). Rephrasing Eichenbaum conducive to this paper we get: 
+ 
+Whereas the essentiality of the hippocampus to navigation can be measured by a 
+cognitive map, its role derives from the relational organization and flexibility of 
+activity those cognitive maps measure and not from a selective role in a particular 
+action. The regular activity of hippocampal networks positions sensory regularities in 
+a way that scales to any form of navigation, be it movement through a maze, clicking 
+through a task, engaging in conversation, or reading texts. 
+ 
+Richard Rorty and others have pointed out that our problems (and potentials) change 
+according to the assumptions of our vocabularies (Rorty, 1999). Luckily, vocabularies are 
+malleable, and words can be reframed through new methods and measurements. 
+ 
+Figure 4: Exciting developments as shown here in (Bellmund et al., 2018) suggest conceptual and behavioral navigation 
+may have a scaled relationship. These scales may become clear with an optimization of current methods and vocabulary 
+towards taking the metrics of the experiment into analysis. 
+ 
+ 
+Current measurements 
+Since Hubel and Wiesel’s single-neuron recordings, it has become standard to study 
+cognition by presenting stimuli to the brain (through the body) and measuring the 
+spatiotemporal distribution of its neuronal “response” (Buzsáki, 2019), assuming a linear 
+relationship between the stimulus and the activity observed (Northoff, 2018b). The stimuli 
+presented can be beeps, lines, photos of faces, etc. The goal is to find a representation in the 
+brain that correlates with the stimulus. What one ends up with is a representation (i.e., an 
+fMRI image) said to correlate with a beep, line, photo, etc., which is itself an unmeasured 
+representation (i.e., to say a photo of a face is ‘angry’ is to measure it, but not with metrics 
+that can be compared or scaled). 
+ 
+In this tradition of experimentation pioneered by Sherrington, measurements (EEG, MEG, 
+fMRI) of a predefined part of the brain measure how blood flow or frequencies change when 
+that prescribed area is presented with a stimulus, and recorded activity is assumed a reaction 
+ 
+32 
+to that stimulus (Northoff, 2018b; Raichle, 2011). The spatiotemporal statistics of the 
+stimulus are not measured. Though effort is made to keep the body’s focus on the stimulus, 
+the body is part of an ongoing encounter. This is not accounted for in the experiment, nor is 
+the ongoing activity of the brain. The experiment tries to regularize the encounter but does 
+not include that regularization in the way the experiment is assessed. As Hasson describes it: 
+On a moment-to-moment basis, the brain is assimilating dynamic, multidimensional 
+information about the world in order to produce rich, context-dependent behaviors. 
+Confronted with such complexity, experimental neuroscientists traditionally design 
+controlled experiments to reduce the dimensionality of the problem to a few factors 
+conceived by the experimenter (Fisher, 1935). This reductionist program relies on a 
+core commitment to the assumption that the neural computations supporting many of 
+our cognitive functions can be decontextualized and decomposed into a handful of 
+latent features, that these features are human interpretable and can be manipulated in 
+isolation, and that the piecemeal recomposition of these features will yield a satisfying 
+understanding of brain and behavior. (Hasson et al., 2020) 
+ 
+It is no surprise that brains that have experienced similar encounters will be active in similar 
+ways in a stringently regularized experimental encounter with a stimulus. Such measurements 
+may not help in understanding how a body (and NS) navigate the everyday encounter 
+successfully or its parameters of health and illness. Reorienting to notice how a body 
+matches, aligns, or fits directly with that encounter to navigate it may be more fruitful. 
+Hasson points out that evolution optimizes millions of parameters (Hasson et al., 2020). If we 
+use the spatiotemporal parameters of the experiment as part of the data, it may be possible to 
+find ways of observing how bodies habituate to regularities and how those bodies sense their 
+own habituations; millions of parameters used by evolution are then to the experiment’s 
+benefit. 
+ 
+ 
+Tolman Eichenbaum Machine 
+An exercise towards how to build such experiments of processual conjunctions (ongoing, 
+layered sensing and positioning) by way of pattern regularity could come through 
+modification (i.e., different use of the term ‘representation’) of the Tolman Eichenbaum 
+Machine (TEM). TEM aims to explain how the brain converts abstract knowledge ‘to 
+constrain new representations’ (J. C. R. Whittington et al., 2020) which, in terms of this 
+ 
+33 
+paper, would become ‘to modify ongoing activity’ (TEM itself being the representation). As 
+TEM puts it: 
+…results suggest that the zoo of different cell types found in entorhinal cortex may be 
+viewed under a unified framework - summarising the common statistics of tasks into 
+basis functions that can be flexibly composed depending on the particular structural 
+constraints of the environment the animal/agent faces. (J. C. R. Whittington et al., 
+2020). 
+Reorienting TEM via this paper, Eichenbaum’s conjunction of ‘structural’ and ‘sensory’ 
+holds and those conjunctions are capable of being sensed and adjusted by the same organ 
+sensing and structuring them. Once we understand representations as measurements of 
+regularities of activity between brains rather than within them, this model helps us understand 
+how the body and NS match to regularities of the ongoing encounter and develop to read 
+those habits as further sensory input. TEM’s substance-based vocabulary could be shifted to a 
+processual model. What it needs is metrics for what the model is being trained upon. 
+ 
+TEM’s proposal that entorhinal cells (grid, band, border, object-vector) form a structural 
+basis while hippocampal cells (place, landmark) link this basis to sensory ‘representations’ 
+(statistical regularities or habits made by the NS and sensed by it) (J. C. R. Whittington et al., 
+2020) could be linked to the natural statistics of the encounter or experiment if methods 
+shifted to include the metrics of the experiment itself. To do this would require a way of 
+measuring the training itself and including this as part of the model: This allows one to probe 
+into how spatiotemporal dynamics of the encounter are positioned such that navigation of a 
+maze has regularities which scale with the spatiotemporal dynamics of the regularities for the 
+body; the navigation of a conceptual task could be measured compared to the spatiotemporal 
+dynamics of that task in terms of scaled patterns or statistics. As this would take a lot of trials 
+for an individual, it requires a computational, generalized model. Still, rather than comparing 
+conceptual to behavioral, it would be necessary to measure TEM by the spatiotemporal 
+statistics of whatever it is being trained on, then do different trials and compare the patterns 
+via methods that look for factorization (or fractalization) and scaling. 
+ 
+Figure 5: Could factorization as presented above in (Behrens et al., 2018) be expanded through metricizing the experiment 
+and looking at the factors as scaling ecologically according to the position of measurement? 
+ 
+ 
+34 
+If an experiment was done that could itself be measured statistically, one could use the basic 
+TEM model (see (J. C. Whittington et al., 2019)) to see how the space and time of the 
+encounter translates into space and time of the NS. To say that positional cells in the HEF 
+may generalize is to say that for the NS, regularities of sensory statistics are not differentiated 
+into conceptual and physical but are scaled. For the brain, scale shifts according to what 
+regularities obtain. One needs to compare the regularities of what the algorithm is trained on 
+to the regularities of how it TEM’s them. Research relative to factorization (Behrens et al., 
+2018; Buzsáki, 2019) could be recast as habituating responses to the encounter’s natural 
+statistics. Habituations established through positioning encountered sensory statistics (the 
+positioning or adjustment of priors) would account for a body’s ability to increase its 
+awareness of the patterns it builds developmentally; the structural generalization is already 
+inherent in the encounter. Once the “transitions have been experienced” (J. C. R. Whittington 
+et al., 2020) weightings come through chemical or electrical translation of sensory input such 
+that “a new node can be introduced with a single relation” so long as that relation has been 
+previously encountered “all other relations can be immediately inferred”(J. C. R. Whittington 
+et al., 2020).6 
+ 
+The “immediate inferences in new environments” that TEM explains are not inferences but 
+fittings or matchings; the NS and body’s reading of its own habits (built developmentally 
+over time) allows adjustment. Learning occurs through navigation pruning what is relevant 
+(Gustafson & Daw, 2011; Momennejad, 2020; J. C. R. Whittington et al., 2020; Zeithamova 
+& Bowman, 2020). The encounter holds the cues of relevance by the regularity of its 
+statistical structure, scaffolded by each iteration of experienced priors as active proclivities. 
+These priors ecologically shape the sequences and activity the body is as it navigates; the 
+encounter is the storage of its encountered statistics. TEM could model this 
+multidimensionally. To be able to get the most from a model like TEM, however, requires a 
+new way of approaching analysis. As discussed below, scale free methods could be added to 
+optimize current ones (Golesorkhi et al., 2021; Tang et al., 2021) if we metricize experiments 
+and measure their statistics. 
+ 
+ 
+Emphasizing baseline activity 
+ 
+6 Jeff Hawkins theory, if reoriented from the brain building models to the brain building habits that observers then model, 
+would also be an excellent way of thinking of this. 
+ 
+35 
+Stimulus-based tasks in the tradition of Sherrington have come to dominate neuroscience 
+(Raichle, 2011) but Sherrington’s student Thomas Brown suggested an early alternative, 
+emphasizing that neural activity in the spinal cord and brain stem was likely not driven by 
+stimuli outside the body and brain (Northoff, 2018b). Brown believed activity in these areas, 
+crucial for cognition, was generated and maintained by the NS without much input. Hans 
+Berger further noted how this ‘spontaneous activity’ did not depend on the encounter even as 
+the body used it, a view further supported by Bishop and Lashley (Northoff, 2018b). Recent 
+research on spontaneous oscillations (Buzsáki, 2006; Llinas, 2014; Yuste et al., 2005) has 
+underlined and expanded this notion, as has the observation of spontaneous connectivity in 
+different brain areas and a new concentration on the default mode network (DMN) as 
+connected to cognitive processes such as mind-wandering (Fox et al., 2015; Greicius et al., 
+2003; Hwang et al., 2016; J. Qin et al., 2015; P. Qin & Northoff, 2011; Raichle, 2011, 2015; 
+Uddin et al., 2008). 
+ 
+DMN activity has been shown to activate during ‘memory retrieval’ and to deactivate for 
+‘novel encoding’ (Huijbers et al., 2009). Some attribute this to different levels of attention 
+while others argue hippocampal regions couple with the DMN for retrieval but decouple for 
+encoding. Another way to look at this would be to say that the regularities of the encounter 
+are statistically positioned by the HEF to all previously encountered over development—
+weighted by firing patterns relative to priors—so baseline activity is left undisturbed unless it 
+passes threshold deviation (‘surprise’) at which point S3 awareness of S2 activity is needed 
+for adjustment. This interpretation leans towards a model whereby sensory statistics are 
+organized by the brain’s ongoing dynamics, and modes of behavior generalize to regularities 
+of the encounter (Fazelpour & Thompson, 2015; Northoff et al., 2010; Northoff, 2018b). 
+ 
+Place and grid cells fire differently according to the body’s position in the encounter (Behrens 
+et al., 2018; Eichenbaum et al., 1999; E. I. Moser et al., 2008). The regularities of the 
+encounter (i.e., particular parts of a room) shape the regularities of the NS. Although room 
+regularities are measured differently than the firing regularities of cells, their ability to be 
+measured from the same position means they likely share patterns of factorization, but current 
+methods do not look for such patterns. To do so requires comparing the brain’s 
+spatiotemporal rhythm, paced through evolution and development, to the body’s sensorial 
+translation of the encounter and how this works with baseline activity to produce the body’s 
+ongoing behavior (Northoff, 2018a,b) and how this scales with the statistics of the encounter. 
+ 
+36 
+ 
+CN mostly ignores the spatiotemporal dynamics of encounters and baseline activity to focus 
+on correlating a stimulus to a voxelated part of the brain. But some work in spatial cognition 
+asks how such high firing regularities arise in HEF cells. The Moser group, for example, has 
+wondered about “whether ensembles of place cells are completely formed by experience or if 
+there is an underlying component that is hardwired in the circuit“ (M.B. Moser et al., 2015). 
+Perhaps positional cell statistics are more like a heartbeat, perhaps there is a baseline activity 
+which, through its regularity, positions sensory information, which is itself regular because of 
+the regularity of the encounter. Studies show that exploration can set a stable firing field 
+(Frank et al., 2004; M. A. Wilson & McNaughton, 1993) and that new place fields depend on 
+an animal’s attention to the spatial features of the encounter (Kentros et al., 2004; Monaco et 
+al., 2014):  
+Thus, place maps are expressed, in some form, from the very moment when animals 
+are put into an environment for the first time, although the map may evolve further 
+with experience. The findings raise the possibility that a skeletal map of a novel 
+environment is drawn from a set of preexisting maps, and then gets modified to fit the 
+specifics of the environment through experience-dependent plasticity (Samsonovich 
+and McNaughton 1997; Dragoi and Tonegawa 2011, 2013) (M.B. Moser et al., 2015). 
+Another way of looking at this might be to say that HEF dynamics set baseline via 
+development (ancestral, environmental) due to the regularity of the encounter but can be 
+adjusted by the brain’s evolved capacity to sense or read those dynamics (S2) and become 
+aware of behavioral regularities (S3). This would allow patterns encountered to be constantly 
+translated by the body according to all patterns previously encountered within certain 
+parameters. Extreme novelty in either direction would adjust overall activity, but in most 
+cases, activity would self-navigate, perhaps along the lines of (Shin et al., 2021).7 
+ 
+Navigation is typically divided into survey and wayfinding, the first would be sorting that 
+does not require awareness (S1), while the later would be sorting that requires further sorting 
+of previous sortings (those sortings themselves now what is read) into larger chunks of 
+ 
+7 High emotion means better remembering of the statistics encountered (Dolan, 2002). Old theories separate emotion 
+from cognition and behavior (Aizawa, 2017; Dolan, 2002; Mahoney, 1974). It may be more productive to see cognition as 
+bodily behavior, and emotion as a scale of both. Modifying cognition modifies behavior, and modifying behavior modifies 
+cognition. One cannot, for example, begin to exercise daily without modifying inner bodily behaviors such as metabolism, 
+breathing, and heart rate and larger scale behaviors like eating and sleep. Emotions may be responses to this edgework. 
+ 
+ 
+37 
+activity (S2) which sometimes requires awareness of those habituations (S3) thus making S3 
+‘remembering’ a matter of attention (Chun & Turk-Browne, 2007), the ability to notice the 
+behavior as it is happening. Importantly, what is often termed “top-down” cognition could be 
+understood as the baseline’s role in cognition (inside-out scripts determining cognition, 
+scripts scaffolded by the ongoing encounter) or S3 awareness/adjustment of S2 readings of 
+baseline activity. 
+ 
+ 
+Natural statistics 
+From Helmholtz through Tolman and beyond, regularities of the encounter have been shown 
+to be crucial for cognition (Horace Barlow, 2002). From day one of development, the sensory 
+statistics of a body’s interactions habituate cognition, matching or fitting to an ongoing 360-
+degree encounter. Northoff’s use of Barlow’s term natural statistics addresses these 
+regularities as “the statistical frequency distribution of a stimulus across discrete positions in 
+time and space“ (Barlow, 2001; Northoff, 2018b). 
+ 
+Barlow’s work can be taken to understand the body as immersed in regular, comprehensive 
+overparameterization similar to Hasson’s direct fit (Barlow, 2001; Hasson et al., 2020). As a 
+demonstration of the regularity of encountered statistics, Hasson gives the example of 
+walking down the street in Boston to walking the street in Princeton—most of the natural 
+statistics are similar, though others clearly distinguish each. Similarly, Barlow speaks of 
+‘chunks of stimuli’ that regularly cluster, more conjunctive than feature. Northoff relates this 
+to an experience of music: Tones are represented as separate in order to understand them but 
+they are not created or heard separately; the NS does not encode distinct tones but rather 
+distributions of regularity experienced as melody (Barlow, 2001; Northoff, 2018b). Natural 
+statistics are the regularities that the body habituates (S1) and need not notice (via S3) when 
+sensing those regularities (S2) to navigate. Inner spatiotemporal scales are key for ‘input 
+processing’ of the encounter because they work for those regularities, creating another set of 
+natural statistics in brain and body (Golesorkhi et al., 2021). 
+ 
+Figure 6: Image from Nature study by Northoff lab showing potential way of observing spatiotemporal scales for what they 
+call neural and mental and this paper would define as different scales of navigation (Golesorkhi et al., 2021). 
+Natural statistics are never one stimulus but immersive. Still, once such parameters have been 
+habituated, when regularities change past parameters, remembering and thinking change. 
+ 
+38 
+Situated sensory experiences create statistically-similar effects—the general relaxing quality 
+of a park, for example, or the spirit of a football match or concert. These spaces come with 
+sensory signatures because they have statistical sensory regularities, but some bodies 
+experience them with different baseline activity, with outlier habituations (such as those 
+termed autistic). 
+ 
+Regularities are only “predispositions in the infant brain” (Northoff, 2018b). Through 
+development, a body matches to the statistical regularities of the encounter, as well as to 
+inherited representational regularities (i.e., language, images). Even though brain activity 
+arrives structured by evolution towards particular patterns and affordances, early matching to 
+the encounter sets the pace within those parameters (Northoff, 2018b). Early years of 
+development have a strong impact on how a person navigates their world and how their NS 
+and body responds to the encounter (Tierney & Nelson, 2009). Recent studies have shown 
+that baseline spatiotemporal measurements of adulthood are predictive of the subject’s early 
+experience of trauma (Northoff & Stanghellini, 2016; Stanghellini et al., 2017).  
+ 
+Once cognition is framed as continuous with navigation, earlier layers of navigation 
+(positioned sensory statistics) can be understood as forming foundational (S1) tunings of non-
+cortex proclivities in the HEF, the thalamus and deeper pattern-generating brain regions 
+(Zimnik & Churchland, 2021). Through interaction with others the body develops the ability 
+to sense/read its own acquired statistics (likely via corollary discharge & cortex) and then to 
+become aware of those readings (S3): the body would have to reach a threshold of interaction 
+with others for such development to become explicit to the body itself (S3). This is consistent 
+with research suggesting metacognition is acquired through a long developmental process 
+(Carruthers, 2006; Heyes, 2018; Rouault et al., 2018; Weil et al., 2013). 
+ 
+Measuring such regularities experimentally requires dynamic, difference-based measures 
+which look at how patterns shift rather than at how contained things correlate. Experiments 
+are built ecologies with spatiotemporal signatures that must be accounted for by 
+measurement. Emerging calls for ecological methods (Holleman et al., 2021; Shamay-Tsoory 
+& Mendelsohn, 2019) point in this direction but are not enough. Specific to navigation and 
+positional cells, recent experiments done ecologically with bats move towards this view 
+(Dotson & Yartsev, 2021; Eliav et al., 2021). Still, it is necessary to imagine ecological ways 
+of measuring and collecting data, not only of creating ecological settings. Current methods do 
+ 
+39 
+not consider the spatiotemporal statistics of the environments, even though technology is 
+advanced enough to control those statistics and measure them: VR, AI, and modern biometric 
+technologies (wearables, etc.) make it possible to measure the encounter, the body, and the 
+NS ecologically. 
+ 
+ 
+Heuristics for reorientation 
+We have seen that our awareness of remembering and thinking (S3 awareness of S2 activity, 
+what we call memories and thoughts) are measurements (from the position of the body) of 
+ongoing activity, and that representations are not in heads but created between bodies. We 
+have also seen that the HEF is crucial for this process, and that modeling how 
+sensory/positioning conjunctions function and generalize through firing regularities of HEF 
+cells further clarifies cognition as action. In this way, we can understand navigating as 
+ongoing sensing and positioning, and thinking and remembering as forms of this activity. 
+ 
+Accepting remembering and thinking as behaviors continuous with navigation means 
+reorienting how we analyze data. Rather than imagining these as sandwiched between stimuli 
+and representations of cognition, for example, we attempt to take the statistics of the 
+experiment/encounter into account and observe regularities in scaling across trials. This 
+means looking at the frequencies of the encounter and those of the brain spatiotemporally and 
+seeing what equations might be generated to understand how they factorize or fractalize. It 
+also means considering the brain’s ongoing ‘inside’ rhythms and baseline activity as positions 
+different from the body, with different patterns of pacing and regulation. 
+ 
+Spatiotemporal neuroscience (SN) is a method for studying cognition in its ongoing, long-
+term development towards observing and measuring how encountered dynamics are 
+translated by the body and NS to habituate actions (Northoff et al., 2020a). SN focuses on 
+world-brain relation as measured by spatiotemporal patterns in dynamic interaction, positing 
+a way of relating spatiotemporal features of the brain and body using non-standard statistical 
+analysis (scale-free methods such as power law exponents and auto correlation) and a 
+consideration of vantage point in measurement (Northoff, 2018b).  
+ 
+Figure 6: Optimization of CN proposed by (Northoff et al., 2020b) 
+ 
+ 
+40 
+Such methods point towards reconsidering data according to the proposals above, focusing on 
+the brain’s spatiotemporal patterns of activity in statistical terms, shifting from function and 
+information to dynamics and pattern (Northoff 2020a). Rather than focus on contents 
+(stimuli, inputs, outputs), it reorients spatiotemporal brain dynamics in relation to the 
+encounter and distinguishes their measurement via point of view (Northoff et al., 2020a). It 
+looks for patterns of activity and how space and time might be measurements of that activity 
+from positions, taking baseline brain dynamics as crucial for developing models and methods. 
+ 
+Such measurements may help us understand how the sensory body converts activity of the 
+encounter such that the inner dynamics of the brain can, without much change, continue as 
+normal while also “using” the frequency and energy of the encounter for movement and 
+sustenance. SN posits that scales change but a pattern of relation between the encounter and 
+the reading of that encounter remains in a fractal or scale-free manner (Damiani et al., 2019; 
+Golesorkhi et al., 2021; He, 2014; Northoff et al., 2020b). Perhaps further scaling metrics 
+(Owen et al., 2021) could be applied to navigation and memory. 
+ 
+Buzsáki also flips the usual outside-in script to emphasize inner dynamics: “Brains largely 
+organize themselves, rather than being enslaved to input signals,” he writes, and “internally 
+generated, self-organized patterns in the brain acquire ‘meaning‘ through action, which 
+becomes what we call ‘experience’.” (Buzsáki, 2019). If space and time are understood as 
+measurements, an idea close to what Buzsáki and Llinás already advocate (Buzsáki & Llinás, 
+2017), it becomes possible to see action as bidirectional, with inner brain dynamics setting a 
+baseline pace to be disturbed as little as possible. Inner brain dynamics have their own space 
+and time from the point of view of an observer, translated by the body but bidirectionally 
+interacting with an ongoing encounter which develops and adjusts those dynamics via 
+development and lifespan. 
+ 
+Though spontaneous (baseline) activity has been studied relative to cognition for decades 
+(Mazoyer et al., 2001), the majority of task and stimulus-based experiments still consider the 
+NS as if it were “an organ at rest, in which excitation arises only as a response to stimuli” 
+(Goldstein, 1995; Northoff, 2018). Internally organized activity that is not immediately 
+influenced by sensory inputs or motor output is “a necessary condition for cognition” such 
+that (Buzsáki, 2019). Still, disregarding ongoing activity is the norm in experiments that 
+ 
+41 
+focus on particular stimuli and voxel delineations, but variability may open better methods 
+(Dinstein et al., 2015; Waschke et al., 2021); the encounter never stops. 
+ 
+SN posits that the space and time of these inner dynamics are measured from a different 
+position than spatiotemporal dynamics from the world: This means space and time within the 
+body (i.e. for a population of neurons) are measured from a different position than whole-
+body measurements, but that those measurements maintain a fractal relationship (Northoff, 
+2018b). Different scales can be compared in different forms of navigation depending on the 
+natural statistics of what is encountered (a maze, a computer program, the subject’s own 
+replay) (Northoff, 2018a, 2018b; Northoff et al., 2020a). Understanding spatiotemporal 
+measurements positionally requires what Northoff calls a ‘Copernican shift of vantage point’ 
+which is expanded here to mean a shift of view from individual to ecological. 
+ 
+SN does not recognize the mind-body problem; to humor those arguments is to fall into the 
+same Cartesian trap that formed current vocabulary and methods discussed earlier as 
+problematic. Instead, it looks at empirical features of the brain, such as the importance of 
+baseline activity (Northoff et al., 2010). Noticing how natural statistics scale or fractalize is a 
+way to stop sandwiching cognitive between outside and inside (Northoff, 2018b) and see the 
+body as continuous with its encounter even as it maintains and adjusts its dynamics. 
+ 
+ 
+Relevance to navigation and memory  
+Using memory means we have reached S3. One has to reverse engineer to understand S2 and 
+S1, which means reconceiving classic delineations of memory systems (Nadel & Hardt, 2011; 
+Sherry & Schacter, 1987; Tulving, 1983). A reorientation is as follows: In development, the 
+NS aligns to spatiotemporal regularities of its encounter to maximize energy and resources. 
+This paces baseline activity, which sets parameters for how the brain positions and reads 
+discrepancies. Habituations to natural statistics scale to all forms of navigation—walking to 
+the park, telling someone how to walk to the park, etc. These use nested regularities of action, 
+but context and awareness of desired outcome frame what bodily behavior follows from what 
+brain behavior: The tone played by the encounter shifts the scale of action, which is the 
+ongoing music. 
+ 
+ 
+42 
+Describing how to go to the park, for example, is not rhythmic context for my body to 
+generate movements to go to the park. The dog sitting at the door is. The spatiotemporal 
+scales of the encounter—the conversation, the dog’s cue—are the notes being played that 
+determine shifts of bodily action as intrinsic habituated scales. It’s not that navigating to the 
+park is the same as describing navigating to the park, but rather that both activities require the 
+same changes of similarity of scale in their scripts; they are nested or fractalized. How the 
+tone of the ongoing encounter cues or fits to inner dynamics could be a matter of brain 
+oscillations, especially sharp wave ripples (Buzsáki, 2006). S3 awareness of S2, or S2 
+disengagement from the encounter to read S1 regularities, could be evident in changes of 
+scale and help explain what Buzsáki means by internalized memory operations when he 
+writes that:  
+…comparison of spatial and mental navigation indicates how disengagement of 
+navigation networks from their external dependence could transform them into 
+internalized memory operations. This recognition simplifies our understanding of 
+neuronal mechanisms of apparently different functions. While spatial navigation, 
+memory, planning and imagination are distinct terms, their neuronal substrates and 
+neurophysiological mechanisms are identical or at least similar (Buzsáki, 2019). 
+ 
+Connections of patterns in cognition need not be a matter of physical closeness or proximity 
+of occurrence but can be shared patterns of statistical relation (pace, rhythm, timing). 
+Traditional notions of time and space whereby something closer is likely to be more 
+correlated than something distant are supplemented with understanding that activities sharing 
+strong patterns of relation (such as a street once walked in Heidelberg and a street of similar 
+statistics now being walked in Lisbon) are matters of spatiotemporal continuity. Nearness is 
+not a matter of placement but of resonance, just as neurons that are not near to one another in 
+the brain may be near to one another in firing rates (Buzsáki, 2019). Activity in the brain 
+exhibits regular temporal patterns and different frequency bands exhibit patterns of relation 
+(Buzsáki, 2006; Buzsáki et al., 2013; Xue et al., 2014), and “networks” in the brain 
+(sensorimotor, central executive, etc.) relate through regularities of spatiotemporal dynamics. 
+Comparing such networks to the encounter may illuminate psychopathology just as surely as 
+correlating them to stimuli (de Pasquale et al., 2012; Menon, 2011). Just as different 
+spatiotemporal frequency-fluctuations mediate and couple with one another in the nervous 
+system, phase synchronizations are likely signatures of remembering and thinking in ways 
+that look different in health as opposed to distress (Canolty & Knight, 2010; Fell & 
+ 
+43 
+Axmacher, 2011). Before a brief illumination of clinical examples, it helps to clarify 
+nestedness and position, how measurements from positions create points of view. 
+ 
+Nestedness 
+Nestedness is a heuristic for understanding how numerous navigations can use fractalized 
+positionings of sensory statistics. Reframed, one could understand what is currently called 
+spatial and nonspatial (Eichenbaum et al., 1999; Eliav et al., 2021)—also behavioral and 
+conceptual; physical space and concept space—as nested forms of navigation at different 
+spatial and temporal scales (Koplenig, 2018; Morozov, 2008) perhaps as in (Owen et. al, 
+2021; Schläpfer, 2021). 
+ 
+Northoff describes this as a neuro-ecological continuum whereby spatiotemporal scales 
+within the nervous system are nested with those of the body just as the body is nested within 
+the scales of its ongoing encounter (Northoff, 2018b). Nestedness is only apparent for an 
+observer—it is the positional measurements that are nested, their statistics, not the activity 
+itself which is ongoing and need only be weighted by previous inertia to act. 
+ 
+Such nested oscillations and nested synchrony in low and high frequency fluctuations (phase-
+phase/power coupling) have been found in spontaneous activity using MEG (Monto, 2012 in 
+Northoff, 2018b). Clark also points out regular statistical brain activity and its direct 
+connection via an “extra-neuronal loop” with the statistics of the encounter (Clark, 2013). 
+TEM shows positional cell firings preserve structure as the regularities of the encounter shift 
+(J. C. R. Whittington et al., 2020). Such generalization is a kind of nestedness: Baking 
+chocolate chip cookies with our kids reminds us of being kids ourselves and doing the 
+same—as forms of navigation, these overlapping patterns of bodily activity have similar 
+regularities due to their overlapping sensory and positional regularities; their oscillatory gear 
+places them near. 
+ 
+No wonder events seem to have sensory signatures. Going to a football match or a music 
+concert means one’s overall bodily state aligns with that encounter. Northoff gives the 
+example of dancing to music—how the spatiotemporal structure of body and music (the 
+encounter) synchronize (Lakatos et al., 2008; Northoff, 2018b, p. 20; Northoff & Huang, 
+2017). Recent studies in entrainment speak to this nested condition whereby shifting the 
+ 
+44 
+dynamics of the patterns of the encounter shifts the dynamics of the body and vice versa 
+(Lakatos et al., 2008). 
+ 
+Position 
+This paper has oriented towards understanding part and whole as measurements from 
+position: What is counted as a membrane or whole system is dependent on from where it is 
+measured; spatiotemporal measurements change according to that position. Humans can 
+measure from human positions but also from non-human positions such as cells or planets. 
+This is possible via communicative representations (metrics) and tools (i.e. microscopes). A 
+position at one scale can be made up of numerous positions at another scale, consciously, if 
+those positions agree to a particular metric. Metrics and tools for measurement (telescopes, 
+computers, books, languages, films, etc.) connect positions with common measurements and 
+allow for shared points of view. This is how humans agree that cells form tissues, for 
+example, or that planets form solar systems. The point of view is a shared set of parameters 
+along the lines of what Kuhn described as a paradigm (Kuhn, 1970). 
+ 
+As Northoff points out, “our epistemic reference does not need to be identical with our ontic 
+location” (Northoff, 2018b). Perspectival readings of science (Giere, 2006) open a path for 
+multiple perspectives and multiple systems of measurement to be real and accessible from 
+one position, which is precisely what representations (communicative measurements) do as 
+presented here—what language and metrics are, and why they create points of view. Theories 
+of Newton and Einstein are not judged as right or wrong but rather by how they bring pieces 
+of a communicative puzzle into communicative clarity (DiSalle, 2006; Massimi & McCoy, 
+2020). This allows for a shared reality; the ability to communicate or miscommunicate 
+necessitates it. Through shared tools and representations, humans find ways to expand point 
+of view to positions beyond individual bodies and to realize points where parameters overlap. 
+ 
+Shared measurements create shared points of view without subsuming individuals, yet any 
+point of view is itself a positional measurement of continuous activity distinct from any 
+measurement of it. Any definition of self, for example, is not a human being but rather a 
+measurement of that being. Here we are reminded of what mathematicians have described as 
+strange loops (D. R. Hofstadter , 2007; Sautoy, 2019), cyclical mathematical structures such 
+as those in Escher’s paintings or Bach’s Shepard tones—iterations of measurement that end 
+up measuring one another, seemingly coming back to the beginning but never crossing the 
+ 
+45 
+same place again, closed enough for feedback but open enough for emergence. All layers 
+being contained inside all others makes sense when we understand them as measurements of 
+an activity that those measurements are created from and perpetuate. As explained by the 
+Ship of Theseus, spatiotemporal patterns observed continuously from a point of view define 
+the regularity of what is encountered and allow a ship to remain a ship and come back to 
+where it started, even if it no longer has a single original part and the starting point is in flux. 
+Although the dynamics of both the ship and starting point change, the overall spatiotemporal 
+patterns maintain their scale from some position. 
+ 
+Wherever one sets the point from which to measure, perceived relations and structure align 
+accordingly. Tools and shared representations bridge positions and points of view and 
+‘wrong’ theories illuminate that activity. Theorizing an earth-centered solar system, for 
+example, provided illumination that eventually overturned that same system with a sun-
+centered one (Northoff, 2018b). Likewise, some of Newton’s wrong ideas still illuminate the 
+workings of the world (DiSalle, 2002, 2006). Humans use language and tools to become 
+aware of references that expand point of view, even as they remain communally constrained. 
+In this way, we develop shared knowledge. 
+ 
+The question that remains is: how can we analyze this metrically? Northoff introduces a 
+bridge principle (by way of (Giere, 2004)) for data-reading and methods to measure 
+nestedness of frequencies via a combination of difference-based measurements and natural 
+statistics (Northoff, 2018b), asking: How are the natural statistics of the encounter translated 
+or deferred by the body, and how do those statistics affect (or not) the statistics of the body’s 
+baseline activity? Here we have a conversion system of energy, frequency, and vibration by 
+way of scents, sounds, touches, tastes, stresses, weather, communication, thinking, etc. When 
+we reframe cognition as continuous with navigation, we have a way of understanding how 
+what we experience as memory and thought could form positionally via nested regularities in 
+the sensory relations encountered as the body navigates.  
+ 
+A person standing in Berlin’s TV tower sees the city differently from a person cycling its 
+streets, even as Berlin is shared. Both views are true views of the same dynamic relation, both 
+have different affordances, and another position can incorporate both positions within one 
+larger point: One can create a virtual S3 map or app whereby numerous positions can share 
+that same point of view. Such scaling happens when one reads a book about the city or 
+ 
+46 
+discusses the city with its inhabitants—point of view continually shifts and adjusts 
+relationally through sharing of positions, path integrating by way of all that has come before 
+while maintaining a continuity of relations (like the Ship of Theseus). Vantage points are 
+continuous and cumulative because of this interlinking regularity such that one chunk of 
+natural statistics links with another, just as Tolman’s rats were able to increase their range of 
+inference by exploration. Depending upon the position from which the parameters of 
+affordance are measured (cell, organ, body, community, etc.), structures and relations will 
+have different statistics. As point of view expands ecologically, even fundamental tenets 
+become somewhat mutable precisely because they are measurements (Smolin, 2018). 
+ 
+All navigation is positional, and position scales to numerous points of view. Navigation 
+through a landscape cannot be separated from position (nor can definitions of intelligence) 
+whether that landscape is a planet, a city, a virtual environment, a computer task, a human, a 
+cell, etc. If we understand remembering (and all cognition) as continuous with navigating, we 
+understand it as evolved activity. To get an accurate gestalt of this activity, we need metrics 
+for brain, body, and experiment. 
+ 
+ 
+Possible experiment 
+Though it is beyond this paper to conduct a study and analyze data, a possible course would 
+be to do an experiment (S3) similar to (Kuhrt et al., 2021) using navigation of different 
+sensory mazes and recalled navigation of those mazes while measuring baseline activity 
+relative to tasks. The key would be to design the experiment such that the sensory 
+components of the experiment itself could be measured and adjusted in complexity. Baseline 
+would be normal sensory range for the individual and complexity would be sensory 
+arrangements that deviate while an individual attempts to navigate a task. The components of 
+this task would be measured and metricized through spatiotemporal means for measuring 
+sensory frequencies (hertz, decibels, amplitude, etc.), while the body and NS are measured 
+biometrically (Hill et al., 2012; Topalovic et al., 2020) possibly on the model of (Serrano et 
+al., 2016; Tromp et al., 2018). One could (via S3) use scale free measurements to compare 
+the frequency measurements of the VR experiment to those of the NS and body—finding 
+patterns in an individual relative to parameters of healthy versus disrupted navigation, and 
+evaluating how behaviors scale (Moon et al., 2020; Owen et al., 2021; Schläpfer et al., 2021) 
+ 
+ 
+47 
+ 
+Clinical potential 
+From the point of view of this paper, cognitive illnesses are disruptions in navigation. This 
+means disruptions in how the body weights and positions sensory regularities as it matches to 
+its encounter, how it reads its habits (priors) in relation to that encounter, and its awareness of 
+its behavior. In someone suffering from schizophrenia, patterns built of prior sensory 
+statistics operating as baseline activity may be more heavily weighted than incoming statistics 
+of the encounter such that those sequences have the phenomenological feel of the present 
+(Northoff, 2016a, 2018a), so the patient loses their ability to sense the encounter, only 
+sensing their own active priors (stuck in S2 without S3 access). A lesser version may happen 
+when we ‘get lost in thought’ while engaging in another activity such as driving a car or 
+walking down the street and cannot remember having driven or walked afterwards. 
+ 
+In depression, rhythmic scale may be slower relative to the pace of the encounter (from an 
+observer’s point of view). In mania, the other side of the spectrum, sensory/positional 
+regularity of ongoing brain activity may scale faster than the body’s encounter (Northoff, 
+2016a, 2018a, 2018b). In depression, awareness would have a negative sensory affect and a 
+grounded quality (sensing would be weighted less than positioning) whereas in mania it 
+would be more positive but less stable (sensing would be weighted more than positioning). 
+ 
+When the parts of the body that sense and interact with the world deteriorate or when the 
+encounter shifts beyond certain parameters, this causes distortions or disconnects in how 
+patterns are cued, causing problems in memory. In Alzheimer’s, the breakdown of the body’s 
+ability to sense regularities (impairments in vision, hearing, etc.) scrambles the HEF 
+positional system as it no longer receives the habitual regularized cues its baseline activity 
+paced itself on. In a condition such as autism, sensory weightings would likely be stronger 
+and overwhelm the hippocampal-entorhinal (and eventually motor-sensory) systems which 
+would result in different or delayed (S3) metacognition. 
+ 
+Violent changes in sensory statistics and positional regularity (war, trauma, displacement, 
+disease) would cause significant changes and distress in remembering and thinking. On the 
+other hand, traveling or entering a new environment could cause changes in thinking, feeling, 
+and the vividness of remembering on a scale experienced as positive. All of these are cases of 
+ 
+48 
+disruptions in how sensory regularities are weighted and positioned to baseline activity and 
+the encounter. 
+ 
+ 
+The commons of cognition and navigation 
+This paper positions cognition as scales of navigation. This means thinking and remembering 
+are how we find our way in the world, and brain and body behavior can be investigated and 
+understood as scaled regularities relative to the regularities of the encounter being navigated. 
+These are best investigated computationally and ecologically, whereby ecological means that 
+rather than designating highly parameterized stimuli, experiments are metricized encounters. 
+This requires an optimization in methods and analysis that takes the experiment itself into 
+analysis. Scale-free methods could be added to the toolkit as ways of observing the 
+complexity of spatiotemporal changes between the encounter and the body’s processing of it, 
+and between brain/body behavior at different scales. Hippocampal research relative to 
+navigation and memory has been offered here an example of this reorientation whereby 
+computation focuses on regularities beyond dichotomies of subject-object/stimulus-response. 
+ 
+From birth to death, a position navigates an ongoing 360-degree encounter. Bodies develop 
+and habituate as they learn to walk, manipulate objects, and communicate, engaging in “rich, 
+context-dependent behaviors” and cycling “dynamic, multidimensional information about the 
+world” (Hasson et al., 2020). The brain “is not an information-absorbing, perpetual coding 
+device, as it is often portrayed, but a venture-seeking explorer” that “ceaselessly interacts 
+with, rather than just detects, the external world in order to remain itself” (Buzsáki, 2019). 
+What is being navigated (light, sound, touch, thought, etc.) is spatiotemporally measurable 
+from numerous positions, at numerous scales. Due to its continuality, encountered regularities 
+likely scale between all positions even as they remain uncontainable and never (exactly) the 
+same from any two points. 
+ 
+Conscious S3 exploration is linked to active iteration within the HEF and its interaction with 
+the cortex (see Chapter 3 in (Buzsáki, 2019)) reiterated via replay (Momennejad, 2020; 
+Ólafsdóttir et al., 2018). HEF communication with the striatum, PFC and other brain areas 
+cannot be separated (Ciaramelli, 2008; Eichenbaum, 2017b; Euston et al., 2012; Lara & 
+Wallis, 2015; Vertes, 2006) but we can understand the HEF as a crucial crossroads. Cases 
+like H.M. show how damage to the HEF results in a body’s inability to order and embed 
+ 
+49 
+ongoing sensory and spatial statistics with ongoing ecological regularities set by all previous 
+encounters—i.e., to make new memories or augment old ones. This results in impairments in 
+navigation, be that through a home, a maze, a book, emotions or thought (Bliss, 2007; Duff & 
+Brown-Schmidt, 2012; MacKay et al., 1998; Squire, 2009). All this suggests that the HEF 
+positions sensory statistics into active scripts or flexible habituations which match to the 
+continuous unbroken encounter that is an individual’s life. Looking at how this common 
+activity scales with different experimental metrics could provide important clinical insights. 
+ 
+Reorienting methods and analysis means reorienting “the framework within which we view 
+ourselves, our mental features, and the world” (Northoff, 2018b). If we understand cognition 
+as continuous with navigation—as scaled behavior evolved through a body’s unique 
+navigation of its ongoing encounter—we begin to shift our understanding of mind and 
+agency. We understand that the body can become conscious of its mind, and even change it, 
+but only through connection and communication with others.  
+ 
+As mentioned earlier, the “revolutionary move of Copernicus consisted in seeing that our 
+epistemic reference does not need to be identical with our ontic location” (Northoff, 2018b). 
+This means positions evolve ecologically; positions can become aware of themselves as part 
+of shared positions. “Presupposing a vantage point from within mind or brain, we could not 
+but understand ourselves in a rather ego-… or neurocentric way” (Northoff, 2018b) and yet it 
+is possible to shift the vantage point through communication—through the representations we 
+create—to position ecologically. 
+ 
+Measuring space and time is how we understand ourselves ecologically. Commons refers to 
+what is not owned by any position but essential to each—resources such as air, water, and 
+land as well as languages, archives, and relationships. The experiential resources of the 
+commons are an ongoing, immediate, without-a-gap spatiality within which bodies are 
+embedded and with which they navigate. There is no choice but to navigate or be navigated, 
+for each change changes every other, just as adding or subtracting a drop from the ocean 
+changes its overall mathematics even if most positional measurements remain the same. 
+ 
+Understanding memory as evolved navigation allows us to see ourselves ecologically, to 
+notice “we are part of the world rather than being its center” (Northoff, 2018).  This means 
+widening traditionally egocentric views with “an allo- and eco-centric view of mental 
+ 
+50 
+features, ourselves, and our position within the world” (Northoff, 2018b). In an eco-centric 
+view, the center is everywhere and each unique ‘I’ can shift between perspectives to become 
+ecological. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Bibliography 
+ 
+Aizawa, K. (2017). Cognition and behavior. Synthese, 194(11), 4269–4288. 
+https://doi.org/10.1007/s11229-014-0645-5 
+ 
+Allen, T. A., Salz, D. M., McKenzie, S., & Fortin, N. J. (2016). Nonspatial Sequence Coding 
+in CA1 Neurons. Journal of Neuroscience, 36(5), 1547–1563. 
+ 
+Appiah, A. (1991). Representations and Realism. Philosophical Studies: An International 
+Journal for Philosophy in the Analytic Tradition, 61(1/2), 65–74. 
+http://www.jstor.org/stable/4320169 
+ 
+Arthur, R. (1994). Space and Relativity in Newton and Leibniz. The British Journal for the 
+Philosophy of Science, 45(1), 219–240. 
+ 
+Baker, B., Lansdell, B.J., & Kording, K.P. (2021). A Philosophical Understanding of 
+Representation for Neuroscience. 
+ 
+Barlow, H. (2001a). Redundancy reduction revisited. Network: Computation in Neural 
+Systems, 12(3), 241–253. https://doi.org/10.1080/net.12.3.241.253 
+ 
+Barlow, H. (2001). The exploitation of regularities in the environment by the brain. 
+Behavioral and Brain Sciences, 24(4), 602–607. 
+https://doi.org/10.1017/S0140525X01000024 
+ 
+Barsalou, L. W. (2010). Grounded Cognition: Past, Present, and Future: Topics in Cognitive 
+Science. Topics in Cognitive Science, 2(4), 716–724. https://doi.org/10.1111/j.1756-
+8765.2010.01115.x 
+ 
+Bateson, G. (1972). Steps to an ecology of mind: Collected essays in anthropology, 
+psychiatry, evolution, and epistemology (pp. xxvi, 545). Jason Aronson. 
+ 
+Baumann, V., Hansen, A., & Wolf, S. (2016). The measurement problem is the measurement 
+problem is the measurement problem. ArXiv:1611.01111 [Quant-Ph]. 
+http://arxiv.org/abs/1611.01111 
+ 
+ 
+51 
+Behrens, T. E. J., Muller, T. H., Whittington, J. C. R., Mark, S., Baram, A. B., Stachenfeld, 
+K. L., & Kurth-Nelson, Z. (2018). What Is a Cognitive Map? Organizing Knowledge for 
+Flexible Behavior. Neuron, 100(2), 490–509. https://doi.org/10.1016/j.neuron.2018.10.002 
+ 
+Bellmund, J. L. S., Gärdenfors, P., Moser, E. I., & Doeller, C. F. (2018b). Navigating 
+cognition: Spatial codes for human thinking. Science, 362(6415), Article 6415. 
+https://doi.org/10.1126/science.aat6766 
+ 
+Berke, J. D. (2009). Procedural Learning: Striatum. In Encyclopedia of Neuroscience (pp. 
+1107–1116). Elsevier. https://doi.org/10.1016/B978-008045046-9.00781-6 
+ 
+BI 063 Uri Hasson: The Way Evolution Does It | Brain Inspired. (2021, September 30). 
+https://braininspired.co/podcast/63/ 
+ 
+Bickhard, M. H. (2009). The interactivist model. Synthese, 166(3), 547–591. 
+ 
+Birch, J., Ginsburg, S., & Jablonka, E. (2020). Unlimited Associative Learning and the 
+origins of consciousness: A primer and some predictions. Biology & Philosophy, 35(6), 56. 
+https://doi.org/10.1007/s10539-020-09772-0 
+ 
+Bliss, T. (2007). The hippocampus book. The Hippocampus Book., xx, 832–xx, 832. 
+ 
+Brette, R. (2018). Is coding a relevant metaphor for the brain? BioRxiv, 168237. 
+https://doi.org/10.1101/168237 
+ 
+Brette, R. (2019). Is coding a relevant metaphor for the brain? Behavioral and Brain 
+Sciences, 42, e215-undefined. https://doi.org/10.1017/S0140525X19000049 
+ 
+Buzsáki, G. (2006). Rhythms of the brain (pp. xv, 448). Oxford University Press. 
+https://doi.org/10.1093/acprof:oso/9780195301069.001.0001 
+ 
+Buzsáki, G. (2019). The Brain from Inside Out. Oxford University Press. 
+https://doi.org/10.1093/oso/9780190905385.001.0001 
+Buzsáki, G. (2020). The Brain–Cognitive Behavior Problem: A Retrospective. ENeuro, 7(4), 
+Article 4. https://doi.org/10.1523/ENEURO.0069-20.2020 
+ 
+Buzsáki, G., & Llinás, R. (2017). Space and time in the brain. Science, 358(6362), 482. 
+https://doi.org/10.1126/science.aan8869 
+ 
+Buzsáki, G., Logothetis, N., & Singer, W. (2013). Scaling Brain Size, Keeping Timing: 
+Evolutionary Preservation of Brain Rhythms. Neuron, 80(3), 751–764. 
+https://doi.org/10.1016/j.neuron.2013.10.002 
+ 
+Buzsáki, G., & Moser, E. I. (2013). Memory, navigation and theta rhythm in the 
+hippocampal-entorhinal system. Nature Neuroscience, 16(2), 130–138. 
+https://doi.org/10.1038/nn.3304 
+ 
+Canolty, R. T., & Knight, R. T. (2010). The functional role of cross-frequency coupling. 
+Trends in Cognitive Sciences, 14(11), 506–515. https://doi.org/10.1016/j.tics.2010.09.001 
+ 
+ 
+52 
+Carruthers, P. (2006). The architecture of the mind: Massive modularity and the flexibility of 
+thought (pp. xviii, 462). Clarendon Press/Oxford University Press. 
+https://doi.org/10.1093/acprof:oso/9780199207077.001.0001 
+ 
+Charles, E. (2012). Ecological Psychology. In Encyclopedia of Human Behavior: Second 
+Edition (pp. 7–12). https://doi.org/10.1016/B978-0-12-375000-6.00142-7 
+ 
+Chersi, F., & Burgess, N. (2015). The Cognitive Architecture of Spatial Navigation: 
+Hippocampal and Striatal Contributions. Neuron, 88(1), 64–77. 
+https://doi.org/10.1016/j.neuron.2015.09.021 
+ 
+Chomsky, N. (1959). Review of V erbal Behavior. Language, 35(1), 26--58. 
+ 
+Chun, M. M., & Turk-Browne, N. B. (2007). Interactions between attention and memory. 
+Current Opinion in Neurobiology, 17(2), 177–184. 
+https://doi.org/10.1016/j.conb.2007.03.005 
+ 
+Church, A. (1937). A. M. Turing. On computable numbers, with an application to the 
+Entscheidungs problcm. Proceedings of the London Mathematical Society, 2 s. Vol. 42 
+(1936–1937), pp. 230–265. Journal of Symbolic Logic, 2(1), 42–43. 
+https://doi.org/10.1017/S002248120003958X 
+ 
+Ciaglia, F. M., Di Cosmo, F., Ibort, A., & Marmo, G. (2020). Schr\"{o}dinger’s problem 
+with cats: Measurements and states in the Groupoid Picture of Quantum Mechanics. 
+ArXiv:2012.10284 [Math-Ph, Physics:Quant-Ph]. https://doi.org/10.3390/e22111292 
+ 
+Ciaramelli, E. (2008). The role of ventromedial prefrontal cortex in navigation: A case of 
+impaired wayfinding and rehabilitation. Neuropsychologia, 46(7), 2099–2105. 
+https://doi.org/10.1016/j.neuropsychologia.2007.11.029 
+ 
+Cisek, P. (2019a). Resynthesizing behavior through phylogenetic refinement. Attention, 
+Perception, & Psychophysics, 81(7), 2265–2287. https://doi.org/10.3758/s13414-019-01760-
+1 
+ 
+Cisek, P. (2019b). A sensorimotor alternative to coding is possible. The Behavioral and Brain 
+Sciences, 42, e222. https://doi.org/10.1017/S0140525X19001468 
+ 
+Clark, A. (1992). Sensory Qualities. Clarendon Press. 
+ 
+Clark, A. (2013). Whatever next? Predictive brains, situated agents, and the future of 
+cognitive science. Behavioral and Brain Sciences, 36(3), 181–204. 
+https://doi.org/10.1017/S0140525X12000477 
+ 
+Constant, A., Clark, A., & Friston, K. J. (2021). Representation Wars: Enacting an Armistice 
+Through Active Inference. Frontiers in Psychology, 11, 3798. 
+https://doi.org/10.3389/fpsyg.2020.598733 
+ 
+Constantinescu, A. O., O’Reilly, J. X., & Behrens, T. E. J. (2016). Organizing conceptual 
+knowledge in humans with a gridlike code. Science, 352(6292), 1464. 
+https://doi.org/10.1126/science.aaf0941 
+ 
+53 
+ 
+Damiani, S., Scalabrini, A., Gomez-Pilar, J., Brondino, N., & Northoff, G. (2019). Increased 
+scale-free dynamics in salience network in adult high-functioning autism. NeuroImage: 
+Clinical, 21, 101634. https://doi.org/10.1016/j.nicl.2018.101634 
+ 
+de Pasquale, F., Della Penna, S., Snyder, A. Z., Marzetti, L., Pizzella, V., Romani, G. L., & 
+Corbetta, M. (2012). A Cortical Core for Dynamic Integration of Functional Networks in the 
+Resting Human Brain. Neuron, 74(4), 753–764. https://doi.org/10.1016/j.neuron.2012.03.031 
+ 
+Dennett, D. C. (Daniel Clement). (1987). The intentional stance. Cambridge, Mass. :MIT 
+Press, 
+ 
+Descartes, R., 1596-1650. (1993). Discourse on method ; and, Meditations on first 
+philosophy. Third edition. Indianapolis : Hackett Pub. Co., [1993] ©1993. 
+https://search.library.wisc.edu/catalog/999718190702121 
+ 
+Dinstein, I., Heeger, D. J., & Behrmann, M. (2015). Neural variability: Friend or foe? Trends 
+in Cognitive Sciences, 19(6), 322–328. https://doi.org/10.1016/j.tics.2015.04.005 
+ 
+DiSalle, R. (2002). Newton’s philosophical analysis of space and time. In I. B. Cohen & G. 
+E. Smith (Eds.), The Cambridge Companion to Newton (pp. 33--56). Cambridge University 
+Press. 
+ 
+DiSalle, R. (2006). Understanding Space-Time: The Philosophical Development of Physics 
+From Newton to Einstein. Cambridge University Press. 
+ 
+Doeller, C. F., Barry, C., & Burgess, N. (2010). Evidence for grid cells in a human memory 
+network. Nature, 463(7281), 657–661. https://doi.org/10.1038/nature08704 
+ 
+Dolan, R. J. (2002). Emotion, Cognition, and Behavior. 298, 4. 
+ 
+Dotson, N. M., & Yartsev, M. M. (2021). Nonlocal spatiotemporal representation in the 
+hippocampus of freely flying bats. Science (New York, N.Y.), 373(6551), 242–247. 
+https://doi.org/10.1126/science.abg1278 
+ 
+Drew, T., Vo, M. L. H., & Wolfe, J. M. (2013). “The invisible gorilla strikes again: Sustained 
+inattentional blindness in expert observers”. Psychological Science, 24(9), 1848–1853. 
+https://doi.org/10.1177/0956797613479386 
+ 
+Duff, M., & Brown-Schmidt, S. (2012). The hippocampus and the flexible use and processing 
+of language. Frontiers in Human Neuroscience, 6, 69. 
+https://doi.org/10.3389/fnhum.2012.00069 
+ 
+Ebbinghaus, H. (2013). Memory: A Contribution to Experimental Psychology. Annals of 
+Neurosciences, 20(4). https://doi.org/10.5214/ans.0972.7531.200408 
+ 
+Eichenbaum, H. (2004). Hippocampus: Cognitive processes and neural representations that 
+underlie declarative memory. Neuron, 44(1), 109–120. 
+https://doi.org/10.1016/j.neuron.2004.08.028 
+ 
+ 
+54 
+Eichenbaum, H. (2017a). The role of the hippocampus in navigation is memory. Journal of 
+Neurophysiology, 117(4), 1785–1796. https://doi.org/10.1152/jn.00005.2017 
+ 
+Eichenbaum, H. (2017b). Prefrontal–hippocampal interactions in episodic memory. Nature 
+Reviews Neuroscience, 18(9), 547–558. https://doi.org/10.1038/nrn.2017.74 
+ 
+Eichenbaum, H., & Cohen, N. J. (1988). Representation in the hippocampus: What do 
+hippocampal neurons code? Trends in Neurosciences, 11(6), 244–248. 
+https://doi.org/10.1016/0166-2236(88)90100-2 
+ 
+Eichenbaum, H., & Cohen, N. J. (2014). Can We Reconcile the Declarative Memory and 
+Spatial Navigation Views on Hippocampal Function? Neuron, 83(4), 764–770. 
+https://doi.org/10.1016/j.neuron.2014.07.032 
+ 
+Eichenbaum, H., Dudchenko, P., Wood, E., Shapiro, M., & Tanila, H. (1999). The 
+Hippocampus, Memory, and Place Cells: Is It Spatial Memory or a Memory Space? Neuron, 
+23(2), 209–226. https://doi.org/10.1016/S0896-6273(00)80773-4 
+ 
+Eliav, T., Maimon, S. R., Aljadeff, J., Tsodyks, M., Ginosar, G., Las, L., & Ulanovsky, N. 
+(2021). Multiscale representation of very large environments in the hippocampus of flying 
+bats. Science (New York, N.Y.), 372(6545), eabg4020. 
+https://doi.org/10.1126/science.abg4020 
+ 
+Euston, D. R., Gruber, A. J., & McNaughton, B. L. (2012). The Role of Medial Prefrontal 
+Cortex in Memory and Decision Making. Neuron, 76(6), 1057–1070. 
+https://doi.org/10.1016/j.neuron.2012.12.002 
+ 
+Evans, J. St. B. T. (2008). Dual-Processing Accounts of Reasoning, Judgment, and Social 
+Cognition. Annual Review of Psychology, 59(1), 255–278. 
+https://doi.org/10.1146/annurev.psych.59.103006.093629 
+ 
+Fazelpour, S., & Thompson, E. (2015). The Kantian brain: Brain dynamics from a 
+neurophenomenological perspective. Current Opinion in Neurobiology, 31, 223–229. 
+https://doi.org/10.1016/j.conb.2014.12.006 
+ 
+Fell, J., & Axmacher, N. (2011). The role of phase synchronization in memory processes. 
+Nature Reviews Neuroscience, 12(2), 105–118. https://doi.org/10.1038/nrn2979 
+ 
+Fox, K. C. R., Spreng, R. N., Ellamil, M., Andrews-Hanna, J. R., & Christoff, K. (2015). The 
+wandering brain: Meta-analysis of functional neuroimaging studies of mind-wandering and 
+related spontaneous thought processes. NeuroImage, 111, 611–621. 
+https://doi.org/10.1016/j.neuroimage.2015.02.039 
+ 
+Frank, L. M., Stanley, G. B., & Brown, E. N. (2004). Hippocampal Plasticity across Multiple 
+Days of Exposure to Novel Environments. The Journal of Neuroscience, 24(35), 7681–7689. 
+https://doi.org/10.1523/JNEUROSCI.1958-04.2004 
+ 
+Frith, C. (2005). The neural basis of hallucinations and delusions. Comptes Rendus Biologies, 
+328(2), 169–175. https://doi.org/10.1016/j.crvi.2004.10.012 
+ 
+ 
+55 
+Gallistel, C. R. (1990). The organization of learning (pp. viii, 648). The MIT Press. 
+ 
+Gallistel, C. R., & King, A. P. (2009). Memory and the computational brain: Why cognitive 
+science will transform neuroscience. (pp. xvi, 319). Wiley-Blackwell. 
+https://doi.org/10.1002/9781444310498 
+ 
+Gärdenfors, P. (2000). Conceptual Spaces: The Geometry of Thought. The MIT Press. 
+https://doi.org/10.7551/mitpress/2076.001.0001 
+ 
+Gibson, J. J. (1966). The senses considered as perceptual systems. Houghton Mifflin. 
+ 
+Gibson, J. J. (1979). The ecological approach to visual perception. Boston: Houghton Mifflin. 
+ 
+Giere, R. N. (2004). How Models Are Used to Represent Reality. Philosophy of Science, 
+71(5), 742–752. https://doi.org/10.1086/425063 
+ 
+Giere, R. N. (2006). Scientific Perspectivism. University of Chicago Press. 
+ 
+Ginsburg, S., & Jablonka, E. (2019). The evolution of the sensitive soul: Learning and the 
+origins of consciousness. (A. Zeligowski, Illustrator).  
+ 
+Goldstein, K. (1995). The organism: A holistic approach to biology derived from 
+pathological data in man (p. 422). Zone Books. 
+ 
+Golesorkhi, M., Gomez-Pilar, J., Zilio, F., Berberian, N., Wolff, A., Yagoub, M. C. E., & 
+Northoff, G. (2021). The brain and its time: Intrinsic neural timescales are key for input 
+processing. Communications Biology, 4(1), 970. https://doi.org/10.1038/s42003-021-02483-6 
+ 
+Golonka, S., & Wilson, A. D. (2019). Ecological representations. Ecological Psychology, 
+31(3), 235–253. https://doi.org/10.1080/10407413.2019.1615224 
+ 
+Greicius, M. D., Krasnow, B., Reiss, A. L., & Menon, V. (2003). Functional connectivity in 
+the resting brain: A network analysis of the default mode hypothesis. Proceedings of the 
+National Academy of Sciences of the United States of America, 100(1), 253–258. 
+https://doi.org/10.1073/pnas.0135058100 
+ 
+Gustafson, N. J., & Daw, N. D. (2011). Grid Cells, Place Cells, and Geodesic Generalization 
+for Spatial Reinforcement Learning. PLoS Computational Biology, 7(10), Article 10. 
+https://doi.org/10.1371/journal.pcbi.1002235 
+ 
+Hafting, T., Fyhn, M., Molden, S., Moser, M.-B., & Moser, E. I. (2005). Microstructure of a 
+spatial map in the entorhinal cortex. Nature, 436(7052), 801–806.  
+ 
+Hampson, R. E., Simeral, J. D., & Deadwyler, S. A. (1999). Distribution of spatial and 
+nonspatial information in dorsal hippocampus. Nature, 402(6762), 610–614. 
+https://doi.org/10.1038/45154 
+ 
+Hasson, U., Nastase, S. A., & Goldstein, A. (2020). Direct Fit to Nature: An Evolutionary 
+Perspective on Biological and Artificial Neural Networks. Neuron, 105(3), 416–434. 
+https://doi.org/10.1016/j.neuron.2019.12.002 
+ 
+56 
+ 
+Hawkins, J., Lewis, M., Klukas, M., Purdy, S., & Ahmad, S. (2018). A Framework for 
+Intelligence and Cortical Function Based on Grid Cells in the Neocortex. Frontiers in Neural 
+Circuits, 12. https://doi.org/10.3389/fncir.2018.00121 
+ 
+He, B. J. (2014). Scale-free brain activity: Past, present, and future. Trends in Cognitive 
+Sciences, 18(9), 480–487. https://doi.org/10.1016/j.tics.2014.04.003 
+ 
+Hebb, D. O. (1949). The organization of behavior a neuropsychological theory. Wiley. 
+http://books.google.com/books?id=fGlqAAAAMAAJ 
+ 
+Heyes, C. (2018). Cognitive gadgets: The cultural evolution of thinking. (p. 292). Harvard 
+University Press. https://doi.org/10.4159/9780674985155 
+ 
+Hill, N. J., Gupta, D., Brunner, P., Gunduz, A., Adamo, M. A., Ritaccio, A., & Schalk, G. 
+(2012). Recording Human Electrocorticographic (ECoG) Signals for Neuroscientific 
+Research and Real-time Functional Cortical Mapping. Journal of Visualized Experiments, 64, 
+3993. https://doi.org/10.3791/3993 
+ 
+Hofstadter, D. (2007). I am a strange loop (pp. xix, 412). Basic Books. 
+ 
+Holleman, G. A., Hooge, I. T. C., Kemner, C., & Hessels, R. S. (2021). The Reality of “Real-
+Life” Neuroscience: A Commentary on Shamay-Tsoory and Mendelsohn (2019). 
+Perspectives on Psychological Science, 16(2), 461–465. 
+https://doi.org/10.1177/1745691620917354 
+ 
+Huijbers, W., Pennartz, C. M., Cabeza, R., & Daselaar, S. M. (2009). When Learning and 
+Remembering Compete: A Functional MRI Study. PLOS Biology, 7(1), e1000011. 
+https://doi.org/10.1371/journal.pbio.1000011 
+ 
+Hurme, P. (2017). We Shape Our Tools, and Thereafter Our Tools Shape Us. Human 
+Technology, 13(2), 145–148. https://doi.org/10.17011/ht/urn.201711104209 
+ 
+Hutto, D. (2017). Memory and narrativity. Faculty of Law, Humanities and the Arts - Papers 
+(Archive), 192–204. 
+ 
+Hwang, J. W., Xin, S. C., Ou, Y. M., Zhang, W. Y., Liang, Y. L., Chen, J., Yang, X. Q., 
+Chen, X. Y., Guo, T. W., Yang, X. J., Ma, W. H., Li, J., Zhao, B. C., Tu, Y., & Kong, J. 
+(2016). Enhanced default mode network connectivity with ventral striatum in subthreshold 
+depression individuals. Journal of Psychiatric Research, 76, 111–120. 
+https://doi.org/10.1016/j.jpsychires.2016.02.005 
+ 
+Jonas, E., & Kording, K. P. (2017). Could a Neuroscientist Understand a Microprocessor? 
+PLoS Computational Biology, 13(1), e1005268. https://doi.org/10.1371/journal.pcbi.1005268 
+ 
+Kahneman, D. (2011). Thinking, fast and slow. 
+ 
+Kentros, C. G., Agnihotri, N. T., Streater, S., Hawkins, R. D., & Kandel, E. R. (2004). 
+Increased Attention to Spatial Context Increases Both Place Field Stability and Spatial 
+Memory. Neuron, 42(2), 283–295. https://doi.org/10.1016/S0896-6273(04)00192-8 
+ 
+57 
+ 
+Kiefer, M., & Pulvermüller, F. (2012). Conceptual representations in mind and brain: 
+Theoretical developments, current evidence and future directions. Cortex, 48(7), 805–825. 
+https://doi.org/10.1016/j.cortex.2011.04.006 
+ 
+Kirmayer, L. J., Worthman, C. M., Kitayama, S., Lemelson, R., & Cummings, C. (Eds.). 
+(2020). Culture, Mind, and Brain: Emerging Concepts, Models, and Applications (1st ed.). 
+Cambridge University Press. https://doi.org/10.1017/9781108695374 
+ 
+Koplenig, A. (2018). Using the parameters of the Zipf–Mandelbrot law to measure diachronic 
+lexical, syntactical and stylistic changes – a large-scale corpus analysis. Corpus Linguistics 
+and Linguistic Theory, 14(1), 1–34. https://doi.org/10.1515/cllt-2014-0049 
+ 
+Krakauer, J. W., Ghazanfar, A. A., Gomez-Marin, A., MacIver, M. A., & Poeppel, D. (2017). 
+Neuroscience Needs Behavior: Correcting a Reductionist Bias. Neuron, 93(3), 480–490. 
+https://doi.org/10.1016/j.neuron.2016.12.041 
+ 
+Kriegeskorte, N., & Diedrichsen, J. (2019). Peeling the Onion of Brain Representations. 
+Annual Review of Neuroscience, 42, 407–432. https://doi.org/10.1146/annurev-neuro-
+080317-061906 
+ 
+Kubie, J. L., Levy, E. R. J., & Fenton, A. A. (2020). Is hippocampal remapping the 
+physiological basis for context? Hippocampus, 30(8), 851–864. 
+https://doi.org/10.1002/hipo.23160 
+Kubie, J. L., & Muller, R. U. (1991). Multiple representations in the hippocampus. 
+Hippocampus, 1(3), 240–242. https://doi.org/10.1002/hipo.450010305 
+ 
+Kuhn, T. S. (1970). The structure of scientific revolutions. [Second edition, enlarged]. 
+Chicago : University of Chicago Press, [1970]. 
+https://search.library.wisc.edu/catalog/999466601902121 
+ 
+Kuhrt, D., St. John, N. R., Bellmund, J. L. S., Kaplan, R., & Doeller, C. F. (2021). An 
+immersive first-person navigation task for abstract knowledge acquisition. Scientific Reports, 
+11(1), 5612. https://doi.org/10.1038/s41598-021-84599-7 
+ 
+Kurczek, J., Brown-Schmidt, S., & Duff, M. C. (2013). Hippocampal contributions to 
+language: Evidence of referential processing deficits in amnesia. Journal of Experimental 
+Psychology. General, 142(4), 1346–1354. https://doi.org/10.1037/a0034026 
+ 
+Lakatos, P., Karmos, G., Mehta, A., Ulbert, I., & Schroeder, C. (2008). Entrainment of 
+Neuronal Oscillations as a Mechanism of Attentional Selection. Science (New York, N.Y.), 
+320, 110–113. https://doi.org/10.1126/science.1154735 
+ 
+Lakoff, G., & Johnson, M. (1999). Philosophy in the flesh: The embodied mind and its 
+challenge to Western thought. Basic Books. 
+ 
+Lakoff, G., Lakoff, G., & Johnson, M. (1980). Metaphors We Live By. 
+http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.206.1458 
+ 
+ 
+58 
+Langille, J. J., & Brown, R. E. (2018). The Synaptic Theory of Memory: A Historical Survey 
+and Reconciliation of Recent Opposition. Frontiers in Systems Neuroscience, 12, 52. 
+https://doi.org/10.3389/fnsys.2018.00052 
+ 
+Lara, A. H., & Wallis, J. D. (2015). The Role of Prefrontal Cortex in Working Memory: A 
+Mini Review. Frontiers in Systems Neuroscience, 9, 173. 
+https://doi.org/10.3389/fnsys.2015.00173 
+ 
+Llinas, R. (2014). The olivo-cerebellar system: A key to understanding the functional 
+significance of intrinsic oscillatory brain properties. Frontiers in Neural Circuits, 7, 96. 
+https://doi.org/10.3389/fncir.2013.00096 
+ 
+Llinás, R. R. (2001). I of the Vortex: From Neurons to Self. A Bradford Book. 
+ 
+Luczak, A., Barthó, P., Marguet, S. L., Buzsáki, G., & Harris, K. D. (2007). Sequential 
+structure of neocortical spontaneous activity in vivo. Proceedings of the National Academy of 
+Sciences of the United States of America, 104(1), 347–352. 
+https://doi.org/10.1073/pnas.0605643104 
+ 
+MacKay, D. G., Stewart, R., & Burke, D. M. (1998). H.M. revisited: Relations between 
+language comprehension, memory, and the hippocampal system. Journal of Cognitive 
+Neuroscience, 10(3), 377–394. https://doi.org/10.1162/089892998562807 
+ 
+Mahoney, M. J. (1974). Cognition and behavior modification. (pp. xv, 351). Ballinger. 
+Marks, L. J., & Michael, J. W. (2001). Science, medicine, and the future: Artificial limbs. 
+BMJ (Clinical Research Ed.), 323(7315), 732–735. PubMed. 
+https://doi.org/10.1136/bmj.323.7315.732 
+ 
+Mandler, G. (1991). Your face looks familiar but I can't remember your name: A review of 
+dual process theory. In W. E. Hockley & S. Lewandowsky (Eds.), Relating theory and data: 
+Essays on human memory in honor of Bennet B. Murdock (pp. 207–225). Lawrence Erlbaum 
+Associates, Inc. 
+ 
+Massimi, M. (2018). Four Kinds of Perspectival Truth. Philosophy and Phenomenological 
+Research, 96(2), 342–359. https://doi.org/10.1111/phpr.12300 
+ 
+Massimi, M., & McCoy, C. D. (Eds.). (2020). Understanding Perspectivism: Scientific 
+Challenges and Methodological Prospects. Taylor & Francis. 
+https://library.oapen.org/handle/20.500.12657/25065 
+ 
+Mazoyer, B., Zago, L., Mellet, E., Bricogne, S., Etard, O., Houdé, O., Crivello, F., Joliot, M., 
+Petit, L., & Tzourio-Mazoyer, N. (2001). Cortical networks for working memory and 
+executive functions sustain the conscious resting state in man. Brain Research Bulletin, 
+54(3), 287–298. https://doi.org/10.1016/s0361-9230(00)00437-8 
+ 
+McClelland, J. L., McNaughton, B. L., & O’Reilly, R. C. (1995). Why there are 
+complementary learning systems in the hippocampus and neocortex: Insights from the 
+successes and failures of connectionist models of learning and memory. Psychological 
+Review, 102(3), 419–457. https://doi.org/10.1037/0033-295X.102.3.419 
+ 
+ 
+59 
+Mcnaughton, B., Barnes, C., Gerrard, J., Gothard, K., Jung, M. W., Knierim, J., HS, K., Qin, 
+Y., Skaggs, W., Suster, M., & Weaver, K. (1996). Deciphering the hippocampal polyglot: 
+The hippocampus as a path integration system. The Journal of Experimental Biology, 199, 
+173–185. 
+ 
+McNaughton, B. L., Battaglia, F. P., Jensen, O., Moser, E. I., & Moser, M.-B. (2006). Path 
+integration and the neural basis of the ‘cognitive map’. Nature Reviews Neuroscience, 7(8), 
+663–678. https://doi.org/10.1038/nrn1932 
+ 
+Menon, V. (2011). Large-scale brain networks and psychopathology: A unifying triple 
+network model. Trends in Cognitive Sciences, 15(10), 483–506. 
+https://doi.org/10.1016/j.tics.2011.08.003 
+ 
+Michaelian, K., & Sutton, J. (2017). Memory. In E. N. Zalta (Ed.), The Stanford 
+Encyclopedia of Philosophy (Summer 2017). Metaphysics Research Lab, Stanford 
+University. https://plato.stanford.edu/archives/sum2017/entries/memory/ 
+ 
+Milivojevic, B., & Doeller, C. F. (2013a). Mnemonic networks in the hippocampal formation: 
+From spatial maps to temporal and conceptual codes. Journal of Experimental Psychology: 
+General, 142(4), 1231–1241. https://doi.org/10.1037/a0033746 
+ 
+Milivojevic, B., & Doeller, C. F. (2013b). Mnemonic networks in the hippocampal 
+formation: From spatial maps to temporal and conceptual codes. Journal of Experimental 
+Psychology. General, 142(4), 1231–1241. https://doi.org/10.1037/a0033746 
+ 
+Momennejad, I. (2020). Learning Structures: Predictive Representations, Replay, and 
+Generalization. Understanding Memory: Which Level of Analysis?, 32, 155–166. 
+https://doi.org/10.1016/j.cobeha.2020.02.017 
+ 
+Monaco, J. D., Rao, G., Roth, E. D., & Knierim, J. J. (2014). Attentive scanning behavior 
+drives one-trial potentiation of hippocampal place fields. Nature Neuroscience, 17(5), 725–
+731. https://doi.org/10.1038/nn.3687 
+ 
+Moon, H.-J., Gauthier, B., Park, H.-D., Faivre, N., & Blanke, O. (2020). Sense of self impacts 
+spatial navigation and hexadirectional coding in human entorhinal cortex [Preprint]. 
+Neuroscience. https://doi.org/10.1101/2020.09.13.295246 
+ 
+Moore, E. C., Fisch, M. H., Kloesei, C. J. W., Roberts, D. D., & Ziegler, L. A. (Eds.). (1984). 
+Writings of Charles S. Peirce: A Chronological Edition, Volume 2. Indiana University Press; 
+JSTOR. http://www.jstor.org/stable/j.ctt16gh7rt 
+ 
+Morozov, A. (2008). Simplifying experiments with a Mandelbrot set model of the phase 
+transition theory. JETP Letters, 86(11), 745–748. 
+https://doi.org/10.1134/S0021364007230142 
+ 
+Moser, E. I., Kropff, E., & Moser, M.-B. (2008). Place Cells, Grid Cells, and the Brain’s 
+Spatial Representation System. Annual Review of Neuroscience, 31(1), 69–89. 
+https://doi.org/10.1146/annurev.neuro.31.061307.090723 
+ 
+ 
+60 
+Moser, M.-B., Rowland, D. C., & Moser, E. I. (2015). Place Cells, Grid Cells, and Memory. 
+Cold Spring Harbor Perspectives in Biology, 7(2), a021808. 
+https://doi.org/10.1101/cshperspect.a021808 
+ 
+Muller, R. U., & Kubie, J. L. (1987). The effects of changes in the environment on the spatial 
+firing of hippocampal complex-spike cells. The Journal of Neuroscience: The Official 
+Journal of the Society for Neuroscience, 7(7), 1951–1968. 
+ 
+Nadel, L., & Hardt, O. (2011). Update on Memory Systems and Processes. 
+Neuropsychopharmacology, 36(1), 251–273. https://doi.org/10.1038/npp.2010.169 
+ 
+Nakajima, M., Schmitt, L. I., & Halassa, M. M. (2019). Prefrontal Cortex Regulates Sensory 
+Filtering through a Basal Ganglia-to-Thalamus Pathway. Neuron, 103(3), 445-458.e10. 
+https://doi.org/10.1016/j.neuron.2019.05.026 
+ 
+Nitzan, N., McKenzie, S., Beed, P. et al. Propagation of hippocampal ripples to the neocortex 
+by way of a subiculum-retrosplenial pathway. Nat Commun 11, 1947 (2020). 
+https://doi.org/10.1038/s41467-020-15787-8 
+ 
+Northoff, G. (2016a). Spatiotemporal psychopathology I: No rest for the brain’s resting state 
+activity in depression? Spatiotemporal psychopathology of depressive symptoms. Journal of 
+Affective Disorders, 190, 854–866. https://doi.org/10.1016/j.jad.2015.05.007 
+ 
+Northoff, G. (2016b). Neuroscience and Whitehead I: Neuro-ecological Model of Brain. 
+Axiomathes, 26(3), 219–252. https://doi.org/10.1007/s10516-016-9286-2 
+ 
+Northoff, G. (2018a). The brain’s spontaneous activity and its psychopathological symptoms 
+– “Spatiotemporal binding and integration”. Neuroimaging in Psychiatry: Steps toward the 
+Clinical Application of Brain Imaging in Psychiatric Disorders, 80, 81–90. 
+https://doi.org/10.1016/j.pnpbp.2017.03.019 
+ 
+Northoff, G. (2018b). The Spontaneous Brain: From the Mind-Body to the World-Brain 
+Problem. MIT Press. 
+ 
+Northoff, G., & Bermpohl, F. (2004). Cortical midline structures and the self. Trends in 
+Cognitive Sciences, 8(3), 102–107. https://doi.org/10.1016/j.tics.2004.01.004 
+ 
+Northoff, G., Duncan, N. W., & Hayes, D. J. (2010). The brain and its resting state activity—
+Experimental and methodological implications. Progress in Neurobiology, 92(4), 593–600. 
+https://doi.org/10.1016/j.pneurobio.2010.09.002 
+ 
+Northoff, G., & Huang, Z. (2017). How do the brain’s time and space mediate consciousness 
+and its different dimensions? Temporo-spatial theory of consciousness (TTC). Neuroscience 
+& Biobehavioral Reviews, 80, 630–645. https://doi.org/10.1016/j.neubiorev.2017.07.013 
+ 
+Northoff, G., & Stanghellini, G. (2016). How to Link Brain and Experience? Spatiotemporal 
+Psychopathology of the Lived Body. Frontiers in Human Neuroscience, 10, 76. 
+https://doi.org/10.3389/fnhum.2016.00172 
+ 
+ 
+61 
+Northoff, G., Wainio-Theberge, S., & Evers, K. (2020a). Is temporo-spatial dynamics the 
+“common currency” of brain and mind? In Quest of “Spatiotemporal Neuroscience”. Physics 
+of Life Reviews, 33, 34–54. https://doi.org/10.1016/j.plrev.2019.05.002 
+ 
+Northoff, G., Wainio-Theberge, S., & Evers, K. (2020b). Spatiotemporal neuroscience – what 
+is it and why we need it. Physics of Life Reviews, 33, 78–87. 
+https://doi.org/10.1016/j.plrev.2020.06.005 
+ 
+O’Keefe, J., & Burgess, N. (1996). Geometric determinants of the place fields of 
+hippocampal neurons. Nature, 381(6581), 425–428. https://doi.org/10.1038/381425a0 
+ 
+O’Keefe, J., & Dostrovsky, J. (1971). The hippocampus as a spatial map. Preliminary 
+evidence from unit activity in the freely-moving rat. Brain Research, 34(1), 171–175. 
+https://doi.org/10.1016/0006-8993(71)90358-1 
+ 
+O’Keefe, J., & Krupic, J. (2021). Do hippocampal pyramidal cells respond to nonspatial 
+stimuli? Physiological Reviews, 101(3), 1427–1456. 
+https://doi.org/10.1152/physrev.00014.2020 
+ 
+O’Keefe, J., & Nadel, L. (1978). The Hippocampus as a Cognitive Map. Oxford: Clarendon 
+Press. https://repository.arizona.edu/handle/10150/620894 
+ 
+Ólafsdóttir, H. F., Bush, D., & Barry, C. (2018). The Role of Hippocampal Replay in 
+Memory and Planning. Current Biology, 28(1), R37–R50. 
+https://doi.org/10.1016/j.cub.2017.10.073 
+ 
+Ortiz-Catalan, M., Mastinu, E., Sassu, P., Aszmann, O., & Brånemark, R. (2020). Self-
+Contained Neuromusculoskeletal Arm Prostheses. New England Journal of Medicine, 
+382(18), 1732–1738. https://doi.org/10.1056/NEJMoa1917537 
+ 
+Owen, L. L. W., et al. (2021) High-level cognition during story listening is reflected in high-
+order dynamic correlations in neural activity patterns. Nature Communications. 
+doi.org/10.1038/s41467-021-25876-x. 
+ 
+Penfield, W. (1952). MEMORY MECHANISMS. Archives of Neurology And Psychiatry, 
+67(2), 178. https://doi.org/10.1001/archneurpsyc.1952.02320140046005 
+ 
+Poeppel, D., & Adolfi, F. (2020). Against the Epistemological Primacy of the Hardware: The 
+Brain from Inside Out, Turned Upside Down. ENeuro, 7(4), Article 4. 
+https://doi.org/10.1523/ENEURO.0215-20.2020 
+ 
+Poldrack, R. (2017). Neuroscience: The risks of reading the brain. Nature, 541(7636), 156–
+156. https://doi.org/10.1038/541156a 
+ 
+Putman, R. J., & Wratten, S. D. (1983). Principles of Ecology. Springer Netherlands. 
+https://doi.org/10.1007/978-94-011-6948-6 
+ 
+Qin, J., Chen, S.-G., Hu, D., Zeng, L.-L., Fan, Y.-M., Chen, X.-P., & Shen, H. (2015). 
+Predicting individual brain maturity using dynamic functional connectivity. Frontiers in 
+Human Neuroscience, 9, 418. https://doi.org/10.3389/fnhum.2015.00418 
+ 
+62 
+ 
+Qin, P., & Northoff, G. (2011). How is our self related to midline regions and the default-
+mode network? NeuroImage, 57(3), 1221–1233. 
+https://doi.org/10.1016/j.neuroimage.2011.05.028 
+ 
+Quammen, D. (2018). The tangled tree: A radical new history of life (First Simon&Schuster 
+hardcover edition.). Simon & Schuster. 
+ 
+Rabinowitch, I., Laurent, P., Zhao, B., Walker, D., Beets, I., Schoofs, L., Bai, J., Schafer, W. 
+R., & Treinin, M. (2016). Neuropeptide-Driven Cross-Modal Plasticity following Sensory 
+Loss in Caenorhabditis elegans. PLOS Biology, 14(1), e1002348. 
+https://doi.org/10.1371/journal.pbio.1002348 
+ 
+Raichle, M. E. (2011). The Restless Brain. Brain Connectivity, 1(1), 3–12. 
+https://doi.org/10.1089/brain.2011.0019 
+ 
+Raichle, M. E. (2015). The brain’s default mode network. Annual Review of Neuroscience, 
+38, 433–447. https://doi.org/10.1146/annurev-neuro-071013-014030 
+ 
+Ranck, J. B. (1973). Studies on single neurons in dorsal hippocampal formation and septum 
+in unrestrained rats: Part I. Behavioral correlates and firing repertoires. Experimental 
+Neurology, 41(2), 462–531. https://doi.org/10.1016/0014-4886(73)90290-2 
+ 
+Read, C., & Szokolszky, A. (2020). Ecological Psychology and Enactivism: Perceptually-
+Guided Action vs. Sensation-Based Enaction. Frontiers in psychology, 11, 1270. 
+https://doi.org/10.3389/fpsyg.2020.01270 
+ 
+Rescher, N. (1991). G. W. Leibniz’s Monadology. University of Pittsburgh Press; JSTOR. 
+https://doi.org/10.2307/j.ctt6wrc4t 
+ 
+Roediger, H. L. (1980). Memory metaphors in cognitive psychology. Memory & Cognition, 
+8(3), 231–246. https://doi.org/10.3758/BF03197611 
+ 
+Rorty, R. (1999). Philosophy and Social Hope. Penguin Books. 
+ 
+Rouault, M., Seow, T., Gillan, C. M., & Fleming, S. M. (2018). Psychiatric Symptom 
+Dimensions Are Associated With Dissociable Shifts in Metacognition but Not Task 
+Performance. Biological Psychiatry, 84(6), 443–451. 
+https://doi.org/10.1016/j.biopsych.2017.12.017 
+ 
+Russo, A. A., Khajeh, R., Bittner, S. R., Perkins, S. M., Cunningham, J. P., Abbott, L. F., & 
+Churchland, M. M. (2020). Neural Trajectories in the Supplementary Motor Area and Motor 
+Cortex Exhibit Distinct Geometries, Compatible with Different Classes of Computation. 
+Neuron, 107(4), 745-758.e6. https://doi.org/10.1016/j.neuron.2020.05.020 
+ 
+Ryan, K. J., & Gallagher, S. (2020). Between Ecological Psychology and Enactivism: Is 
+There Resonance? Frontiers in Psychology, 11, 1147. 
+https://doi.org/10.3389/fpsyg.2020.01147 
+ 
+Ryle, G. (1949). The Concept of Mind (Issue 234, pp. 23–37). Hutchinson & Co. 
+ 
+63 
+ 
+Sautoy, M. du. (2019, March 9). Can AI become conscious? Bach, Escher and Gödel’s 
+‘strange loops’ may have the answer. The Guardian. 
+https://www.theguardian.com/culture/2019/mar/09/bach-escher-godel-douglas-hofstadter-
+consciousness-ai-revolution-mathematical-idea-art-music 
+ 
+Schapiro, A. C., Turk-Browne, N. B., Botvinick, M. M., & Norman, K. A. (2017). 
+Complementary learning systems within the hippocampus: A neural network modelling 
+approach to reconciling episodic memory with statistical learning. Philosophical 
+Transactions of the Royal Society B: Biological Sciences, 372(1711), 20160049. 
+https://doi.org/10.1098/rstb.2016.0049 
+ 
+Schiller, D., Eichenbaum, H., Buffalo, E. A., Davachi, L., Foster, D. J., Leutgeb, S., & 
+Ranganath, C. (2015). Memory and Space: Towards an Understanding of the Cognitive Map. 
+The Journal of Neuroscience, 35(41), 13904–13911. 
+https://doi.org/10.1523/JNEUROSCI.2618-15.2015 
+ 
+Schläpfer, Markus & Dong, Lei & O'Keeffe, Kevin & Santi, Paolo & Szell, Michael & Salat, 
+Hadrien & Anklesaria, Samuel & Vazifeh, Mohammad & Ratti, Carlo & West, Geoffrey. 
+(2021). The universal visitation law of human mobility. Nature. 593. 522-527. 
+10.1038/s41586-021-03480-9. 
+ 
+Schlosser, G. (2018). A Short History of Nearly Every Sense—The Evolutionary History of 
+Vertebrate Sensory Cell Types. Integrative and Comparative Biology, 58(2), 301–316. 
+https://doi.org/10.1093/icb/icy024 
+ 
+Schmitzer-Torbert, N., & Redish, A. D. (2004). Neuronal activity in the rodent dorsal 
+striatum in sequential navigation: Separation of spatial and reward responses on the multiple 
+T task. Journal of Neurophysiology, 91(5), 2259–2272. https://doi.org/10.1152/jn.00687.2003 
+ 
+Scoville, W. B., & Milner, B. (1957). Loss of recent memory after bilateral hippocampal 
+lesions. Journal of Neurology, Neurosurgery, and Psychiatry, 20(1), 11–21. 
+https://doi.org/10.1136/jnnp.20.1.11 
+ 
+Serrano, B., Baños, R. M., & Botella, C. (2016). Virtual reality and stimulation of touch and 
+smell for inducing relaxation: A randomized controlled trial. Computers in Human Behavior, 
+55, 1–8. https://doi.org/10.1016/j.chb.2015.08.007 
+ 
+Seth, A. (2018). Being a beast machine: The origins of selfhood in control-oriented 
+interoceptive inference [Preprint]. PsyArXiv. https://doi.org/10.31234/osf.io/vg5da 
+ 
+Shamay-Tsoory, S. G., & Mendelsohn, A. (2019). Real-Life Neuroscience: An Ecological 
+Approach to Brain and Behavior Research. Perspectives on Psychological Science, 14(5), 
+841–859. https://doi.org/10.1177/1745691619856350 
+ 
+Sherry, D. F., & Schacter, D. L. (1987). The evolution of multiple memory systems. In K. 
+Pawlik & M. Rosenzweig (Eds.), International Handbook of Psychology. 
+ 
+Shin, J. N., Doron, G., & Larkum, M. E. (2021). Memories off the top of your head. Science 
+(New York, N.Y.), 374(6567), 538–539. https://doi.org/10.1126/science.abk1859 
+ 
+64 
+ 
+Smetacek, V., & Mechsner, F. (2004). Making sense. Nature, 432(7013), 21–21. 
+https://doi.org/10.1038/432021a 
+ 
+Smolin, L. (2018). The dynamics of difference. Foundations of Physics, 48(2), 121–134. 
+https://doi.org/10.1007/s10701-018-0141-8 
+ 
+Spiers H. J. (2008). Keeping the goal in mind: prefrontal contributions to spatial 
+navigation. Neuropsychologia, 46(7), 2106–2108. 
+https://doi.org/10.1016/j.neuropsychologia.2008.01.028 
+ 
+Squire, L. R. (2009). The Legacy of Patient H.M. for Neuroscience. Neuron, 61(1), 6–9. 
+https://doi.org/10.1016/j.neuron.2008.12.023 
+ 
+Stanghellini, G., Ballerini, M., Presenza, S., Mancini, M., Northoff, G., & Cutting, J. (2017). 
+Abnormal Time Experiences in Major Depression: An Empirical Qualitative Study. 
+Psychopathology, 50(2), 125–140. https://doi.org/10.1159/000452892 
+ 
+Stanovich, K. E., & West, R. F. (2000). Individual differences in reasoning: Implications for 
+the rationality debate? Behavioral and Brain Sciences, 23(5), 645–665. 
+https://doi.org/10.1017/S0140525X00003435 
+ 
+Stefanics, G., Hangya, B., Hernádi, I., Winkler, I., Lakatos, P., & Ulbert, I. (2010). Phase 
+Entrainment of Human Delta Oscillations Can Mediate the Effects of Expectation on 
+Reaction Speed. The Journal of Neuroscience, 30(41), 13578–13585. 
+https://doi.org/10.1523/JNEUROSCI.0703-10.2010 
+ 
+Studies, C. S. S., & Peirce. (1883). Studies in Logic. By Members of the Johns Hopkins 
+University. 
+ 
+Taube, J. S., Muller, R. U., & Ranck, J. B., Jr (1990). Head-direction cells recorded from the 
+postsubiculum in freely moving rats. I. Description and quantitative analysis. The Journal of 
+neuroscience : the official journal of the Society for Neuroscience, 10(2), 420–435. 
+https://doi.org/10.1523/JNEUROSCI.10-02-00420.1990 
+ 
+Tang, W., Shin, J. D., & Jadhav, S. P. (2021). Multiple time-scales of decision-making in the 
+hippocampus and prefrontal cortex. ELife, 10, e66227. https://doi.org/10.7554/eLife.66227 
+ 
+Theves, S., Fernández, G., & Doeller, C. F. (2020). The Hippocampus Maps Concept Space, 
+Not Feature Space. The Journal of Neuroscience, 40(38), 7318. 
+https://doi.org/10.1523/JNEUROSCI.0494-20.2020 
+ 
+Thompson, E. (2007). Mind in Life: Biology, Phenomenology, and the Sciences of Mind. 
+Harvard University Press. 
+ 
+Tierney, A. L., & Nelson, C. A. (2009). Brain Development and the Role of Experience in the 
+Early Years. Zero to Three, 30(2), 9–13. 
+ 
+Tolman, E. C. (1922). A New Formula for Behaviorism. Psychological Review, 29(1), 44–53. 
+https://doi.org/10.1037/h0070289 
+ 
+65 
+ 
+Tolman, E. C. (1948). Cognitive maps in rats and men. Psychological Review, 55(4), 189–
+208. https://doi.org/10.1037/h0061626 
+ 
+Topalovic, U., Aghajan, Z. M., Villaroman, D., Hiller, S., Christov-Moore, L., Wishard, T. J., 
+Stangl, M., Hasulak, N. R., Inman, C. S., Fields, T. A., Rao, V. R., Eliashiv, D., Fried, I., & 
+Suthana, N. (2020). Wireless Programmable Recording and Stimulation of Deep Brain 
+Activity in Freely Moving Humans. Neuron, 108(2), 322-334.e9. 
+https://doi.org/10.1016/j.neuron.2020.08.021 
+ 
+Tromp, J., Peeters, D., Meyer, A. S., & Hagoort, P. (2018). The combined use of virtual 
+reality and EEG to study language processing in naturalistic environments. Behavior 
+Research Methods, 50(2), 862–869. https://doi.org/10.3758/s13428-017-0911-9 
+ 
+Tse D, Langston RF, Kakeyama M, Bethus I, Spooner PA, Wood ER, Witter MP, Morris RG. 
+Schemas and memory consolidation. Science. (2007) Apr 6;316(5821):76-82. doi: 
+10.1126/science.1135935. PMID: 17412951. 
+ 
+Tulving, E. (1983). Elements of episodic memory. Clarendon Press ; Oxford University Press. 
+ 
+Turing, A. M. (1937). On Computable Numbers, with an Application to the 
+Entscheidungsproblem. Proceedings of the London Mathematical Society, s2-42(1), 230–265. 
+https://doi.org/10.1112/plms/s2-42.1.230 
+ 
+Tzilivaki, A., Kastellakis, G., Schmitz, D., & Poirazi, P. (2021). GABAergic Interneurons 
+with Nonlinear Dendrites: From Neuronal Computations to Memory Engrams. Neuroscience, 
+S0306-4522(21)00593-5. Advance online publication. 
+https://doi.org/10.1016/j.neuroscience.2021.11.033 
+ 
+Uddin, L. Q., Clare Kelly, A. M., Biswal, B. B., Xavier Castellanos, F., & Milham, M. P. 
+(2008). Functional connectivity of default mode network components: Correlation, 
+anticorrelation, and causality. Human Brain Mapping, 30(2), 625–637. 
+https://doi.org/10.1002/hbm.20531 
+Varela, F. J., Thompson, E., & Rosch, E. (1991). The embodied mind: Cognitive science and 
+human experience (pp. xx, 308). The MIT Press. 
+ 
+Varela, F. J., Thompson, E., & Rosch, E. (2017). The embodied mind: Cognitive science and 
+human experience. 
+ 
+Vertes, R. P. (2006). Interactions among the medial prefrontal cortex, hippocampus and 
+midline thalamus in emotional and cognitive processing in the rat. Neuroscience, 142(1), 1–
+20. https://doi.org/10.1016/j.neuroscience.2006.06.027 
+ 
+Vorhees, C. V., & Williams, M. T. (2014). Assessing spatial learning and memory in rodents. 
+ILAR Journal, 55(2), 310–332. PubMed. https://doi.org/10.1093/ilar/ilu013 
+ 
+Waschke, L., Kloosterman, N. A., Obleser, J., & Garrett, D. D. (2021). Behavior needs neural 
+variability. Neuron, 109(5), 751–766. https://doi.org/10.1016/j.neuron.2021.01.023 
+ 
+ 
+66 
+Weil, L. G., Fleming, S. M., Dumontheil, I., Kilford, E. J., Weil, R. S., Rees, G., Dolan, R. J., 
+& Blakemore, S.-J. (2013). The development of metacognitive ability in adolescence. 
+Consciousness and Cognition, 22(1), 264–271. https://doi.org/10.1016/j.concog.2013.01.004 
+ 
+Wells, A. J. (2002). Gibson’s Affordances and Turing’s Theory of Computation. Ecological 
+Psychology, 14(3), 140–180. https://doi.org/10.1207/S15326969ECO1403_3 
+ 
+Wells, A. J. (2004). Cognitive Science and the Turing Machine: An Ecological Perspective. 
+In C. Teuscher (Ed.), Alan Turing: Life and Legacy of a Great Thinker (pp. 271–292). 
+Springer. https://doi.org/10.1007/978-3-662-05642-4_11 
+ 
+Weick, K. (1995). Sensemaking in Organisations. London: Sage. 
+ 
+Whittington, J. C., Muller, T. H., Mark, S., Chen, G., Barry, C., Burgess, N., & Behrens, T. 
+E. (2019). The Tolman-Eichenbaum Machine: Unifying space and relational memory through 
+generalisation in the hippocampal formation. BioRxiv, 770495. 
+https://doi.org/10.1101/770495 
+ 
+Whittington, J. C. R., Muller, T. H., Mark, S., Chen, G., Barry, C., Burgess, N., & Behrens, 
+T. E. J. (2020). The Tolman-Eichenbaum Machine: Unifying Space and Relational Memory 
+through Generalization in the Hippocampal Formation. Cell, 183(5), 1249-1263.e23. 
+https://doi.org/10.1016/j.cell.2020.10.024 
+ 
+Wilbur, H. M. (1980). Complex Life Cycles. Annual Review of Ecology and Systematics, 
+11(1), 67–93. https://doi.org/10.1146/annurev.es.11.110180.000435 
+ 
+Wilson, B., Finley, C., Lawson, D., & Zerbi, M. (1997). Temporal representations with 
+cochlear implants. Am J Otol, 18(6 Suppl), S30-4. PubMed. 
+ 
+Wilson, M. A., & McNaughton, B. L. (1993). Dynamics of the hippocampal ensemble code 
+for space. Science (New York, N.Y.), 261(5124), 1055–1058. 
+https://doi.org/10.1126/science.8351520 
+ 
+Wimmer, R. D., Schmitt, L. I., Davidson, T. J., Nakajima, M., Deisseroth, K., & Halassa, M. 
+M. (2015). Thalamic control of sensory selection in divided attention. Nature, 526(7575), 
+705–709. https://doi.org/10.1038/nature15398 
+ 
+Wittgenstein, L. (1953). Philosophical Investigations (Vol. 17, Issue 69, p. 362). Wiley-
+Blackwell. 
+ 
+Wolff, A., Di Giovanni, D. A., Gómez-Pilar, J., Nakao, T., Huang, Z., Longtin, A., & 
+Northoff, G. (2019). The temporal signature of self: Temporal measures of resting-state EEG 
+predict self-consciousness. Human Brain Mapping, 40(3), 789–803. 
+https://doi.org/10.1002/hbm.24412 
+ 
+Wood, E. R., Dudchenko, P. A., & Eichenbaum, H. (1999). The global record of memory in 
+hippocampal neuronal activity. Nature, 397(6720), 613–616. https://doi.org/10.1038/17605 
+ 
+ 
+67 
+Wu, C. M., Schulz, E., Garvert, M. M., Meder, B., & Schuck, N. W. (2020). Similarities and 
+differences in spatial and non-spatial cognitive maps. PLOS Computational Biology, 16(9), 
+e1008149. https://doi.org/10.1371/journal.pcbi.1008149 
+ 
+Xue, S.-W., Li, D., Weng, X.-C., Northoff, G., & Li, D.-W. (2014). Different Neural 
+Manifestations of Two Slow Frequency Bands in Resting Functional Magnetic Resonance 
+Imaging: A Systemic Survey at Regional, Interregional, and Network Levels. Brain 
+Connectivity, 4(4), 242–255. https://doi.org/10.1089/brain.2013.0182 
+ 
+Yuste, R., MacLean, J. N., Smith, J., & Lansner, A. (2005). The cortex as a central pattern 
+generator. Nature Reviews. Neuroscience, 6(6), 477–483. https://doi.org/10.1038/nrn1686 
+ 
+Zeithamova, D., & Bowman, C. R. (2020). Generalization and the hippocampus: More than 
+one story? Neurobiology of Learning and Memory, 175, 107317. 
+https://doi.org/10.1016/j.nlm.2020.107317 
+ 
+Zimnik, A. J., & Churchland, M. M. (2021). Independent generation of sequence elements by 
+motor cortex. Nature Neuroscience, 24(3), 412–424. https://doi.org/10.1038/s41593-021-
+00798-5 
+ 
+ 
+ 
+ 
+Abbreviations 
+ 
+Cognitive Neuroscience  
+ 
+ 
+CN 
+Default Mode Network 
+ 
+ 
+DMN 
+Global Positioning System 
+ 
+ 
+GPS 
+Hippocampal-entorhinal formation   
+HEF 
+Nervous system 
+ 
+ 
+ 
+NS 
+Spatiotemporal neuroscience   
+ 
+SN 
+System 1 
+ 
+ 
+ 
+ 
+S1 
+System 2 
+ 
+ 
+ 
+ 
+S2 
+System 3 
+ 
+ 
+ 
+ 
+S3 
+Tolman Eichenbaum Machine 
+ 
+TEM 
+ 
+ 
+ 
+ 
+ 
+ 
+View publication stats

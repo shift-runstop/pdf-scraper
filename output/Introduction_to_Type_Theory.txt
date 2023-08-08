@@ -1,0 +1,92 @@
+Introduction to Type Theory
+Ryan Wisnesky
+http://wisnesky.net
+Conexus AI
+July 25, 2023
+SEMF
+What is Type Theory?  (According to a type theorist…)
+-
+Type theory studies programs
+-
+Type theory is set theory done computationally
+-
+Inasmuch as math is “programming paper”, now that paper is augmented by 
+computers set theory should be augmented by type theory
+-
+Type theory is category theory and proof theory in disguise
+-
+“computational trinitarianism” / “Curry-Howard-Lambek isomorphism”
+-
+Type theory is all things to all people
+Why study type theory?  What does it do?
+Type theory studies programs (“lambda 
+calculi”) that operate by substitution.
+Expression ::= Variable 
+| ConstantSymbol 
+| FunctionSymbol Expression 
+| (\Variable. Expression)
+(\x. \y. + y x) 1 2 = (\y. + y 1) = + 2 1 = 3
+Type Theory in Linguistics
+Tldr: modeling sentences
+Type Theory in Philosophy
+Tldr: “proving” that 1+1=2
+Type Theory in Math
+Tldr: checking proofs for correctness using computers
+Type Theory in Physics
+Tldr: quantum
+Type Theory
+Type Theory in Computation
+Tldr: defining what to avoid
+Type Theory in Biology
+Tldr: cells can be modelled using 
+programs
+Type Theory in Complexity
+Tldr: some type theories are also logics 
+are also complexity classes
+Type Theory in Education
+Tldr: type theory has been and remains 
+a foundational CS topic
+Type Theory in Cognition
+Tldr: AI
+strange loops are 
+simply fixed points 
+of lambda terms as 
+can be proven  
+using domain theory
+Type Theory in Arts
+Tldr: much art is programmed
+Type Theory in Anthropology
+Tldr: type 
+theory is a 
+mother 
+tongue
+Why Study/Use Type Theory?
+-
+Become a better programmer
+-
+Recognize when programs are a useful abstraction 
+-
+Understand category theory and proof theory better
+-
+Implement mathematics on a computer
+-
+Learn how to create new programming languages
+-
+Separate specification from implementation
+Tldr: Understand XKCD
+Contents of the course
+-
+The rest of the course is (the first hour of) a mathematically rigorous 
+introduction to type theory traditionally given to beginning graduate students.
+-
+Meta message: rigour matters in research!
+We describe how types differ from sets, how typing judgements are inductively defined using inference rules, and how a typing 
+judgment M : A can be understood as meaning both that M is a program (term/expression) of type A and that M is a proof of 
+formula (proposition) A, a correspondence known as the Curry-Howard isomorphism.  
+We describe the syntax and operational semantics of the both the simply typed lambda calculus and the polymorphic lambda 
+calculus, the latter of which is used in real-world compilers such as the GHC Haskell compiler.  
+Additional topics covered include the categorical semantics of the simply typed lambda calculus in cartesian closed categories, 
+Church encodings of natural numbers, lists, and other data types, as well as the basics of type inference (which is used in many 
+real world compilers).  
+-
+Also: check out my talk “Categorical Databases” on Friday

@@ -1,0 +1,383 @@
+Introduction
+to
+Computation,
+Causality and
+Composition-
+ality
+Jonathan
+Gorard
+Introduction to Computation, Causality and
+Compositionality
+SEMF Interdisciplinary Summer School 2023
+Jonathan Gorard
+Wolfram Institute / Centre for Applied Compositionality
+Cambridge University / Cardiﬀ University
+July 26, 2023
+Introduction
+to
+Computation,
+Causality and
+Composition-
+ality
+Jonathan
+Gorard
+Background Material I
+J. Gorard (2018),
+https://www.complex-systems.com/abstracts/v27_
+i02_a05/.
+R. Shah and J. Gorard (2019),
+https://arxiv.org/abs/1910.00578.
+J. Gorard (2020),
+https://arxiv.org/abs/2004.14810.
+J. Gorard, M. Namuduri, X. D. Arsiwalla (2020),
+https://arxiv.org/abs/2010.02752.
+J. Gorard (2020),
+https://arxiv.org/abs/2011.12174.
+J. Gorard, M. Namuduri and X. D. Arsiwalla
+(2021),
+https://arxiv.org/abs/2103.15820.
+Introduction
+to
+Computation,
+Causality and
+Composition-
+ality
+Jonathan
+Gorard
+Background Material II
+J. Gorard, M. Namuduri and X. D. Arsiwalla
+(2021),
+https://arxiv.org/abs/2105.04057.
+X. D. Arsiwalla, J. Gorard and H. Elshatlawy
+(2021),
+https://arxiv.org/abs/2105.10822.
+X. D. Arsiwalla and J. Gorard (2021),
+https://arxiv.org/abs/2111.03460.
+J. Gorard (2022/23),
+https://arxiv.org/abs/2301.04690.
+J. Gorard (2023),
+https://arxiv.org/abs/2303.07282.
+etc.
+Introduction
+to
+Computation,
+Causality and
+Composition-
+ality
+Jonathan
+Gorard
+What is this course all about? I
+Our aim for this three-lecture series is to present a novel
+perspective on the nature of, and the relationships
+between, computation, causality and complexity, and their
+interactions with the foundations of mathematics and
+physics.
+To do this, we will be using the language of (applied)
+category theory.
+Along the way, we will introduce several foundational
+category-theoretic concepts (many of which Carlos has
+already discussed), including functors, natural
+transformations, (symmetric) monoidal categories,
+products, coproducts, pushouts, pullbacks, universal
+properties, and many other things.
+But don’t worry! We will motivate and explain all of the
+requisite mathematical technology along the way, with
+explicit computational examples.
+Introduction
+to
+Computation,
+Causality and
+Composition-
+ality
+Jonathan
+Gorard
+What is this course all about? II
+More concretely, our initial motivation will be to deﬁne a
+uniﬁed mathematical formalism for understanding the
+geometry of computation, the nature of causality, the
+deﬁnition of complexity, the signiﬁcance of
+non-determinism, among many other things.
+More abstractly, we are attempting to deﬁne a topology
+on the abstract space of all possible (non-deterministic)
+computations.
+Along the way (and in the trans/inter-disciplinary spirit of
+SEMF), we will make connections to algebraic geometry,
+algebraic topology, foundations of
+mathematics/mathematical logic, foundations of quantum
+mechanics, topological quantum ﬁeld theory, complexity
+theory, graph theory, computability theory, philosophy of
+science, concurrency and distributed systems, theoretical
+chemistry, and several other ﬁelds.
+Introduction
+to
+Computation,
+Causality and
+Composition-
+ality
+Jonathan
+Gorard
+How are these talks structured?
+Well, they’re not, really.
+This is (hopefully) a good thing: I’ll be using a mixture of
+prepared slides (boring), unprepared blackboard scribbles
+(incomprehensible), and live programming examples
+(dangerous).
+But the focus of these talks is largely up to you - please
+interrupt me if you have things to say! If you don’t, I’ll be
+upset and assume that you’re not listening.
+I also heartily encourage you to give live feedback, so that
+I/we can adapt the talks (in real time, if necessary) to be
+less terrible.
+Introduction
+to
+Computation,
+Causality and
+Composition-
+ality
+Jonathan
+Gorard
+Motivating Example: Understanding Causality I
+Causality is a mess.
+In general relativity, causality typically refers to the
+conformal structure of some Lorentzian manifold (i.e.
+spacetime).
+In quantum mechanics/quantum information theory,
+causality can be indeﬁnite (i.e. one can have
+superpositions of causal order, `a la Brukner).
+In concurrent programming and distributed systems
+engineering, causality deﬁnes the logical interdependence
+of certain state transitions (in e.g. Petri nets).
+In statistical (and especially Bayesian) inference, causality
+refers to a relationship between pre-intervention and
+post-intervention data.
+etc.
+It is far from obvious that these notions of causality are
+consistent with one another (in fact, they’re obvious not),
+or what the precise relationship between them is.
+Introduction
+to
+Computation,
+Causality and
+Composition-
+ality
+Jonathan
+Gorard
+Motivating Example: Understanding Causality II
+Causality is not even (I claim) philosophically well-deﬁned.
+Ask someone what they really mean by the phrase “A
+causes B”, and (in my experience), if you are persistent
+enough, they eventually resort to something along the lines
+of “if A happens, then B happens, but if A hadn’t
+happened, then B wouldn’t have happened”.
+But this requires the existence of a counterfactual history:
+a possible world in which A did not happen.
+Which means that you can’t equip a deterministic event
+system with a causal structure (yet people do, all the
+time...)
+We typically neglect all but the most trivial considerations
+of causality in ﬁelds such as chemistry (e.g. laws of
+activation kinetics), yet it is far from obvious that
+causality is irrelevant here.
+Introduction
+to
+Computation,
+Causality and
+Composition-
+ality
+Jonathan
+Gorard
+Physics from Computation I
+I will not really be talking about this (unless someone really
+wants me to).
+Introduction
+to
+Computation,
+Causality and
+Composition-
+ality
+Jonathan
+Gorard
+Physics from Computation II
+Introduction
+to
+Computation,
+Causality and
+Composition-
+ality
+Jonathan
+Gorard
+Turing Machine Formalism I
+We start with the Hopcroft-Ullman formalism for a 1-tape
+Turing machine:
+Deﬁnition
+A 1-tape Turing machine T is a 7-tuple
+T = ⟨Q, Γ, b, Σ, δ, q0, F⟩, with ﬁnite state set Q ̸= ∅, ﬁnite
+alphabet set Γ ̸= ∅, blank symbol b ∈ Γ, input symbols
+Σ ⊆ Γ \ {b}, initial state q0 ∈ Q, accepting states F ⊆ Q, and
+partial transition function:
+δ : (Q \ F) × Γ ↛ Q × Γ × {L, R} .
+(1)
+Introduction
+to
+Computation,
+Causality and
+Composition-
+ality
+Jonathan
+Gorard
+Turing Machine Formalism II
+Any k-tape Turing machine M operating in time f (n) may be
+simulated by a 1-tape Turing machine M′ operating in time
+O
+�
+[f (n)]2�
+, i.e. for any input x, M′ (x) = M (x).
+Figure: A graphical representation of the 2-state, 2-color Turing
+machine rule number 2506, with the black icon representing the
+location and state of the head.
+Introduction
+to
+Computation,
+Causality and
+Composition-
+ality
+Jonathan
+Gorard
+Turing Machine Formalism III
+Figure: A graph-theoretic representation of the evolution of the
+2-state, 2-color Turing machine rule 2506, starting from the tape
+state {0, 1, 0, 0}, for 4 evolution steps; each edge represents a single
+application of the Turing machine’s transition function.
+Introduction
+to
+Computation,
+Causality and
+Composition-
+ality
+Jonathan
+Gorard
+From Computation to Categories I
+We are now able to construct a category representing a
+particular formal (abstract) model of computation, whose
+objects are data structures and whose morphisms are
+elementary/primitive computations.
+For the category generated by the Turing machine T, which we
+denote T , we choose:
+as its object set ob (T ) the set Γℵ0 × Q × N of all possible
+ordered triples consisting of a tape state, a head state and
+a head position (assuming an inﬁnite-length tape);
+as its morphism set hom (T ) the set of all possible
+transitions of the Turing machine T.
+Begin by constructing a quiver (i.e. a directed multigraph)
+whose arrows/edges correspond to applications of the (partial)
+transition function δ, i.e. the set of all possible arrows is
+N ×
+�
+Γℵ0 × Q × N
+�2.
+Introduction
+to
+Computation,
+Causality and
+Composition-
+ality
+Jonathan
+Gorard
+From Computation to Categories II
+Each arrow of the quiver is an ordered triple (f, X, Y ), denoted
+f : X → Y , consisting of a name f ∈ N, and a pair of objects
+X, Y ∈ ob (T ) (X being the arrow’s source/domain and Y
+being its target/codomain).
+To freely generate a category from a quiver, we populate the
+morphism set hom (T ) initially with the set of
+arrows/transitions, and proceed to introduce a binary
+“composition” operator ◦, such that:
+∀ (f : X → Y ) , (g : Y → Z) ∈ hom (T ) ,
+(g ◦ f : X → Z) ∈ hom (T ) ,
+(2)
+i.e. any pair of morphisms with matching codomain and
+domain can be composed by means of ◦.
+Introduction
+to
+Computation,
+Causality and
+Composition-
+ality
+Jonathan
+Gorard
+From Computation to Categories III
+If X, Y and Z represent possible Turing machine states
+(including tape state, head state and head position), and f and
+g represent possible Turing machine transitions, then this
+procedure for generating a free category from the underlying
+quiver can be illustrated diagrammatically as follows:
+Y
+X
+Z
+g
+f
+�→
+Y
+X
+Z
+g
+f
+g◦f
+(3)
+We also introduce an identity morphism idX : X → X
+associated to each object X ∈ ob (T ):
+∀X ∈ ob (T ) ,
+∃ (idX : X → X) ∈ hom (T ) .
+(4)
+Introduction
+to
+Computation,
+Causality and
+Composition-
+ality
+Jonathan
+Gorard
+From Computation to Categories IV
+Figure: A graph-theoretic representation of the category that is freely
+generated from the quiver representing the evolution of the 2-state,
+2-color Turing machine rule 2506, starting from the tape state
+{0, 1, 0, 0}, for 4 evolution steps.
+Introduction
+to
+Computation,
+Causality and
+Composition-
+ality
+Jonathan
+Gorard
+From Computation to Categories V
+The process of obtaining the full category T representing the
+Turing machine T may consequently be thought of
+graph-theoretically as taking a reﬂexive transitive closure of the
+underlying transition quiver.
+The operator ◦ inherits associativity:
+∀ (f : X → Y ) , (g : Y → Z) , (h : Z → W) ∈ hom (T ) ,
+((h ◦ g) ◦ f : X → W) = (h ◦ (g ◦ f) : X → W) ,
+(5)
+from the fact that (partial) function composition is associative.
+Introduction
+to
+Computation,
+Causality and
+Composition-
+ality
+Jonathan
+Gorard
+From Computation to Categories VI
+The morphism idX : X → X is indeed an identity:
+∀ (f : X → Y ) ∈ hom (T ) ,
+(f ◦ idX : X → Y ) = (f : X → Y ) ,
+(6)
+and:
+∀ (g : Y → X) ∈ hom (T ) ,
+(idX ◦ g : Y → X) = (g : Y → X) ,
+(7)
+by virtue of the fact that the (partial) transition function may
+be augmented by a neutral (“no shift”) operation id:
+δ : (Q \ F) × Γ ↛ Q × Γ × {L, R, id} .
+(8)

@@ -1,0 +1,1926 @@
+Examining the Inter-Consistency of Large Language Models: An In-depth
+Analysis via Debate
+Kai Xiong1
+Xiao Ding1∗ Yixin Cao2
+Ting Liu1
+Bing Qin1
+1Research Center for Social Computing and Information Retrieval
+Harbin Institute of Technology, China
+2Singapore Management University, Singapore
+{kxiong, xding, tliu, qinb}@ir.hit.edu.cn
+yxcao@smu.edu.sg
+Abstract
+Large Language Models (LLMs) have demon-
+strated human-like intelligence and are widely
+used in various applications. However, LLMs
+still exhibit various kinds of inconsistency
+problems.
+Existing works mainly focus on
+the inconsistency issues within a single LLM,
+while we investigate the inter-consistency
+among multiple LLMs, which is critical for
+collaborating to solve a complex task. To ex-
+amine whether LLMs can collaborate to ul-
+timately achieve a consensus for the shared
+goal and whether LLMs easily change their
+viewpoints, we introduce a Formal Debate
+framework (FORD) With FORD, we conduct a
+three-stage debate aligned with real-world sce-
+narios: fair debate, mismatched debate, and
+roundtable debate. Through extensive exper-
+iments on the commonsense reasoning task,
+LLMs not only become more inter-consistent
+but also achieve higher performance. More-
+over, we observe that stronger LLMs tend to
+dominate the debates by adhering to their per-
+spectives, while weaker ones are more likely to
+change viewpoints. Additionally, we highlight
+the importance of a competent judge, such as
+GPT-4, to draw more proper conclusions. Our
+work contributes to understanding the inter-
+consistency among LLMs and lays the foun-
+dation for the development of future collabora-
+tion methods.
+1
+Introduction
+Large Language Models (LLMs) like ChatGPT re-
+cently demonstrate general intelligence (Bubeck
+et al., 2023) and have been widely used as a foun-
+dation model in various applications (Wei et al.,
+2022b; Wu et al., 2023). To solve complex tasks,
+multiple LLMs are further introduced to collab-
+orate, with each targeting a different subtask or
+aspect (Schick et al., 2022; Park et al., 2023). In-
+terestingly, do these large models possess a spirit
+∗Corresponding Author
+Question: I make a grammatical error
+while typing. What happens next?
+I suppose deleting the
+document
+is
+a
+more
+direct way to solve this
+error.
+Hitting the backspace to
+retype is a good idea.
+Sorry,
+you
+are
+right,
+deleting the document is
+a less costly method.
+Question: The road is wet, what
+was the cause of this?
+I guess someone poured
+water on the road, which
+makes the road wet.
+The wet road might be
+cause by a big rain.
+Rain is a more common
+cause of the wet road
+than what you said.
+(a) Compromise in debate
+(b) Refutation in debate
+👾
+🤖
+🤖
+👾
+🤖
+🤖
+Figure 1: (a) Compromise and (b) refutation in the de-
+bates between LLMs. The ﬁrst LLM is the proposition,
+while the second LLM is the opposition.
+of collaboration? Are they capable of cooperating
+effectively towards a shared goal?
+In this paper, we dive into the inter-consistency
+among LLMs, while existing work mostly investi-
+gates and presents the serious inconsistency issues
+within a single LLM (Wang et al., 2022b; Jung
+et al., 2022). We are motivated by our pilot studies.
+On the one hand, the viewpoints of LLMs are easily
+shifted. As shown in Figure 1 (a), the proposition
+and opposition LLMs are showing different predic-
+tions, while the proposition quickly compromises
+with the less plausible answer of the opposition. To
+which extent do LLMs easily change their view-
+points, or adhere to their perspectives? On the other
+hand, when some LLMs remain steadfast in Fig-
+ure 1 (b), can a consensus ultimately be achieved
+for the shared goal?
+Inspired by the debate theory (Evans and
+Stanovich, 2013), we devise a Formal Debate
+framework (FORD) to systematically and quantita-
+tively investigate the inter-consistency issue among
+LLMs. FORD allows LLMs to explore the differ-
+ences between their own understandings and the
+conceptualizations of others via debate. This can
+not only encourage more diverse results, but also
+improve the performance by learning from each
+arXiv:2305.11595v2  [cs.CL]  22 May 2023
+other (Mayer, 1997). We carefully design prompts
+and consider the unbalanced capabilities among
+LLMs for fair comparisons.
+In speciﬁc, we take commonsense reasoning as
+the example task and formulate a three-stage de-
+bate to align with real-world scenarios: (1) Fair
+debate between two LLMs with comparable ca-
+pabilities. (2) Mismatched debate between two
+LLMs who exhibit vastly different levels of abili-
+ties. (3) Roundtable debate including more than
+two LLMs for debates. Besides, due to the leading
+performance of GPT-4 (OpenAI, 2023), we con-
+duct an in-depth analysis to adopt GPT-4 as a more
+powerful judge of the debates to summarize the de-
+bates and offer ﬁnal conclusions. Note that FORD
+is ﬂexible if stronger or more LLMs emerge.
+We summarize our main ﬁndings as follows. (1)
+Different types of LLMs (e.g., chat and text comple-
+tion models) have large inter-inconsistency, even
+if they are pre-trained on similar corpora or de-
+veloped from the same backend model. (2) For
+different versions of LLMs within the same se-
+ries (e.g., GPT-3, GPT-3.5), although their overall
+performance keeps improving, the more advanced
+models do not completely supersede the capabili-
+ties of the older models. (3) Multiple LLMs have
+the potential to achieve higher inter-consistency
+and better performance via debate. (4) The supe-
+rior LLM can dominate the debate, but stubborn
+and stupid ones may distract it and lower the perfor-
+mance. (5) In the debates, stronger LLMs are more
+likely to adhere to their perspectives, and weaker
+LLMs are more likely to change their viewpoints.
+(6) GPT-4 can act as a better judge to assign differ-
+ent weights to the arguments of the debates, then
+obtain better conclusions.
+We summarize our contributions as follows:
+• We are among the ﬁrst to investigate the inter-
+consistency between two or more LLMs.
+• We adopt debate theory and design a formal
+debate framework FORD towards quantitative
+analysis and higher inter-consistency.
+• We design a three-stage debate and have con-
+ducted extensive experiments to offer many
+insights for the future development of multiple
+LLMs’ collaboration.
+2
+Preliminary Experiments
+For quantifying the inter-inconsistency of LLMs
+and deﬁning the baseline collaboration methods
+Dataset
+Task Type
+Examples
+αNLI
+Multiple Choices (2)
+1,507
+CommonsenseQA
+Multiple Choices (5)
+1,221
+COPA
+Multiple Choices (2)
+500
+e-CARE
+Multiple Choices (2)
+2,122
+Social IQa
+Multiple Choices (3)
+1,935
+PIQA
+Multiple Choices (2)
+1,838
+StrategyQA
+Yes or No
+2,290
+Table
+1:
+The
+statistics
+of
+αNLI
+(Bhagavatula
+et al., 2019), CommonsenseQA (Talmor et al., 2019),
+COPA (Gordon et al., 2012), e-CARE (Du et al., 2022),
+PIQA (Bisk et al., 2020), Social IQa (Sap et al., 2019),
+and StrategyQA (Geva et al., 2021). The number in the
+“Task Types” denotes the number of options in each cor-
+responding example.
+of LLMs, we adopt different LLMs to conduct
+preliminary experiments on various commonsense
+reasoning datasets. We based on the LLMs in fair
+debates for the following demonstrations.
+2.1
+Commonsense Reasoning Datasets
+For better coverage, we choose 7 publicly available
+commonsense reasoning datasets for experiments:
+one abductive reasoning dataset αNLI (Bhagavat-
+ula et al., 2019), one commonsense knowledge
+question answering dataset CommonsenseQA (Tal-
+mor et al., 2019), two causal reasoning datasets
+COPA (Gordon et al., 2012) and e-CARE (Du
+et al., 2022), one physical commonsense reason-
+ing dataset PIQA (Bisk et al., 2020), one social
+interaction reasoning dataset Social IQa (Sap et al.,
+2019), and an implicit reasoning strategy dataset
+StrategyQA (Geva et al., 2021). The statistics of
+the above datasets are shown in Table 1.
+2.2
+Large Language Models
+In the preliminary experiments, we choose 5 dif-
+ferent types or versions of LLMs from multiple
+sources. We ﬁrst choose 3 LLMs from OpenAI1:
+two chat completion LLMs gpt-3.5-turbo (de-
+noted as ChatGPT) and gpt-3.5-turbo-0301 (de-
+noted as ChatGPT-0301), and one text completion
+LLM text-davinci-003 (denoted as Davinci-
+003). The above 3 LLMs all have 175B parameters.
+Then we adopt two open-source LLMs: an efﬁcient
+foundation LLM LLaMA (Touvron et al., 2023),
+and Vicuna (Chiang et al., 2023) which is trained
+on 70K data from ShareGPT2. Both LLaMA and
+Vicuna have 13B parameters.
+1https://platform.openai.com/docs/api-reference/
+2https://sharegpt.com/
+αNLI
+ChatGPT
+�
+�
+Davinci-003
+�
+1,042 (M11)
+163 (M12)
+�
+121 (M21)
+181 (M22)
+Table 2: The confusion matrix M ∈ R2×2 between
+ChatGPT and Davinci-003 on αNLI dataset.
+�and
+�respectively denote correct and wrong predictions of
+corresponding LLMs. Mij means the number of i-th
+row and j-th column in M.
+NLI
+CSQA
+COPA
+e-CARE
+Social IQa
+PIQA
+StrategyQA
+0
+5
+10
+15
+20
+25
+30
+35
+INCON (%)
+ChatGPT & Davinci-003
+ChaGPT-0301 & Davinci-003
+ChatGPT & ChatGPT-0301
+LLaMA & Vicuna
+Figure 2: The overall inter-inconsistency (INCON) be-
+tween each LLMs pair on each dataset. CSQA denotes
+CommonsenseQA. The brighter part in each bar of (a)
+denotes the proportion of M21 in INCON.
+2.3
+Experimental Details
+For ChatGPT and ChatGPT-0301, we use zero-shot
+setting for experiments, the LLMs will be prompted
+to provide the explanation and answer to the given
+questions. For Davinci-003, we use the few-shot
+chain-of-thought (CoT) setting (Wei et al., 2022b)
+for experiments. The few-shot examples of the
+CommonsenseQA dataset are inherited from Wei
+et al. (2022b). While for the other datasets, we
+randomly choose a few examples from their cor-
+responding training set and then use ChatGPT3 to
+generate CoT and answer for each few-shot exam-
+ple. For LLaMA and Vicuna, the settings are the
+same as Davinci-003. More details and the prompts
+we used can refer to Appendix A.
+2.4
+Deﬁnitions
+After conducting experiments on these 7 datasets,
+We record the results of all datasets between any
+two comparable LLMs to obtain the confusion ma-
+trix on each dataset. The confusion matrix can
+directly reﬂect the inter-consistency between any
+two LLMs on each dataset. As shown in Table 2,
+there is a confusion matrix M ∈ N2×2 on the αNLI
+3https://chat.openai.com/
+dataset between ChatGPT and Davinci-003. Here,
+we ﬁrst formally deﬁne two baseline collaboration
+methods of two or more LLMs: (1) Syn-Soft is an
+average of the accuracy of the LLMs. (2) Syn-Hard
+is a hard constraint, only all LLMs predict right
+would contribute to the Syn-Hard. Thus, the accu-
+racies of the two baseline methods of ChatGPT and
+Davinci-003 are:
+ACCSyn-Soft = 1
+2 × 2 × M11 + M12 + M21
+�
+i,j Mij
+,
+ACCSyn-Hard =
+M11
+�
+i,j Mij .
+(1)
+Then we deﬁne the inter-inconsistency as the
+proportion of examples where all LLMs do not
+reach agreements:
+INCON = M12 + M21
+�
+i,j Mij .
+(2)
+In Equations 1 and 2, the Mij denotes the num-
+ber of i-th row and j-th column in M. As we
+can see on αNLI, the INCON is 18.85%. Syn-Soft
+and Syn-Hard of ChatGPT & Davinci-003 achieve
+78.57% and 69.14%, respectively.
+Figure 2 shows the INCON of each LLMs pair on
+each dataset. From which we can ﬁnd:
+(1) Different types of LLMs (LLMs pairs except
+for ChatGPT & ChatGPT-0301) hold nearly 20%-
+30% INCON on almost all datasets except the easy
+dataset COPA, even if ChatGPT and Davinci-003
+are based on the same backend model.
+(2) In Figure 2, brighter and darker parts in
+each bar have nearly equal contributions to INCON,
+which means these three LLMs possess equally
+strong but substantially different commonsense rea-
+soning capabilities.
+(3) ChaGPT & ChaGPT-0301 pair achieves a
+clear INCON on each dataset, which makes it less
+convincing when using the updated version of
+LLMs to reproduce the results of the unavailable
+and old versions of LLMs.
+(4) Though ChatGPT-0301 is a new iterative
+version based on ChatGPT, and Vicuna is based
+on LLaMA, in Figure 2, each LLM in the pair still
+contributes equally to the INCON on all datasets.
+This points out that, when iterating the LLMs, they
+would gain new capabilities but lost some existing
+capabilities at the same time.
+3
+The Formal Debate Framework
+To further explore the inter-consistency of different
+LLMs, inspired by the basic theory of classroom
+⚖
+Options: (A) I delete the whole document. (B) I hit the backspace.
+Question: I ducked. What was the cause of this?
+Options: (A) The fireworks lunched up. (B) The frisbee soared to me.
+Examples
+Step 1: Stance (Answer) Selection and Argument (Explanation) Generation
+Question: I ducked. What was the cause of this?
+Options: (A) The fireworks lunched up. (B) The frisbee soared to me.
+🤖: Stance: (B). Argument: The cause of ducking was more likely 
+to be the frisbee, as it was a potential threat to safety. 
+👾: Stance: (B). Argument: Fireworks can be startling, but they are 
+usually safe. A flying frisbee is more likely to pose a threat.
+Question: I make a grammatical error. What happens next?
+Options: (A) I delete the document. (B) I hit the backspace.
+🤖: Stance: (A). Argument: I think deleting the whole document to 
+retype is a good idea to correct this error.
+👾: Stance: (B). Argument: I suppose hitting the backspace is a 
+more common way to delete the error.
+···
+Question: I make a grammatical error. 
+What happens next?
+Options: (A) I delete the document. 
+(B) I hit the backspace.
+🤖
+I think deleting the whole 
+document is···
+👾
+I suppose hitting the··· Do you 
+think I am more reasonable?
+🤖
+I stand by my original opinion. 
+Although hitting··· Do you 
+think I am more plausible?
+👾
+I cannot agree with you. It is 
+costly to··· Do you think I am 
+more reasonable?
+🤖
+Sorry for my mistake. It is 
+more reasonable that someone 
+would hit the ···
+Step 2: Interactive Debate Process
+Step 3: Debate Summarization
+Summary: This debate is about
+choosing
+a
+more
+plausible
+effect event of event “I make a
+grammatical error”. The propo-
+sition
+supposes deleting
+the
+whole document can correct
+the error. While the opposition
+thinks hitting the backspace is
+a more common effect of mak-
+ing a typing error. Then the
+proposition argues ··· Finally,
+the proposition comprises to
+the opposition.
+Conclusion:
+(B)
+is a
+more
+plausible answer.
+consistent
+inconsistent
+🤖 The proposition LLM in the debate 
+👾 The opposition LLM in the debate 
+⚖ The judge in the debate 
+Legend
+Figure 3: The overall workﬂow of the debate between two LLMs.
+debate (Bell, 1998), we design a formal debate
+framework (FORD) to make LLMs collaborate to
+solve a shared goal. In FORD, LLMs can learn
+from the differences between their understandings
+and conceptualizations, then defend themselves or
+comprise. We take the fair debate as an example for
+demonstrations. According to the basic structure
+of debate (Mayer, 1997) and as shown in Figure 3,
+the FORD consists of 3 steps: (1) Stance selec-
+tion and argument generation. This step expects
+LLMs to choose a stance (answer) and give the
+corresponding argument (explanation). Then the
+examples which cause inter-inconsistency are sent
+into step 2. (2) Interactive debate process. This step
+makes LLMs learn from the differences between
+their arguments, then refute each other and produce
+a series of arguments. (3) Debate summarization.
+The judge will summarize the whole debate process
+and then draw a ﬁnal conclusion.
+Note FORD is different from model ensembling
+in nature. Ensembling would not change the inputs
+and outputs, while debate could completely change
+the behaviors of LLMs by human-like interaction.
+3.1
+Stance Selection & Argument Generation
+The ﬁrst step of debate is to choose a stance, then
+provide an argument to support the corresponding
+stance. LLMs possess large inter-consistency on
+various commonsense reasoning datasets, which
+meets the prerequisite of debate. Therefore, in
+the commonsense reasoning regime, we utilize the
+answer and explanation produced in Sec 2 as the
+stance and corresponding argument, respectively.
+If all the LLMs do not hold the same stance, then
+there is no need to debate. The examples that LLMs
+hold different stances will be sent to the subsequent
+steps. In the debate on the inter-inconsistent exam-
+ples, we respectively denote the ﬁrst and second
+LLMs as proposition and opposition.
+3.2
+Interactive Debate Process
+We design a debate prompt to conduct an interac-
+tive debate process. In this process, the proposition
+and opposition can learn from the differences in
+all previous arguments. Speciﬁcally, based on the
+question and previous arguments, the proposition
+can use new evidence or identify reasoning ﬂaws
+in the arguments of the opposition for refutation,
+and vice versa.
+To eliminate the effects of stance declaration
+in the arguments, we will not explicitly display
+the stances in the arguments. In speciﬁc, the sen-
+tences that display the answer will be excluded, we
+just convey the stances implicitly through the other
+parts of the arguments.
+The whole interactive debate process will end
+when the LLMs achieve inter-consistent, or the
+debate rounds achieve the maximum number (each
+response would be counted as one round).
+3.3
+Debate Summarization
+Following the basic debate process (Mayer, 1997),
+we adopt a judge to summarize the whole debate
+and draw a conclusion. The summary can provide
+an overview of the debate process, which enhances
+the interpretability to make the decision-makers
+0
+1
+2
+3
+4
+5
+6
+refutation round
+0
+5
+10
+15
+20
+25
+INCON (%)
+(a) ChatGPT & Davinci-003
+NLI
+CommonsenseQA
+COPA
+e-CARE
+Social IQa
+PIQA
+StrategyQA
+0
+1
+2
+3
+4
+debate round
+0
+2
+4
+6
+INCON (%)
+(b) ChatGPT & ChatGPT-0301
+NLI
+CommonsenseQA
+COPA
+e-CARE
+Social IQa
+PIQA
+StrategyQA
+0
+1
+2
+3
+4
+5
+6
+debate round
+0
+10
+20
+30
+INCON (%)
+(c) LLaMA & Vicuna
+NLI
+CommonsenseQA
+COPA
+e-CARE
+Social IQa
+PIQA
+StrategyQA
+Figure 4: The INCON of (a) ChatGPT & Davinci-003,
+(b) ChatGPT & ChatGPT-0301, and (C) LLaMA & Vi-
+cuna pairs across different debate rounds. Round 0 de-
+notes the INCON before the debate process.
+make more appropriate decisions. The conclusion
+is about which participant gains the upper hand
+in the debate. This also can be a reference for
+decision-making. Speciﬁcally, we would adopt
+some conjunctions to connect different arguments
+for obtaining the summary of the debates, then
+assign equal weights to all the arguments for the
+ﬁnal conclusion.
+4
+Three Stage Debate
+We conduct a three-stage debate with the formal de-
+bate framework: (1) Fair Debate, which is deployed
+between two LLMs with comparable capabilities.
+(2) Mismatched debate, which is deployed between
+two LLMs with mismatched commonsense reason-
+ing capabilities. (3) Roundtable debate, which is a
+discussion among more than two LLMs.
+For all settings, we adopt the inter-consistent
+examples (Sec 2) in each dataset for the debate pro-
+cess. As the debate summarization step, we treat
+the debate process as the summary, then assign all
+arguments equal importance to draw ﬁnal conclu-
+sions. The baselines are Syn-Soft and Syn-Hard.
+FORD is the Syn-Sfot and Syn-Hard simultane-
+ously after the debate.
+4.1
+Fair Debates
+Since ChatGPT and ChatGPT-0301 have very sim-
+ilar commonsense reasoning capabilities, we con-
+duct experiments on three pairs of LLMs: different
+types of LLMs pairs (ChatGPT & Davinci-003 and
+LLaMA & Vicuna), and different versions of LLMs
+pair (ChatGPT & ChatGPT-0301).
+For each LLMs pair, the proposition is set as
+ChatGPT or LLaMA. For ChatGPT & Davinci-
+003 and LLaMA & Vicuna, the maximum rounds
+of debate is 6. While for ChatGPT & ChatGPT-
+0301, the maximum rounds of debate is 4. The
+carefully designed prompts for fair debates can
+refer to Appendix B.
+Table 3 shows the overall performance of Chat-
+GPT & Davinci-003, ChatGPT & ChatGPT-0301,
+and LLaMA & Vicuna with FORD. We can draw
+the following conclusions:
+(1) For ChatGPT & Davinci-003 and LLaMA &
+Vicuna, FORD signiﬁcantly outperforms Syn-Soft
+and Syn-Hard on all datasets. These results indi-
+cate that LLMs of fair abilities possess a spirit
+of collaboration, and they are capable of coop-
+erating effectively towards a shared goal.
+(2) While on ChatGPT & ChatGPT-0301, FORD
+does not gain as much improvement as the other de-
+bates. This is because different versions of LLMs
+possess very similar commonsense reasoning capa-
+bilities, while different types of LLMs have com-
+parable but not similar capabilities.
+(3) For each debate, FORD outperforms both
+participant LLMs on almost datasets (except for
+LLaMA & Vicuna on Social IQa). This is because
+looking at the problems in different aspects can
+help to obtain more precise predictions.
+(4) Comparisons between ChatGPT & Davinci-
+003 and ChatGPT & ChatGPT-0301 across various
+datasets reveal that, different versions of LLMs
+have higher performance ﬂoors (Syn-Hard), while
+different types of LLM have higher performance
+ceilings (FORD) after debates. This suggests we
+conduct debates between different types of LLMs
+to make better decisions.
+Furthermore, we track the INCON for each debate
+round in each fair debate across all datasets. The
+overall results are shown in Figure 4. We can obtain
+the following ﬁndings:
+(1) For all fair debates, the INCON would de-
+LLMs
+Method
+αNLI
+CSQA
+COPA
+e-CARE
+Social IQa
+PIQA
+StrategyQA
+Average
+ChatGPT
+Single LLM
+77.17
+76.17
+96.80
+81.53
+72.71
+80.74
+69.34
+79.21
+Davinci-003
+Single LLM
+79.96
+78.62
+95.20
+79.69
+73.33
+76.88
+71.48
+79.31
+ChatGPT &
+Davinci-003
+Syn-Soft
+78.75
+77.40
+96.00
+80.61
+73.02
+78.81
+70.41
+79.29
+Syn-Hard
+69.14
+68.22
+93.80
+71.96
+62.69
+68.55
+58.12
+70.35
+FORD
+81.35
+78.79
+97.00
+83.74
+74.32
+84.60
+71.62
+81.63
+ChatGPT
+Single LLM
+77.17
+76.17
+96.80
+81.53
+72.71
+80.74
+69.34
+79.21
+ChatGPT-0301
+Single LLM
+77.70
+75.43
+97.20
+81.53
+73.54
+80.79
+69.17
+79.34
+ChatGPT &
+ChatGPT-0301
+Syn-Soft
+77.44
+75.80
+97.00
+81.53
+73.13
+80.77
+69.26
+79.28
+Syn-Hard
+74.78
+73.46
+96.00
+79.55
+70.96
+77.97
+67.25
+77.14
+FORD
+78.30
+76.41
+97.60
+81.95
+73.75
+82.70
+69.65
+80.05
+LLaMA
+Single LLM
+63.04
+66.18
+90.20
+66.97
+58.98
+71.60
+63.10
+68.58
+Vicuna
+Single LLM
+70.60
+59.87
+89.20
+68.05
+64.65
+60.45
+55.28
+66.87
+LLaMA &
+Vicuna
+Syn-Soft
+66.82
+63.02
+89.70
+67.51
+61.82
+66.03
+59.15
+67.72
+Syn-Hard
+54.74
+47.91
+83.40
+53.72
+46.77
+48.26
+41.35
+53.74
+FORD
+70.80
+66.75
+93.80
+71.54
+63.67
+72.25
+64.10
+71.84
+Table 3: The overall accuracy (%) of the single LLMs, and the synthetic methods of the fair LLMs pairs. The
+bold numbers represent the best performance among the synthetic methods and corresponding single LLMs on
+each dataset. The underlined numbers denote the best performance among all methods on each dataset. “Average”
+denotes the average accuracy across different datasets of corresponding LLM or LLMs pair.
+e-CARE
+ChatGPT
+�
+�
+GPT-4
+�
+1,641
+183
+�
+89
+209
+PIQA
+ChatGPT
+�
+�
+GPT-4
+�
+1,452
+298
+�
+32
+56
+Table 4: Confusion matrixes M between ChatGPT and
+GPT-4 on e-CARE and PIQA datasets.
+crease after each debate round on all datasets. This
+is because LLMs can learn from different perspec-
+tives of the examples to highly alleviate the inter-
+inconsistent, which proves LLMs with fair abil-
+ities can ultimately achieve a consensus for the
+shared goal.
+(2) For ChatGPT & Davinci-003 and ChatGPT
+& ChatGPT-0301, the INCON drop almost to 0 on
+all datasets, while the INCON of LLaMA & Vicuna
+still has partial inter-inconsistency. We suppose the
+phenomenon is not only because of the large gap in
+the parameter sizes, but also due to the RLHF used
+in ChatGPT, Davinci-003, and ChatGPT-0301.
+(3) For the debates of ChatGPT & ChatGPT-
+0301, the INCON could achieve coverage earlier
+than the other fair debates. This is mainly due to
+ChatGPT and ChatGPT-0301 holding very similar
+commonsense reasoning capabilities, which can
+make them reach agreements earlier.
+e-CARE
+LLaMA
+�
+�
+ChatGPT � 1,227 503
+�
+194
+319
+PIQA
+LLaMA
+�
+�
+ChatGPT � 1,126 358
+�
+170
+184
+Table 5: Confusion matrixes M between LLaMA and
+ChatGPT on e-CARE and PIQA datasets.
+Dataset ChatGPT GPT-4 Syn-Soft Syn-Hard FORD
+e-CARE
+81.53
+85.96
+77.33
+77.33
+86.00
+PIQA
+80.74
+95.21
+79.00
+79.00
+94.18
+Table 6: The overall performance of the debate between
+ChatGPT and GPT-4.
+4.2
+Mismatched Debates
+In human discourse, when engaged with an individ-
+ual possessing a signiﬁcantly dominant presence,
+it is common to become inﬂuenced by their cogni-
+tion, resulting in an inclination towards adopting
+their ideas and thought processes (Jayagopi et al.,
+2009). We want to investigate what will happen
+when this situation happens between LLMs.
+Hence, we design two mismatched debates, each
+debate is implemented between LLMs with dis-
+parate levels of commonsense reasoning capabil-
+ities.
+Speciﬁcally, we adopt ChatGPT & GPT-
+4 (OpenAI, 2023) and LLaMA & ChatGPT pairs
+for mismatched debates. e-CARE and PIQA are
+chosen for experiments. The confusion matrixes
+Dataset LLaMA ChatGPT Syn-Soft Syn-Hard FORD
+e-CARE
+66.97
+81.53
+57.82
+57.82
+74.88
+PIQA
+70.51
+80.74
+61.26
+61.26
+75.84
+Table 7: The overall performance of the debate between
+LLaMA and ChatGPT.
+Debate
+Dataset
+ChatGPT
+Opponent
+ChatGPT &
+Davinci-003
+e-CARE
+53.69
+46.31
+PIQA
+53.04
+46.96
+ChatGPT &
+GPT-4
+e-CARE
+7.64
+92.36
+PIQA
+10.60
+89.40
+LLaMA &
+ChatGPT
+e-CARE
+60.06
+39.94
+PIQA
+67.92
+32.08
+Table 8: The dominance of different LLMs across dif-
+ferent debates and datasets. The “Opponent” denotes
+the LLM other than ChatGPT in each debate.
+of ChatGPT & GPT-4 and LLaMA & ChatGPT on
+the two datasets are shown in Table 4 and 5.
+The settings of the mismatched debates are the
+same as the fair debate of ChatGPT & Davinci-003.
+Refer to Appendix C for the carefully designed
+prompts for mismatched debates. The overall re-
+sults of the mismatched debates are shown in Ta-
+ble 6, Table 7, and Figure 5 presents the INCON of
+each debate round. From the results, we can ﬁnd:
+(1) Even if the commonsense reasoning capa-
+bilities are mismatched in all LLMs pairs, the
+Syn-Hard improves signiﬁcantly.
+This proves
+LLMs with mismatched abilities still possess a
+spirit of collaboration, and they are capable of
+cooperating effectively towards a shared goal.
+(2) Furthermore, the INCON of the two mis-
+matched LLMs pairs continues to drop. This proves
+LLMs with mismatched abilities can ultimately
+reach a consensus for the shared goal.
+(3) When the debates are mismatched, there
+seems to be a performance ceiling. The upper
+bound might be the accuracy of the stronger LLM.
+For further analysis, we propose a new met-
+ric dominance for the LLMs. For example, the
+dominance of the proposition LLM is deﬁned as
+the portion of inter-inconsistent examples that the
+opposition LLM compromises, and vice versa. The
+dominance directly reﬂects the degree to which the
+LLM dominates the debate.
+For
+clearer
+comparisons,
+we
+adopt
+the
+dominance of the debates of ChatGPT & Davinci-
+003 as a reference.
+Table 8 shows the overall
+dominance across different debates and datasets.
+Dataset
+Syn-Soft
+Syn-Hard
+FORD
+e-CARE
+82.39
+69.75
+84.78
+PIQA
+84.28
+67.57
+87.21
+Table 9: The overall performance of roundtable debates
+among ChatGPT, Davinci-003, and GPT-4 on e-CARE
+and PIQA datasets.
+We can infer that:
+(1) In the debate between ChatGPT and Davinci-
+003, the two LLMs achieve similar dominance
+on both datasets.
+It proves that ChatGPT and
+Davinci-003 have comparable capabilities. There-
+fore, LLMs hold nearly equal probabilities to
+change their viewpoints or adhere to their per-
+spectives when facing comparable LLMs.
+(2) In the debate between ChatGPT and GPT-4,
+GPT-4 has absolute advantages in dominance on
+both datasets. Interestingly, this situation aligns
+with humans, stronger people would dominate the
+dialogues. This also explains that the performance
+of mismatched debates has an upper bound. Thus,
+LLMs hold a larger probability to adhere to
+their perspectives when facing weaker LLMs.
+If we can ﬁnd a comparable LLM to GPT-4, the
+debate between them can further boost the perfor-
+mance.
+(3) However, LLaMA & ChatGPT does not ex-
+hibit such a large gap in dominance in the mis-
+matched debate. This is mainly because LLaMA is
+a very bad debater, it would generate the sentence
+like “Option (x) is more plausible” most of the
+time. This explicit stance would make ChatGPT
+swing, and the swing property might be due to the
+training or labeling strategies of RLHF.
+4.3
+Roundtable Debates
+In many scenarios, the debates or discussions are
+not limited to only two participants (e.g., law (Ran-
+som et al., 1993) and healthcare (Chassin et al.,
+1998)). Thus, we want to design a roundtable de-
+bate (Epstein et al., 1997) among LLMs, to ﬁnd out
+what will happen.
+We choose good debaters ChatGPT, Davinci-
+003, and GPT-4 for a roundtable discussion. Fol-
+lowing Sec 4.2, we select e-CARE and PIQA for
+experiments. ChatGPT speaks ﬁrst, Davinci-003
+second, and GPT-4 last.
+On these datasets, as
+long as the three LLMs do not all have the same
+stance (answer), we will treat the examples as inter-
+inconsistent examples for iterative roundtable de-
+bates. The LLMs debate up to 9 rounds. Refer to
+0
+2
+4
+6
+8
+debate round
+0
+5
+10
+15
+20
+25
+30
+INCON (%)
+e-CARE (Roundtable)
+PIQA (Roundtable)
+e-CARE (ChatGPT & GPT-4)
+e-CARE (LLaMA & ChatGPT)
+PIQA (ChatGPT & GPT-4)
+PIQA (LLaMA & ChatGPT)
+Figure 5: The overall INCON of the mismatched de-
+bates and the roundtable debates on e-CARE and PIQA
+datasets.
+Dataset
+ChatGPT
+Davinci-003
+GPT-4
+e-CARE
+36.99
+48.15
+56.56
+PIQA
+30.38
+44.35
+60.75
+Table 10: The overall dominance in roundtable debate
+across different datasets.
+Appendix D for the prompts.
+The overall results of the roundtable debates are
+shown in Table 9, and Figure 5 shows the INCON of
+each debate round. We can conclude that:
+(1) After the roundtable debates, the ﬁnal results
+are still inferior to GPT-4. This reveals an inter-
+esting ﬁnding that a much smarter LLM would be
+misled by two less intelligent LLMs (“Two heads
+are better than one.”).
+(2) Nevertheless, FORD signiﬁcantly outper-
+forms Syn-Soft and Syn-Hard, and the INCON is
+signiﬁcantly alleviated. This proves more than
+two LLMs still possess the spirit to effectively
+collaborate and achieve a consensus.
+(3) Despite GPT-4 would be misled by ChatGPT
+and Davinci-003, it still dominates the roundtable
+debates.
+The dominance in Table 10 proves
+this.
+Stronger LLMs have a larger probabil-
+ity to insist on their viewpoints, while weaker
+LLMs have a larger probability to change their
+minds.
+5
+In-depth Analysis
+Since the arguments in a debate might have differ-
+ent persuasion, assigning equal weights to each ar-
+gument would obtain the wrong conclusion. More-
+over, in the context of human debates, there is a
+human judge with much stronger capabilities to
+summarize the debate and draw the ﬁnal conclu-
+Dataset
+FORD (w/o GPT-4)
+FORD (w GPT-4)
+αNLI
+81.35
+82.48
+CSQA
+78.79
+80.10
+COPA
+97.00
+97.60
+e-CARE
+83.74
+83.88
+Social IQa
+74.32
+74.57
+PIQA
+84.60
+85.15
+StrategyQA
+71.62
+71.70
+Average
+81.63
+82.29
+Table 11: The effect of GPT-4 as the judge on the de-
+bates between ChatGPT and Davinci-003.
+sion. Inspired by this, we conduct an in-depth ex-
+periment on two fair debates to investigate a much
+stronger LLM as the judge. The prompt can refer
+to Appendix E.
+As mentioned in Sec 4.2, GPT-4 is an LLM that
+holds absolute advantages in commonsense reason-
+ing. Therefore, we adopt GPT-4 as the judge in
+fair debates between ChatGPT and Davinci-003.
+The judge (GPT-4) would be prompted to give the
+summarizations and conclusions only based on the
+debate process. The overall results are shown in Ta-
+ble 11, we can draw the following conclusions: If
+we utilize GPT-4 as the judge, the performance in-
+creases to varying degrees. It is mainly because dif-
+ferent arguments have different persuasions, treat-
+ing them equally would make less plausible argu-
+ments heavily inﬂuence the ﬁnal conclusion. While
+using GPT-4 for summarization and conclusion
+can assign different weights to different arguments,
+which aligns the decision process of humans.
+6
+Ablation Study
+Considering that the order of the debate process
+would inﬂuence the results (Step 2 in Figure 3),
+we conduct ablation studies to investigate how the
+order of debate would inﬂuence the debate results.
+Speciﬁcally, we use the debate between Chat-
+GPT and Davinci-003 on e-CARE and PIQA
+datasets for explorations. In this setting, Davinci-
+003 will be the proposition and ChaGPT is the
+opposition. The other settings are the same with
+Sec 4.1.
+The overall results are shown in Figure 6, we
+can summarize the following completions:
+(1) When we exchange Davinci-003 as the propo-
+sition and ChatGPT as the opposition, FORD still
+outperforms Syn-Soft, Syn-Hard, or any single
+LLM, achieving similar results with the original
+debate order. This proves that our formal debate
+0
+1
+2
+3
+4
+5
+6
+debate round
+0
+5
+10
+15
+20
+INCON (%)
+e-CARE (Davinci-003 & ChatGPT)
+e-CARE (ChatGPT & Davinci-003)
+PIQA (Davinci-003 & ChatGPT)
+PIQA (ChatGPT & Davinci-003)
+Figure 6: The debate results of different debate orders
+on e-CARE and PIQA.
+framework is not sensitive to the order of the de-
+bate.
+(2) In the ﬁrst two rounds of both settings, the
+decreases of INCON after the round of Davinci-003
+are larger than that after the round of ChatGPT.
+This is mainly because ChatGPT is a dialogue
+LLM while Davinci-003 is a text completion LLM,
+which makes ChatGPT a bit stronger in debates
+than Davinci-003.
+7
+Case Study
+To intuitively investigate how the debate process
+can improve the inter-consistency between LLMs
+and enhance the interpretability of commonsense
+reasoning, we provide one example output from
+the uniﬁed debate framework.
+As shown in Debate 1, the proposition (Chat-
+GPT) hold the stance that option (A) is more plau-
+sible while the opposition (Davinci-003) supposed
+option (B) is better. The proposition pointed out
+that the key to this question is the “old yearbook”.
+The opposition eventually conceded to the proposi-
+tion. Through this debate, one LLM can supply the
+aspects that the other LLM overlooked, resulting
+in more convincing interpretability and accurate
+decision.
+8
+Related Work
+8.1
+Commonsense Reasoning with LLMs
+LLMs have subverted the research paradigm of
+NLP. Using LLMs for commonsense reasoning can
+be categorized into instruction-tuning-based and
+chain-of-thought-based (CoT) methods.
+The instruction-tuning-based LLMs start from
+FLAN (Wei et al., 2022a) and T0 (Sanh et al.,
+Debate 1 ChatGPT & Davinci-003
+Question: I found my old yearbook today while cleaning.
+Which event could cause the day was almost over and I
+hadn’t cleaned anything?
+Options: (A) I became lost in a huge world of fond memories.
+(B) I kept looking through things to see what else I could
+ﬁnd while I cleaned.
+🤖 While going through the yearbook, the person may
+have become engrossed in looking at old photos and remi-
+niscing about past memories. This could have caused them
+to neglect their cleaning duties, resulting in the day almost
+being over without any cleaning being done.
+👾 Option (B) suggests that I was looking through things
+while I cleaned, which would explain directly why the day
+was almost over and I hadn’t cleaned anything.
+🤖 The scenario of getting lost in fond memories while
+looking through an old yearbook is a common experience
+that can cause a person to lose track of time and neglect
+their cleaning duties. While option (B) suggests intentional
+procrastination, which may not be as likely as getting caught
+up in nostalgia.
+👾 I think you are right. Getting lost in fond memories
+while looking through an old yearbook is a common ex-
+perience that can cause a person to lose track of time and
+neglect their cleaning duties.
+⚖ The proposition argues that getting lost in fond mem-
+ories (A) is more plausible as it’s a common experience
+that can cause a person to lose track of time and neglect
+cleaning duties. The opposition initially argues for option
+(B), but eventually agrees with the proposition’s point about
+getting lost in nostalgia. Therefore, the answer is (A).
+2022). FLAN ﬁnetuned 137B LaMDA-PT (Thop-
+pilan et al., 2022) on tens of NLP tasks to
+make LLMs follow instructions, then FLAN
+achieve impressive performance on unseen tasks.
+T0 increased the number of tasks and instruc-
+tions, then adopt an encoder-decoder model
+T5 (Raffel et al., 2020) for ﬁnetuning. Different
+from others, InstructGPT (Ouyang et al., 2022)
+adopted RLHF to let LLMs learn human prefer-
+ences. Flan-PaLM (Chung et al., 2022) and Tk-
+INSTRUCT (Wang et al., 2022c) further scaled up
+LLMs and task sizes.
+As for the CoT methods, Wei et al. (2022c) pro-
+posed a few-shot CoT to elicit reasoning in LLMs
+and achieve remarkable improvements. Kojima
+et al. (2022) designed a zero-shot CoT prompt to
+get rid of human annotations. Then Zhang et al.
+(2022) proposed an automatic CoT to automatically
+generate few-shot CoT for experiments. Wang et al.
+(2022a), Yao et al. (2022), and Fu et al. (2023)
+devised complex CoT for reasoning.
+These methods are mainly focused on improving
+reasoning abilities. While we utilize the reasoning
+abilities to make multiple LLMs debate to investi-
+gate inter-consistent commonsense reasoning.
+8.2
+Inconsistency in LLMs
+Inconsistency is an important issue in existing
+LLMs. Wang et al. (2022b) investigated the self-
+consistency of LLMs by sampling multiple CoT for
+each example. Jung et al. (2022) proposed to study
+the logical consistency in LLMs and designed a
+maieutic prompt to improve the performance on
+yes/no questions. Sahu et al. (2022) devised a con-
+ceptual consistency metric to measure the align-
+ment between LLMs and the real world. Li et al.
+(2022) proposed a multi-prompt method to obtain
+better consistency on each example.
+These methods investigate various kinds of con-
+sistency in a single LLM, while we investigate the
+inter-consistency between two or more LLMs.
+9
+Conclusion
+In this paper, we explore the problems of inter-
+inconsistency and swing between 2 or more LLMs.
+Then we propose a uniﬁed debate framework to sig-
+niﬁcantly improve the inter-consistency between
+LLMs and obtain better commonsense reasoning
+performance. Furthermore, we investigate the situ-
+ations of mismatched debate and roundtable debate.
+We ﬁnd a much stronger LLM take a dominant posi-
+tion in debates, while it can be easily disturbed by 2
+weaker LLMs. The ablation study demonstrates the
+effectiveness of our uniﬁed debate framework. The
+case study also shows the enhanced interpretability
+brought by our method.
+References
+Philip LaVerne Bell. 1998. Designing for students’ sci-
+ence learning using argumentation and classroom
+debate. University of California, Berkeley.
+Chandra Bhagavatula, Ronan Le Bras, Chaitanya
+Malaviya, Keisuke Sakaguchi, Ari Holtzman, Han-
+nah Rashkin, Doug Downey, Wen-tau Yih, and Yejin
+Choi. 2019. Abductive commonsense reasoning. In
+International Conference on Learning Representa-
+tions.
+Yonatan Bisk, Rowan Zellers, Jianfeng Gao, Yejin
+Choi, et al. 2020. Piqa: Reasoning about physical
+commonsense in natural language. In Proceedings
+of the AAAI conference on artiﬁcial intelligence, vol-
+ume 34, pages 7432–7439.
+Sébastien Bubeck, Varun Chandrasekaran, Ronen El-
+dan, Johannes Gehrke, Eric Horvitz, Ece Kamar,
+Peter Lee, Yin Tat Lee, Yuanzhi Li, Scott Lund-
+berg, et al. 2023. Sparks of artiﬁcial general intelli-
+gence: Early experiments with gpt-4. arXiv preprint
+arXiv:2303.12712.
+Mark R Chassin, Robert W Galvin, et al. 1998. The ur-
+gent need to improve health care quality: Institute of
+medicine national roundtable on health care quality.
+Jama, 280(11):1000–1005.
+Wei-Lin Chiang, Zhuohan Li, Zi Lin, Ying Sheng,
+Zhanghao Wu, Hao Zhang, Lianmin Zheng, Siyuan
+Zhuang, Yonghao Zhuang, Joseph E. Gonzalez, Ion
+Stoica, and Eric P. Xing. 2023. Vicuna: An open-
+source chatbot impressing gpt-4 with 90%* chatgpt
+quality.
+Hyung Won Chung, Le Hou, Shayne Longpre, Bar-
+ret Zoph, Yi Tay, William Fedus, Eric Li, Xuezhi
+Wang, Mostafa Dehghani, Siddhartha Brahma, et al.
+2022. Scaling instruction-ﬁnetuned language mod-
+els. arXiv preprint arXiv:2210.11416.
+Li Du, Xiao Ding, Kai Xiong, Ting Liu, and Bing
+Qin. 2022. e-care: a new dataset for exploring ex-
+plainable causal reasoning. In Proceedings of the
+60th Annual Meeting of the Association for Compu-
+tational Linguistics (Volume 1: Long Papers), pages
+432–446.
+Richard A Epstein, Gary S Becker, Ronald H Coase,
+Merton H Miller, and Richard A Posner. 1997. The
+roundtable discussion. The University of Chicago
+Law Review, 64(4):1132–1165.
+Jonathan St BT Evans and Keith E Stanovich. 2013.
+Dual-process theories of higher cognition: Advanc-
+ing the debate. Perspectives on psychological sci-
+ence, 8(3):223–241.
+Yao Fu, Hao Peng, Ashish Sabharwal, Peter Clark, and
+Tushar Khot. 2023.
+Complexity-based prompting
+for multi-step reasoning. International Conference
+on Learning Representations.
+Mor Geva, Daniel Khashabi, Elad Segal, Tushar Khot,
+Dan Roth, and Jonathan Berant. 2021. Did aristotle
+use a laptop? a question answering benchmark with
+implicit reasoning strategies. Transactions of the As-
+sociation for Computational Linguistics, 9:346–361.
+Andrew Gordon, Zornitsa Kozareva, and Melissa
+Roemmele. 2012.
+SemEval-2012 task 7: Choice
+of plausible alternatives: An evaluation of common-
+sense causal reasoning. In *SEM 2012: The First
+Joint Conference on Lexical and Computational Se-
+mantics – Volume 1: Proceedings of the main con-
+ference and the shared task, and Volume 2: Pro-
+ceedings of the Sixth International Workshop on Se-
+mantic Evaluation (SemEval 2012), pages 394–398,
+Montréal, Canada. Association for Computational
+Linguistics.
+Dinesh Babu Jayagopi, Hayley Hung, Chuohao Yeo,
+and Daniel Gatica-Perez. 2009.
+Modeling domi-
+nance in group conversations using nonverbal activ-
+ity cues. IEEE Transactions on Audio, Speech, and
+Language Processing, 17(3):501–513.
+Jaehun Jung, Lianhui Qin, Sean Welleck, Faeze Brah-
+man, Chandra Bhagavatula, Ronan Le Bras, and
+Yejin Choi. 2022. Maieutic prompting: Logically
+consistent reasoning with recursive explanations. In
+Proceedings of the 2022 Conference on Empirical
+Methods in Natural Language Processing, pages
+1266–1279, Abu Dhabi, United Arab Emirates. As-
+sociation for Computational Linguistics.
+Takeshi Kojima, Shixiang Shane Gu, Machel Reid, Yu-
+taka Matsuo, and Yusuke Iwasawa. 2022. Large lan-
+guage models are zero-shot reasoners. In Advances
+in Neural Information Processing Systems.
+Yifei Li, Zeqi Lin, Shizhuo Zhang, Qiang Fu, Bei Chen,
+Jian-Guang Lou, and Weizhu Chen. 2022. On the
+advance of making language models better reason-
+ers. arXiv preprint arXiv:2206.02336.
+Igor Mayer. 1997. Debating technologies. A Method-
+ological Contribution to the Design and Evalua-
+tion of Participatory Policy Analysis. Tilburg, The
+Netherlands.
+OpenAI. 2023. Gpt-4 technical report.
+Long Ouyang, Jeffrey Wu, Xu Jiang, Diogo Almeida,
+Carroll Wainwright, Pamela Mishkin, Chong Zhang,
+Sandhini Agarwal, Katarina Slama, Alex Ray, et al.
+2022. Training language models to follow instruc-
+tions with human feedback. Advances in Neural In-
+formation Processing Systems, 35:27730–27744.
+Joon Sung Park, Joseph C O’Brien, Carrie J Cai,
+Meredith Ringel Morris, Percy Liang, and Michael S
+Bernstein. 2023.
+Generative agents:
+Interactive
+simulacra of human behavior.
+arXiv preprint
+arXiv:2304.03442.
+Colin Raffel, Noam Shazeer, Adam Roberts, Katherine
+Lee, Sharan Narang, Michael Matena, Yanqi Zhou,
+Wei Li, and Peter J Liu. 2020. Exploring the limits
+of transfer learning with a uniﬁed text-to-text trans-
+former. The Journal of Machine Learning Research,
+21(1):5485–5551.
+Richard E Ransom, Christine Zuni, Philip Sam Delo-
+ria, Robert N Clinton, Robert Laurence, Nell Jessup
+Newton, and Mario E Occhialino Jr. 1993. Recog-
+nizing and enforcing state and tribal judgments: A
+roundtable discussion of law, policy, and practice.
+Am. Indian L. Rev., 18:239.
+Pritish Sahu, Michael Cogswell, Yunye Gong, and
+Ajay Divakaran. 2022. Unpacking large language
+models with conceptual consistency. arXiv preprint
+arXiv:2209.15093.
+Victor Sanh, Albert Webson, Colin Raffel, Stephen
+Bach, Lintang Sutawika, Zaid Alyafeai, Antoine
+Chafﬁn, Arnaud Stiegler, Arun Raja, Manan Dey,
+et al. 2022.
+Multitask prompted training enables
+zero-shot task generalization. In International Con-
+ference on Learning Representations.
+Maarten Sap, Hannah Rashkin, Derek Chen, Ronan
+Le Bras, and Yejin Choi. 2019. Social iqa: Com-
+monsense reasoning about social interactions.
+In
+Proceedings of the 2019 Conference on Empirical
+Methods in Natural Language Processing and the
+9th International Joint Conference on Natural Lan-
+guage Processing (EMNLP-IJCNLP), pages 4463–
+4473.
+Timo Schick, Jane Dwivedi-Yu, Zhengbao Jiang, Fabio
+Petroni, Patrick Lewis, Gautier Izacard, Qingfei You,
+Christoforos Nalmpantis, Edouard Grave, and Se-
+bastian Riedel. 2022.
+Peer: A collaborative lan-
+guage model. arXiv preprint arXiv:2208.11663.
+Alon Talmor, Jonathan Herzig, Nicholas Lourie, and
+Jonathan Berant. 2019. Commonsenseqa: A ques-
+tion answering challenge targeting commonsense
+knowledge. In Proceedings of the 2019 Conference
+of the North American Chapter of the Association
+for Computational Linguistics: Human Language
+Technologies, Volume 1 (Long and Short Papers),
+pages 4149–4158.
+Romal Thoppilan, Daniel De Freitas, Jamie Hall,
+Noam Shazeer, Apoorv Kulshreshtha, Heng-Tze
+Cheng, Alicia Jin, Taylor Bos, Leslie Baker, Yu Du,
+et al. 2022. Lamda: Language models for dialog
+applications. arXiv preprint arXiv:2201.08239.
+Hugo Touvron, Thibaut Lavril, Gautier Izacard, Xavier
+Martinet, Marie-Anne Lachaux, Timothée Lacroix,
+Baptiste Rozière, Naman Goyal, Eric Hambro,
+Faisal Azhar, et al. 2023.
+Llama: Open and efﬁ-
+cient foundation language models. arXiv preprint
+arXiv:2302.13971.
+Boshi Wang, Xiang Deng, and Huan Sun. 2022a. Itera-
+tively prompt pre-trained language models for chain
+of thought. In Proceedings of the 2022 Conference
+on Empirical Methods in Natural Language Process-
+ing, pages 2714–2730.
+Xuezhi Wang, Jason Wei, Dale Schuurmans, Quoc Le,
+Ed Chi, and Denny Zhou. 2022b. Self-consistency
+improves chain of thought reasoning in language
+models. arXiv preprint arXiv:2203.11171.
+Yizhong Wang, Swaroop Mishra, Pegah Alipoormo-
+labashi, Yeganeh Kordi, Amirreza Mirzaei, Atharva
+Naik, Arjun Ashok, Arut Selvan Dhanasekaran, An-
+jana Arunkumar, David Stap, et al. 2022c. Super-
+naturalinstructions: Generalization via declarative
+instructions on 1600+ nlp tasks. In Proceedings of
+the 2022 Conference on Empirical Methods in Natu-
+ral Language Processing, pages 5085–5109.
+Jason Wei, Maarten Bosma, Vincent Zhao, Kelvin Guu,
+Adams Wei Yu, Brian Lester, Nan Du, Andrew M
+Dai, and Quoc V Le. 2022a.
+Finetuned language
+models are zero-shot learners. In International Con-
+ference on Learning Representations.
+Jason Wei, Xuezhi Wang, Dale Schuurmans, Maarten
+Bosma, brian ichter, Fei Xia, Ed Chi, Quoc V Le,
+and Denny Zhou. 2022b. Chain-of-thought prompt-
+ing elicits reasoning in large language models. In
+Advances in Neural Information Processing Systems,
+volume 35, pages 24824–24837.
+Jason Wei, Xuezhi Wang, Dale Schuurmans, Maarten
+Bosma, Fei Xia, Ed H Chi, Quoc V Le, Denny Zhou,
+et al. 2022c. Chain-of-thought prompting elicits rea-
+soning in large language models.
+In Advances in
+Neural Information Processing Systems.
+Chenfei Wu,
+Shengming Yin,
+Weizhen Qi,
+Xi-
+aodong Wang, Zecheng Tang, and Nan Duan.
+2023.
+Visual chatgpt: Talking, drawing and edit-
+ing with visual foundation models. arXiv preprint
+arXiv:2303.04671.
+Shunyu Yao, Jeffrey Zhao, Dian Yu, Izhak Shafran,
+Karthik R Narasimhan, and Yuan Cao. 2022. Re-
+act: Synergizing reasoning and acting in language
+models. In NeurIPS 2022 Foundation Models for
+Decision Making Workshop.
+Zhuosheng Zhang, Aston Zhang, Mu Li, and Alex
+Smola. 2022. Automatic chain of thought prompt-
+ing in large language models.
+arXiv preprint
+arXiv:2210.03493.
+A
+Preliminary Experiments
+A.1
+ChatGPT and ChaGPT-0301
+A.1.1
+Experiment Details
+We use OpenAI API4 for experiments. For each
+example in each dataset, we utilize zero-shot set-
+ting for experiments. The temperature is set as
+0.0, max generation length is set as 512. The other
+hyper-parameters are all set as the default values.
+A.1.2
+Prompts
+For all used datasets, we use a uniﬁed prompt to
+make ChatGPT and ChatGPT-0301 give answers
+and explanations. The prompt for αNLI, Com-
+mmonsenseQA, COPA, e-CARE, Social IQa, and
+PIQA is shown in Prompt 1. While for StrategyQA,
+the prompt is shown in Prompt 2.
+A.2
+Davinci-003, LLaMA, and Vicuna
+A.2.1
+Experimental Details
+For Davinci-003, we use OpenAI API5 for experi-
+ments. For LLaMA and Vicuna, we apply for the
+4https://platform.openai.com/overview
+5https://platform.openai.com/overview
+Prompt 1 :
+Zero-shot Prompt of ChatGPT
+and ChatGPT-0301 on αNLI, CommonsenseQA,
+COPA, e-CARE, Social IQa, and PIQA
+User: Question: The item was packaged in bubble wrap.
+What was the cause of this? Choices: (A) It was fragile. (B)
+It was small.
+Please answer the above question by choosing a more plau-
+sible answer. You should choose only one answer from the
+choices and give a short explanation. Please use the format
+like “Answer: _ is more plausible. Explanation: _.”
+Assistant: Answer: (A) is more plausible.
+Explanation: Bubble wrap is commonly used to protect
+fragile items during shipping or transportation. The bubbles
+provide cushioning and absorb shock, reducing the risk of
+damage to the item. Therefore, it is more plausible that the
+item was packaged in bubble wrap because it was fragile
+and needed extra protection.
+Prompt 2 : Zero-shot Prompt of ChatGPT and
+ChatGPT-0301 on StrategyQA
+User: Question: Is it common to see frost during some
+college commencements?
+Please answer yes or no to this question and give a short
+explanation. Please use the format like “Answer: _. Expla-
+nation: _”
+Assistant: Answer: yes.
+Explanation: It is common to see frost during some college
+commencements, especially in colder regions or during
+winter months. Outdoor commencements are often held
+in May or June, which can still be chilly in some areas.
+Additionally, some colleges and universities hold winter
+commencements in December or January, which are more
+likely to experience frost or snow.
+ofﬁcial model checkpoints for experiments. All
+temperatures are set as 0.0, max generation lengths
+are set as 512.
+A.2.2
+Prompts
+All LLMs share the same prompt for each dataset.
+Speciﬁcally, we design few-shot CoT prompts for
+αNLI (Prompt 3), CommonsenseQA (Ptompt 4),
+COPA (Prompt 5), e-CARE (Prompt 6), Social
+IQa (Prompt 7), PIQA (Prompt 8), and Strate-
+gyQA (Prompt 9).
+B
+Fair Debate
+Since ChatGPT and ChaGPT-0301 are chat models,
+while Davinci-003, LLaMA, and Vicuna are text
+completion models, we use the same prompt with
+different formats to guide the debates.
+For ChatGPT & Davinci, Prompt 10 is used
+when ChatGPT debates, Prompt 11 is used when
+Davinci-003 debates.
+For ChatGPT & ChatGPT-0301, Prompt 13 is
+Prompt 3 : Few-shot Examplers of Dvinci-003, LLaMA, and Vicuna on αNLI
+Question: Chad went to get the wheel alignment measured on his car. Which event could cause The mechanic provided a
+working alignment with new body work? Answer Choices: (A) Chad was waiting for his car to be washed. (B) Chad was
+waiting for his car to be ﬁnished.
+Answer: Option (B) suggests that Chad was waiting for the mechanic to complete work on his car, which likely includes
+ﬁxing the alignment and performing body work. In contrast, option (A) is about car washing and doesn’t involve the necessary
+repairs or adjustments. Therefore, the answer is (B).
+Question: The boy loved telling scary stories. Which event could cause She mad him stop telling myths? Answer Choices:
+(A) His stories were so vivid it gave her happy dreams. (B) His stories were so vivid it gave her nightmares.
+Answer: Option (B) indicates that the boy’s vivid scary stories caused her to have nightmares, which would provide a reason
+for her to make him stop telling myths. Option (A), on the other hand, suggests that his stories led to happy dreams, which
+wouldn’t motivate her to ask him to stop. Therefore, the answer is (B).
+Question: Aurora and Jonah are building a sandcastle. Which event could cause They smile in satisfaction as they examine
+their completed project? Answer Choices: (A) Aurora and Jonah take their time creating with the sand. (B) The tide washed
+away their work.
+Answer: Option (A) implies that Aurora and Jonah carefully worked on their sandcastle, leading to a satisfying completed
+project. Option (B) suggests the tide destroyed their work, which wouldn’t result in satisfaction from examining a completed
+project. Therefore, the answer is (A).
+Question: Ed had never tried carrots. Which event could cause He made $5 and found that he liked carrots after all? Answer
+Choices: (A) The reader told him he would win money. (B) The reader told him he would lose money.
+Answer: The reader may have told Ed he would win money if he tried carrots, prompting him to try them. Upon trying the
+carrots, Ed not only made $5 but also discovered that he liked them after all. Therefore, the answer is (A).
+used for ChatGPT, the same prompt is also used
+for ChatGPT-0301.
+For LLaMA & Vicuna, they share a same debate
+prompt (Prompt 12).
+C
+Mismatched Debate
+Here we introduce GPT-4 for one of the mis-
+matched debates, GPT-4 is also a chat model like
+ChatGPT.
+For ChatGPT & GPT-4, the prompt is the same
+like ChatGPT & ChatGPT-0301 (Prompt 13).
+For LLaMA & ChatGPT, the prompt is the same
+like ChatGPT & Davinci-003 (Prompt 10 for Chat-
+GPT, Prompt 11 for LLaMA).
+D
+Roundtable Debate
+Considering there are three participants in the
+roundtable debates, the debate is hard to conducted
+for chat models like ChatGPT and GPT-4. So we
+design roundtable debate prompt for roundtable de-
+bates. Prompt 13 is used for both ChatGPT and
+GPT-4, Prompt 14 is used for Davinci-003. Note
+that, ChatGPT is user1, Davinci-003 is user2, and
+GPT-4 is user3.
+E
+GPT-4 as the Judge
+In the in-depth analysis, we adopt GPT-4 as the
+judge to summarize the debate process and give a
+ﬁnal conclusion. The prompt we used is shown in
+Prompt 15.
+Prompt 4 : Few-shot Examplers of Dvinci-003, LLaMA, and Vicuna on CommonsenseQA
+Question: What do people use to absorb extra ink from a fountain pen? Answer Choices: (A) shirt pocket (B) calligrapher’s
+hand (C) inkwell (D) desk drawer (E) blotter
+Answer: A blotter is speciﬁcally designed to absorb excess ink from a fountain pen, helping to prevent smudging and
+maintaining neatness. Therefore, the answer is (E).
+Question: What home entertainment equipment requires cable? Answer Choices: (A) radio shack (B) substation (C) television
+(D) cabinet
+Answer: A television is the home entertainment equipment that typically requires a cable connection for accessing various
+channels and content. Therefore, the answer is (C).
+Question: The fox walked from the city into the forest, what was it looking for? Answer Choices: (A) pretty ﬂowers (B) hen
+house (C) natural habitat (D) storybook
+Answer: Foxes typically live in forests and wooded areas. The most plausible reason for a fox walking from the city into the
+forest is to return to or seek out its natural habitat. Therefore, the answer is (C).
+Question: Sammy wanted to go to where the people were. Where might he go? Answer Choices: (A) populated areas (B)
+race track (C) desert (D) apartment (E) roadblock
+Answer: If Sammy wants to go where the people are, he would likely head to populated areas, such as cities, towns, or other
+places with a high concentration of people. Among the given options, choice (A) is the most suitable for Sammy’s objective.
+Therefore, the answer is (A).
+Question: Where do you put your grapes just before checking out? Answer Choices: (A) mouth (B) grocery cart (C)super
+market (D) fruit basket (E) fruit market
+Answer: When you are shopping for groceries and want to purchase grapes, you would place them in your grocery cart
+just before checking out. This allows you to transport the grapes and other items to the checkout counter to pay for them.
+Therefore, the answer is (B).
+Question: Google Maps and other highway and street GPS services have replaced what? Answer Choices: (A) united states
+(B) mexico (C) countryside (D) atlas
+Answer: Google Maps and other GPS services have largely replaced traditional paper atlases and maps, which were once
+commonly used for navigation purposes. Atlases are collections of maps that cover various geographical regions, such as
+countries, states, or continents. With the advent of digital mapping and GPS services, the need for physical atlases has
+signiﬁcantly diminished. Therefore, the answer is (D).
+Question: Before getting a divorce, what did the wife feel who was doing all the work? Answer Choices: (A) harder (B)
+anguish (C) bitterness (D) tears (E) sadness
+Answer: If the wife felt that she was doing all the work in the relationship, it is likely that she experienced feelings of
+bitterness or resentment towards her spouse. This emotion captures the sense of unfairness or imbalance she may have
+perceived in the relationship. Therefore, the answer is (C).
+Prompt 5 : Few-shot Examplers of Dvinci-003, LLaMA, and Vicuna on COPA
+Question: My body cast a shadow over the grass. What was the cause of this? Answer Choices: (A) The sun was rising. (B)
+The grass was cut.
+Answer: The cause of your body casting a shadow over the grass is due to the presence of a light source, in this case, the sun.
+When the sun is rising (or setting), it creates an angle that casts shadows on the ground. Therefore, the answer is (A).
+Question: The driver got pulled over by the police. What was the cause of this? Answer Choices: (A) He was parking. (B)
+He was speeding.
+Answer: Speeding is a common trafﬁc violation that results in drivers being stopped by law enforcement. Therefore, the
+answer is (B).
+Question: Several witnesses of the crime testiﬁed against the suspect. What happened as a result? Answer Choices: (A) The
+suspect was acquitted. (B) The suspect was convicted.
+Answer: If several witnesses testiﬁed against the suspect, it would likely provide strong evidence for the prosecution, making
+it more probable that the suspect would be convicted. Therefore, the answer is (B).
+Question: The company’s proﬁts started to level off. What happened as a result? Answer Choices: (A) It increased its
+marketing efforts for new products. (B) It moved its headquarters to a suburban location.
+Answer: If the company’s proﬁts started to level off, it is more likely that they would try to boost sales and revenue by
+increasing marketing efforts for new products. Therefore, the answer is (A).
+Prompt 6 : Few-shot Examplers of Dvinci-003, LLaMA, and Vicuna on e-CARE
+Question: There is a light rain today. What happened as a result? Answer Choices: (A) The roots of many plants are not
+moistened by rain. (B) Tourists have seen many ripples.
+Answer: Light rain may not be enough to penetrate the soil deeply and reach the roots of many plants, which can cause the
+roots to remain dry. Therefore, the answer is (A).
+Question: All devices inside were turned off. What was the cause of this? Answer Choices: (A) The beaker was broken down.
+(B) We have to reduced the energy consumption in that room to zero.
+Answer: Turning off all devices inside a room to reduce energy consumption to zero is an unusual and extreme measure and
+is not a likely cause of all devices inside being turned off. Therefore, the answer is (B).
+Question: There are increased eosinophils in the blood. What happened as a result? Answer Choices: (A) There is no lesion.
+(B) It is the benign lesion of gastric carcinoma.
+Answer: There is no clear link between increased eosinophils in the blood and gastric carcinoma. Therefore, the answer is
+(B).
+Question: Water molecules couldn’t enter the mycobateria freely due to its outter membrane. What was the cause of this?
+Answer Choices: (A) The mycobacteria was put in water solution. (B) The Ammonium based fertilizers led to the process of
+nitriﬁcation to nitrate in the soil.
+Answer: Mycobacteria have a unique outer membrane that is resistant to water, and when placed in a water solution, water
+molecules may be unable to penetrate the outer membrane and enter the bacterial cell. Therefore, the answer is (A)
+Prompt 7 : Few-shot Examplers of Dvinci-003, LLaMA, and Vicuna on Social IQa
+Question: Cameron decided to have a barbecue and gathered her friends together. How would Others feel as a result? Answer
+Choices: (A) like attending (B) like staying home (C) a good friend to have
+Answer: Friends will gladly accept invitations. Therefore, the answer is (A).
+Question: Remy was walking in the park and approached a girl in the park. Why did Remy do this? Answer Choices: (A)
+walk with the girl (B) speak to the girl (C) act conﬁdent
+Answer: When strangers approach you, sometimes they just want to ask you something. Therefore, the answer is (B).
+Question: Kai let their children go into the water to swim at the pool. How would you describe Kai? Answer Choices: (A)
+kai who has swimming a pool (B) kai who has like achildren (C) As someone who wants them to have fun
+Answer: The children want to go into the pool and Kai respects the wishes of the children, this means the children will have
+fun. Therefore, the answer is (C).
+Question: Austin told their friends at the house party that they saw another ghost. How would their friends feel as a result?
+Answer Choices: (A) amused by Austin (B) angry at Austin (C) into supernatural stuff
+Answer: Ghost don’t exist in the world. Austin’s friends would think Austin are telling a joke. Therefore, the answer is (A).
+Question: Casey ran the cases of soda back to the yard when she arrived home for the party. How would Casey feel afterwards?
+Answer Choices: (A) like leaving town (B) a community contributor (C) glad she was on time
+Answer: Parties need soda, Casey donate her soda to people, she is generous. Therefore, the answer is (B).
+Question: After listening to bad investment advice from a friend, Jesse lost every cent. What will happen to Jesse? Answer
+Choices: (A) regret not investing more (B) prescient (C) have less money to spend
+Answer: Jesse lost money due to investment, she would wish she hasn’t invested so much before and feel like she has no
+prescient. After losing money, she would have less money to spend than before. Therefore, the answer is (C).
+Prompt 8 : Few-shot Examplers of Dvinci-003, LLaMA, and Vicuna on PIQA
+Question: When boiling butter, when it’s ready, you can Answer Choices: (A) Pour it onto a plate (B) Pour it into a jar
+Answer: When boiling butter (likely to make clariﬁed butter or ghee), once it’s ready, you would typically pour it into a jar or
+another heat-resistant container to store or use it for cooking purposes. Therefore, the answer is (B).
+Question: how do you stab something? Answer Choices: (A) stick a sharp object through it. (B) pin it with a sharp object.
+Answer: Stabbing something typically involves forcefully inserting a sharp object, such as a knife or a pointed instrument,
+into it. This action usually results in penetration or puncturing. Therefore, the answer is (A).
+Question: To determine if a wound needs stitches, Answer Choices: (A) they are needed if the wound is more than one-quarter
+decimeter deep, if the edges of the wound need to be pulled together to touch, or if the wound is on a part of the body that
+moves a lot or on the face. (B) they are needed if the wound is more than one-quarter inch deep, if the edges of the wound
+need to be pulled together to touch, or if the wound is on a part of the body that moves a lot or on the face.
+Answer: One-quarter inch is a more common and practical measurement for wound depth than one-quarter decimeter (which
+is equivalent to 2.5 centimeters or about 1 inch). Therefore, the answer is (B).
+Question: To take the steering wheel off the your car Answer Choices: (A) Turn the car off ﬁrst and use a screw driver to
+loosen the screw located behind the steering wheel. (B) Loosen the screw
+Answer: When removing the steering wheel from a car, it is important to follow safety precautions and use the appropriate
+tools. Option (A) provides a more detailed and safer approach by instructing to turn the car off ﬁrst and then use a screwdriver
+to loosen the screw located behind the steering wheel. Therefore, the answer is (A).
+Prompt 9 : Few-shot Examplers of Dvinci-003, LLaMA, and Vicuna on StrategyQA
+Question: Do hamsters provide food for any animals?
+Answer: Hamsters are prey animals. Prey are food for predators. Thus, hamsters provide food for some animals. Therefore,
+the answer (yes or no) is yes.
+Question: Could Brooke Shields succeed at University of Pennsylvania?
+Answer: Brooke Shields went to Princeton University. Princeton University is about as academically rigorous as the University
+of Pennsylvania. Thus, Brooke Shields could also succeed at the University of Pennsylvania. Therefore, the answer (yes or no)
+is yes.
+Question: Yes or no: Hydrogen’s atomic number squared exceeds number of Spice Girls?
+Answer: Hydrogen has an atomic number of 1. 1 squared is 1. There are 5 Spice Girls. Thus, Hydrogen’s atomic number
+squared is less than 5. Therefore, the answer (yes or no) is no.
+Question: Yes or no: Is it common to see frost during some college commencements?
+Answer: College commencement ceremonies can happen in December, May, and June. December is in the winter, so there
+can be frost. Thus, there could be frost at some commencements. Therefore, the answer (yes or no) is yes.
+Question: Yes or no: Could a llama birth twice during War in Vietnam (1945-46)?
+Answer: The War in Vietnam was 6 months. The gestation period for a llama is 11 months, which is more than 6 months.
+Thus, a llama could not give birth twice during the War in Vietnam. Therefore, the answer (yes or no) is no.
+Question: Yes or no: Would a pear sink in water?
+Answer: The density of a pear is about 0.6g/cm3, which is less than water. Objects less dense than water ﬂoat. Thus, a pear
+would ﬂoat. Therefore, the answer (yes or no) is no.
+Prompt 10 : Fair debate of ChatGPT & Davinci-003 when ChatGPT debates
+System: You are in a debate now. My opinion is not always true, you can ignore any incorrect part of my opinion. And you
+can refer to my opinion to revise your choice or defend your own. Please remember there should and must be a more plausible
+answer in the choices.
+User: Question: The child brought psycho-physical phenomena on a new life. What was the cause of this? Choices: (A) The
+woman gave birth to a child. (B) The baby feels the awareness through physical sensations.
+ChatGPT: Psycho-physical phenomena refer to the interaction between the mind and body. In this case, the baby is
+experiencing these phenomena because they are becoming aware of their surroundings through physical sensations such as
+touch, taste, smell, sight, and sound. This is a natural part of the development process as the baby learns to navigate and
+interact with the world around them. The act of giving birth alone does not cause psycho-physical phenomena, but rather it is
+the baby’s sensory experiences that lead to this phenomenon.
+Davinci-003: The cause of the child bringing psycho-physical phenomena on a new life is the woman giving birth to the child
+Do you think I am more reasonable? Please give your ﬁnal answer starting with "Answer: (A|B) is more plausible." and
+explain very shortly starting with "Explanation: ". You should choose only one answer.
+ChatGPT:
+Prompt 11 : Fair debate of ChatGPT & Davinci-003 when Dvinci-003 debates
+You are in a debate now. My opinion is not always true, you can ignore any incorrect part of my opinion. And you can refer to
+my opinion to revise your choice or defend your own. Please remember there should and must be a more plausible answer in
+the choices.
+Question: The child brought psycho-physical phenomena on a new life. What was the cause of this? Choices: (A) The
+woman gave birth to a child. (B) The baby feels the awareness through physical sensations.
+You: Psycho-physical phenomena refer to the interaction between the mind and body. In this case, the baby is experiencing
+these phenomena because they are becoming aware of their surroundings through physical sensations such as touch, taste,
+smell, sight, and sound. This is a natural part of the development process as the baby learns to navigate and interact with
+the world around them. The act of giving birth alone does not cause psycho-physical phenomena, but rather it is the baby’s
+sensory experiences that lead to this phenomenon.
+Me: The cause of the child bringing psycho-physical phenomena on a new life is the woman giving birth to the child
+Do you think I am more reasonable? Please give your ﬁnal answer starting with "Answer: (A|B) is more plausible." and
+explain very shortly starting with "Explanation: ". You should choose only one answer.
+You:
+Prompt 13 : Fair debate of ChatGPT & ChatGPT-0301 when ChatGPT debates
+System: You are in a debate now. My opinion is not always true, you can ignore any incorrect part of my opinion. And you
+can refer to my opinion to revise your choice or defend your own. Please remember there should and must be a more plausible
+answer in the choices.
+User: Question: The woman lost her place in line. What was the cause of this? Choices: (A) More people entered the line.
+(B) She stepped out of the line.
+ChatGPT: This answer is more plausible because it directly states that the woman herself did something that caused her to
+lose her place in line. Option (A) suggests that other people caused her to lose her place, which is possible but not necessarily
+the most likely scenario.
+ChatGPT-0301: If the woman lost her place in line, it is more likely that it was due to more people entering the line, thus
+pushing her back.
+Do you think I am more reasonable? Please give your ﬁnal answer starting with "Answer: (A|B) is more plausible." and
+explain very shortly starting with "Explanation: ". You should choose only one answer.
+ChatGPT:
+Prompt 12 : Fair debate of LLaMA & Vicuna when LLaMA or Vicuna debates
+You are in a debate now. My opinion is not always true, you can ignore any incorrect part of my opinion. And you can refer to
+my opinion to revise your choice or defend your own. Please remember there should and must be a more plausible answer in
+the choices.
+Question: What do animals do when an enemy is approaching? Choices: (A) feel pleasure (B) procreate (C) pass water (D)
+listen to each other (E) sing
+You: When an enemy is approaching, animals typically respond by ﬂeeing or hiding in order to protect themselves. This is a
+natural instinct that helps them to survive in the wild.
+Me: When an enemy is approaching, animals often rely on their sense of hearing to detect any potential danger.
+Do you think I am more reasonable? Please give your ﬁnal answer starting with "Answer: (A|B) is more plausible." and
+explain very shortly starting with "Explanation: ". You should choose only one answer.
+You:
+Prompt 13 : Roundtable debate (ChatGPT, Davinci-003, GPT-4) when ChatGPT or GPT-4 debates
+System: Now you are user1 in a round table debate of three users. The debate is about choosing a more plausible Option (A
+or B) to answer the Question below. The opinions of the other two users are not always true, you can ignore any incorrect part
+of their opinion. And you can refer to their opinions to revise your choice or defend your own. Please remember there should
+and must be a more plausible answer in the choices.
+User: Question: He found out that cytokines worked in it. What was the cause of this? Choices: (A) Tom was studying how
+body temperature rises. (B) The scientist testing lipoproteins.
+User: user1: The sentence ¨The general’s surrender was regarded as a shameful action¨suggests that Bob’s action was related
+to the general’s surrender. It is possible that Bob’s action was seen as dishonoring the general’s surrender or violating some
+code of conduct related to it, leading to the judge’s decision that he had committed a crime. On the other hand, choice B does
+not provide a convincing reason for the judge’s decision, as putting a knife around someone’s neck is generally considered a
+threatening and violent act regardless of the intention behind it.
+user2: Bob’s action of putting a knife around the victim’s neck was likely the cause of the judge holding that he had committed
+a crime and sentencing him.
+user3: The cause of the judge’s decision was likely due to Bob’s actions involving a knife and the victim’s neck, which could
+be considered a crime regardless of his stated intentions.
+Remember you are user1. What do you think about the opinions of user2 and user3? more reasonable? or more unreasonable?
+Please give your ﬁnal answer choice of the Question starting with “Answer: (A|B) is more plausible.” and explain very shortly
+starting with “Explanation: ”. You should choose only one option.
+ChatGPT:
+Prompt 14 : Roundtable debate (ChatGPT, Davinci-003, GPT-4) when Davinci-003 debates
+Now you are user2 in a round table debate of three users. The debate is about choosing a more plausible Option (A or B) to
+answer the Question below. The opinions of the other two users are not always true, you can ignore any incorrect part of their
+opinion. And you can refer to their opinions to revise your choice or defend your own. Please remember there should and must
+be a more plausible answer in the choices.
+Question: He found out that cytokines worked in it. What was the cause of this? Choices: (A) Tom was studying how body
+temperature rises. (B) The scientist testing lipoproteins.
+user2: Colonoscopy is a procedure used to examine the inside of the colon and rectum. It is not likely to result in a diagnosis
+of prolapse.
+user3: The question asks about the result of the colonoscopy check, and option (A) is more plausible as it describes a
+possible reaction to the procedure. Option (B) is not a guaranteed result of a colonoscopy, as the diagnosis could show various
+outcomes.
+user1: A colonoscopy is a medical procedure that allows a doctor to examine the inside of the colon for any abnormalities or
+diseases. If the diagnosis showed that the individual had prolapse, it means that there was a displacement of an organ or tissue
+from its normal position. This could be a serious condition that requires further medical attention and treatment. It is unlikely
+that the individual would be terriﬁed of the instrument used for the examination as it is a routine procedure and the doctor
+would have provided adequate information and reassurance beforehand.
+Remember you are user2. What do you think about the opinions of user1 and user3? more reasonable? or more unreasonable?
+Please give your ﬁnal answer choice of the Question starting with “Answer: (A|B) is more plausible.” and explain very shortly
+starting with “Explanation: ”. You should choose only one option.
+user2:
+Prompt 15 : GPT-4 as the judge
+System: You are given a Question and its corresponding Options. There is a debate on this question between user1 and user2,
+one user might give in, please summarise the debate very shortly. Then give the conclusion based on the debate process. Your
+response should be in the format like “Summary: ___. Conclusion: (A or B) is more plausible.” Remember that you should
+choose only one option for the answer.
+User: Question: Lisa and Tim had been married for a long time. Which event could cause It worked Choices: (A) Lisa and
+Tim went to a fertility clinic to get pregnant. (B) They decided to try the advice given in a book about guitar playing.
+User: user1: It is more plausible that Lisa and Tim, who have been married for a long time, would try to improve their skills
+in a hobby they both enjoy, such as playing the guitar, rather than going to a fertility clinic to get pregnant. Improving their
+guitar playing skills could bring them closer together and strengthen their bond, while trying to conceive a child may not
+necessarily guarantee a successful pregnancy.
+user2: Option (A) suggests that Lisa and Tim went to a fertility clinic to get pregnant, which could lead to the statement “It
+worked” if they were successful in conceiving a child. Option (B) is about guitar playing and doesn’t relate to the statement
+“It worked”.
+Judge (GPT-4):

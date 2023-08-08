@@ -1,0 +1,2028 @@
+Citation: Fields, C.; Levin, M.
+Competency in Navigating Arbitrary
+Spaces as an Invariant for Analyzing
+Cognition in Diverse Embodiments.
+Entropy 2022, 24, 819. https://
+doi.org/10.3390/e24060819
+Academic Editors: Martin Hilbert,
+Vanessa Ferdinand, Helena Miton,
+Noga Zaslavsky and Sarah Marzen
+Received: 26 April 2022
+Accepted: 8 June 2022
+Published: 12 June 2022
+Publisher’s Note: MDPI stays neutral
+with regard to jurisdictional claims in
+published maps and institutional afﬁl-
+iations.
+Copyright:
+© 2022 by the authors.
+Licensee MDPI, Basel, Switzerland.
+This article is an open access article
+distributed
+under
+the
+terms
+and
+conditions of the Creative Commons
+Attribution (CC BY) license (https://
+creativecommons.org/licenses/by/
+4.0/).
+entropy
+Concept Paper
+Competency in Navigating Arbitrary Spaces as an Invariant for
+Analyzing Cognition in Diverse Embodiments
+Chris Fields 1,2
+and Michael Levin 2,3,*
+1
+23 Rue des Lavandières, 11160 Caunes Minervois, France; ﬁeldsres@gmail.com
+2
+Allen Discovery Center at Tufts University, Science and Engineering Complex, 200 College Ave.,
+Medford, MA 02155, USA
+3
+Wyss Institute for Biologically Inspired Engineering at Harvard University,
+Boston, MA 02115, USA
+*
+Correspondence: michael.levin@tufts.edu
+Abstract: One of the most salient features of life is its capacity to handle novelty and namely to thrive
+and adapt to new circumstances and changes in both the environment and internal components.
+An understanding of this capacity is central to several ﬁelds: the evolution of form and function,
+the design of effective strategies for biomedicine, and the creation of novel life forms via chimeric
+and bioengineering technologies. Here, we review instructive examples of living organisms solving
+diverse problems and propose competent navigation in arbitrary spaces as an invariant for thinking
+about the scaling of cognition during evolution. We argue that our innate capacity to recognize
+agency and intelligence in unfamiliar guises lags far behind our ability to detect it in familiar
+behavioral contexts. The multi-scale competency of life is essential to adaptive function, potentiating
+evolution and providing strategies for top-down control (not micromanagement) to address complex
+disease and injury. We propose an observer-focused viewpoint that is agnostic about scale and
+implementation, illustrating how evolution pivoted similar strategies to explore and exploit metabolic,
+transcriptional, morphological, and ﬁnally 3D motion spaces. By generalizing the concept of behavior,
+we gain novel perspectives on evolution, strategies for system-level biomedical interventions, and
+the construction of bioengineered intelligences. This framework is a ﬁrst step toward relating
+to intelligence in highly unfamiliar embodiments, which will be essential for progress in artiﬁcial
+intelligence and regenerative medicine and for thriving in a world increasingly populated by synthetic,
+bio-robotic, and hybrid beings.
+Keywords: physiology; anatomical morphospace; basal cognition
+“Intelligence is a fixed goal with variable means of achieving it.”
+—William James
+1. Introduction
+Perhaps the most striking property of life, when contrasted with inanimate objects
+and the artifacts of human engineering to date, is its ability to operate adaptively in a
+range of problem domains. This adaptability persists, as noted by James in the quotation
+above [1], even when circumstances require qualitatively different adaptive responses.
+Living systems at all scales—from cells to swarms of organisms—exhibit preferences about
+speciﬁc states and exert energy to achieve those states by any means available. There is
+great variety in the degree of adaptive competency seen across the biosphere, ranging
+from simple homeostatic processes to complex minds with meta-cognition able to not only
+pursue complex goals but to set and reset those goals [2]. The capacity to navigate and
+behave in three-dimensional space via degrees of memory, foresight, creativity, etc. has
+been long studied by behavioral and cognitive science. More recently, the capacities of
+humans and other animals to navigate and behave in complex social environments has also
+been intensively investigated, as has the ability of humans (infants and adults) and other
+Entropy 2022, 24, 819. https://doi.org/10.3390/e24060819
+https://www.mdpi.com/journal/entropy
+Entropy 2022, 24, 819
+2 of 33
+animals to detect intelligent agents in their environments and form a theory of mind [3].
+However, the omics revolution and the availability of big data in multiple domains, as
+well as the emerging ﬁelds of basal cognition, synthetic bioengineering, and artiﬁcial
+intelligence, require the development of novel frameworks for modeling “navigation” and
+“behavior” in abstract “spaces” at multiple scales and for understanding the relationships
+between them.
+It is now clear, for example, that molecular networks, single-celled organisms, tissues,
+and organs exhibit behaviors that, when viewed at a suitable level of abstraction, can be
+placed on the same continuum as familiar model systems studied in neuroscience [4–10].
+The conservation of molecular mechanisms supporting behavioral functionality is now
+being characterized in the ﬁeld of basal cognition, making it clear that ﬂexible, adaptive
+behavioral competencies long predate the appearance of complex brains. Moreover, a
+wide range of novel organisms including cyborgs, hybrots, biobots, and others are being
+created by chimeric approaches that combine evolved and designed material. These efforts
+give rise to beings that cannot be placed within the natural phylogenetic tree of Earth,
+with behavioral competencies that cannot be readily guessed by analogy to familiar forms
+selected within speciﬁc environments [11–22].
+The boundaries between “organisms” and “machines” are, moreover, rapidly disap-
+pearing [23] as evolutionary techniques are used by machines to create other machines, and
+biological control systems become increasingly tractable to reprogramming [24,25]. These
+advances suggest that the classical deﬁnitions of intelligence, agency, cognition, and similar
+terms, based on the limitations of technology and imagination, are unlikely to survive the
+next few decades. It is essential now to develop frameworks that generalize across the
+space of possible beings and focus not on the contingent facts of a creature’s composition
+or provenance (e.g., evolved vs. designed) but rather on deep functional aspects. We must
+learn to recognize, repair, create, and relate to novel beings, with minds of diverse cognitive
+capacity in new and unfamiliar forms. While we (and many other animals) are very good
+at recognizing agency in both the three-dimensional world of conventional behavior and
+the much higher dimensional space of social interactions, we are poor at recognizing intelli-
+gence in novel guises. Hence, we often neglect the intelligence underlying competencies
+at the sub-organismal scales (Figure 1A). This acts as a brake on technological progress
+(in robotics and in biomedical science) and holds back the development of new systems
+of ethics that are required for a world outside of a Garden of Eden in which we would be
+confronted only by a ﬁnite, unchanging set of standard animals. Toward the development
+of mature theories of intelligence based on cybernetic principles and not frozen accidents
+of the evolutionary stream on Earth, we propose a framework—one based on the well-
+established ideas of hierarchical Bayesian active inference [26–30]—that generalizes the
+notion of the ”space” within which an agent can operate and deﬁnes intelligence as the
+competency of navigating that space. Our goal is to identify a deep invariant that would
+be useful across truly diverse intelligences and that would establish a rigorous conceptual
+basis to advance empirical studies of agency across embodiments. As we show in what
+follows, minimization of the Bayesian prediction error—cast formally as minimization of a
+variational free energy (VFE) [26–30]—meets these requirements.
+Entropy 2022, 24, 819
+3 of 33
+Entropy 2022, 24, 819 
+3 of 35 
+ 
+ 
+ 
+Figure 1. Multi-scale competency architecture (MCA). (A) The MCA is implemented by biological 
+systems in which every level of organization traverses various spaces toward preferred regions. 
+Subcellular systems (molecular networks) navigate the transcriptional space (B), while collections 
+of cells navigate the anatomical morphospace, such as planarian tissues that can be pushed into 
+regions of the space corresponding to diverse species’ head shapes without genomic editing (C) 
+(image by Alexis Pietak [31]). Higher-order systems distort the energy landscapes for their 
+subsystems (via virtual “objects” in that space) to enable their components’ local homeostatic 
+mechanisms to achieve goals that are adaptive at the higher level systems’ space. This links the 
+intelligence (or competent navigation) of spaces to simple energy minimization dynamics. Panels 
+(A,B) are courtesy of Jeremy Guay of Peregrine Creative. 
+Understanding how agents of all kinds—from evolved natural forms to 
+bioengineered creations—solve problems is of high importance on several fronts. From 
+the basic science perspective, we stand to gain a more profound understanding of the 
+evolutionary process and how it innovates [32,33]. Fascinating questions surround the 
+relationship of biological hardware determined by DNA and the dynamic functionality 
+upon which selection operates. There is also a set of practical impacts. Biomedicine risks 
+stagnating in the low-hanging fruit of single-gene and single-cell diseases that are 
+reachable by genomic editing and stem cell biology without exploiting the “software” of 
+life [34]. Understanding the algorithms that enable life to thrive despite a wide range of 
+perturbations (described below) offers a roadmap for regenerative medicine in which we 
+exploit the competencies of cellular collectives to achieve system-level outcomes that are 
+simply too complex to micromanage [35,36]. Micromanaging complex systems is very 
+difficult and faces intractable inverse problems [37] with respect to knowing what 
+pathway or gene to edit to achieve, for example, organ regeneration. A mature 
+understanding of how biology at all scales solves problems could enable bioengineers to 
+work in much simpler, lower-dimensional spaces in which we identify triggers or stimuli 
+for top-down control of form and function. Top-down control of decision making at the 
+organ level avails regenerative medicine of the master triggers that affect a kind of 
+behavior shaping of body cells and tissues to induce predictable changes in growth and 
+form that are too hard to force from the bottom up [35,36,38]. 
+The philosophical basis of our perspective has been described previously; it dates 
+back at least to Ashby [39] and was featured prominently in the work of Maturana and 
+(A)
+(B)
+(C)
+deforms
+Figure 1. Multi-scale competency architecture (MCA). (A) The MCA is implemented by biological
+systems in which every level of organization traverses various spaces toward preferred regions.
+Subcellular systems (molecular networks) navigate the transcriptional space (B), while collections of
+cells navigate the anatomical morphospace, such as planarian tissues that can be pushed into regions
+of the space corresponding to diverse species’ head shapes without genomic editing (C) (image by
+Alexis Pietak [31]). Higher-order systems distort the energy landscapes for their subsystems (via
+virtual “objects” in that space) to enable their components’ local homeostatic mechanisms to achieve
+goals that are adaptive at the higher level systems’ space. This links the intelligence (or competent
+navigation) of spaces to simple energy minimization dynamics. Panels (A,B) are courtesy of Jeremy
+Guay of Peregrine Creative.
+Understanding how agents of all kinds—from evolved natural forms to bioengineered
+creations—solve problems is of high importance on several fronts. From the basic science
+perspective, we stand to gain a more profound understanding of the evolutionary process
+and how it innovates [32,33]. Fascinating questions surround the relationship of biolog-
+ical hardware determined by DNA and the dynamic functionality upon which selection
+operates. There is also a set of practical impacts. Biomedicine risks stagnating in the
+low-hanging fruit of single-gene and single-cell diseases that are reachable by genomic
+editing and stem cell biology without exploiting the “software” of life [34]. Understanding
+the algorithms that enable life to thrive despite a wide range of perturbations (described
+below) offers a roadmap for regenerative medicine in which we exploit the competencies
+of cellular collectives to achieve system-level outcomes that are simply too complex to mi-
+cromanage [35,36]. Micromanaging complex systems is very difﬁcult and faces intractable
+inverse problems [37] with respect to knowing what pathway or gene to edit to achieve, for
+example, organ regeneration. A mature understanding of how biology at all scales solves
+problems could enable bioengineers to work in much simpler, lower-dimensional spaces in
+which we identify triggers or stimuli for top-down control of form and function. Top-down
+control of decision making at the organ level avails regenerative medicine of the master
+triggers that affect a kind of behavior shaping of body cells and tissues to induce predictable
+changes in growth and form that are too hard to force from the bottom up [35,36,38].
+The philosophical basis of our perspective has been described previously; it dates
+back at least to Ashby [39] and was featured prominently in the work of Maturana and
+Entropy 2022, 24, 819
+4 of 33
+Varela [40], Pattee [41], and Rosen [42,43], among many others. It is fundamentally an
+observer-focused, gradualist, substrate-independent view of agency that takes evolution
+and developmental biology seriously. We focus on embodied, enactive cognition, on “life
+as it can be”, on the processing of information by agents that exist at multiple scales in
+living organisms, and on goal-directed activity within an active-inference framework. We
+generalize “behavior” to include actions in diverse problem spaces and focus on the role of
+the observer in deﬁning “problems” and “strategies (of various levels of sophistication)” as
+hypotheses to be evaluated based on the degree of prediction and control they provide. We
+emphasize that estimates of the intelligence of any system, natural or not, are fundamentally
+an IQ test for the observer, requiring us to acknowledge our own limitations in being able
+to detect intelligent functionality that differs from our own in embodiment or in its goals.
+This viewpoint was for example the basis for the well-known Turing test. Thus, we seek a
+framework that is general and constrained as little as possible by parochial assumptions of
+the standard human experience of intelligent behavior limited to medium-sized, medium-
+speed objects operating in the 3D world accessible to direct visual perception.
+In what follows, we ﬁrst review the ubiquitous use of abstract spaces to organize ob-
+served biological behavior. We show how, in every case, the biological systems in question
+can be seen as actively behaving in the relevant space. We discuss, in particular, examples
+of living systems solving problems in transcriptional, physiological, and anatomical spaces.
+From this perspective, development and regeneration are the result of a collective intelli-
+gence of cells navigating the anatomical morphospace, and devices such as pacemakers
+and insulin pumps, as well as our standard organs, become more complex versions of
+Braitenberg-like “vehicles” [44] navigating in physiological space. A key communication
+mechanism enabling this collective intelligence is resource exchange (e.g., a cell or tissue
+serving as memory in exchange for food). Hence, it is possible to use “economic” thinking
+to understand homeo- or allostasis. We show how these ideas generalize across multiple
+spaces of interest and suggest that a relatively small number of mechanisms organize
+behavior in any “space” of biological signiﬁcance.
+We generalize from such examples to establish the notion of an arbitrary space in
+which agents operate and in which components distort the spaces for their subcomponents,
+causing them to traverse geodesics with adaptive consequences for the higher levels
+(Figure 1B). This facilitates rigorous recognition, comparison, and manipulation of agents’
+behaviors. We redeﬁne “environment” to mean not just external objects but the internal
+components that serve as an environment to the inner modules that cooperate and compete
+within and across the levels of organization. We propose an account of what spaces are,
+how they come to be, and how observers, selves, and agents operate in those spaces,
+complementing the notion of empowerment from robotics [45–54]. We formalize the notion
+of an observer’s reference frame and show how fundamental active inference processes give
+rise to an abstract idea of an agent’s “action space” that abstracts away from any particular
+set of degrees of freedom and hence allows “action” in spaces characterized by, for example,
+transcriptional or morphological degrees of freedom, as well as in ordinary 3D space with
+its position and momentum degrees of freedom. Our highly integrative framework shows
+how information exchange (mutual mechanistic constraints) between spaces and scales
+enables sophisticated, adaptive system-level computation and efﬁcient representation. We
+end with a discussion of the implications of, as well as the new research directions made
+possible by, this new lens with which to see how agents represent their worlds.
+2. Abstract Spaces Reveal Behavior across Biology
+A ‘space” is just a collection of states, together with some notion of similarity or
+“distance” between states. The use of omics technologies has made commonplace the
+ideas of the “states” of the genome, transcriptome, proteome, and metabolome. Statistical
+measures of the similarity of such states are often based on the assumption that such
+states form a space. Counting the number of base differences between two DNA or RNA
+sequences or of amino acid or amino acid family differences in polypeptide sequences
+Entropy 2022, 24, 819
+5 of 33
+provides a well-known example (e.g., see [55] for an early investigation of metrics of this
+kind). Adopting the formalism of a space allows the use of dynamical concepts, such as
+attractors and ﬂows, as well as the concepts of similarity and distance [56].
+While the spaces deﬁned by omics technologies are often regarded as theoretical
+constructs that we, as external observers, employ to organize and analyze data, it is equally
+natural to regard these as spaces that the system of interest traverses. We suggest abandon-
+ing the concept of a single, objective “behavior” that a system is “really” performing in favor
+of an abstract “action space” that incorporates all of the ways in which an organism can ma-
+nipulate its own or its environment’s degrees of freedom. We propose an observer-centered
+view in which statements about goals and cognitive properties are, in effect, engineering
+claims to be empirically evaluated based on how much progress and control they drive.
+Thus, in place of Morgan’s Canon [57], which urges erring on the side of underestimating
+the level of agency in systems (a kind of scientiﬁc mind blindness as an a priori preference),
+we propose an unbiased view in which multiple observers’ proposed problem spaces and
+levels of competency within those problem spaces could be equally useful.
+In this framework, “preferred” homeostatic or allostatic states become attractors for
+the dynamics executed by the system [58–61]. Within the hierarchical Bayesian active
+inference formalism, they are states that minimize variational free energy (VFE) and hence
+maximize the probability of correct predictions as discussed below. An early insight of
+this approach [27] is that minimizing VFE requires probing the environment to determine
+how it behaves when actively perturbed. While this notion of active inference, with its
+connotation of agency, seems obvious for complex organisms feeding, ﬁghting, ﬂeeing, or
+engaging in social behaviors, we will see below that it is theoretically productive from the
+scales of cells and tissues to those of communities and ecosystems [62,63].
+3. Transcriptional, Metabolic, and Physiological Spaces
+Some cell-level capabilities have only been considered traversals of “spaces” since the
+development of omics technology and big databases. Being able to look at a transcriptome,
+for example, over time made the idea of a transcriptional space—a space of all possible gene
+expression patterns—obvious. However, we still have not, as a research community, begun
+to view the transition of the system through the space as active navigation with the cell
+as an agent. It is usually thought to be a descriptive view of a physical process (although,
+see the work on dynamic adaptation in physiological space [64–66] and on navigation of
+biochemical networks space [67]). Control systems acting on the transcriptome, proteome,
+and metabolome or on the “interactome” that spans all three are typically thought of as
+mechanisms and not as information-processing systems that display active intelligence.
+(However, see [68], in which metabolite regulation of metabolic pathways is characterized
+as “heuristic”, and [69], in which the consequences of metabolic decisions are considered in
+development and disease.) These and other biological phenomena can, however, be cast
+as behavior and problem solving in appropriate spaces, such as the transcriptional and
+physiological spaces depicted in Figure 2A,B, respectively. Doing so allows all of the tools
+of cybernetics, control theory, and the cognitive and behavioral sciences to be brought to
+bear. From this perspective, physiological prosthetics (such as implanted smart insulin or
+neurotransmitter pumps) are simple robots navigating a problem space.
+Entropy 2022, 24, 819
+6 of 33
+Entropy 2022, 24, 819 
+6 of 35 
+ 
+ 
+ 
+Figure 2. Diverse spaces within which living systems navigate. Transcriptional space is the space of 
+possible gene expression patterns, taken with permission from [59]. Examples of a transcriptional 
+state space of a two-gene network (mutual inhibition of genes (A,B)) and the associated epigenetic 
+landscape in the two-dimensional state space are shown. The dynamical state of the network maps 
+to a point in the space; changes in gene activity represent walks in the space. (B) Physiological space 
+is the space of possible physiological states, simplified to just three parameters such as intracellular 
+ion concentrations, taken with permission from [70]. Individual cells occupy regions of the space 
+and can move between states by opening and closing specific ion channels. The functional state 
+(region of the space) is a function of all of the parameters and large-scale variables, such as Vmem 
+(resting potential), which refer to numerous microstates composed of individual ion levels. (C) 
+Navigating spaces to thrive despite novel stressors, taken with permission from [71]. Planaria 
+exposed to barium chloride experience head deprogression because barium is a blocker of 
+potassium channels, making it impossible for the neural tissues in the head to maintain a normal 
+physiology. The flatworms soon regenerate a new head which is barium-insensitive. Transcriptomic 
+analysis showed only a handful of genes whose expression was altered in the barium-adapted 
+heads. Because barium is not something planaria encounter in the wild, this example shows the 
+ability of the cells to navigate transcriptional space to identify a set of genes that enable them to 
+resolve a novel physiological stressor. The mechanism by which they rapidly determine which of 
+many thousands of genes should be up- or downregulated in this scenario is not understood. (The 
+cells do not turn over fast enough to allow a hill-climbing search, for example.) 
+As an example of problem solving in unconventional spaces, consider the following. 
+When planarian flatworms are exposed to barium, a non-specific blocker of potassium 
+channels, their heads rapidly degenerate due to the stress of the neural tissues’ inability 
+to regulate the ionic balance (Figure 2C). Remarkably, when kept in a barium solution, the 
+remaining tails regenerate new heads which are barium-insensitive [71]. Transcriptomic 
+analysis reveals that the difference between the wild-type and barium-adapted heads 
+occurs in only a handful of transcripts. The key facts are that barium is not something that 
+planaria encounter in the wild (thus, there is not a selective pressure to specifically evolve 
+responses to this toxin) and that planarian cells do not turn over fast enough to employ a 
+bacteria-like selection mechanism (random change to test all possible transcriptional 
+responses, with a rare survivor clone repopulating the head). How, among the very high-
+dimensional space of all possible gene expression levels, do the cells know exactly which 
+small complement of transcriptional responses is needed to solve this physiological 
+stressor? There is no time to try every possible combination (which would be 
+astronomical, and many of which would kill the cell anyway). 
+This problem can be formulated as a search policy for navigating transcriptional 
+space (i.e., the space for some specific organism of all possible gene expression patterns). 
+Similar problems have been shown in other model systems of developmental robustness, 
+suggesting exploration strategies that avail organisms of rapid, Lamarckian-like 
+adaptation to stress and changing environmental conditions [72–75]. It is not known yet 
+how the planaria do this, but one possibility involves generalization (one dimension of 
+intelligence) to recognize barium-induced physiological states as belonging to a class of 
+Figure 2. Diverse spaces within which living systems navigate. Transcriptional space is the space of
+possible gene expression patterns, taken with permission from [59]. Examples of a transcriptional
+state space of a two-gene network (mutual inhibition of genes (A,B)) and the associated epigenetic
+landscape in the two-dimensional state space are shown. The dynamical state of the network maps to
+a point in the space; changes in gene activity represent walks in the space. (B) Physiological space is
+the space of possible physiological states, simpliﬁed to just three parameters such as intracellular ion
+concentrations, taken with permission from [70]. Individual cells occupy regions of the space and
+can move between states by opening and closing speciﬁc ion channels. The functional state (region
+of the space) is a function of all of the parameters and large-scale variables, such as Vmem (resting
+potential), which refer to numerous microstates composed of individual ion levels. (C) Navigating
+spaces to thrive despite novel stressors, taken with permission from [71]. Planaria exposed to barium
+chloride experience head deprogression because barium is a blocker of potassium channels, making
+it impossible for the neural tissues in the head to maintain a normal physiology. The ﬂatworms
+soon regenerate a new head which is barium-insensitive. Transcriptomic analysis showed only a
+handful of genes whose expression was altered in the barium-adapted heads. Because barium is
+not something planaria encounter in the wild, this example shows the ability of the cells to navigate
+transcriptional space to identify a set of genes that enable them to resolve a novel physiological
+stressor. The mechanism by which they rapidly determine which of many thousands of genes should
+be up- or downregulated in this scenario is not understood. (The cells do not turn over fast enough
+to allow a hill-climbing search, for example.)
+As an example of problem solving in unconventional spaces, consider the following.
+When planarian ﬂatworms are exposed to barium, a non-speciﬁc blocker of potassium
+channels, their heads rapidly degenerate due to the stress of the neural tissues’ inability to
+regulate the ionic balance (Figure 2C). Remarkably, when kept in a barium solution, the
+remaining tails regenerate new heads which are barium-insensitive [71]. Transcriptomic
+analysis reveals that the difference between the wild-type and barium-adapted heads occurs
+in only a handful of transcripts. The key facts are that barium is not something that planaria
+encounter in the wild (thus, there is not a selective pressure to speciﬁcally evolve responses
+to this toxin) and that planarian cells do not turn over fast enough to employ a bacteria-like
+selection mechanism (random change to test all possible transcriptional responses, with a
+rare survivor clone repopulating the head). How, among the very high-dimensional space
+of all possible gene expression levels, do the cells know exactly which small complement of
+transcriptional responses is needed to solve this physiological stressor? There is no time to
+try every possible combination (which would be astronomical, and many of which would
+kill the cell anyway).
+This problem can be formulated as a search policy for navigating transcriptional space
+(i.e., the space for some speciﬁc organism of all possible gene expression patterns). Similar
+problems have been shown in other model systems of developmental robustness, suggest-
+ing exploration strategies that avail organisms of rapid, Lamarckian-like adaptation to
+stress and changing environmental conditions [72–75]. It is not known yet how the planaria
+do this, but one possibility involves generalization (one dimension of intelligence) to recog-
+Entropy 2022, 24, 819
+7 of 33
+nize barium-induced physiological states as belonging to a class of other problems (like
+excitotoxicity) for which planarian cells may have evolved solutions. Perhaps, like bacterial
+metabolism sensing systems [68,76,77], the cells detect (and act on) highly processed state
+information several steps removed from the proximal events at the membrane. In this
+case, the many ways to depolarize tissue could be naturally coarse-grained to represent a
+single problem: a change in membrane voltage addressable by a single set of transcriptional
+actions. As shown in [78], acting on such coarse-grained information is a simple form of
+meta-processing (i.e., “higher-level” information processing that controls some lower-level
+process). The planarian’s response to barium can, from this perspective, be seen as a very
+primitive form of meta-cognition.
+4. Morphospace: Control of Growth and Form as a Collective Intelligence
+A key aspect of formulating intelligence-based models is the recognition that all in-
+telligent agents are collective intelligences; their problem-solving capacities rely on the
+competencies of their parts and the architecture of their relations. Much like how indi-
+vidual cells’ capabilities rely in part on gene-regulatory networks, which also have the
+capacity for learning [79–83], multicellular creatures have to rely on cellular behaviors
+in order to achieve goals in the anatomical morphospace, or the space of possible shape
+conﬁgurations [84–86]. One way to begin to understand the scaling of intelligence toward
+higher-level goals is to consider how the collective intelligence of cellular swarms imple-
+ments large-scale anatomical homeostasis. Panels A–I in Figure 3 illustrate a number of
+examples of swarm intelligence as the ability to reliably navigate to a correct target mor-
+phology (region of the morphospace) despite perturbations or changing starting positions.
+Entropy 2022, 24, 819 
+7 of 35 
+ 
+ 
+other problems (like excitotoxicity) for which planarian cells may have evolved solutions. 
+Perhaps, like bacterial metabolism sensing systems [68,76,77], the cells detect (and act on) 
+highly processed state information several steps removed from the proximal events at the 
+membrane. In this case, the many ways to depolarize tissue could be naturally coarse-
+grained to represent a single problem: a change in membrane voltage addressable by a 
+single set of transcriptional actions. As shown in [78], acting on such coarse-grained 
+information is a simple form of meta-processing (i.e., “higher-level” information 
+processing that controls some lower-level process). The planarian’s response to barium 
+can, from this perspective, be seen as a very primitive form of meta-cognition. 
+4. Morphospace: Control of Growth and Form as a Collective Intelligence 
+A key aspect of formulating intelligence-based models is the recognition that all 
+intelligent agents are collective intelligences; their problem-solving capacities rely on the 
+competencies of their parts and the architecture of their relations. Much like how 
+individual cells’ capabilities rely in part on gene-regulatory networks, which also have the 
+capacity for learning [79–83], multicellular creatures have to rely on cellular behaviors in 
+order to achieve goals in the anatomical morphospace, or the space of possible shape 
+configurations [84–86]. One way to begin to understand the scaling of intelligence toward 
+higher-level goals is to consider how the collective intelligence of cellular swarms 
+implements large-scale anatomical homeostasis. Panels A–I in Figure 3 illustrate a number 
+of examples of swarm intelligence as the ability to reliably navigate to a correct target 
+morphology (region of the morphospace) despite perturbations or changing starting 
+positions. 
+ 
+Figure 3. Anatomical morphospace and its navigation by cellular collective intelligence. (A) 
+Example of morphospace—the space of possible shapes—for coiled shells (taken with permission 
+from [87]). Three parameters (rate of increase in the size of the generated shell cross section per 
+revolution, the distance between the cross section and the coiling axis, and the rate of translation of 
+the cross section along the axis per revolution) define a space within which many taxa can be found. 
+(B) Space of possible planarian heads defined by possible values of three morphogen values in a 
+computational model (taken with permission from [88]). (C,D) The idea of morphospace and 
+different species of animals as mathematical transformations of coordinates in those spaces was 
+originally proposed by D’Arcy Thompson (panels taken with permission from [89]). Traversals of 
+morphospace can be seen in regeneration, such as for the salamander limb, which will continue to 
+Figure 3. Anatomical morphospace and its navigation by cellular collective intelligence. (A) Example
+of morphospace—the space of possible shapes—for coiled shells (taken with permission from [87]).
+Three parameters (rate of increase in the size of the generated shell cross section per revolution, the
+distance between the cross section and the coiling axis, and the rate of translation of the cross section
+along the axis per revolution) deﬁne a space within which many taxa can be found. (B) Space of
+possible planarian heads deﬁned by possible values of three morphogen values in a computational
+model (taken with permission from [88]). (C,D) The idea of morphospace and different species of
+animals as mathematical transformations of coordinates in those spaces was originally proposed by
+Entropy 2022, 24, 819
+8 of 33
+D’Arcy Thompson (panels taken with permission from [89]). Traversals of morphospace can be seen
+in regeneration, such as for the salamander limb, which will continue to grow when amputated at any
+position (brought to a new region of morphospace for the limb) until the system reaches the correct
+state (the shape of a normal limb), at which point it stops ((E) panel by Jeremy Guay of Peregrine
+Creative), or in the ability of both normal and scrambled tadpole faces to rearrange until a correct frog
+craniofacial morphology is reached ((F,G) taken from [90]). (H) Remodeling, de novo embryogenesis,
+and regeneration are all examples of biological systems’ abilities to navigate from starting positions
+in morphospace “s1”–“s4” and reach the target morphology goal state “G” while avoiding the
+local maxima “LM”. Morphospace plasticity (I) includes the ability of higher-level constraints to
+activate diverse underlying molecular mechanisms as needed. For example, (I) tubulogenesis in
+the amphibian kidney normally works via cell–cell communication, but when the cells are forced
+to be very large (by induced polyploidy), this reduces the number of cells and eventually leads to
+switching to using cytoskeletal bending to form the same diameter of tube from just one cell bending
+around itself (panel by Jeremy Guay from [91,92]).
+During embryonic development, each of us recapitulates evolution’s journey across
+the Cartesian cut: we begin life as a single cell (the fertilized egg), which replicates and
+eventually self-assembles a complex and sometimes highly cognitive being. This process
+is often presented as a feedforward emergence of complexity via massively parallel local
+rules, and much progress in molecular genetics has shed light on the subcellular hardware
+necessary for it to occur. The developmental morphogenetic ﬁeld concept anticipated some
+aspects of this framework, although the mechanistic information linking the parameters
+deﬁning movements in the space and the mediator of the information ﬁeld is only becoming
+apparent now [86,88,93–99]. What is only now beginning to be rigorously understood is
+the degree of intelligence, in William James’s sense, of this process. It is reliable but not
+hardwired. It exhibits remarkable stability and robustness, capable of reaching the same
+target morphologies despite signiﬁcant departures from evolutionarily expected (default,
+wild-type) components and environmental conditions.
+One potential source of the targeted plasticity of embryonic development is that
+development is, from the very ﬁrst zygotic division, a process of communication and
+negotiation. In some organisms (e.g., Caenorhabditis elegans), the ﬁrst division establishes
+the anterior-posterior axis, an asymmetry encoded by differences in the protein and RNA
+content of the ﬁrst-division daughter cells [100]. In others (e.g., Xenopus laevis), bioelectric
+asymmetry at the ﬁrst division (driven by cytoskeletal symmetry breaking) establishes the
+left-right axis [101,102]. As soon as cells have some distinction, they have something to
+communicate about. This can be understood in terms of VFE minimization, as described
+further below. The behavior of a cellular neighbor with distinct properties is not as easy
+to predict compared with that of an identical neighbor [103]. The cells on the exterior
+of an embryo, for example, are more exposed to the environment than the interior cells;
+hence, they are responsible for both protecting and, in the absence of a yolk sac, feeding
+the interior cells. What interior cells provide in return is, in many cases, information [104],
+with neurons as the evolutionary specialists for this task. This kind of communication-
+dependent specialization, and hence the division of labor in building the embryo and
+then the adult organism, obviously suggests economic exchange, as well as deception,
+coercion, and other strategies employed in organism-scale social relations [105], with
+phenomena such as cellular cytotoxicity [106] and the cells’ ability to gauge the ﬁtness of
+their neighbors [107,108] as the ultimate “policing” actions.
+It is clear that cooperation and competition [109] among cells reliably results in com-
+plex target morphologies during embryogenesis. Indeed, this capability is a sought-after
+capacity in swarm robotics [110]. Importantly, robotics, neuroscience, and the ﬁeld of
+collective intelligence [111,112] all focus on the ability of swarm dynamics to give rise
+to emergent minds. How much and what kind of intelligence could a society of cells
+exhibit? Evidence for goal-directed behavior (a hallmark of a coherent intelligence in any
+embodiment), including the sophisticated ability to achieve those goals despite unexpected
+Entropy 2022, 24, 819
+9 of 33
+circumstances (activity beyond ﬁxed responses), abound in developmental and regenerative
+biology. Morphogenesis is extremely tolerant to novelty not just in changes to the external
+environment but changes in its own components via natural mutation or engineering.
+One example is the regenerative properties of animals like planaria and axolotls [113].
+When a salamander limb is amputated at any level, the cells will rapidly grow and remake a
+limb, stopping when the correct limb is completed. The collective pursues this goal from diverse
+starting positions and executes a test-operate-exit loop [36] to deal with unpredictable types
+of damage. Some progress has been made on the mechanisms that serve as the cognitive
+glue binding individual competent cells together into an emergent collective intelligence
+that can operate toward an outcome far larger than any individual cell (i.e., only deﬁned at
+the system scale). Perhaps unsurprisingly (but only in retrospect), this involves preneural
+bioelectric signaling, where cells form bioelectric networks that scale [9,114,115] individual
+cell capacities toward larger (anatomical) goals. By perturbing this system, not only can
+the pattern memories of the collective intelligence be altered (for example, permanently
+changing the number of heads that genetically wild-type planarian tissues consider to
+be their correct target morphology) [116,117], but they can be pushed into the regions of
+an anatomical state space belonging to other species. In planaria, temporary disruption of
+bioelectrical connectivity among cells (with no genomic editing) leads to the regeneration
+of heads (including brain shape and stem cell distribution) appropriate to other extant
+species of planaria [31,118], which are 100–150 million years apart phylogenetically.
+The ability to repair damage toward speciﬁc conﬁgurations in the anatomical mor-
+phospace is not only seen in adult regeneration, since regulative development allows
+bisected embryos to make normal monozygotic twins, and it compensates for huge changes
+in the number of cells during development [119,120]. Another example concerns the con-
+version of tadpoles into frogs by the movement of craniofacial organs. It was found that this
+is not a hardwired process where each organ simply moves a predetermined amount in the
+right direction. When tadpoles with scrambled faces are created, they change into largely
+normal frogs [90,121,122], because the eyes, jaws, etc. move in novel directions and across
+new paths (in fact sometimes overshooting and coming back to the correct positions) to
+form a correct frog face. These capacities in development, regeneration, and metamorphosis
+can all be seen as diverse examples of one basic underlying capacity: anatomical home-
+ostasis (error reduction loop with respect to the metrics in the anatomical space), which
+requires policies for actions which reduce the delta from the current state and target state.
+In most cases (including the frog face), this is actually the behavior of a complex “body” in
+that space, because numerous “vehicles” (cells and craniofacial organs) must move relative
+to each other to achieve the correct ﬁnal conﬁguration (and thus their estimates of positions
+are constantly changing as the landscape changes dynamically).
+Remarkably, this capacity goes beyond the obvious evolutionary advantage of repair
+from injury to the ability to handle novelty within a creature’s basic components (a capacity
+that likely improves the evolvability itself). When the cells of a newt are artiﬁcially increased
+in size, fewer of them cooperate to build correctly sized kidney tubules. However, when
+they are made very large, just one single cell wraps around itself, leaving a lumen to
+produce the same diameter tubule. In this example, diverse molecular mechanisms (cell–
+cell communication vs. cytoskeletal bending) are called up in the service of a large-scale
+state as needed to deal with novel circumstances, including internal change. This ability to
+ﬂexibly harness diverse microstates toward invariant macrostates is a hallmark of multi-
+scale control in life forms, and the capacity to use different action modules in new ways
+to achieve a goal is a classic part of many IQ tests. Thus, the collective intelligence of cell
+swarms operates toward speciﬁc goals in the morphospace, able to reach adaptive areas of
+that space despite diverse starting positions, changing components, or perturbations. All
+of this can be framed as a kind of behavior in this space, formulating investigations in this
+ﬁeld as the search for mechanisms that enable cellular collectives to implement coherent
+system-level navigation policies.
+Entropy 2022, 24, 819
+10 of 33
+Creative problem solving (e.g., the reuse of existing affordances in new ways) is
+revealed most strongly when living systems are pushed well beyond their default conﬁgu-
+rations by techniques such as chimerism and bioengineering. Skin cells removed from a
+frog embryo can reboot their multicellularity in a new environment, forming self-motile
+novel proto-organisms (Xenobots) with numerous capacities, including kinematic self-
+replication [25,123,124]. These cells reuse the hardware provided by their wild-type frog
+genome in new ways for coherent morphogenesis, regeneration, and behavior. Thus, evolu-
+tion produces not only machines that can execute homeostasis for preselected setpoints
+but highly reconﬁgurable hardware that is guided by allostasis [125–127] and can support
+diverse goal states. It is no accident that Turing was interested in both intelligence and
+morphogenesis [128,129], as these problems share a deep invariant.
+5. 3D Behavior: Movements in Space and Time
+Classical behavior in 3D space—what we can call “behavioral space”—is the canonical
+context in which intelligence is most easily recognized (and the degree of agency is esti-
+mated by other observers). It has been proposed (e.g., the skin brain thesis) that behavioral
+intelligence is the result of increasing demands in coordinating internal sensory-motor
+organization [6,130,131]. Here, we are proposing an extension of this view in which be-
+havioral intelligence is indeed the product of elaboration of internal computational needs
+not only of motor coordination but also of morphogenesis. Speciﬁcally, we propose that
+evolution pivoted the strategies used by bioelectric networks to coordinate paths through
+the morphospace into behavior by simply swapping the sensors and effectors to work in a
+different space (Figure 4). Indeed, transitional forms exist, showing how morphological
+control and behavioral control can be implemented by the same system. For example, in
+the slime mold Physarum polycephalum [132–136], which solves problems by growing in
+speciﬁc directions, its motile 3D behavior is morphological change. Plants behave the same
+way, responding to conditions via morphological change.
+Entropy 2022, 24, 819 
+11 of 35 
+ 
+(A)
+(B)
+(C)
+(D)
+Figure 4. Cont.
+Entropy 2022, 24, 819
+11 of 33
+ 
+ 
+Figure 4. Isomorphism between neural bioelectricity and preneural (developmental) bioelectricity. 
+(A) Neural cells compute by forming networks in which each cell can use ion channels to establish 
+a specific resting potential and selectively communicate it to connected neighbors through electrical 
+synapses known as gap junctions. (B) Neural dynamics are actually a speed-optimized variant of a 
+much more ancient system. All cells use ion channels, and most cells form electrical connections 
+with their neighbors. (C) In the brain, DNA-specified ion channel hardware in neurons enables 
+bioelectric computation, a kind of software that can be impacted by experiences (stimuli). By 
+enabling fast communication over long distances, the synaptic architecture depicted in (A) enables 
+the brain to control the physiological dynamics of muscle cells and hence move the body in three 
+dimensions. (D) Prior to the development of specialized, high-speed neurons, preneural bioelectric 
+networks exploited the same architecture of physiological software implemented by the same ion 
+channel hardware. The information-processing and memory features of bioelectrical networks were 
+used to control the movement of the body configuration through the morphospace by controlling 
+cell behaviors [104,137]. Images by Jeremy Guay of Peregrine Creative. 
+This pivot (and others like it) across problem spaces (Figure 5) is made possible by 
+three things: (1) network [138–140] and probabilistic computation [27,141–143] dynamics 
+which are invariant to their material implementation (e.g., Figure 6), (2) modularity of the 
+homeostatic loop, in which the sense, setpoint, and action modules can be swapped out 
+without interfering with the error minimization process, and (3) the fact that evolution, 
+like scientists, is not tied to one specific problem space and is free to pick the perspective 
+(B)
+(D)
+Figure 4. Isomorphism between neural bioelectricity and preneural (developmental) bioelectricity.
+(A) Neural cells compute by forming networks in which each cell can use ion channels to establish a
+speciﬁc resting potential and selectively communicate it to connected neighbors through electrical
+synapses known as gap junctions. (B) Neural dynamics are actually a speed-optimized variant of a
+much more ancient system. All cells use ion channels, and most cells form electrical connections with
+their neighbors. (C) In the brain, DNA-speciﬁed ion channel hardware in neurons enables bioelectric
+computation, a kind of software that can be impacted by experiences (stimuli). By enabling fast
+communication over long distances, the synaptic architecture depicted in (A) enables the brain to
+control the physiological dynamics of muscle cells and hence move the body in three dimensions.
+(D) Prior to the development of specialized, high-speed neurons, preneural bioelectric networks
+exploited the same architecture of physiological software implemented by the same ion channel
+hardware. The information-processing and memory features of bioelectrical networks were used
+to control the movement of the body conﬁguration through the morphospace by controlling cell
+behaviors [104,137]. Images by Jeremy Guay of Peregrine Creative.
+This pivot (and others like it) across problem spaces (Figure 5) is made possible by
+three things: (1) network [138–140] and probabilistic computation [27,141–143] dynamics
+which are invariant to their material implementation (e.g., Figure 6), (2) modularity of the
+homeostatic loop, in which the sense, setpoint, and action modules can be swapped out
+without interfering with the error minimization process, and (3) the fact that evolution,
+like scientists, is not tied to one speciﬁc problem space and is free to pick the perspective
+from which a problem appears solvable. The development of neural systems borrows
+heavily from preneural dynamics, utilizing the same molecular mechanisms: ion channels,
+electrical synapses, and neurotransmitter machinery [35,104].
+Entropy 2022, 24, 819
+12 of 33
+Entropy 2022, 24, 819 
+12 of 35 
+ 
+ 
+from which a problem appears solvable. The development of neural systems borrows 
+heavily from preneural dynamics, utilizing the same molecular mechanisms: ion 
+channels, electrical synapses, and neurotransmitter machinery [35,104]. 
+ 
+Figure 5. A proposed model in which evolution pivots the same strategies (and some of the same 
+molecular mechanisms) to navigate different spaces. Each level of organization solves problems in 
+its own space, and systems evolved from navigating the metabolic, physiological, transcriptional, 
+anatomical, and finally (when the muscle and nervous systems evolve) 3D space of traditional 
+behavior. Other spaces, such as linguistic space, are possible in more advanced forms. Images by 
+Jeremy Guay of Peregrine Creative. 
+ 
+Figure 6. Similar strategies are seen in diverse biological systems at all levels for navigating problem 
+spaces. One example is spreading out and then pulling back from regions that are non-attractors. 
+(A) Physarum slime molds spreading throughout a maze and then pulling back from every location 
+except the shortest path between two food sources (taken with permission from [144]). (B) Neurons 
+often prune back after forming a set of network connections (taken with permission from [145]). (C) 
+Physarum maze-solving
+Neuronal pruning
+Evolutionary exploration
+(A)
+(B)
+(C)
+Figure 5. A proposed model in which evolution pivots the same strategies (and some of the same
+molecular mechanisms) to navigate different spaces. Each level of organization solves problems in
+its own space, and systems evolved from navigating the metabolic, physiological, transcriptional,
+anatomical, and ﬁnally (when the muscle and nervous systems evolve) 3D space of traditional
+behavior. Other spaces, such as linguistic space, are possible in more advanced forms. Images by
+Jeremy Guay of Peregrine Creative.
+Entropy 2022, 24, 819 
+12 of 35 
+ 
+ 
+from which a problem appears solvable. The development of neural systems borrows 
+heavily from preneural dynamics, utilizing the same molecular mechanisms: ion 
+channels, electrical synapses, and neurotransmitter machinery [35,104]. 
+ 
+Figure 5. A proposed model in which evolution pivots the same strategies (and some of the same 
+molecular mechanisms) to navigate different spaces. Each level of organization solves problems in 
+its own space, and systems evolved from navigating the metabolic, physiological, transcriptional, 
+anatomical, and finally (when the muscle and nervous systems evolve) 3D space of traditional 
+behavior. Other spaces, such as linguistic space, are possible in more advanced forms. Images by 
+Jeremy Guay of Peregrine Creative. 
+ 
+Figure 6. Similar strategies are seen in diverse biological systems at all levels for navigating problem 
+spaces. One example is spreading out and then pulling back from regions that are non-attractors. 
+(A) Physarum slime molds spreading throughout a maze and then pulling back from every location 
+except the shortest path between two food sources (taken with permission from [144]). (B) Neurons 
+often prune back after forming a set of network connections (taken with permission from [145]). (C) 
+Physarum maze-solving
+Neuronal pruning
+Evolutionary exploration
+(A)
+(B)
+(C)
+Figure 6. Similar strategies are seen in diverse biological systems at all levels for navigating problem
+spaces. One example is spreading out and then pulling back from regions that are non-attractors.
+(A) Physarum slime molds spreading throughout a maze and then pulling back from every location
+except the shortest path between two food sources (taken with permission from [144]). (B) Neurons
+often prune back after forming a set of network connections (taken with permission from [145]).
+(C) Evolutionary exploration ﬁnds high ﬁtness peaks, and then populations pull back from the
+valleys. Panel (C) by Jeremy Guay of Peregrine Creative.
+Entropy 2022, 24, 819
+13 of 33
+Important innovations (such as the speed up from minutes to milliseconds and point-
+to-point connectivity) provide the unique features of each system best suited for its space
+and the other agents within it. Another important feature of such pivots of molecular
+machinery into different spaces concerns how they treat space and time. The morphological
+collective intelligence is primarily concerned with the arrangement of objects in 3D space.
+The control of movement via nervous systems is largely about events in time. While the
+brain provides the ability to time travel with respect to behavior (i.e., to remember and plan
+things that are not occurring right now), there is also preneural bioelectric time travel with
+respect to a space (encoding pattern memories that serve, for example, as future patterns
+toward which remodeling and morphogenesis can strive [35,36,117]). For time, the order
+of arrival, and the sequence response are just edge detection of time, rather than the edge
+detection in a space performed in morphogenetic events that have to respect compartment
+borders. The notion of memory is already implicit in homeostatic loops (because setpoints
+have to be stored) and can be performed by subcellular biochemical circuits [146,147].
+Indeed, at least in mammals, episodic memory seems to have evolved from place memory,
+where the hippocampus and associated areas are mainly place memory in mice and still
+serve as place memory in humans in addition to encoding episodic memories, which are
+anchored in space and time. Indeed, recent modeling work suggests that the hippocampus,
+together with the parahippocampal areas, serves as a general, coordinate-based relational
+processor [148,149]. Other core elements of cognition—synchronization clocks [150] and
+space-measuring standards [151]—are equally ancient, perhaps arising from cell cycling or
+division and distance measuring for cell extension before cleavage (a cytoskeletal task that
+likely existed in pre-tubulin or actin bacterial cytoskeletal systems).
+Even aspects of behavior above the individual organism level are already presaged
+by preneural dynamics. Multicellularity induces “social” relations at the cellular level.
+Such relations are preﬁgured by mechanisms such as quorum sensing [152] in facultative
+multicellular systems such as microbial bioﬁlms [153]. At the organismal scale, both
+within- and between-species social relations exhibit complex, context-dependent mixtures
+of cooperation and competition. Such exchanges are fundamentally communicative, even
+when they involve destructive interactions such as predation. Hence, they occur in what can
+be thought of as an informational space [62]. It is natural and, although still controversial,
+increasingly common to think of information spaces in which innovation, social learning,
+and intergenerational transfer occur as cultures [154]. Cultures are clearly highly developed
+in humans via language, the visual and symbolic arts, and the built environment. Since
+the development of hierarchically organized social life, the resulting information space has
+ramiﬁed into a multi-dimensional virtual reality that includes such cognitive constructs as
+religion, ﬁnance, politics, and science [155]. Evolution in such spaces is fast because, even if
+one is a crow, memes are cheap [156]. We can expect such memetic evolution to accelerate,
+in humans and other systems, as additional cognitive prosthetics, including devices usable
+by nonhuman organisms, are developed.
+6. Navigating Arbitrary Spaces: A Powerful Invariant
+The notion of an action space generalizes from the familiar 3D space of moving
+behavior to any arbitrary space of some number of dimensions, within which an agent can
+act. Hence, all of the speciﬁc spaces discussed above can be considered components of an
+organism’s action space. These spaces are constructs created by the system itself to organize
+its activity and make sense of its world and by an observer (e.g., a scientist or a conspeciﬁc)
+who constructs a ﬁlter with which to be able to understand and predict the actions of
+the agent. A most useful thing about spaces is that they serve as a central symmetry
+between phenomena such as classical behavior, physiology, metabolism, gene expression,
+and morphogenesis. They are a unifying principle, an invariant that fundamentally deﬁnes
+what an active agent is and how they can be recognized, compared, and manipulated.
+In fact, there are actually two symmetries here. One is scale: the fact that the same type
+of dynamic is acting at the molecular, cell, tissue, organism, and community scales. The
+Entropy 2022, 24, 819
+14 of 33
+second is across spaces: the same strategy can be pivoted by evolution to explore behavioral
+space after it is honed, exploring metabolic, transcriptional, and morphospaces. The high
+degree of conservation of mechanisms and algorithms between, for example, morphology
+and cognition is an example of this symmetry across the course of evolution [35,104,157]. All
+of these unconventional agents navigate their spaces with various degrees of competency,
+enabling all of the tools created to understand and control the traversal of spaces in animals
+and machines to be deployed on a very wide range of problems.
+The notion of action spaces shows how to connect goal-directed activity to notions
+of energy (e.g., of evolution toward an attractor). For biological systems at any scale, the
+relevant attractors are those that implement allostasis within the current environment.
+The variational free energy (VFE) principle formulates this requirement for allostasis
+in information-theoretic terms: living systems behave so as to maximize their ability
+to predict their own future states. When we identify VFE with uncertainty and hence
+with (the probability of) prediction error, the minima of VFE become the maxima of
+predictive success. Uncertainty, and hence VFE, is distinct from metabolic load. Hence,
+we can ask about the metabolic cost of achieving an increment of predictive ability. The
+metabolic cost of generating predictions through the use of some computational model
+of the environment emphasizes that moving through the search space really is a search. It
+takes effort and resources, including memory resources. As cells or other systems become
+stressed (e.g., by lack of sufﬁcient free-energy resources), their generative models can be
+expected to deteriorate toward stochastic defaults, and hence their searches can be expected
+to deteriorate toward random walks. This has been observed at the cellular level [158] and
+is a commonplace observation in stressed organisms, including humans.
+The act of navigating a state space, whatever its degrees of freedom, involves several
+fundamental components. First, there is the inverse problem of which effectors to activate to
+reach a preferred region of state space. It frames most aspects of survival as, fundamentally,
+a search with different degrees of capacity to look into the future. Second, it is greatly
+potentiated by the ability to maintain a record of the past (i.e., a reliable, readable memory).
+The central question faced by any system is what to do next among certain choices. Thus, it
+is important to begin to formalize a notion of decision making in a deterministic system.
+No ﬁnite agent can discover all of the causal inﬂuences that determine its own behavior,
+as global determinism logically disallows local determinism. Hence, global determinism
+assures “free will” from every (ﬁnite) local perspective [159]. The failure of theories
+modeling human decision making on what human agents can consciously report about their
+thought processes makes the need for a general theory evident [160,161]. The mathematical
+theory of active inference as Bayesian satisﬁcing provides a scale-free framework for
+understanding this process. Given that spaces are an essential invariant for understanding
+biological adaptive activity, it is important to ask how these spaces originate.
+7. Active Inference Generates Spaces
+7.1. Organisms Interact with Their Environments via Markov Blankets
+Biological systems at all scales exist and maintain their integrity in active exchange
+with their environments. As ﬁrst shown by Ashby [162], this exchange can be formalized as
+an exchange of information. From this formal perspective, organisms act so as to minimize
+the VFE of their interactions with their environments. While the FEP was originally
+formulated as a theory of brain function [163–165], it has since been applied to a wide
+range of biological systems and processes [27,142,166–168] and was recently shown to
+characterize any classical [169] or quantum [170] system that is sufﬁciently stable to be
+identiﬁable over macroscopic time. Allostasis is, in other words, not limited to biology; it is
+a general characteristic of all systems that resist the entropic forces of their environments
+long enough to be observed at multiple times. Indeed, the emergence of the structural
+complexity required to sustain allostasis can be seen as being driven by the environment as
+a means of producing entropy [171].
+Entropy 2022, 24, 819
+15 of 33
+Maintaining allostasis is maintaining a distinction between “my states” and “my
+environment’s states,” where “my environment” here is everything other than me. A state
+is a collection of values of some degrees of freedom, or state variables. Position, temperature,
+viscosity, concentrations of various molecules, and electrical charge are all state variables of
+relevance to all organisms. The internal-external distinction can be formalized in terms of a
+Markov blanket (MB), a set of intermediate states that serves as an interface between inside
+and outside [27,172]. These interface states transfer information from outside to inside (i.e.,
+implement perception) and from inside to outside (i.e., implement action). An organism
+and its environment share, by deﬁnition, the same MB; they merely “look at” different sides
+of it. Position states on a MB implement the “physical boundary” of an organism, with the
+cell membrane or the skin as examples. This boundary is, from the organism’s perspective,
+also the physical boundary of its environment. Most MB states encode values of variables
+other than the position (e.g., photon intensity and frequency (brightness, color, radiant
+temperature, etc.), air pressure (e.g., wind velocity and sound), or molecular concentrations
+(e.g., osmolarity, smell, and taste)).
+As all information exchange between a system and its environment passes through the
+MB, an organism’s perceptions “of its environment” are, from a mechanistic perspective,
+data encoded by its environment on its MB (Figure 7). An organism’s actions “on its
+environment” are, similarly, data it encodes on its MB. Indeed, we can view an organism’s
+actions as its environment’s perceptions and vice versa. An organism has no access, even
+in principle, to the mechanisms by which its environment encodes data on its MB. This
+restriction on access is fully symmetrical; the organism’s environment has no access to
+how the organism encodes data on the MB. (Indeed, an organism is, by deﬁnition, “the
+environment” of its environment.) While such statements are sometimes considered “anti-
+realist” or “subjectivist” [173], they are just consequences of modeling physical interaction
+as information exchange [174,175]. Organisms such as humans that employ technologies
+to extend their perception and action capabilities are, effectively, extending their Markov
+blankets to encode the values of additional state variables.
+Entropy 2022, 24, 819 
+16 of 35 
+ 
+ 
+Figure 7. Schematic specifications of a Markov blanket (MB) comprising sensory (s) and active (a) 
+states that are intermediate between the external or environmental (e) states and the internal (i) 
+states of some system of interest. The MB is a boundary in the joint system-environment state space. 
+It may be partially implemented by a structure (here, a plasma membrane) in a 3D space. The MB 
+states (s and a) can be thought of as an API between the system and its environment. Taken from 
+[157] and used with permission. 
+When information flow is restricted by an MB, the task of minimizing the prediction 
+error and hence minimizing the VFE becomes the task of predicting and then acting to 
+regulate the future state of the MB. The good regulator theorem [176] requires any system 
+capable of such regulation to be or to encode a generative model [27] of its environment’s 
+actions on its MB. The state variables of this model are the state variables of the MB, the 
+only state variables that can be either measured or predicted. The generative model 
+Figure 7. Schematic speciﬁcations of a Markov blanket (MB) comprising sensory (s) and active
+(a) states that are intermediate between the external or environmental (e) states and the internal (i)
+states of some system of interest. The MB is a boundary in the joint system-environment state space.
+It may be partially implemented by a structure (here, a plasma membrane) in a 3D space. The MB
+states (s and a) can be thought of as an API between the system and its environment. Taken from [157]
+and used with permission.
+Entropy 2022, 24, 819
+16 of 33
+When information ﬂow is restricted by an MB, the task of minimizing the prediction
+error and hence minimizing the VFE becomes the task of predicting and then acting to
+regulate the future state of the MB. The good regulator theorem [176] requires any system
+capable of such regulation to be or to encode a generative model [27] of its environment’s
+actions on its MB. The state variables of this model are the state variables of the MB, the only
+state variables that can be either measured or predicted. The generative model encoded by
+an organism is thus the organism’s “theory” of its environment’s observable behavior (i.e.,
+its environment’s actions on its MB) and includes, most importantly, its theory of how its
+environment will respond to each of its own actions on its MB.
+It is important to emphasize that, as shown in [169,170], these considerations apply
+to all physical systems at all scales. While here, we will be concerned primarily with
+individual organisms, Markov blankets as system–environment interfaces and VFE mini-
+mization as an inferential mechanism characterize all systems identiﬁable as such over time,
+including macromolecules, biomolecular pathways, individual cells (whether free-living or
+components of multicellular organisms), organs and tissues, individual organisms, com-
+munities of organisms, ecosystems, and even larger structures. Indeed, the authors of [177]
+showed how to model the global climate system by minimizing the VFE across an MB. We
+can, therefore, consider MBs to be universal, scale-free structures and VFE minimization to
+be a universal, scale-free mechanism. Hence, MBs and VFE minimization are invariants that
+characterize all forms of behavior in all “spaces” occupied and explored by organisms.
+7.2. Behavioral “Spaces” Are Tractable Components of an Overall State Space
+We are now in position to deﬁne the spaces in which an organism operates. Suppose
+an organism’s MB encodes at most m distinct values of each of n distinct variables, and
+let N = nm. This number N is ﬁnite for any ﬁnite system (i.e., any system with ﬁnite
+energy resources and hence a ﬁnite measurement resolution). Any state of the MB can then
+be considered to be a vector in an N-dimensional vector space constructed by assigning
+a basis vector to each of the N variable-value combinations and adopting the standard
+notion of distance between vectors as a metric. Such vector spaces are called Hilbert spaces
+and are widely used in quantum theory. They can also be employed in classical physics.
+Any organism—indeed, any physical system, classical or quantum—can be considered to
+behave in the Hilbert space that characterizes its MB. A perception-action loop is, in this
+formalism, simply a mapping from an “input” vector representing the state of the MB at
+some instant t to an “output” vector representing the state of the MB at some later instant
+t + ∆t. As this is a well-behaved map between vectors, it can be treated as linear independent
+of its implementation. It is this “hiding” of implementation details that renders MBs such
+useful theoretical tools. They can be thought of as deﬁning application programming
+interfaces (APIs) around physical systems that specify the data structures that interactions
+must respect. The consequences of this are discussed further below.
+For any biological system, the number N is enormous, and the complexity of a pre-
+dictive (generative) model of an N-dimensional space increases combinatorially with N.
+Hence, organisms cannot be expected to implement full, predictive models of the Hilbert
+spaces of their MBs. Indeed, a model of the full Hilbert space of the MB is impossible
+in principle. The MB is, by deﬁnition, the sole interface in the joint system–environment
+state space between any system and its environment. Hence, some fraction of the states of
+the MB of any ﬁnite system must be allocated to free energy acquisition and waste heat
+removal [178]. The sector of the Hilbert space allocated to these thermodynamic functions
+is observationally inaccessible to the system; its sole function is a thermodynamic one.
+Hence, the MB of any ﬁnite system can be regarded as divided into at least three sectors,
+comprising sensory, active, and thermodynamic states as shown in Figure 8.
+Entropy 2022, 24, 819
+17 of 33
+ 
+of the states of the MB of any finite system must be allocated to free energy acquisition 
+and waste heat removal [178]. The sector of the Hilbert space allocated to these 
+thermodynamic functions is observationally inaccessible to the system; its sole function is 
+a thermodynamic one. Hence, the MB of any finite system can be regarded as divided into 
+at least three sectors, comprising sensory, active, and thermodynamic states as shown in 
+Figure 8. 
+ 
+Figure 8. Generic two-system interaction mediated by a Markov blanket. (a) Any MB can be 
+considered a boundary B in the joint state space of a system S and its environment E. The physical 
+interaction between S and E, here represented by the Hamiltonian (total energy) operator HSE, is 
+defined at this boundary. (b) S must obtain free energy from and exhaust waste heat into E. The 
+boundary B must therefore include a thermodynamic sector in addition to the sensory (s) and active 
+(a) sectors. The states of this thermodynamic sector are observationally inaccessible and hence 
+uninformative to S. Taken from [78] with a CC-BY license. 
+Because MB states cannot be modeled completely, organisms, including humans, 
+instead implement partial models of sets of variables that have been observed to covary 
+systematically. The positions of objects, for example, covary as an organism moves. A 
+model that captures this covariance is a model of an ordinary 3D space. Concentrations of 
+environmental chemicals also tend to covary; the space of chemical concentration 
+gradients is the primary “space” in which chemotactic microbes operate [179] and is an 
+Figure 8. Generic two-system interaction mediated by a Markov blanket. (a) Any MB can be
+considered a boundary B in the joint state space of a system S and its environment E. The physical
+interaction between S and E, here represented by the Hamiltonian (total energy) operator HSE, is
+deﬁned at this boundary. (b) S must obtain free energy from and exhaust waste heat into E. The
+boundary B must therefore include a thermodynamic sector in addition to the sensory (s) and active
+(a) sectors. The states of this thermodynamic sector are observationally inaccessible and hence
+uninformative to S. Taken from [78] with a CC-BY license.
+Because MB states cannot be modeled completely, organisms, including humans,
+instead implement partial models of sets of variables that have been observed to covary
+systematically. The positions of objects, for example, covary as an organism moves. A
+model that captures this covariance is a model of an ordinary 3D space. Concentrations of
+environmental chemicals also tend to covary; the space of chemical concentration gradients
+is the primary “space” in which chemotactic microbes operate [179] and is an important
+space for all organisms equipped with olfaction and taste. Organisms can, in general, be
+expected to optimize the use of their limited information-processing resources by limiting
+their generative models to just the principal components of their experience and segmenting
+these models into “spaces” spanned by covarying principal components.
+Segmentation of an overall state space into predictively tractable subspaces is greatly
+facilitated by the fact that tractable subspaces tend to exhibit relatively simple symmetries.
+The most familiar are the translational, rotational, and relative motion symmetries of objects
+in a 3D space. Moving an object in a 3D space does not modify its properties or change its
+identity. These symmetries are described mathematically by the Galilean group in classical
+physics and by the Poincaré group when special relativity is taken into account. Hence, a
+generative model of spacetime is, at minimum, a representation of the Galilean or Poincaré
+groups. State variables that can be described by ﬁelds in spacetime (e.g., electric or magnetic
+ﬁelds) satisfy gauge symmetries, which prevent the state of the ﬁeld from depending on
+how it is measured. Using a quantum theoretic framework, it can be proven that any state
+variables encoded on a Markov blanket must satisfy the gauge symmetries if they are
+represented as a ﬁeld in spacetime [180]. See [143] for an application of gauge-theoretic
+ideas in neuroscience.
+Symmetries create redundancy, and many different descriptions of a symmetric situa-
+tion encode the same information. This redundancy enables data compression and coarse
+graining. It also makes any space characterized by symmetries an error-correcting code.
+Information that may be missing or ambiguous at one “location” in the space can be found
+at other locations [181]. Redundancy enables “babbling” as a strategy for discovering
+the symmetries of a space. The language and motor babbling of infants are a canonical
+example. Babbling can be considered a heuristic search strategy in which “random” ac-
+tions are deployed to investigate the large-scale structure of a space, and more directed
+minor variations of “interesting” actions are used to investigate the local structure (for
+Entropy 2022, 24, 819
+18 of 33
+comparisons of human infant and developmental robotic implementations of babbling,
+see [182,183]). Such alternation between breadth-ﬁrst and depth-ﬁrst searching in a space
+is an ancient strategy of living systems, going back at least to the run-and-tumble behavior
+of chemotactic bacteria. The same strategy (in effect, babbling in a 3D space instead of in a
+linguistic space) has been shown to be very effective in robotics, enabling the building of
+adaptive robots that develop models of themselves and strategies to navigate the world de
+novo [184].
+7.3. Problem Spaces Are Observer-Dependent
+Problem spaces are deﬁned by observers, as they make models to help explain, pre-
+dict, and control other systems. Crucially, however, the system itself is also such an
+observer [185] and generates models of spaces to help guide activity. In humans, the
+personal past is such a space, as increasingly more detailed studies of the construction
+of episodic memories demonstrate [186,187]. A very fundamental way for even simple
+observers to generate the notion of spaces ab initio is from the commonalities between
+actions required to nullify changes in sensory experience. Actuations that result in pre-
+dictable changes in sensory states can often be naturally represented as “movement” in a
+space [188]. As discussed above, an obvious and well-studied example is “babbling”—both
+vocal and motor—in human infants, a phenomenon also common in other animals [189]
+and increasingly employed in developmental robotics [182,190]. Such space construction is
+closely linked to the very basal capacity for homeostasis (keeping a sensory state in a con-
+stant range is just one step past keeping a speciﬁc variable, such as the pH level, in the right
+range), but this may involve feedback and monitoring of the result of one or more layers of
+processing past the raw sensor. This loop immediately provides the opportunity to scale
+intelligence via optimized user illusions (models) of spaces [181,183,191,192] because there
+are many levels of sophistication available to the overall project of keeping one measurable
+optimized by taking various actions. This scheme is not only about actuating muscle or
+ciliary motion to keep a constant relationship with a spot of light, for example; it works in
+other spaces, too. The barium-exposed planaria are looking for moves in transcriptional
+space that allow them to keep their normal physiological states. Similarly, somatic tissue
+develops and monitors representations of its own anatomical layout, using bioelectrics
+in epithelia as a kind of “retina” that perceives the body structure [193,194] and is able to
+trigger movements in the morphospace to counter the induction of incorrect layouts in the
+large-scale morphospace (such as the fact that tails grafted onto inappropriate locations
+in amphibians will become remodeled into limbs, a structure more appropriate to the
+new location [195,196]). When brains developed, they retained and ampliﬁed the notion of
+modeling the self in anatomical space via the somatotopic homunculus [197].
+7.4. Tractable Spaces Correspond to Perception and Action Modules
+Separating the overall (Hilbert) state space of the Markov blanket into predictively
+tractable components has the effect of breaking the overall prediction problem—the prob-
+lem of minimizing VFE—into tractable components. As these component problems involve
+spaces with, in general, different symmetries, the most efﬁcient methods of solving them
+will, in general, be different. They can each, in particular, be expected to involve data
+structures (“representations”) that encode the symmetries of the relevant space. These
+data structures are, in turn, encoded by the Markov blanket. Formally, they are the ba-
+sis vectors of the corresponding Hilbert space. Maximizing efﬁciency (i.e., minimizing
+the resource requirements of information processing) requires that perception and action
+both employ the same data structures and hence respect the same symmetries. Hence,
+perception and action in any domain can always be viewed as acting via a particular,
+domain-speciﬁc component—a particular subspace with its own basis vectors—of the
+overall Markov blanket.
+A perception–action module that imposes a particular data structure can be considered
+to deﬁne a reference frame, and when such a module is physically implemented by a ﬁnite
+Entropy 2022, 24, 819
+19 of 33
+system that consumes energy and dissipates heat, it becomes a quantum reference frame
+(QRF) [197,198] (see [170,199] for discussion in a biological context). The most familiar
+QRFs are artifacts, such as meter sticks or clocks, that we humans use to make external
+measurements. Employing such artifacts to measure distance and time, however, requires
+an internal sensory representation of distance and time. A person with no ability to
+sense duration, for example, could make no sense of a clock [200]. Hence, biologically
+implemented QRFs underlie the use of all artiﬁcial QRFs. Any pathway that employs
+a ﬁxed (or only slowly varying) reference point (e.g., the midpoint of a sigmoid activity
+curve) to switch some behavior on or off can be considered a QRF. The use of the [CheY-
+P]/[CheY] concentration ratio to control the direction of ﬂagellar motion in chemotactic
+bacteria provides an ancient example.
+A perception–action module can compare perceptions and hence regulate actions only
+over the timeframe of its local memory. Maintaining a local memory requires energy. The
+[CheY-P]/[CheY] ratio, for example, is maintained by enzymatic activity and hence by
+metabolic activity. Selective pressure to minimize VFE is, therefore, selective pressure to
+expand the memory capacity (i.e., to allocate increased structural and energy resources
+to storing information about the consequences (in context) of past actions). As obtaining
+additional resources from the environment may require sensing and acting on the environ-
+ment in new ways—from predation to social or economic exchange—VFE minimization
+can be expected, in general, to drive the development of new QRFs, with the elaboration of
+progressively more complex visual, auditory, and olfactory systems in lineages subject to
+different selection pressures as obvious examples. Increasing the information processing
+capability is, therefore, inevitably a positive feedback loop and hence effectively an arms
+race with selection pressures from the environment.
+The Heisenberg uncertainty principle famously limits the simultaneous use or co-
+deployability of some pairs of QRFs (e.g., those for position and momentum) at high mea-
+surement resolutions. Interference between the measurements of degrees of freedom
+assumed a priori to be independent, generically termed context effects, can be generated
+even in classical systems [201] and can always be attributed to failures in commutativity
+(i.e., interference) between QRFs [202]. Competition for energetic resources between QRFs
+also limits co-deployability. Systems respond to limits on co-deployability by developing
+attention systems that prioritize both perceptions and actions. By serving as a resource
+allocation mechanism, attention itself becomes a resource.
+7.5. Experimentally Probing a System’s QRFs
+When we perform experiments on a system, we are acting as part of that system’s
+environment. Our actions on the system and our measurements of its behavior depend on
+our QRFs and hence on the spaces in which we operate. Our inferred explanations of the
+system’s behavior become components of our generative models, which we test by testing
+their predictions.
+How can we, from this position outside of the system’s Markov blanket, determine
+what QRFs the system is deploying and hence determine the spaces in which it operates? It
+is clear from the deﬁnition of a Markov blanket and a generic result of quantum information
+theory [178,203] that no such experimental determination can be made. The best that can be
+accomplished is an empirical model of the system’s QRFs and hence of its operating spaces,
+developed within the language imposed by the experimenter’s QRFs. Even biochemical
+pathways, from this strict perspective, are theoretical models based on evidence that may
+be limited or ascertainment-biased by the experimental procedures employed. The science
+of QRFs is, in other words, subject to the same fundamental limitations of any other science.
+It is greatly facilitated by building models of the system of interest as embedded in and
+communicating with its environment and then examining these models at multiple scales.
+The mammalian hippocampus, for example, functions in part as a spacetime QRF at the
+scale of the whole organism but functions as a pulse correlation generator at the scale of
+the local networks to which it supplies inputs [204].
+Entropy 2022, 24, 819
+20 of 33
+From an operational perspective, probing a system’s QRFs is an exercise in reverse
+engineering, inferring a “design model” that meets the goals of functionality and efﬁciency
+from experiments that probe structure (to the extent that it is observationally accessible)
+and overt behavior. Inferring the representations and hence the data structures employed
+by an organism to process and act on information from its environment is, effectively,
+inferring the API of a computational system for which only the input-output behavior and
+external resource usage are initially known. While a recognizable hardware architecture
+can contribute useful information to this process, it places few if any constraints on the
+software architecture and hence on the structure of the API. The use of experimental
+methods modeled on those of cognitive psychology is the present state of the art for reverse
+engineering the functions implemented by deep learning systems following training [205].
+We may increasingly expect the same to be the case in biology.
+7.6. Common Inference Mechanisms Induce Symmetries between Spaces
+All complex biological systems are hierarchical; macromolecules are organized into
+larger-scale structures and pathways, which are organized into functioning cells, which
+form tissues, organs, and eventually whole organisms, which are then organized into
+societies and ecosystems, etc. A crucial aspect of this is that the hierarchy (modularity)
+is not simply structural. Each level contains its own agency, with agendas in various
+appropriate spaces. The robustness and plasticity of life may be due to the unique and
+powerful ways in which the lower levels’ activities (microstates) are harnessed toward the
+higher levels’ goals. Agents at higher levels (e.g., organs) deform the energy landscape
+of actions for the lower levels (e.g., cells or subcellular machinery), such as the example
+in Figure 3I. This enables the lower systems to “merely go down energy gradients”, or to
+perform their tasks with minimal cognitive capacity while at the same time serving the
+needs of the higher-level system, which has exerted energy (via rewards and other actions)
+to shape its parts’ geodesics to be compatible with its own goals. This is a very powerful
+aspect of multi-scale competency because the larger system does not need to micromanage
+the actions of the lower levels; once the geodesics are set, the system can depend on the
+lower levels to do what they do best: go down the energy gradient. The paths of least
+action in any space are implemented by the paths of least action (i.e., VFE-minimizing
+paths) in the overall manifold of the internal state probabilities. Recent work in Bayesian
+predictive processing shows how an agent’s information geometry is distorted by beliefs, a
+kind of gauge theory [143] that tightly links the notion of action in an arbitrary space to the
+cognitive state of the agent as an invested observer. For example, the meta-cognitive level
+of attention can be seen as setting the precision (curvature of the free energy) for another
+part of the internal model. It is this set of multi-scale relationships, with parts deforming
+subparts’ action spaces toward goals in their own space, that distinguishes ﬂat (single-level)
+systems that simply minimize energy (e.g., water ﬂowing down a hill, which people do not
+think of as an action or decision) from ones that use the same kind of physics in a more
+obviously cognitive manner.
+As noted above, systems at every level in such hierarchies can be described as perform-
+ing active inference with the goal of minimizing environmental VFE, where the environment
+is everything other than the system. Systems at any hierarchical level can, in other words,
+be considered to deploy generative models of the behaviors of their environments to in-
+terpret what they perceive and to employ these same models to act on their environments
+in return. Biological hierarchies are, moreover, not just structural; they are also functional.
+How do actions or functions at one level affect the actions or functions at other levels? It is
+to this question that we now turn.
+Consider an amoeboid cell. Actions in the macromolecular state spaces that deﬁne the
+genome, transcriptome, and proteome (e.g., expressing an actin gene) enable actions in the
+morphological space (e.g., pseudopod extension), as shown in Figure 9. The macromolecu-
+lar actions are carried out by macromolecular complexes, in this case transcription, mRNA
+processing, and translation systems. The morphological actions that they enable are carried
+Entropy 2022, 24, 819
+21 of 33
+out by much larger-scale structures, in this case spatially organized associations between
+the cytoskeletal components and mitochondria. These organelle-scale actions in turn enable
+cellular scale actions such as environmental exploration and predation. Bottom-up enabling
+relations such as these have top-down counterparts; predation enables metabolism of prey
+components to yield usable free energy, which in turn enables macromolecular actions such
+as gene expression.
+Entropy 2022, 24, 819 
+22 
+ 
+ 
+Figure 9. Actions in one space enable (or constrain) actions in another space. These relations fun
+both from the bottom up and the top down in the scale hierarchy. Gene expression, for exam
+provides the components needed to enable a particular morphology, which in turn en
+behaviors that enable the free energy production required to drive further gene expression. Ena
+and constraining relations function, in general, both from the bottom up and the top down i
+scale hierarchy. Image by Jeremy Guay of Peregrine Creative. 
+8. Implications: A Research Program 
+We have shown here how MBs and VFE minimization define mutu
+interdependent behavioral spaces at multiple scales and then organize behavio
+maximize predictability, hence maximizing the probability of continuing allostasis w
+those spaces. This analysis leaves open, however, the question of how either MBs or 
+minimization are implemented in the vast variety of biological and increasingly hy
+biological and artificial systems to which we have experimental access. Hence, t
+remains a large number of further areas for conceptual development as well as empi
+capabilities that should be investigated, which include the following. 
+8.1. Conceptual Questions and Further Links to Develop 
+• 
+While higher-level systems bend action spaces for lower-level subsystems, it ca
+predicted that the higher level no longer needs to operate in a very rugged spa
+microstates. Instead, evolution can search a coarse-grained space of intervent
+which also includes changing the resource availability landscapes at both the lo
+and higher levels (e.g., inventing a mouth and a specialized digestive syst
+Computational models can be created to quantify the efficiency gains of evolutio
+search in such multi-scale competency systems
+Figure 9. Actions in one space enable (or constrain) actions in another space. These relations function
+both from the bottom up and the top down in the scale hierarchy. Gene expression, for example,
+provides the components needed to enable a particular morphology, which in turn enables behaviors
+that enable the free energy production required to drive further gene expression. Enabling and
+constraining relations function, in general, both from the bottom up and the top down in the scale
+hierarchy. Image by Jeremy Guay of Peregrine Creative.
+8. Implications: A Research Program
+We have shown here how MBs and VFE minimization deﬁne mutually interdependent
+behavioral spaces at multiple scales and then organize behavior to maximize predictability,
+hence maximizing the probability of continuing allostasis within those spaces. This analysis
+leaves open, however, the question of how either MBs or VFE minimization are imple-
+mented in the vast variety of biological and increasingly hybrid biological and artiﬁcial
+systems to which we have experimental access. Hence, there remains a large number of
+further areas for conceptual development as well as empirical capabilities that should be
+investigated, which include the following.
+8.1. Conceptual Questions and Further Links to Develop
+•
+While higher-level systems bend action spaces for lower-level subsystems, it can be
+predicted that the higher level no longer needs to operate in a very rugged space of
+microstates. Instead, evolution can search a coarse-grained space of interventions,
+Entropy 2022, 24, 819
+22 of 33
+which also includes changing the resource availability landscapes at both the lower
+and higher levels (e.g., inventing a mouth and a specialized digestive system). Compu-
+tational models can be created to quantify the efﬁciency gains of evolutionary search
+in such multi-scale competency systems.
+•
+Links can be made to higher levels of cognitive activity and neuroscience. For example,
+yoga and biofeedback can be seen as ways for systems to forge new links between
+higher- and lower-level measurables. Gaining control over formerly autonomic sys-
+tem functions is akin to rerunning causal analysis functions on oneself to discover
+new axes in physiological spaces that the higher-level self did not previously have
+actuators for. Such processes clearly depend on interoception, a process for which
+active inference models are now well-developed [206,207], and being integrated with
+models of perception in a shared memory global workspace architecture [208].
+•
+More broadly, models of space traversal help ﬂesh out a true continuum of agency,
+placing simple systems that only know how to “roll down a hill” on the same overall
+spectrum as psychological systems that minimize complex cognitive stress states. Con-
+cepts related to free energy help provide a single framework that is required to explain
+how complex minds emerge from “just physics” without magical discontinuities in
+evolution or development. The capacity to traverse a space without getting caught
+in local optima can be developed into a formal deﬁnition of IQ for a system in that
+space. This links naturally to the work in morphological computation and embodied
+cognition because body shape determines the IQ of traversing a 3D behavioral space.
+How does this extend into other spaces? Many fascinating conceptual links can be de-
+veloped to work on embodied premotor cognition in math, causal reasoning, general
+planning, etc. [209–211].
+•
+How do cells, both native and after modiﬁcation via synthetic biology tools, make
+internal models of their “body shape” in unconventional spaces, such as a transcrip-
+tional space? Cells in vitro can learn to control ﬂight simulators [212], as can people
+with BCIs [213]. Brains can learn to control prosthetic limbs with new degrees of
+freedom [214]. What self- and world-modeling capacities are invariant across such
+problem spaces?
+•
+The tight link we have developed between motion in spaces and degrees of cognition
+across scales suggests that it may be possible to develop models of evolutionary search
+itself as a kind of meta-agent searching the ﬁtness space via active inference and other
+strategies [62,63,215,216]. In this light, evolution is still not claimed to be a complex
+meta-cognitive agent that is knowingly seeking speciﬁc ends, but on the other hand, it
+may not be completely blind either. It may be possible to develop models of minimal
+information processing that better explain the ability of the evolutionary process to
+solve problems, to choose which problems to solve, and to give rise to architectures
+that not only provide immediate ﬁtness payoffs but also perform well in entirely
+new environments.
+•
+A key opportunity for new theory concerns what tools could be developed for a
+system to detect that it is part of a larger system that is deforming its action space
+with nonzero agency. It may not be possible due to the Gödelian limits for a system to
+fathom the actual goals of the larger system, of which it forms a part, but how does an
+intelligent system gain evidence that it is part of an agent with some “grand design”
+versus living in a cold, mechanical universe that does not care what the parts do? The
+Lovecraftian horror of catching a glimpse of the fact that one is a cog in a grandiose
+intelligent system may be tempered by mathematical tools that enable us to have more
+agency over which aspects of the externally applied gradients we wish to ﬁght against
+and which gradients we gladly roll down.
+•
+We foresee great promise in the application of the mathematical framework of category
+theory [217,218], which provides the conceptual and formal tools needed to model the
+relationships between arbitrary spaces. Any of the spaces discussed here, together
+with the search operations acting within that space, can be considered a category.
+Entropy 2022, 24, 819
+23 of 33
+The theory provides, in this case, rigorous tools for determining whether multiple
+paths through the space yield the same outcome and, even more interestingly, whether
+paths through different spaces, such as a path in a morphological space or a path
+in a 3D behavioral space, yield the same outcome. We defer such analysis to future
+work. Some preliminary steps in this direction, characterizing arbitrary QRFs as
+category-theoretic constructs, can be found in [170,178].
+•
+There are numerous analogies to be explored with respect to porting conceptual tools
+from relativity to study scale-free cognition. The use of cognitive geometry and in-
+fodesics [219] ties naturally to general relativity. Other examples include the following:
+�
+Gravitational memory (permanent distortions of spacetime by gravitational
+waves [220]) to link the structure of action spaces to past experience;
+�
+Inertia in terms of resilience to stress (anatomical homeostasis as a kind of
+inertia against movement in the morphospace and other spaces);
+�
+Acceleration and force in a network space, where every connection in a net-
+work could be modeled via a “spring constant” or, even better, an LRC circuit.
+With feedback, interesting oscillations can appear, which can be harnessed
+as computations;
+�
+The ability of one system to warp the action space for another, such as warp-
+ing the morphospace for the embryonic head by speciﬁc organ movements,
+generates an analog of “mass”;
+�
+Bioelectric circuits could be modeled as warping the morphospace in the same
+way wormholes warp physical space. The two points at opposite ends of a wire
+are, for informational purposes, the same point, even if they are on opposite
+sides of the embryo. Neal Stephenson stated, “The cyberspace-warping power
+of wires, therefore, changes the geometry of the world of commerce and politics
+and ideas that we live in” [221]. The gap junctions’ control of morphogenetic
+bioelectric communication deform the physiological space to overcome distance
+in the anatomical space. Neurons do this too, as do mechanical stress in
+connective tissue and hormones;
+�
+Links also could be made to concepts of special relativity. For example, doppler
+effects in morphogenesis have already been described [222]. Moreover, the
+limited speed at which information can propagate through tissue naturally
+deﬁnes a minimal “now” moment, a temporal thickness for the integrated
+agent below which only submodules exist, in effect illustrating the relatedness
+of space and time by the propagation speed of information signals within
+living systems.
+8.2. Speciﬁc Empirical Research Directions
+•
+Speciﬁc models of morphogenetic control (embryogenesis, regeneration, cancer, etc.)
+that rely on navigation policies with diverse levels of cognitive sophistication need
+to be created and empirically tested. Can craniofacial remodeling be understood
+as a “run and tumble” strategy? Can evolution of morphogenetic control circuits
+be understood as the evolution of abstract vehicle navigation skills, thus porting
+knowledge from evolutionary robotics and collective intelligence to developmental
+biology [157,223–225]?
+•
+Similarly, such models need to be developed to understand allostasis in transcriptional,
+metabolic, and physiological spaces, modeling and then developing minimal Braiten-
+berg vehicles [44,226–229] as real devices to implement biomedical interventions such
+as smart insulin and neurotransmitter delivery devices.
+•
+Regenerative medicine needs to be moved beyond an exclusive focus on the micro-
+level hardware (genomic editing and protein pathway engineering) to include inter-
+ventions at higher levels. Using tools from behavioral science such as training in
+various learning assays can manipulate the lower-dimensional and smoother space of
+tissue- and organ-level incentives (described in more detail in [35,36]). Much as evolu-
+Entropy 2022, 24, 819
+24 of 33
+tion exploits multi-scale competency to maximize the adaptive gains per change made,
+bioengineers and workers in regenerative medicine can take advantage of behavior
+shaping of cellular agendas and plasticity, working in a reward space. Interestingly,
+this was well-appreciated by Pavlov, whose early work included training animals’
+organs in addition to the animals themselves. He understood the physiological space,
+and his experiments on training the pancreas and other body systems can now be
+performed with much higher-resolution tools. More broadly, impacting and incen-
+tivizing decision-making modules at higher levels is much more likely to produce
+coordinated, coherent outcomes than interventions at lower levels [230], resulting
+in fewer side effects in pharmacology and avoiding unhappy monsters in synthetic
+bioengineering. The future of biomedicine will look much more like communication
+(with unconventional intelligences in the body) than mechanical control at the molec-
+ular pathway level. This includes signaling to exploit the control policies of cells in
+the morphospace for regenerative control of growth and form [35,36] and exploiting
+gene-regulatory networks’ abilities to learn from experience to modify how they move
+in the transcriptional space while healthy and in the case of disease [79,83,231–235].
+•
+Computer engineering and robotics also afford many opportunities for testing and ap-
+plying this framework. Incorporating biological concepts into a computing system de-
+sign has been explored in the abstract [236,237], at the level of system design [238,239],
+and with neuromorphic hardware [240,241]. The present work suggests further di-
+rections, including developing frameworks for working with agential materials (like
+the cells that make up Xenobots), which requires distinct strategies from those used
+with passive materials or even active matter [242–245], creating evolutionary simula-
+tions and human use tools to explicitly address multiple scales of organization and
+problem solving.
+•
+More broadly, artiﬁcial intelligence can beneﬁt from enhancing current neuromorphic
+approaches with systems based on much more general, ancient intelligence, creating
+systems with motivation and agency from the ground up by taking embodiment
+seriously from an evolutionary perspective. The classic Dennett and Minsky debate
+about how much real-world embodiment matters for artiﬁcial intelligence can now be
+reframed in more general terms: embodiment is critical indeed, but it does not have to
+be in the classic 3D space. Embodiment in other action spaces can drive the same intel-
+ligence ratchet described above. New general AIs are likely to be developed gradually
+from minimal systems driven by the dynamics described above, which eventually
+scale homeostatic action into advanced metacognition. One speciﬁc strategy that can
+be suggested is the creation of an unsupervised agency estimator, which seeks to
+make models of its environment anywhere on the spectrum of persuadability [9]. This
+system will not only be useful for human scientists (freeing their hypothesis-making
+from the mindblindness [246] that limits imagination with respect to unconventional
+intelligences); it can also be used in an “adversarial” mode with evolving intelligences,
+a cycle that increasingly potentiates both the intelligence and the ability to detect it.
+9. Conclusions
+Human beings evolved with conscious access mostly to data from the outside world,
+including sensitivity to only a very small slice of the myriad of actions occurring in their
+various physiological, cellular, metabolic, and morphogenetic control systems. As a result,
+while our cognition is ﬁnely tuned to identify levels of agency in the behavioral actions
+of objects moving in a 3D space, we are intrinsically bad at recognizing intelligence in
+unfamiliar guises. If, for example, we grew up with a keen internal sense of our blood
+chemistry and all the things our pancreas, liver, kidneys, etc. were doing to maximize our
+health, or if we could directly sense changes in gene expression, we would have no trouble
+recognizing these as agents exhibiting competency and degrees of intelligence in other
+spaces. Thus, it is essential to develop a substrate- and scale-invariant theory of agency and
+intelligence. Speciﬁcally, we have sketched such a theory while maximizing the empirical,
+Entropy 2022, 24, 819
+25 of 33
+testable, and practical implications over philosophical wrangling. We have shown in
+particular that living systems operate in multiple spaces at different scales. These include
+the transcriptional, physiological, and morphological spaces as well as the more familiar 3D
+behavioral and social spaces. The computational mechanism of VFE minimization drives
+behavior in these spaces toward attractor states that enable allostasis. This framework
+suggests a number of new theoretical and experimental approaches in both biological and
+hybrid biological-artiﬁcial systems.
+Our model is committed to an observer-dependent non-binary approach that takes
+evolution and developmental biology seriously to emphasize gradual origins, deep uniﬁca-
+tion of basic principles, and ubiquitous real-time change. Policies and mechanisms guiding
+such seemingly diverse behavior as magnets’ “mindless” movements to reach each other,
+biochemical networks moving down energy gradients, bacteria swimming up nutrient gra-
+dients, moths’ repeated attempts to reach a light, and human goal-directed behavior must
+be on the same continuum because modern biology offers no discrete magical event that
+separates them; a single framework is needed. In this light, all intelligences are collective
+intelligences, and biological systems are nested dolls of agents with agendas that cooperate,
+compete, communicate, and interact within and across levels of organization. Agents of
+highly diverse implementation model their environments and themselves in accordance
+with an active inference framework, which drives the way they navigate information spaces.
+While dynamical systems theory describes how a system can go through a deﬁned space,
+multi-scale agency models explain the shape of the space relative to speciﬁc observers and
+agents [247].
+A key aspect of life is top-down control, where higher levels deform action spaces so
+that lower levels can be less intelligent and more mechanical while enabling the larger sys-
+tem to occupy the more adaptive regions of various spaces. The system evolves via a ratchet
+mechanism that begins with simple homeostasis and takes advantage of its modularity to
+measure, remember, and act over progressively larger and more complex states. Evolution
+pivoted this basic trick across spaces from the metabolic and physiological spaces through
+the anatomical morphospace, where ancient bioelectric network mechanisms became used
+to propel animals through a 3D space using the same strategies they originally relied on to
+move their anatomical conﬁguration through morphospace during regulative development
+and regeneration.
+The “brain in a vat” dynamic, where agents have no access to the objective ground
+truth about their brain–body–environment relations but must build actionable models of
+themselves on the ﬂy, helps understand (and design) highly diverse systems in which all of
+these aspects can be changed in a modular way: by evolution and by engineers. This helps
+clarify why biological systems are so highly evolvable and dissolves the existing concepts of
+objective privileged viewpoints of boundaries between the self and the world. These ideas
+have numerous implications for understanding the origin of various control systems in
+neuroscience and the efﬁciency of evolution in creating extremely robust problem-solving
+machines. This in turn suggests the same kinds of strategies (targeting high-level reward
+spaces) that are useful for workers in biomedicine, AI, and synthetic bioengineering who
+seek to manipulate and build complex adaptive systems.
+We view this framework as only the beginning of an empirically grounded understand-
+ing of agency that provides a conceptually integrated picture of the world. It is crucial to
+develop such frameworks that abandon untenable binary distinctions in favor of predictive,
+actionable models that are compatible with the modern understanding of gradual evolution
+and developmental biology. Forthcoming advances in synthetic bioengineering and AI will
+result in a diversity of agents in our midst that will dwarf Darwin’s challenge to classical
+categories. Future developments in transformative regenerative medicine, automation, and
+ethics require a ﬁrm conceptual foundation for understanding agency in a physical world.
+Author Contributions: Conceptualization: M.L. and C.F. Writing and editing: M.L. and C.F. All
+authors have read and agreed to the published version of the manuscript.
+Entropy 2022, 24, 819
+26 of 33
+Funding: M.L. gratefully acknowledges the support of the Templeton World Charity Foundation
+(grant TWCF0606) and the John Templeton Foundation (grant 62212). The opinions expressed
+in this publication are those of the authors and do not necessarily reﬂect the views of the John
+Templeton Foundation.
+Institutional Review Board Statement: Not applicable.
+Informed Consent Statement: Not applicable.
+Data Availability Statement: Not applicable.
+Acknowledgments: We thank Dora Biro, Pranab Das, Karl Friston, Edward Harvey, Benjamin
+Levin, and many other members of the community for helpful discussions and Wesley Clawson
+for comments on a draft of the manuscript. We thank Julia Poirier for editorial assistance with
+the manuscript.
+Conﬂicts of Interest: The authors declare no conﬂict of interest.
+References
+1.
+James, W. The Principles of Psychology; H. Holt and Company: New York, NY, USA, 1890.
+2.
+Rosenblueth, A.; Wiener, N.; Bigelow, J. Behavior, purpose, and teleology. Philos. Sci. 1943, 10, 18–24. [CrossRef]
+3.
+Krupenye, C.; Call, J. Theory of mind in animals: Current and future directions. Wiley Interdiscip. Rev. Cogn. Sci. 2019, 10, e1503.
+[CrossRef]
+4.
+Balázsi, G.; van Oudenaarden, A.; Collins, J.J. Cellular decision making and biological noise: From microbes to mammals. Cell
+2011, 144, 910–925. [CrossRef] [PubMed]
+5.
+Baluška, F.; Levin, M. On Having No Head: Cognition throughout Biological Systems. Front. Psychol. 2016, 7, 902. [CrossRef]
+6.
+Keijzer, F.; van Duijn, M.; Lyon, P. What nervous systems do: Early evolution, input-output, and the skin brain thesis. Adapt.
+Behav. 2013, 21, 67–85. [CrossRef]
+7.
+Lyon, P. The biogenic approach to cognition. Cogn. Process. 2006, 7, 11–29. [CrossRef] [PubMed]
+8.
+Lyon, P. The cognitive cell: Bacterial behavior reconsidered. Front. Microbiol. 2015, 6, 264. [CrossRef] [PubMed]
+9.
+Levin, M. Technological Approach to Mind Everywhere: An Experimentally-Grounded Framework for Understanding Diverse
+Bodies and Minds. Front. Syst. Neurosci. 2022, 16, 768201. [CrossRef]
+10.
+Westerhoff, H.V.; Brooks, A.N.; Simeonidis, E.; Garcia-Contreras, R.; He, F.; Boogerd, F.C.; Jackson, V.J.; Goncharuk, V.; Kolodkin,
+A. Macromolecular networks and intelligence in microorganisms. Front. Microbiol. 2014, 5, 379. [CrossRef]
+11.
+Ando, N.; Kanzaki, R. Insect-machine hybrid robot. Curr. Opin. Insect Sci. 2020, 42, 61–69. [CrossRef]
+12.
+Dong, X.; Kheiri, S.; Lu, Y.; Xu, Z.; Zhen, M.; Liu, X. Toward a living soft microrobot through optogenetic locomotion control of
+Caenorhabditis elegans. Sci. Robot. 2021, 6, eabe3950. [CrossRef] [PubMed]
+13.
+Saha, D.; Mehta, D.; Altan, E.; Chandak, R.; Traner, M.; Lo, R.; Gupta, P.; Singamaneni, S.; Chakrabartty, S.; Raman, B. Explosive
+sensing with insect-based biorobots. Biosens. Bioelectron. X 2020, 6, 100050. [CrossRef]
+14.
+Bakkum, D.J.; Chao, Z.C.; Gamblen, P.; Ben-Ary, G.; Shkolnik, A.G.; DeMarse, T.B.; Potter, S.M. Embodying cultured networks
+with a robotic drawing arm. In Proceedings of the 29th Annual International Conference of the IEEE Engineering in Medicine
+and Biology Society, Lyon, France, 22–26 August 2007; pp. 2996–2999.
+15.
+Bakkum, D.J.; Gamblen, P.M.; Ben-Ary, G.; Chao, Z.C.; Potter, S.M. MEART: The Semi-Living Artist. Front. Neurorobot. 2007, 1, 5.
+[CrossRef] [PubMed]
+16.
+DeMarse, T.B.; Wagenaar, D.A.; Blau, A.W.; Potter, S.M. The Neurally Controlled Animat: Biological Brains Acting with Simulated
+Bodies. Auton. Robot. 2001, 11, 305–310. [CrossRef]
+17.
+Ebrahimkhani, M.R.; Levin, M. Synthetic living machines: A new window on life. iScience 2021, 24, 102505. [CrossRef] [PubMed]
+18.
+Merritt, T.; Hamidi, F.; Alistar, M.; DeMenezes, M. Living media interfaces: A multi-perspective analysis of biological materials
+for interaction. Digit. Creat. 2020, 31, 1–21. [CrossRef]
+19.
+Potter, S.M.; Wagenaar, D.A.; Madhavan, R.; DeMarse, T.B. Long-term bidirectional neuron interfaces for robotic control, and
+in vitro learning studies. In Proceedings of the 25th Annual International Conference of the Ieee Engineering in Medicine and
+Biology Society, Cancun, Mexico, 17–21 September 2003; pp. 3690–3693.
+20.
+Ricotti, L.; Trimmer, B.; Feinberg, A.W.; Raman, R.; Parker, K.K.; Bashir, R.; Sitti, M.; Martel, S.; Dario, P.; Menciassi, A. Biohybrid
+actuators for robotics: A review of devices actuated by living cells. Sci. Robot. 2017, 2, aaq0495. [CrossRef]
+21.
+Tsuda, S.; Artmann, S.; Zauner, K.-P. The Phi-Bot: A Robot Controlled by a Slime Mould. In Artiﬁcial Life Models in Hardware;
+Adamatzky, A., Komosinski, M., Eds.; Springer: London, UK, 2009; pp. 213–232.
+22.
+Warwick, K.; Nasuto, S.J.; Becerra, V.M.; Whalley, B.J. Experiments with an In-Vitro Robot Brain. In Computing with Instinct:
+Rediscovering Artiﬁcial Intelligence; Cai, Y., Ed.; Lecture Notes in Computer Science; Springer: Berlin/Heidelberg, Germany, 1998;
+pp. 1–15.
+23.
+Bongard, J.; Levin, M. Living Things Are Not (20th Century) Machines: Updating Mechanism Metaphors in Light of the Modern
+Science of Machine Behavior. Front. Ecol. Evol. 2021, 9, 650726. [CrossRef]
+Entropy 2022, 24, 819
+27 of 33
+24.
+Davies, J.A.; Glykofrydis, F. Engineering pattern formation and morphogenesis. Biochem. Soc. Trans. 2020, 48, 1177–1185.
+[CrossRef]
+25.
+Kriegman, S.; Blackiston, D.; Levin, M.; Bongard, J. A scalable pipeline for designing reconﬁgurable organisms. Proc. Natl. Acad.
+Sci. USA 2020, 117, 1853–1859. [CrossRef]
+26.
+Constant, A.; Ramstead, M.J.D.; Veissiere, S.P.L.; Campbell, J.O.; Friston, K.J. A variational approach to niche construction. J. R.
+Soc. Interface 2018, 15, 20170685. [CrossRef] [PubMed]
+27.
+Friston, K. Life as we know it. J. R. Soc. Interface 2013, 10, 20130475. [CrossRef] [PubMed]
+28.
+Friston, K. Active inference and free energy. Behav. Brain Sci. 2013, 36, 212–213. [CrossRef] [PubMed]
+29.
+Friston, K.J.; Daunizeau, J.; Kilner, J.; Kiebel, S.J. Action and behavior: A free-energy formulation. Biol. Cybern 2010, 102, 227–260.
+[CrossRef]
+30.
+Sengupta, B.; Stemmler, M.B.; Friston, K.J. Information and efﬁciency in the nervous system—A synthesis. PLoS Comput. Biol.
+2013, 9, e1003157. [CrossRef]
+31.
+Emmons-Bell, M.; Durant, F.; Hammelman, J.; Bessonov, N.; Volpert, V.; Morokuma, J.; Pinet, K.; Adams, D.S.; Pietak, A.; Lobo,
+D.; et al. Gap Junctional Blockade Stochastically Induces Different Species-Speciﬁc Head Anatomies in Genetically Wild-Type
+Girardia dorotocephala Flatworms. Int. J. Mol. Sci. 2015, 16, 27865–27896. [CrossRef]
+32.
+Gerhart, J.; Kirschner, M. The theory of facilitated variation. Proc. Natl. Acad. Sci. USA 2007, 104 (Suppl. S1), 8582–8589. [CrossRef]
+33.
+Wagner, A. Arrival of the Fittest: Solving Evolution’s Greatest Puzzle; Penguin Group: New York, NY, USA, 2014.
+34.
+Levin, M. The wisdom of the body: Future techniques and approaches to morphogenetic ﬁelds in regenerative medicine,
+developmental biology and cancer. Regen. Med. 2011, 6, 667–673. [CrossRef]
+35.
+Pezzulo, G.; Levin, M. Re-membering the body: Applications of computational neuroscience to the top-down control of
+regeneration of limbs and other complex organs. Integr. Biol. 2015, 7, 1487–1517. [CrossRef]
+36.
+Pezzulo, G.; Levin, M. Top-down models in biology: Explanation and control of complex living systems above the molecular
+level. J. R. Soc. Interface 2016, 13, 20160555. [CrossRef]
+37.
+Lobo, D.; Solano, M.; Bubenik, G.A.; Levin, M. A linear-encoding model explains the variability of the target morphology in
+regeneration. J. R. Soc. Interface 2014, 11, 20130918. [CrossRef] [PubMed]
+38.
+Mathews, J.; Levin, M. The body electric 2.0: Recent advances in developmental bioelectricity for regenerative and synthetic
+bioengineering. Curr. Opin. Biotechnol. 2018, 52, 134–144. [CrossRef] [PubMed]
+39.
+Ashby, W.R. Design for a Brain: The Origin of Adaptive Behavior; Chapman & Hall: London, UK, 1952.
+40.
+Maturana, H.R.; Varela, F.J. Autopoiesis and Cognition: The Realization of the Living; D. Reidel Publishing Company: Dordrecht, The
+Netherlands, 1980.
+41.
+Pattee, H.H. Cell Psychology: An Evolutionary Approach to the Symbol-Matter Problem. Cogn. Brain Theory 1982, 5, 325–341.
+42.
+Rosen, R. Anticipatory Systems: Philosophical, Mathematical, and Methodological Foundations, 1st ed.; Pergamon Press: Oxford, UK;
+New York, NY, USA, 1985.
+43.
+Rosen, R. On Information and Complexity. In Complexity, Language, and Life: Mathematical Approaches; Casti, J.L., Karlqvist, A.,
+Eds.; Springer: Berlin/Heidelberg, Germany, 1986; Volume 16, pp. 174–196.
+44.
+Braitenberg, V. Vehicles, Experiments in Synthetic Psychology; MIT Press: Cambridge, MA, USA, 1984; 152p.
+45.
+Klyubin, A.S.; Polani, D.; Nehaniv, C.L. Empowerment: A universal agent-centric measure of control. In Proceedings of the 2005
+IEEE Congress on Evolutionary Computation, Edinburgh, UK, 2–4 September 2005; pp. 128–135.
+46.
+Vernon, D.; Thill, S.; Ziemke, T. The Role of Intention in Cognitive Robotics. In Toward Robotic Socially Believable Behaving Systems;
+Esposito, A., Jain, L., Eds.; Intelligent Systems Reference Library; Springer: Cham, Switzerland, 2016; Volume 1, pp. 15–27.
+47.
+Vernon, D.; Lowe, R.; Thill, S.; Ziemke, T. Embodied cognition and circular causality: On the role of constitutive autonomy in the
+reciprocal coupling of perception and action. Front. Psychol. 2015, 6, 1660. [CrossRef] [PubMed]
+48.
+Ziemke, T.; Thill, S. Robots are not Embodied! Conceptions of Embodiment and their Implications for Social Human-Robot
+Interaction. Front. Artif. Intell. Appl. 2014, 273, 49–53. [CrossRef]
+49.
+Ziemke, T. On the role of emotion in biological and robotic autonomy. Biosystems 2008, 91, 401–408. [CrossRef]
+50.
+Ziemke, T. The embodied self—Theories, hunches and robot models. J. Conscious. Stud. 2007, 14, 167–179.
+51.
+Ziemke, T. Cybernetics and embodied cognition: On the construction of realities in organisms and robots. Kybernetes 2005, 34,
+118–128. [CrossRef]
+52.
+Sharkey, N.; Ziemke, T. Life, mind, and robots—The ins and outs of embodied cognition. In Hybrid Neural Systems; Wermter, S.,
+Sun, R., Eds.; Lecture Notes in Computer Science; Springer: Berlin/Heidelberg, Germany, 2000; Volume 1778, pp. 313–332.
+53.
+Toro, J.; Kiverstein, J.; Rietveld, E. The Ecological-Enactive Model of Disability: Why Disability Does Not Entail Pathological
+Embodiment. Front. Psychol. 2020, 11, 1162. [CrossRef]
+54.
+Kiverstein, J. The meaning of embodiment. Top Cogn. Sci. 2012, 4, 740–758. [CrossRef]
+55.
+Altschul, S.F. Amino acid substitution matrices from an information theoretic perspective. J. Mol. Biol. 1991, 219, 555–565.
+[CrossRef]
+56.
+Kaneko, K. Characterization of stem cells and cancer cells on the basis of gene expression proﬁle stability, plasticity, and robustness:
+Dynamical systems theory of gene expressions under cell-cell interaction explains mutational robustness of differentiated cells
+and suggests how cancer cells emerge. Bioessays 2011, 33, 403–413. [PubMed]
+Entropy 2022, 24, 819
+28 of 33
+57.
+Morgan, C.L. Other minds than ours. In Review of An Introduction to Comparative Psychology, New ed.; Morgan, C.L., Ed.; Walter
+Scott Publishing Company: London, UK, 1903; pp. 36–59.
+58.
+Bui, T.T.; Selvarajoo, K. Attractor Concepts to Evaluate the Transcriptome-wide Dynamics Guiding Anaerobic to Aerobic State
+Transition in Escherichia coli. Sci. Rep. 2020, 10, 5878. [CrossRef] [PubMed]
+59.
+Huang, S.; Ernberg, I.; Kauffman, S. Cancer attractors: A systems view of tumors from a gene network dynamics and develop-
+mental perspective. Semin. Cell Dev. Biol. 2009, 20, 869–876. [CrossRef]
+60.
+Li, Q.; Wennborg, A.; Aurell, E.; Dekel, E.; Zou, J.Z.; Xu, Y.; Huang, S.; Ernberg, I. Dynamics inside the cancer cell attractor reveal
+cell heterogeneity, limits of stability, and escape. Proc. Natl. Acad. Sci. USA 2016, 113, 2672–2677. [CrossRef]
+61.
+Zhou, P.J.; Wang, S.X.; Li, T.J.; Nie, Q. Dissecting transition cells from single-cell transcriptome data through multiscale stochastic
+dynamics. Nat. Commun. 2021, 12, 5609. [CrossRef]
+62.
+Fields, C.; Levin, M. Does Evolution Have a Target Morphology? Org. J. Biol. Sci. 2020, 4, 57–76. [CrossRef]
+63.
+Fields, C.; Levin, M. Scale-Free Biology: Integrating Evolutionary and Developmental Thinking. Bioessays 2020, 42, e1900228.
+[CrossRef]
+64.
+Hamood, A.W.; Marder, E. Animal-to-Animal Variability in Neuromodulation and Circuit Function. Cold Spring Harb. Symp.
+Quant. Biol. 2014, 79, 21–28. [CrossRef]
+65.
+O’Leary, T.; Williams, A.H.; Franci, A.; Marder, E. Cell types, network homeostasis, and pathological compensation from a
+biologically plausible ion channel expression model. Neuron 2014, 82, 809–821. [CrossRef]
+66.
+Ori, H.; Marder, E.; Marom, S. Cellular function given parametric variation in the Hodgkin and Huxley model of excitability. Proc.
+Natl. Acad. Sci. USA 2018, 115, E8211–E8218. [CrossRef] [PubMed]
+67.
+Barkai, N.; Leibler, S. Robustness in simple biochemical networks. Nature 1997, 387, 913–917. [CrossRef] [PubMed]
+68.
+Kochanowski, K.; Okano, H.; Patsalo, V.; Williamson, J.; Sauer, U.; Hwa, T. Global coordination of metabolic pathways in
+Escherichia coli by active and passive regulation. Mol. Syst. Biol. 2021, 17, e10064. [CrossRef]
+69.
+Mosteiro, L.; Hariri, H.; van den Ameele, J. Metabolic decisions in development and disease. Development 2021, 148, dev199609.
+[CrossRef] [PubMed]
+70.
+Marder, E.; Goaillard, J.M. Variability, compensation and homeostasis in neuron and network function. Nat. Rev. Neurosci. 2006, 7,
+563–574. [CrossRef]
+71.
+Emmons-Bell, M.; Durant, F.; Tung, A.; Pietak, A.; Miller, K.; Kane, A.; Martyniuk, C.J.; Davidian, D.; Morokuma, J.; Levin, M.
+Regenerative Adaptation to Electrochemical Perturbation in Planaria: A Molecular Analysis of Physiological Plasticity. iScience
+2019, 22, 147–165. [CrossRef]
+72.
+Bassel, G.W. Information Processing and Distributed Computation in Plant Organs. Trends Plant Sci. 2018, 23, 994–1005. [CrossRef]
+73.
+Elgart, M.; Snir, O.; Soen, Y. Stress-mediated tuning of developmental robustness and plasticity in ﬂies. Biochim. Biophys. Acta
+2015, 1849, 462–466. [CrossRef]
+74.
+Schreier, H.I.; Soen, Y.; Brenner, N. Exploratory adaptation in large random networks. Nat. Commun. 2017, 8, 14826. [CrossRef]
+75.
+Soen, Y.; Knafo, M.; Elgart, M. A principle of organization which facilitates broad Lamarckian-like adaptations by improvisation.
+Biol. Direct 2015, 10, 68. [CrossRef]
+76.
+Millard, P.; Smallbone, K.; Mendes, P. Metabolic regulation is sufﬁcient for global and robust coordination of glucose uptake,
+catabolism, energy production and growth in Escherichia coli. PLoS Comput. Biol. 2017, 13, e1005396. [CrossRef] [PubMed]
+77.
+Ledezma-Tejeida, D.; Schastnaya, E.; Sauer, U. Metabolism as a signal generator in bacteria. Curr. Opin. Syst. Biol. 2021, 28, 100404.
+[CrossRef]
+78.
+Kuchling, F.; Fields, C.; Levin, M. Metacognition as a Consequence of Competing Evolutionary Time Scales. Entropy 2022, 24, 601.
+[CrossRef] [PubMed]
+79.
+Biswas, S.; Manicka, S.; Hoel, E.; Levin, M. Gene regulatory networks exhibit several kinds of memory: Quantiﬁcation of memory
+in biological and random transcriptional networks. iScience 2021, 24, 102131. [CrossRef] [PubMed]
+80.
+Fernando, C.T.; Liekens, A.M.; Bingle, L.E.; Beck, C.; Lenser, T.; Stekel, D.J.; Rowe, J.E. Molecular circuits for associative learning
+in single-celled organisms. J. R. Soc. Interface 2009, 6, 463–469. [CrossRef]
+81.
+McGregor, S.; Vasas, V.; Husbands, P.; Fernando, C. Evolution of associative learning in chemical networks. PLoS Comput. Biol.
+2012, 8, e1002739. [CrossRef]
+82.
+Vey, G. Gene Coexpression as Hebbian Learning in Prokaryotic Genomes. Bull. Math. Biol. 2013, 75, 2431–2449. [CrossRef]
+83.
+Watson, R.A.; Buckley, C.L.; Mills, R.; Davies, A.P. Associative memory in gene regulation networks. In Proceedings of the 12th
+International Conference on the Synthesis and Simulation of Living Systems, Odense, Denmark, 19–23 August 2010; pp. 194–202.
+84.
+Abzhanov, A. The old and new faces of morphology: The legacy of D’Arcy Thompson’s ‘theory of transformations’ and ‘laws of
+growth’. Development 2017, 144, 4284–4297. [CrossRef]
+85.
+Avena-Koenigsberger, A.; Goni, J.; Sole, R.; Sporns, O. Network morphospace. J. R. Soc. Interface 2015, 12, 20140881. [CrossRef]
+86.
+Stone, J.R. The spirit of D’arcy Thompson dwells in empirical morphospace. Math. Biosci. 1997, 142, 13–30. [CrossRef]
+87.
+Raup, D.M.; Michelson, A. Theoretical Morphology of the Coiled Shell. Science 1965, 147, 1294–1295. [CrossRef] [PubMed]
+88.
+Cervera, J.; Levin, M.; Mafe, S. Morphology changes induced by intercellular gap junction blocking: A reaction-diffusion
+mechanism. Biosystems 2021, 209, 104511. [CrossRef] [PubMed]
+89.
+Thompson, D.A.W.; Whyte, L.L. On Growth and Form, A New ed.; The University Press: Cambridge, UK, 1942; pp. 1055–1064.
+Entropy 2022, 24, 819
+29 of 33
+90.
+Vandenberg, L.N.; Adams, D.S.; Levin, M. Normalized shape and location of perturbed craniofacial structures in the Xenopus
+tadpole reveal an innate ability to achieve correct morphology. Dev. Dyn. 2012, 241, 863–878. [CrossRef] [PubMed]
+91.
+Fankhauser, G. The Effects of Changes in Chromosome Number on Amphibian Development. Q. Rev. Biol. 1945, 20, 20–78.
+[CrossRef]
+92.
+Fankhauser, G. Maintenance of normal structure in heteroploid salamander larvae, through compensation of changes in cell size
+by adjustment of cell number and cell shape. J. Exp. Zool. 1945, 100, 445–455. [CrossRef]
+93.
+Abzhanov, A.; Kuo, W.P.; Hartmann, C.; Grant, B.R.; Grant, P.R.; Tabin, C.J. The calmodulin pathway and evolution of elongated
+beak morphology in Darwin’s ﬁnches. Nature 2006, 442, 563–567. [CrossRef]
+94.
+Abzhanov, A.; Protas, M.; Grant, B.R.; Grant, P.R.; Tabin, C.J. Bmp4 and morphological variation of beaks in Darwin’s ﬁnches.
+Science 2004, 305, 1462–1465. [CrossRef]
+95.
+Cervera, J.; Pietak, A.; Levin, M.; Mafe, S. Bioelectrical coupling in multicellular domains regulated by gap junctions: A conceptual
+approach. Bioelectrochemistry 2018, 123, 45–61. [CrossRef]
+96.
+Cervera, J.; Ramirez, P.; Levin, M.; Mafe, S. Community effects allow bioelectrical reprogramming of cell membrane potentials in
+multicellular aggregates: Model simulations. Phys. Rev. E 2020, 102, 052412. [CrossRef]
+97.
+Niehrs, C. On growth and form: A Cartesian coordinate system of Wnt and BMP signaling speciﬁes bilaterian body axes.
+Development 2010, 137, 845–857. [CrossRef]
+98.
+Riol, A.; Cervera, J.; Levin, M.; Mafe, S. Cell Systems Bioelectricity: How Different Intercellular Gap Junctions Could Regionalize
+a Multicellular Aggregate. Cancers 2021, 13, 5300. [CrossRef] [PubMed]
+99.
+Shi, R.; Borgens, R.B. Three-dimensional gradients of voltage during development of the nervous system as invisible coordinates
+for the establishment of embryonic pattern. Dev. Dyn. 1995, 202, 101–114. [CrossRef] [PubMed]
+100. Marnik, E.A.; Updike, D.L. Membraneless organelles: P granules in Caenorhabditis elegans. Trafﬁc 2019, 20, 373–379. [CrossRef]
+101. Adams, D.S.; Robinson, K.R.; Fukumoto, T.; Yuan, S.; Albertson, R.C.; Yelick, P.; Kuo, L.; McSweeney, M.; Levin, M. Early,
+H+-V-ATPase-dependent proton ﬂux is necessary for consistent left-right patterning of non-mammalian vertebrates. Development
+2006, 133, 1657–1671. [CrossRef] [PubMed]
+102. Levin, M.; Thorlin, T.; Robinson, K.R.; Nogi, T.; Mercola, M. Asymmetries in H+/K+-ATPase and cell membrane potentials
+comprise a very early step in left-right patterning. Cell 2002, 111, 77–89. [CrossRef]
+103. Fields, C.; Levin, M. Somatic multicellularity as a satisﬁcing solution to the prediction-error minimization problem. Commun.
+Integr. Biol. 2019, 12, 119–132. [CrossRef]
+104. Fields, C.; Bischof, J.; Levin, M. Morphological Coordination: A Common Ancestral Function Unifying Neural and Non-Neural
+Signaling. Physiology 2020, 35, 16–30. [CrossRef]
+105. Fields, C.; Levin, M. Why isn’t sex optional? Stem-cell competition, loss of regenerative capacity, and cancer in metazoan
+evolution. Commun. Integr. Biol. 2020, 13, 170–183. [CrossRef]
+106. Prager, I.; Watzl, C. Mechanisms of natural killer cell-mediated cellular cytotoxicity. J. Leukoc. Biol. 2019, 105, 1319–1329. [CrossRef]
+107. Casas-Tinto, S.; Torres, M.; Moreno, E. The ﬂower code and cancer development. Clin. Transl. Oncol. 2011, 13, 5–9. [CrossRef]
+108. Rhiner, C.; Lopez-Gay, J.M.; Soldini, D.; Casas-Tinto, S.; Martin, F.A.; Lombardia, L.; Moreno, E. Flower forms an extracellular
+code that reveals the ﬁtness of a cell to its neighbors in Drosophila. Dev. Cell 2010, 18, 985–998. [CrossRef] [PubMed]
+109. Gawne, R.; McKenna, K.Z.; Levin, M. Competitive and Coordinative Interactions between Body Parts Produce Adaptive
+Developmental Outcomes. Bioessays 2020, 42, e1900245. [CrossRef] [PubMed]
+110. Rubenstein, M.; Cornejo, A.; Nagpal, R. Robotics. Programmable self-assembly in a thousand-robot swarm. Science 2014, 345,
+795–799. [CrossRef] [PubMed]
+111. Couzin, I. Collective minds. Nature 2007, 445, 715. [CrossRef] [PubMed]
+112. Couzin, I.D. Collective cognition in animal groups. Trends Cogn. Sci. 2009, 13, 36–43. [CrossRef]
+113. Birnbaum, K.D.; Sanchez Alvarado, A. Slicing across kingdoms: Regeneration in plants and animals. Cell 2008, 132, 697–710.
+[CrossRef]
+114. Levin, M. The Computational Boundary of a “Self”: Developmental Bioelectricity Drives Multicellularity and Scale-Free Cognition.
+Front. Psychol. 2019, 10, 2688. [CrossRef]
+115. Levin, M. Bioelectrical approaches to cancer as a problem of the scaling of the cellular self. Prog. Biophys. Mol. Biol. 2021, 165,
+102–113. [CrossRef]
+116. Durant, F.; Morokuma, J.; Fields, C.; Williams, K.; Adams, D.S.; Levin, M. Long-Term, Stochastic Editing of Regenerative Anatomy
+via Targeting Endogenous Bioelectric Gradients. Biophys. J. 2017, 112, 2231–2243. [CrossRef]
+117. Pezzulo, G.; LaPalme, J.; Durant, F.; Levin, M. Bistability of somatic pattern memories: Stochastic outcomes in bioelectric circuits
+underlying regeneration. Philos. Trans. R. Soc. Lond. B Biol. Sci. 2021, 376, 20190765. [CrossRef]
+118. Sullivan, K.G.; Emmons-Bell, M.; Levin, M. Physiological inputs regulate species-speciﬁc anatomy during embryogenesis and
+regeneration. Commun. Integr. Biol. 2016, 9, e1192733. [CrossRef] [PubMed]
+119. Cooke, J. Cell number in relation to primary pattern formation in the embryo of Xenopus laevis. I: The cell cycle during new
+pattern formation in response to implanted organisers. J. Embryol. Exp. Morph. 1979, 51, 165–182.
+120. Cooke, J. Scale of body pattern adjusts to available cell number in amphibian embryos. Nature 1981, 290, 775–778. [CrossRef]
+[PubMed]
+Entropy 2022, 24, 819
+30 of 33
+121. Pinet, K.; Deolankar, M.; Leung, B.; McLaughlin, K.A. Adaptive correction of craniofacial defects in pre-metamorphic Xenopus
+laevis tadpoles involves thyroid hormone-independent tissue remodeling. Development 2019, 146, dev175893. [CrossRef] [PubMed]
+122. Pinet, K.; McLaughlin, K.A. Mechanisms of physiological tissue remodeling in animals: Manipulating tissue, organ, and organism
+morphology. Dev. Biol. 2019, 451, 134–145. [CrossRef] [PubMed]
+123. Blackiston, D.; Lederer, E.; Kriegman, S.; Garnier, S.; Bongard, J.; Levin, M. A cellular platform for the development of synthetic
+living machines. Sci. Robot. 2021, 6, eabf1571. [CrossRef]
+124. Kriegman, S.; Blackiston, D.; Levin, M.; Bongard, J. Kinematic self-replication in reconﬁgurable organisms. Proc. Natl. Acad. Sci.
+USA 2021, 118, e2112672118. [CrossRef]
+125. McEwen, B.S. Stress, adaptation, and disease. Allostasis and allostatic load. Ann. N. Y. Acad. Sci. 1998, 840, 33–44. [CrossRef]
+126. Schulkin, J.; Sterling, P. Allostasis: A Brain-Centered, Predictive Mode of Physiological Regulation. Trends Neurosci. 2019, 42,
+740–752. [CrossRef]
+127. Ziemke, T. The body of knowledge: On the role of the living body in grounding embodied cognition. Biosystems 2016, 148, 4–11.
+[CrossRef]
+128. Turing, A.M. Computing machinery and intelligence. Mind 1950, 59, 433–460. [CrossRef]
+129. Turing, A.M. The Chemical Basis of Morphogenesis. Philos. Trans. R. Soc. Lond. Ser. B-Biol. Sci. 1952, 237, 37–72. [CrossRef]
+130. Keijzer, F.; Arnellos, A. The animal sensorimotor organization: A challenge for the environmental complexity thesis. Biol. Philos.
+2017, 32, 421–441. [CrossRef]
+131. Keijzer, F. Moving and sensing without input and output: Early nervous systems and the origins of the animal sensorimotor
+organization. Biol. Philos. 2015, 30, 311–331. [CrossRef] [PubMed]
+132. Adamatzky, A.; Costello, B.D.L.; Shirakawa, T. Universal Computation with Limited Resources: Belousov-Zhabotinsky and
+Physarum Computers. Int. J. Bifurc. Chaos 2008, 18, 2373–2389. [CrossRef]
+133. Beekman, M.; Latty, T. Brainless but Multi-Headed: Decision Making by the Acellular Slime Mould Physarum polycephalum. J. Mol.
+Biol. 2015, 427, 3734–3743. [CrossRef]
+134. Mori, Y.; Koaze, A. Cognition of different length by Physarum polycephalum: Weber’s law in an amoeboid organism. Mycoscience
+2013, 54, 426–428. [CrossRef]
+135. Nakagaki, T.; Kobayashi, R.; Nishiura, Y.; Ueda, T. Obtaining multiple separate food sources: Behavioural intelligence in the
+Physarum plasmodium. Proc. Biol. Sci. 2004, 271, 2305–2310. [CrossRef]
+136. Vogel, D.; Dussutour, A. Direct transfer of learned behaviour via cell fusion in non-neural organisms. Proc. Biol. Sci. 2016, 283,
+20162382. [CrossRef]
+137. Levin, M. Bioelectric signaling: Reprogrammable circuits underlying embryogenesis, regeneration, and cancer. Cell 2021, 184,
+1971–1989. [CrossRef]
+138. Benitez, M.; Hernandez-Hernandez, V.; Newman, S.A.; Niklas, K.J. Dynamical Patterning Modules, Biogeneric Materials, and the
+Evolution of Multicellular Plants. Front. Plant Sci. 2018, 9, 871. [CrossRef] [PubMed]
+139. Kauffman, S.A. The Origins of Order: Self Organization and Selection in Evolution; Oxford University Press: New York, NY, USA,
+1993; pp. 18, 709.
+140. Kauffman, S.A.; Johnsen, S. Coevolution to the edge of chaos: Coupled ﬁtness landscapes, poised states, and coevolutionary
+avalanches. J. Biol. 1991, 149, 467–505. [CrossRef]
+141. Powers, W.T. Behavior: The Control of Perception; Aldine Pub. Co.: Chicago, IL, USA, 1973; pp. 11, 296.
+142. Ramstead, M.J.D.; Badcock, P.B.; Friston, K.J. Answering Schrodinger’s question: A free-energy formulation. Phys. Life Rev. 2018,
+24, 1–16. [CrossRef]
+143. Sengupta, B.; Tozzi, A.; Cooray, G.K.; Douglas, P.K.; Friston, K.J. Towards a Neuronal Gauge Theory. PLoS Biol. 2016, 14, e1002400.
+[CrossRef]
+144. Nakagaki, T.; Yamada, H.; Toth, A. Maze-solving by an amoeboid organism. Nature 2000, 407, 470. [CrossRef] [PubMed]
+145. Osan, R.; Su, E.; Shinbrot, T. The interplay between branching and pruning on neuronal target search during developmental
+growth: Functional role and implications. PLoS ONE 2011, 6, e25135. [CrossRef]
+146. Katz, Y.; Springer, M. Probabilistic adaptation in changing microbial environments. PeerJ 2016, 4, e2716. [CrossRef]
+147. Katz, Y.; Springer, M.; Fontana, W. Embodying probabilistic inference in biochemical circuits. arXiv 2018, arXiv:1806.10161.
+[CrossRef]
+148. Whittington, J.C.R.; Muller, T.H.; Mark, S.; Chen, G.; Barry, C.; Burgess, N.; Behrens, T.E.J. The Tolman-Eichenbaum Machine:
+Unifying Space and Relational Memory through Generalization in the Hippocampal Formation. Cell 2020, 183, 1249–1263.e23.
+[CrossRef]
+149. George, D.; Rikhye, R.V.; Gothoskar, N.; Guntupalli, J.S.; Dedieu, A.; Lazaro-Gredilla, M. Clone-structured graph representations
+enable ﬂexible learning and vicarious evaluation of cognitive maps. Nat. Commun. 2021, 12, 2392. [CrossRef]
+150. Merchant, H.; Harrington, D.L.; Meck, W.H. Neural basis of the perception and estimation of time. Annu. Rev. Neurosci 2013, 36,
+313–336. [CrossRef] [PubMed]
+151. Jeffery, K.J.; Wilson, J.J.; Casali, G.; Hayman, R.M. Neural encoding of large-scale three-dimensional space-properties and
+constraints. Front. Psychol. 2015, 6, 927. [CrossRef] [PubMed]
+152. Schuster, M.; Sexton, D.J.; Diggle, S.P.; Greenberg, E.P. Acyl-homoserine lactone quorum sensing: From evolution to application.
+Annu. Rev. Microbiol. 2013, 67, 43–63. [CrossRef]
+Entropy 2022, 24, 819
+31 of 33
+153. Monds, R.D.; O’Toole, G.A. The developmental model of microbial bioﬁlms: Ten years of a paradigm up for review. Trends
+Microbiol. 2009, 17, 73–87. [CrossRef] [PubMed]
+154. Lefebvre, L. Brains, innovations, tools and cultural transmission in birds, non-human primates, and fossil hominins. Front. Hum.
+Neurosci. 2013, 7, 245. [CrossRef]
+155. Harari, Y.N. Sapiens: A Brief History of Humankind; Harvill Secker: London, UK, 2014.
+156. Blackmore, S. Dangerous memes; or, What the Pandorans let loose. In Cosmos & Culture: Culture Evolution in a Cosmic Context;
+Dick, S.J., Lupisdella, M.L., Eds.; National Aeronautics and Space Administration, Ofﬁce of External Relations, History Division:
+Washington, DC, USA, 2009; pp. 297–317.
+157. Friston, K.; Levin, M.; Sengupta, B.; Pezzulo, G. Knowing one’s place: A free-energy approach to pattern regulation. J. R. Soc.
+Interface 2015, 12, 20141383. [CrossRef]
+158. Kashiwagi, A.; Urabe, I.; Kaneko, K.; Yomo, T. Adaptive response of a gene network to environmental changes by ﬁtness-induced
+attractor selection. PLoS ONE 2006, 1, e49. [CrossRef]
+159. Conway, J.; Kochen, S. The Free Will Theorem. Found. Phys. 2006, 36, 1441–1473. [CrossRef]
+160. Kahneman, D. Thinking, Fast and Slow; Farrar, Straus and Giroux: New York, NY, USA, 2011.
+161. Chater, N. The Mind Is Flat: The Remarkable Shallowness of the Improvising Brain; Yale University Press: New Haven, CT, USA, 2018.
+162. Ashby, W.R. Design for a Brain; Chapman & Hall: London, UK, 1952; p. 259.
+163. Friston, K. A theory of cortical responses. Philos. Trans. R. Soc. Lond. Ser. B Biol. Sci. 2005, 360, 815–836. [CrossRef]
+164. Friston, K. The free-energy principle: A uniﬁed brain theory? Nat. Rev. Neurosci. 2010, 11, 127–138. [CrossRef]
+165. Friston, K.J.; Stephan, K.E. Free-energy and the brain. Synthese 2007, 159, 417–458. [CrossRef] [PubMed]
+166. Friston, K.; FitzGerald, T.; Rigoli, F.; Schwartenbeck, P.; Pezzulo, G. Active Inference: A Process Theory. Neural Comput. 2017, 29,
+1–49. [CrossRef] [PubMed]
+167. Ramstead, M.J.D.; Constant, A.; Badcock, P.B.; Friston, K.J. Variational ecology and the physics of sentient systems. Phys. Life Rev.
+2019, 31, 188–205. [CrossRef]
+168. Kuchling, F.; Friston, K.; Georgiev, G.; Levin, M. Morphogenesis as Bayesian inference: A variational approach to pattern
+formation and control in complex biological systems. Phys. Life Rev. 2020, 33, 88–108. [CrossRef] [PubMed]
+169. Friston, K. A free energy principle for a particular physics. arXiv 2019, arXiv:1906.10184. [CrossRef]
+170. Fields, C.; Friston, K.; Glazebrook, J.F.; Levin, M. A free energy principle for generic quantum systems.
+arXiv 2021,
+arXiv:2112.15242. [CrossRef] [PubMed]
+171. Jeffery, K.; Pollack, R.; Rovelli, C. On the Statistical Mechanics of Life: Schrödinger Revisited. Entropy 2019, 21, 1211. [CrossRef]
+172. Clark, A. How to knit your own Markov blanket: Resisting the Second Law with metamorphic minds. In Philosophy and Predictive
+Processing 3; Metzinger, T., Wiese, W., Eds.; MIND Group: Frankfurt am Main, Germany, 2017.
+173. Hoffman, D.D. The Case Against Reality: Why Evolution Hid the Truth from Our Eyes; W. W. Norton & Company: New York, NY,
+USA, 2019.
+174. Fields, C. Building the Observer into the System: Toward a Realistic Description of Human Interaction with the World. Systems
+2016, 4, 32. [CrossRef]
+175. Fields, C. Sciences of Observation. Philosophies 2018, 3, 29. [CrossRef]
+176. Conant, R.C.; Ross Ashby, W. Every good regulator of a system must be a model of that system†. Int. J. Syst. Sci. 1970, 1, 89–97.
+[CrossRef]
+177. Rubin, S.; Parr, T.; Da Costa, L.; Friston, K. Future climates: Markov blankets and active inference in the biosphere. J. R. Soc.
+Interface 2020, 17, 20200503. [CrossRef] [PubMed]
+178. Fields, C.; Glazebrook, J.F.; Marcianò, A. Reference Frame Induced Symmetry Breaking on Holographic Screens. Symmetry 2021,
+13, 408. [CrossRef]
+179. Robbins, R.J.; Krishtalka, L.; Wooley, J.C. Advances in biodiversity: Metagenomics and the unveiling of biological dark matter.
+Stand. Genom. Sci. 2016, 11, 69. [CrossRef]
+180. Addazi, A.; Chen, P.S.; Fabrocini, F.; Fields, C.; Greco, E.; Lulli, M.; Marcianò, A.; Pasechnik, R. Generalized Holographic Principle,
+Gauge Invariance and the Emergence of Gravity a la Wilczek. Front. Astron. Space Sci. 2021, 8, 563450. [CrossRef]
+181. Fields, C.; Hoffman, D.D.; Prakash, C.; Prentner, R. Eigenforms, Interfaces and Holographic Encoding toward an Evolutionary
+Account of Objects and Spacetime. Constr. Found. 2017, 12, 265–274.
+182. Law, J.; Shaw, P.; Earland, K.; Sheldon, M.; Lee, M. A psychology based approach for longitudinal development in cognitive
+robotics. Front. Neurorobot. 2014, 8, 1. [CrossRef]
+183. Hoffman, D.D.; Singh, M.; Prakash, C. The Interface Theory of Perception. Psychon. Bull. Rev. 2015, 22, 1480–1506. [CrossRef]
+184. Bongard, J.; Zykov, V.; Lipson, H. Resilient machines through continuous self-modeling. Science 2006, 314, 1118–1121. [CrossRef]
+185. Grifﬁths, T.L.; Chater, N.; Kemp, C.; Perfors, A.; Tenenbaum, J.B. Probabilistic models of cognition: Exploring representations and
+inductive biases. Trends Cogn. Sci. 2010, 14, 357–364. [CrossRef]
+186. Conway, M.A.; Pleydell-Pearce, C.W. The construction of autobiographical memories in the self-memory system. Psychol. Rev.
+2000, 107, 261–288. [CrossRef]
+187. Simons, J.S.; Ritchey, M.; Fernyhough, C. Brain Mechanisms Underlying the Subjective Experience of Remembering. Annu. Rev.
+Psychol. 2022, 73, 159–186. [CrossRef] [PubMed]
+Entropy 2022, 24, 819
+32 of 33
+188. Prentner, R. Consciousness and topologically structured phenomenal spaces. Conscious. Cogn. 2019, 70, 25–38. [CrossRef]
+[PubMed]
+189. Ter Haar, S.M.; Fernandez, A.A.; Gratier, M.; Knornschild, M.; Levelt, C.; Moore, R.K.; Vellema, M.; Wang, X.; Oller, D.K.
+Cross-species parallels in babbling: Animals and algorithms. Philos. Trans R. Soc. Lond. B Biol. Sci. 2021, 376, 20200239. [CrossRef]
+[PubMed]
+190. Hoffmann, M.; Chinn, L.K.; Somogyi, G.; Heed, T.; Fagard, J.; Lockman, J.J.; O’Regan, J.K. Development of reaching to the
+body in early infancy: From experiments to robotic models. In Proceedings of the 7th Joint IEEE International Conference on
+Development and Learning and Epigenetic Robotics (ICDL-EpiRob), Lisbon, Portugal, 18–21 September 2017; pp. 112–119.
+191. Dietrich, E.; Fields, C.; Hoffman, D.D.; Prentner, R. Editorial: Epistemic Feelings: Phenomenology, Implementation, and Role in
+Cognition. Front. Psychol. 2020, 11, 606046. [CrossRef] [PubMed]
+192. Prakash, C.; Fields, C.; Hoffman, D.D.; Prentner, R.; Singh, M. Fact, Fiction, and Fitness. Entropy 2020, 22, 514. [CrossRef]
+193. Busse, S.M.; McMillen, P.T.; Levin, M. Cross-limb communication during Xenopus hindlimb regenerative response: Non-local
+bioelectric injury signals. Development 2018, 145, dev164210. [CrossRef]
+194. McMillen, P.; Novak, R.; Levin, M. Toward Decoding Bioelectric Events in Xenopus Embryogenesis: New Methodology for
+Tracking Interplay Between Calcium and Resting Potentials In Vivo. J. Mol. Biol. 2020, 432, 605–620. [CrossRef]
+195. Farinella-Ferruzza, N. Risultati di trapianti di bottone codale di urodeli su anuri e vice versa. Riv. Biol. 1953, 45, 523–527.
+196. Farinella-Ferruzza, N. The transformation of a tail into a limb after xenoplastic transformation. Experientia 1956, 15, 304–305.
+[CrossRef]
+197. Rijntjes, M.; Buechel, C.; Kiebel, S.; Weiller, C. Multiple somatotopic representations in the human cerebellum. Neuroreport 1999,
+10, 3653–3658. [CrossRef]
+198. Bartlett, S.D.; Rudolph, T.; Spekkens, R.W. Reference frames, superselection rules, and quantum information. Rev. Mod. Phys.
+2007, 79, 555–609. [CrossRef]
+199. Fields, C.; Glazebrook, J.F.; Levin, M. Minimal physicalism as a scale-free substrate for cognition and consciousness. Neurosci.
+Conscious. 2021, 7, niab013. [CrossRef] [PubMed]
+200. Fields, C.; Levin, M. How Do Living Systems Create Meaning? Philosophies 2020, 5, 36. [CrossRef]
+201. Dzhafarov, E.N.; Cervantes, V.H.; Kujala, J.V. Contextuality in canonical systems of random variables. Philos. Trans. A Math. Phys.
+Eng. Sci. 2017, 375. [CrossRef]
+202. Fields, C.; Glazebrook, J.F. Information ﬂow in context-dependent hierarchical Bayesian inference. J. Exp. Artif. Intell. 2022, 34,
+111–142. [CrossRef]
+203. Fields, C.; Marcianò, A. Sharing Nonfungible Information Requires Shared Nonfungible Information. Quantum Rep. 2019, 1,
+252–259. [CrossRef]
+204. Buzsaki, G.; Tingley, D. Space and Time: The Hippocampus as a Sequence Generator. Trends Cogn. Sci. 2018, 22, 853–869.
+[CrossRef]
+205. Taylor, J.E.T.; Taylor, G.W. Artiﬁcial cognition: How experimental psychology can help generate explainable artiﬁcial intelligence.
+Psychon. Bull. Rev. 2021, 28, 454–475. [CrossRef]
+206. Seth, A.K.; Friston, K.J. Active interoceptive inference and the emotional brain. Philos. Trans R. Soc. Lond. B Biol. Sci. 2016,
+371, 20160007. [CrossRef]
+207. Seth, A.K.; Tsakiris, M. Being a Beast Machine: The Somatic Basis of Selfhood. Trends Cogn. Sci. 2018, 22, 969–981. [CrossRef]
+208. Fields, C.; Glazebrook, J.F. Do Process-1 simulations generate the epistemic feelings that drive Process-2 decision making? Cogn.
+Process. 2020, 21, 533–553. [CrossRef]
+209. Lakoff, G.; Núñez, R.E. Where Mathematics Comes from: How the Embodied Mind Brings Mathematics into Being; Basic Books:
+New York, NY, USA, 2000.
+210. Bubic, A.; von Cramon, D.Y.; Schubotz, R.I. Prediction, cognition and the brain. Front. Hum. Neurosci. 2010, 4, 25. [CrossRef]
+211. Fields, C. Metaphorical motion in mathematical reasoning: Further evidence for pre-motor implementation of structure mapping
+in abstract domains. Cogn. Process. 2013, 14, 217–229. [CrossRef]
+212. DeMarse, T.B.; Dockendorf, K.P. Adaptive ﬂight control with living neuronal networks on microelectrode arrays. In Proceedings
+of the International Joint Conference on Neural Networks (IJCNN), Montreal, QC, Canada, 31 July–4 August 2005; Volume 1–5,
+pp. 1548–1551.
+213. Kryger, M.; Wester, B.; Pohlmeyer, E.A.; Rich, M.; John, B.; Beaty, J.; McLoughlin, M.; Boninger, M.; Tyler-Kabara, E.C. Flight
+simulation using a Brain-Computer Interface: A pilot, pilot study. Exp. Neurol. 2017, 287, 473–478. [CrossRef]
+214. Collinger, J.L.; Wodlinger, B.; Downey, J.E.; Wang, W.; Tyler-Kabara, E.C.; Weber, D.J.; McMorland, A.J.; Velliste, M.; Boninger,
+M.L.; Schwartz, A.B. High-performance neuroprosthetic control by an individual with tetraplegia. Lancet 2013, 381, 557–564.
+[CrossRef]
+215. Hesp, C.; Ramstead, M.; Constant, A.; Badcock, P.; Kirchhoff, M.; Friston, K. A Multi-scale View of the Emergent Complexity of
+Life: A Free-Energy Proposal. In Evolution, Development and Complexity; Georgiev, G.Y., Smart, J.M., Flores Martinez, C.L., Price,
+M.E., Eds.; Springer Proceedings in Complexity; Springer: Cham, Switzerland, 2019; pp. 195–227.
+216. Xue, B.; Sartori, P.; Leibler, S. Environment-to-phenotype mapping and adaptation strategies in varying environments. Proc. Natl.
+Acad. Sci. USA 2019, 116, 13847–13855. [CrossRef]
+217. Adámek, J.; Herrlich, H.; Strecker, G.E. Abstract and Concrete Categories: The Joy of Cats; Wiley: New York, NY, USA, 2004.
+Entropy 2022, 24, 819
+33 of 33
+218. Awodey, S. Category Theory. In Oxford Logic Guides, 2nd ed.; Oxford University Press: Oxford, UK, 2010; Volume 52.
+219. Archer, K.; Catenacci Volpi, N.; Bröker, F.; Polani, D. A space of goals: The cognitive geometry of informationally bounded agents.
+arXiv 2021, arXiv:2111.03699. [CrossRef]
+220. Barrow, J.D. Gravitational Memory. Ann. N. Y. Acad. Sci. 1993, 688, 686–689. [CrossRef]
+221. Vazquez, A.; Pastor-Satorras, R.; Vespignani, A. Large-scale topological and dynamical properties of the Internet. Phys. Rev. E
+Stat. Nonlin. Soft Matter Phys. 2002, 65, 066130. [CrossRef]
+222. Soroldoni, D.; Jorg, D.J.; Morelli, L.G.; Richmond, D.L.; Schindelin, J.; Julicher, F.; Oates, A.C. Genetic oscillations. A Doppler
+effect in embryonic pattern formation. Science 2014, 345, 222–225. [CrossRef]
+223. Hills, T.T.; Todd, P.M.; Lazer, D.; Redish, A.D.; Couzin, I.D.; Cognitive Search Research, G. Exploration versus exploitation in
+space, mind, and society. Trends Cogn. Sci. 2015, 19, 46–54. [CrossRef] [PubMed]
+224. Valentini, G.; Moore, D.G.; Hanson, J.R.; Pavlic, T.P.; Pratt, S.C.; Walker, S.I. Transfer of Information in Collective Decisions by
+Artiﬁcial Agents. In Proceedings of the 2018 Conference on Artiﬁcial Life (Alife 2018), Tokyo, Japan, 22–28 July 2018; pp. 641–648.
+225. Serlin, Z.; Rife, J.; Levin, M. A Level Set Approach to Simulating Xenopus laevis Tail Regeneration. In Proceedings of the
+Fifteenth International Conference on the Synthesis and Simulation of Living Systems (ALIFE XV), Cancun, Mexico, 4–8 July 2016;
+pp. 528–535.
+226. Beer, R.D. Autopoiesis and cognition in the game of life. Artif. Life 2004, 10, 309–326. [CrossRef]
+227. Beer, R.D. The cognitive domain of a glider in the game of life. Artif. Life 2014, 20, 183–206. [CrossRef]
+228. Beer, R.D. Characterizing autopoiesis in the game of life. Artif. Life 2015, 21, 1–19. [CrossRef] [PubMed]
+229. Beer, R.D.; Williams, P.L. Information processing and dynamics in minimally cognitive agents. Cogn. Sci. 2015, 39, 1–38. [CrossRef]
+[PubMed]
+230. Durant, F.; Bischof, J.; Fields, C.; Morokuma, J.; LaPalme, J.; Hoi, A.; Levin, M. The Role of Early Bioelectric Signals in the
+Regeneration of Planarian Anterior/Posterior Polarity. Biophys. J. 2019, 116, 948–961. [CrossRef]
+231. Szilagyi, A.; Szabo, P.; Santos, M.; Szathmary, E. Phenotypes to remember: Evolutionary developmental memory capacity and
+robustness. PLoS Comput. Biol. 2020, 16, e1008425. [CrossRef]
+232. Watson, R.A.; Wagner, G.P.; Pavlicev, M.; Weinreich, D.M.; Mills, R. The evolution of phenotypic correlations and “developmental
+memory”. Evolution 2014, 68, 1124–1138. [CrossRef]
+233. Sorek, M.; Balaban, N.Q.; Loewenstein, Y. Stochasticity, bistability and the wisdom of crowds: A model for associative learning in
+genetic regulatory networks. PLoS Comput. Biol. 2013, 9, e1003179. [CrossRef]
+234. Emmert-Streib, F.; Dehmer, M. Information processing in the transcriptional regulatory network of yeast: Functional robustness.
+BMC Syst. Biol. 2009, 3, 35. [CrossRef]
+235. Tagkopoulos, I.; Liu, Y.C.; Tavazoie, S. Predictive behavior within microbial genetic networks. Science 2008, 320, 1313–1317.
+[CrossRef] [PubMed]
+236. Mikkilineni, R. Infusing Autopoietic and Cognitive Behaviors into Digital Automata to Improve Their Sentience, Resilience, and
+Intelligence. Big Data Cogn. Comput. 2022, 6, 7. [CrossRef]
+237. Mikkilineni, R. A New Class of Autopoietic and Cognitive Machines. Information 2022, 13, 24. [CrossRef]
+238. Darwish, A. Bio-inspired computing: Algorithms review, deep analysis, and the scope of applications. Future Comput. Inform. J.
+2018, 3, 231–246. [CrossRef]
+239. Kar, A.K. Bio inspired computing—A review of algorithms and scope of applications. Expert Syst. Appl. 2016, 59, 20–32. [CrossRef]
+240. Indiveri, G.; Chicca, E.; Douglas, R.J. Artiﬁcial Cognitive Systems: From VLSI Networks of Spiking Neurons to Neuromorphic
+Cognition. Cogn. Comput. 2009, 1, 119–127. [CrossRef]
+241. Schuman, C.D.; Potok, T.E.; Patton, R.M.; Birdwell, J.D.; Dean, M.E.; Rose, G.S.; Plank, J.S. A Survey of Neuromorphic Computing
+and Neural Networks in Hardware. arXiv 2017, arXiv:1705.06963.
+242. Adamatzky, A.; Holley, J.; Dittrich, P.; Gorecki, J.; De Lacy Costello, B.; Zauner, K.P.; Bull, L. On architectures of circuits
+implemented in simulated Belousov-Zhabotinsky droplets. Biosystems 2012, 109, 72–77. [CrossRef]
+243. Cejkova, J.; Banno, T.; Hanczyc, M.M.; Stepanek, F. Droplets As Liquid Robots. Artif. Life 2017, 23, 528–549. [CrossRef]
+244. Peng, C.; Turiv, T.; Guo, Y.; Wei, Q.H.; Lavrentovich, O.D. Command of active matter by topological defects and patterns. Science
+2016, 354, 882–885. [CrossRef]
+245. Wang, A.L.; Gold, J.M.; Tompkins, N.; Heymann, M.; Harrington, K.I.; Fraden, S. Conﬁgurable NOR gate arrays from Belousov-
+Zhabotinsky micro-droplets. Eur. Phys. J. Spec. Top. 2016, 225, 211–227. [CrossRef] [PubMed]
+246. Frith, U. Mind blindness and the brain in autism. Neuron 2001, 32, 969–979. [CrossRef]
+247. Sultan, S.E.; Moczek, A.P.; Walsh, D. Bridging the explanatory gaps: What can we learn from a biological agency perspective?
+Bioessays 2022, 44, e2100185. [CrossRef] [PubMed]

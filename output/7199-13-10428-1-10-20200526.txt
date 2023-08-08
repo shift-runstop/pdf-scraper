@@ -1,0 +1,277 @@
+The Thirty-Fourth AAAI Conference on Artiﬁcial Intelligence (AAAI-20)
+Who Are Controlled by The Same User? Multiple Identities
+Deception Detection via Social Interaction Activity (Student Abstract)
+Jiacheng Li,1,2 Chunyuan Yuan,1,2 Wei Zhou,2,∗ Jingli Wang,3 Songlin Hu2
+1School of Cyber Security, University of Chinese Academy of Sciences, Beijing, China
+2Institute of Information Engineering, Chinese Academy of Sciences, Beijing, China
+3 China Government Securities Depository Trust & Clearing Co., Ltd., Shanghai, China
+{lijiacheng, yuanchunyuan, zhouwei, wangjingli, husonglin}@iie.ac.cn
+Abstract
+Social media has become a preferential place for sharing
+information. However, some users may create multiple ac-
+counts and manipulate them to deceive legitimate users. Most
+previous studies utilize verbal or behavior features based
+methods to solve this problem, but they are only designed for
+some particular platforms, leading to low universalness.
+In this paper, to support multiple platforms, we construct in-
+teraction tree for each account based on their social inter-
+actions which is common characteristic of social platforms.
+Then we propose a new method to calculate the social inter-
+action entropy of each account and detect the accounts which
+are controlled by the same user. Experimental results on two
+real-world datasets show that the method has robust superior-
+ity over state-of-the-art methods.
+Introduction
+Multiple identities (sockpuppets) detection is a critical issue
+in social media. Previous studies (Kumar et al., 2017; Wang
+et al., 2018) have shown that sockpuppets are often applied
+to manipulate public opinion and heavily affect the user ex-
+perience.
+Recent studies focus on proﬁle similarity based (Keselj
+et al., 2003; Li et al., 2017), verbal based (Solorio, Hasan,
+and Mizan, 2013) and behavior features based (Tsikerdekis
+and Zeadally, 2014) methods to detect the sockpuppets. Pro-
+ﬁle similarity based methods use the account proﬁle, such
+as nickname
+(Keselj et al., 2003) and description of ac-
+count (Li et al., 2017), for detection. Verbal based methods
+assume that sockpuppets have similar linguistic traits (Ku-
+mar et al., 2017) and extract text and semantic features from
+posts and comments. However, smart malicious users could
+change nicknames and writing style to disguise themselves.
+Thus, behavior feature based methods are proposed to an-
+alyze account behaviors, such as the total number of bytes
+removed from all the revisions (Tsikerdekis et al,2014), co-
+occurrence relationship (Liu et al., 2016). However, pre-
+vious methods have high dependence on the particular plat-
+forms, thus lack generalization. For example, as a video plat-
+∗Wei Zhou is corresponding author
+Copyright c⃝ 2020, Association for the Advancement of Artiﬁcial
+Intelligence (www.aaai.org). All rights reserved.
+form, TikTok can hardly provide useful text to extract verbal
+features. In this paper, we propose a platform-independent
+interaction entropy method based on the social interaction
+activity. The method can be easily applied to many social
+media platforms.
+The contribution of this work can be concluded as fol-
+lows: (1) We apply the interaction activities, which are avail-
+able on mainstream social platforms, to extract general fea-
+tures that are easily available from many platforms. (2) We
+propose a novel interaction entropy algorithm to depict the
+interaction activities of users for sockpuppets detection. (3)
+The experimental results achieve a signiﬁcant performance
+over state-of-the-art methods and validate the effectiveness
+of our method.
+Methodology
+We extract the interaction activity from interaction logs and
+construct interaction tree as shown in Figure 1. Then we
+propose the interaction entropy based on the interaction tree
+inspired by the ideal of the graph entropy (Dehmer, 2008).
+Firstly, we deﬁne user interaction set Du = {du
+i |u ∈ U, i ∈
+M}, where du
+i is the interaction tree of account u based on
+message i, U is the set of users and M denotes the messages
+in the social network. The function |S(v, du
+i )| denotes the
+depth of node v in du
+i as shown in Figure 2. For a node v ∈
+du
+i , we deﬁne the node entropy function:
+f(v) = |S(v, du
+i )| · C(v)
+C(du
+i ),
+(1)
+where C(v) is the number of account v in du
+i (an account
+may appear many times in one tree) and C(du
+i ) is the num-
+ber of nodes in the tree du
+i . Then we propose an function to
+represent the entropy of the interaction tree du
+i .
+Hp(du
+i ) =
+C(du
+i )
+�
+i=0
+−p(v, du
+i ) · log p(v, du
+i ),
+(2)
+where p(v, du
+i ) =
+f(v)
+�C(du
+i=0i )
+αf(v) is the probability mass func-
+tion for the tree. The hyperparameters α is a shrinkage fac-
+tor. According to the above deﬁnition, a tree has more di-
+verse interactions when it has a lower entropy value.
+13853
+Table 1: Multiple Identity Deception Detection
+Method
+DS
+DT
+Precision
+Recall
+F1-Score
+Precision
+Recall
+F1-Score
+Verbal Based (Solorio et al., 2013)
+0.755
+0.580
+0.645
+0.701
+0.696
+0.697
+Behavior Features Based (Tsikerdekis et al., 2014)
+0.700
+0.564
+0.622
+0.766
+0.765
+0.764
+Behavior Features Based (Liu et al., 2016)
+0.680
+0.700
+0.690
+0.760
+0.580
+0.660
+Proﬁle Similarity Based (Li et al., 2017)
+0.746
+0.686
+0.707
+0.710
+0.672
+0.690
+Behavior Features Based (Wang et al., 2018)
+0.840
+0.870
+0.850
+0.830
+0.800
+0.820
+Our Method
+0.860
+0.890
+0.875
+0.900
+0.894
+0.897
+�������������������������
+���������������������������
+�
+�
+�
+�
+�
+�
+�
+�
+�
+�
+�
+Figure 1: Interaction Tree Construction Process. We extract
+the interaction link list from interaction logs and merge the
+link list with the same head such as username and tweet.
+�
+�
+�
+�
+�
+�
+�
+�
+�
+Figure 2: The depth of interaction tree, for example
+|S(B, du
+i )| = 2. The depth is an integer starting with 1 at
+the deepest leaf node for the convenience of calculation.
+Then, we obtain an interaction entropy of account u which
+indicates interaction diversity.
+If(u) =
+|Du|
+�
+i=0
+−Hp(du
+i ) · log2 Hp(du
+i ),
+(3)
+where |Du| is the size of set Du.
+Based on the interaction entropy, we show the multiple
+identities deception detection algorithm. Given accounts u
+and v, we will get the function G to depict the social interac-
+tion activity difference, which can be formalized as follows:
+G(u, v) =
+����
+If(u)
+If(v) − 1.0
+���� .
+(4)
+Finally, we can obtain the result to discriminate for multiple
+identities via the function G.
+G(u, v) =
+�
+⩽ β
+u, v are controlled by the same user
+> β
+u, v belong to different users
+,
+(5)
+where β is a threshold and the accounts whose difference
+score below the β is controlled by the same malicious user.
+Experiments and Result
+Datasets. In this paper, we conduct experiments on two real-
+world datasets DS and DT which are public available at
+(Wang et al., 2018). The DS dataset contains 675 users. The
+DT dataset contains 991 users. Accounts are identiﬁed as
+sockpuppets according to rules, such as self-reported sen-
+tence matching like ’This is a sockpuppet of Mix’.
+Experiments In the experiments, we set the model parame-
+ters as: α = 2.3, β = 0.6. The analyses of parameter sensi-
+tivity can be found in the supplemental materials. As shown
+in the Table 1, our model achieves signiﬁcantly improve-
+ment over state-of-the-art methods on two datasets (+2.5-
+30.5% in terms of F1), which shows the effectiveness of
+the model. Furthermore, the interaction relations are eas-
+ily available on mainstream social media platforms, such as
+Twitter, Facebook, Weibo, etc., thus the algorithm has wider
+applications compared with previous methods.
+Conclusion
+In this paper, we study the multiple identities deception de-
+tection problem, with the platform independent model based
+on social interaction structure. Then we raise a novel interac-
+tion entropy algorithm to depict the interaction activity. The
+experimental results validate the effectiveness of our method
+on two real-world datasets.
+References
+Dehmer, M. 2008. Information processing in complex networks:
+Graph entropy and information functionals. Applied Mathematics
+and Computation 201(1-2):82–94.
+Keselj, V.; Peng, F.; Cercone, N.; and Thomas, C. 2003. N-gram-
+based author proﬁles for authorship attribution. In PACLING’03,
+255–264.
+Kumar, S.; Cheng, J.; Leskovec, J.; and Subrahmanian, V. S. 2017.
+An army of me: Sockpuppets in online discussion communities. In
+WWW’17, 857–866.
+Li, Y.; Peng, Y.; Ji, W.; Zhang, Z.; and Xu, Q. 2017. User identiﬁ-
+cation based on display names across online social networks. IEEE
+Access 5:17342–17353.
+Liu, D.; Wu, Q.; Han, W.; and Zhou, B. 2016. Sockpuppet gang
+detection on social media sites. Frontiers Comput. Sci. 10(1):124–
+135.
+Solorio, T.; Hasan, R.; and Mizan, M. 2013. A case study of sock-
+puppet detection in wikipedia. In Proceedings of the Workshop on
+Language Analysis in Social Media, 59–68.
+Tsikerdekis, M., and Zeadally, S. 2014. Multiple account iden-
+tity deception detection in social media using nonverbal behavior.
+IEEE Trans. Information Forensics and Security 9(8):1311–1321.
+Wang, J.; Zhou, W.; Li, J.; Yan, Z.; Han, J.; and Hu, S. 2018. An
+online sockpuppet detection method based on subgraph similarity
+matching. In ISPA’18, 391–398.
+13854
